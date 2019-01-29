@@ -24,4 +24,4 @@ You can do machine learning in many languages, but Python would probable be the 
 
 I will also provide some learning articles in Python, R, JavaScript, Ruby and Go.
 
-There will be interesting time generating and visualizing the TensorFlow models.
+There will be interesting time generating and visualizing the ML models.
