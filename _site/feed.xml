@@ -6,35 +6,41 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Jan 2019 13:58:39 +0100</pubDate>
-    <lastBuildDate>Tue, 29 Jan 2019 13:58:39 +0100</lastBuildDate>
+    <pubDate>Tue, 29 Jan 2019 16:35:31 +0100</pubDate>
+    <lastBuildDate>Tue, 29 Jan 2019 16:35:31 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>Welcome to this website!</title>
+        <description>&lt;p&gt;You will find here &lt;code class=&quot;highlighter-rouge&quot;&gt;posts&lt;/code&gt; about artificial intelligence most of the time.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;Current themes of interest would be :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The TensorFlow and Keras&lt;/li&gt;
+  &lt;li&gt;The PyTorch (another machine learning library for Python)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cs.stanford.edu/people/karpathy/convnetjs/&quot;&gt;ConvNetJs&lt;/a&gt; (JavaScript machine learning library)&lt;/li&gt;
+  &lt;li&gt;all other tools and papers helping me understand the machine learning process&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;I will certainly focus some articles on the latest TensorFlow 2.0 that you may install via this command:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nightly&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;preview&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tensorflow&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Since GitHub is one of the greatest code repositories online there will be some searching methods explained helping us to grab good quality data.&lt;/code&gt;&lt;/p&gt;
 
+&lt;p&gt;You can do machine learning in many languages, but Python would probable be the very first choice if you haven’t worked with the R programming language.&lt;/p&gt;
+
+&lt;p&gt;I will also provide some learning articles in Python, R, JavaScript, Ruby and Go.&lt;/p&gt;
+
+&lt;p&gt;There will be interesting time generating and visualizing the ML models.&lt;/p&gt;
 </description>
         <pubDate>Tue, 29 Jan 2019 10:26:30 +0100</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2019/01/29/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2019/01/29/welcome-to-jekyll.html</guid>
+        <link>http://yourdomain.com/hello/2019/01/29/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/hello/2019/01/29/welcome-to-jekyll.html</guid>
         
         
-        <category>jekyll</category>
-        
-        <category>update</category>
+        <category>hello</category>
         
       </item>
     
