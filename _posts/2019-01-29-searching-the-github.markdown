@@ -7,4 +7,14 @@ categories: search
 Searching the GitHub needs couple of words. 
 
 
+~~~ruby
+def hello(name)  
+  'Hello ' + name  
+end 
+~~~
 
+```ruby
+def hello(name)  
+  'Hello ' + name  
+end
+```
