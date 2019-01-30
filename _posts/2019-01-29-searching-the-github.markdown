@@ -1,14 +1,20 @@
 ---
 layout: post
-title:  "Searching the GitHub"
-date:   2019-01-29 10:26:30 +0100
+title: Searching the GitHub
+date: '2019-01-29 10:26:30 +0100'
 categories: search
+published: true
 ---
 There are couple of documents [here](https://help.github.com/articles/understanding-the-search-syntax/), [here](https://help.github.com/articles/searching-code/) and [here](https://help.github.com/articles/about-searching-on-github/) that explain [GitHub advanced search](https://github.com/search/advanced).
 
-***Note the problem in here is even though we have the advanced search options there is no feedback on code quality which may change in the future.***
-
----
+### In GitHub you search inside:
+* Repositories
+* Topics
+* Issues and pull requests
+* Code
+* Commits
+* Users
+* Wikis
 
 ### Search is not case sensitive
 * `cat` is the same as `CAT`
