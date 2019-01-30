@@ -32,10 +32,10 @@ There are couple of documents [here](https://help.github.com/articles/understand
 
 
 ### User search
-* `user:dejanbatanjac extension:txt` matches code from @dejanbatanjac that ends in `.txt`
+* `user:dejanbatanjac extension:txt` (matches code from @dejanbatanjac that ends in `.txt`)
 
 ### Sarching from certain organization
-* `org:github extension:js` matches code from GitHub that ends in `.js`
+* `org:github extension:js` (matches code from GitHub that ends in `.js`)
 
 ### Searching based on stars
 * `cat stars:>1000` (will search for repos that have `>1000` stars)
