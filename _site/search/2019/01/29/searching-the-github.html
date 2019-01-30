@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Searching the GitHub</title>
-  <meta name="description" content="Searching the GitHub needs couple of words.def hello(name)    'Hello ' + name  end def hello(name)    'Hello ' + name  end">
+  <meta name="description" content="There are couple of documents here, here and here that explain GitHub advanced search.Note the problem in here is even though we have the advanced search opt...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://yourdomain.com/search/2019/01/29/searching-the-github.html">
@@ -39,6 +39,10 @@
           
         
           
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
         
           
         
@@ -62,17 +66,91 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>Searching the GitHub needs couple of words.</p>
+    <p>There are couple of documents <a href="https://help.github.com/articles/understanding-the-search-syntax/">here</a>, <a href="https://help.github.com/articles/searching-code/">here</a> and <a href="https://help.github.com/articles/about-searching-on-github/">here</a> that explain <a href="https://github.com/search/advanced">GitHub advanced search</a>.</p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>  
-  <span class="s1">'Hello '</span> <span class="o">+</span> <span class="nb">name</span>  
-<span class="k">end</span> 
-</code></pre></div></div>
+<p><strong><em>Note the problem in here is even though we have the advanced search options there is no feedback on code quality which may change in the future.</em></strong></p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>  
-  <span class="s1">'Hello '</span> <span class="o">+</span> <span class="nb">name</span>  
-<span class="k">end</span>
-</code></pre></div></div>
+<hr />
+
+<h3 id="search-is-not-case-sensitive">Search is not case sensitive</h3>
+<ul>
+  <li><code class="highlighter-rouge">cat</code> is the same as <code class="highlighter-rouge">CAT</code></li>
+</ul>
+
+<h3 id="based-on-time-created-or-pushed">based on time created or pushed</h3>
+<ul>
+  <li><code class="highlighter-rouge">cat created:&gt;2016-04-29</code> or</li>
+  <li><code class="highlighter-rouge">cat pushed:&gt;2016-04-29</code></li>
+</ul>
+
+<h3 id="language-search">language search</h3>
+<ul>
+  <li><code class="highlighter-rouge">cat language:javascript</code> (matches repositories with the word “cat” written in JavaScript)</li>
+  <li><code class="highlighter-rouge">cat -language:javascript</code> (matches repositories with the word “cat” not written in JavaScript)</li>
+</ul>
+
+<h3 id="topics-or-label-search">Topics or label search</h3>
+<ul>
+  <li><code class="highlighter-rouge">cat topics:&gt;=5</code> (matches repositories with the word “cat” 5 or more topics)</li>
+  <li><code class="highlighter-rouge">label:"in progress"</code></li>
+</ul>
+
+<h3 id="in-filter"><code class="highlighter-rouge">in</code> filter</h3>
+<ul>
+  <li><code class="highlighter-rouge">cat in:file</code> (matches code where “cat” appears in the file contents)</li>
+  <li><code class="highlighter-rouge">cat in:path</code> (matches code where “cat” appears in the file path)</li>
+  <li><code class="highlighter-rouge">cat in:file,path</code> (matches code where “cat” appears in the file contents or the file path)</li>
+</ul>
+
+<h3 id="user-search">user search</h3>
+<ul>
+  <li><code class="highlighter-rouge">user:dejanbatanjac extension:txt</code> matches code from @dejanbatanjac that ends in <code class="highlighter-rouge">.txt</code></li>
+</ul>
+
+<h3 id="sarching-from-certain-organization">sarching from certain organization</h3>
+<ul>
+  <li><code class="highlighter-rouge">org:github extension:js</code> matches code from GitHub that ends in <code class="highlighter-rouge">.js</code></li>
+</ul>
+
+<h3 id="searching-based-on-stars">searching based on stars</h3>
+<ul>
+  <li><code class="highlighter-rouge">cat stars:&gt;1000</code> (will search for repos that have <code class="highlighter-rouge">&gt;1000</code> stars)</li>
+</ul>
+
+<h3 id="file-size">file size</h3>
+<ul>
+  <li><code class="highlighter-rouge">cats size:&lt;10000</code> (match files smaller than <code class="highlighter-rouge">10000</code> Bytes)</li>
+</ul>
+
+<h3 id="filename-search">filename search</h3>
+<ul>
+  <li><code class="highlighter-rouge">filename:cat path:test language:ruby</code> (matches Ruby files named <code class="highlighter-rouge">cat</code> within the <code class="highlighter-rouge">test</code> directory)</li>
+</ul>
+
+<h3 id="extension-search">extension search</h3>
+<ul>
+  <li><code class="highlighter-rouge">icon size:&gt;200000 extension:css</code> (matches files larger than <code class="highlighter-rouge">200 KB</code> that end in <code class="highlighter-rouge">.css</code> and have the word <code class="highlighter-rouge">icon</code>)</li>
+</ul>
+
+<h3 id="date">date</h3>
+<ul>
+  <li><code class="highlighter-rouge">cat created:&gt;2018-12-31</code> (search files created starting from 2019)</li>
+</ul>
+
+<h3 id="not">NOT</h3>
+<ul>
+  <li><code class="highlighter-rouge">hello NOT world</code> (matches repositories that have the word <code class="highlighter-rouge">hello</code> but not the word <code class="highlighter-rouge">world</code>)</li>
+</ul>
+
+<h3 id="search-in-forks">search in <a href="https://help.github.com/articles/searching-in-forks/">forks</a></h3>
+<ul>
+  <li><code class="highlighter-rouge">fork:true</code> (matches all repositories containing the word “github,” including forks)</li>
+</ul>
+
+<h3 id="sorted-search"><a href="https://help.github.com/articles/sorting-search-results/">sorted</a> search</h3>
+<ul>
+  <li><code class="highlighter-rouge">cat sort:updated</code> (matches repositories containing the word <code class="highlighter-rouge">cat</code>sorted by most recently updated date)</li>
+</ul>
 
   </div>
 
