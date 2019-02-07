@@ -7,7 +7,7 @@ Unlike Numpy, Torch has strong GPU support.
     
 You can use Torch either using the Lua programming language or if you like Python you can use PyTorch.
 
-You can use PyTorch together all major Python packages likes scipy, numpy, matplotlib and Cython with PyTorch's own autograd system.
+You can use PyTorch together with all major Python packages likes scipy, numpy, matplotlib and Cython and benefit from with PyTorch's autograd system.
 
 We will check some major PyTorch features in here and provide some feedback on PyTorch tensors, algebra and graphs.
 
@@ -22,6 +22,8 @@ We will check some major PyTorch features in here and provide some feedback on P
 
 ### Data types
 
+We see in here the list of data types currently supported.
+
 |Data type | 	Tensor|
 |---|:---|
 |32-bit floating point |	torch.FloatTensor|
@@ -33,7 +35,7 @@ We will check some major PyTorch features in here and provide some feedback on P
 |32-bit integer (signed)| 	torch.IntTensor |
 |64-bit integer (signed) |	torch.LongTensor|
 
-### What do you do first?
+### What do you do first in PyTorch?
 
 In order to use it you first import the `torch` library.
 
@@ -63,11 +65,12 @@ We can use both CPU and GPU with PyTorch. This would be how to move our data fro
 
 ~~~
 a = torch.range(1, 12)
-a = a.view(3, 4)        # reshapes inot 3 columns x 4 rows
+a = a.view(3, 4)        # reshapes in 3 columns x 4 rows
 ~~~
 
-Note how numpy uses `reshape()` method and PyTorch uses `view()` method for the same thing
-As we know from numpy the next line will vectorize the tensor.
+Note you can use PyTorch `reshape()` method also but PyTorch uses `view()` method would return you the copy if possible.
+
+As we know, if we spec. the dimension `-1` this will "vectorize" the tensor.
 
     a.view(-1)
     
@@ -135,32 +138,49 @@ We can set the torch seed using this line:
 
     torch.manual_seed(seed) 
     
-Also we can set `np.random.seed(seed)` for the numpy library.
+Also we can set `np.random.seed(seed)` for the numpy library. This will help us set the deterministic results. Also note that Python programs need to set the hash seed in order to work deterministic. 
 
-### Loss functions
+### The graph, the Variable, and the Function
 
-To execute backpropagation algorithm you need to have loss function in order to calculate the error. You can create your own loss function or use one from the list:
+The invasion of PyTorch tensors is becoming evident, but less evident is the idea of PyTorch variable and function. The interesting thing, if you try to print the variable you will get the output like you printed the Tensors. Let's check this example:
 
-    L1Loss
-    MSELoss
-    CrossEntropyLoss
-    CTCLoss
-    NLLLoss
-    PoissonNLLLoss
-    KLDivLoss
-    BCELoss
-    BCEWithLogitsLoss
-    MarginRankingLoss
-    HingeEmbeddingLoss
-    MultiLabelMarginLoss
-    SmoothL1Loss
-    SoftMarginLoss
-    MultiLabelSoftMarginLoss
-    CosineEmbeddingLoss
-    MultiMarginLoss
-    TripletMarginLoss
-    
-As we said the autograd package provides automatic differentiation for all operations on Tensors. You typically use the autograd package like this:
+~~~
+import torch
+from torch.autograd import Variable
+
+def pr(obj):
+  print(obj)
+  print("type:", type(obj))
+  
+a = torch.Tensor([[1,2],[3,4]])
+pr(a.grad_fn)
+a2= a+2
+pr(a2.grad_fn)
+b = Variable(torch.Tensor([[1,2],[3,4]]), requires_grad=True)
+pr(b.grad_fn)
+b2 = b+2
+pr(b2.grad_fn)
+
+~~~
+
+The output:
+~~~
+None
+type: <class 'NoneType'>
+None
+type: <class 'NoneType'>
+None
+type: <class 'NoneType'>
+<AddBackward0 object at 0x7f857dc19f60>
+type: <class 'AddBackward0'>
+~~~
+
+`b2` is a variable that has the function under `.grad_fn` that has created the variable.
+The variable `b` we created doesn't have the function that has created it, since we created it.
+
+The complete history of computation is saved this way in the interconnected acyclic graph.
+
+As we said the autograd package provides automatic differentiation for all operations in the graph so let's check that next.
 
 ### Autograd
 
@@ -170,12 +190,11 @@ The autograd package provides automatic differentiation for all operations on Te
 
 The `import torch.autograd` package is the heart of PyTorch. It contains classes and functions implementing automatic differentiation on a computation graph. Computational graph is what you get out-of-the-box in PyTorch once you set your computations.
 
-
 Important things about the graph:
 
 * when computing the forwards pass, autograd builds up a graph
-* graph holds functions and tensors
-* graph encodes a complete history of the computation
+* graph holds functions and variables (tensors)
+* graph encodes a complete history of computation
 * after the backward pass the graph will be freed to save the memory
 * graph is recreated from scratch at every iteration (on forward pass)
 * graph is needed to compute the gradients
@@ -201,7 +220,8 @@ print(b.grad)    # b.grad = 1
 ~~~
 
 For the previous program:
-* we created the computational graph once we created the equation to PyTorch
+
+* once we wrote the equation PyTorch creates computational graph on fly...
 * every Tensor with a flag: `requires_grad=Fase` will freeze backward computation
 * every Tensor with a flag: `requires_grad=True` will require gradient computation
 * when the forwards pass is done, we evaluate this graph in the backwards pass to compute the gradients.
@@ -210,8 +230,8 @@ For the previous program:
 
 PyTorch computes backward gradients using a computational graph which keeps track of what operations have been done during your forward pass. 
 
-In each iteration:
-* we execute the forward pass, 
+In each iteration we:
+* execute the forward pass, 
 * compute the derivatives of output with respect to the parameters of the network
 * update the parameters to fit the given examples
 
@@ -275,3 +295,6 @@ The output will be like this:
 ![Capture.PNG]({{site.baseurl}}/images/Capture.PNG)
 
 One another way to create the graphs is `torch.jit.get_trace_graph`.
+
+
+    
