@@ -2,6 +2,7 @@
 published: true
 ---
 
+
 PyTorch is based on Torch. Torch is a Tensor library like Numpy. 
 Unlike Numpy, Torch has strong GPU support. 
     
@@ -41,7 +42,7 @@ In order to use it you first import the `torch` library.
 
     import torch
     
-Probable the next thing would be to convert your numpy arryas to PyTorch
+Probable the next thing would be to convert your numpy arryas to PyTorch tensors
 
     pta = torch.from_numpy(a)
 
@@ -55,7 +56,27 @@ We can override default behaviour if we cast it:
 
     pta = torch.FloatTensor(a)
     
-### The privledge working with GPU
+### PyTorch tensor
+
+Has three atributes:
+
+* `torch.dtype`
+* `torch.device`
+* `torch.layout`
+
+We already listed all `dtype` attrubutes in a section before. For the device we can have either "cpu" or "cuda". Cuda is a software layer over hardware GPU unit. Currently it works only on Nvidia  hardware. This "cuda" thing is what makes speed improvements.
+
+A `torch.layout` is an object that represents the memory layout of a torch.Tensor. `torch.strided` means dense tensors. Experimental support for `torch.sparse_coo` exists.
+
+You typically use the following ways to create the tensor in PyTorch:
+
+* torch.Tensor(data)
+* torch.tensor(data)
+* torch.as_tensor(data)
+* torch.from_numpy(data)
+
+    
+### The privilege working with GPU
 
 We can use both CPU and GPU with PyTorch. This would be how to move our data from CPU to GPU:
 
@@ -77,7 +98,7 @@ As we know, if we spec. the dimension `-1` this will "vectorize" the tensor.
 
 ### Basic Algebra in PyTorch
 
-Here we define a tensors `a` and `b` and do basic algebra operations:
+Here we define tensors `a` and `b` and do basic algebra operations:
 
 ~~~
 a = torch.rand(4,4)
@@ -112,7 +133,7 @@ tensor([[0.9216, 0.4754, 0.8547, 0.0683],
         [0.1223, 0.0348, 0.7196, 0.9155]])
 ~~~
 
-Also we have Hadamard product with * and the dot product
+Also, we have Hadamard product with * and the dot product
 
 ~~~
 a = torch.Tensor([[1,2],[3,4]])
@@ -138,7 +159,7 @@ We can set the torch seed using this line:
 
     torch.manual_seed(seed) 
     
-Also we can set `np.random.seed(seed)` for the numpy library. This will help us set the deterministic results. Also note that Python programs need to set the hash seed in order to work deterministic. 
+We can set `np.random.seed(seed)` for the numpy library. This will help us set the deterministic results. Also note that Python programs need to set the hash seed in order to work deterministic. 
 
 ### The graph, the Variable, and the Function
 
@@ -295,6 +316,3 @@ The output will be like this:
 ![Capture.PNG]({{site.baseurl}}/images/Capture.PNG)
 
 One another way to create the graphs is `torch.jit.get_trace_graph`.
-
-
-    
