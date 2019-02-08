@@ -76,7 +76,7 @@ x=20
 dx = (f(x+e)-f(x))/e
 print("sigmoid grad. at point 20:", dx)
 ~~~
-![sigmoid function](https://dejanbatanjac.github.io/images/sigmoid.png)
+![sigmoid function](https://dejanbatanjac.github.io/images/sigmoidx.png)
 
 Note we got the following output:
 ~~~
