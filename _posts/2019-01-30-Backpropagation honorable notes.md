@@ -1,8 +1,6 @@
 ---
 published: true
 ---
-## Backpropagation
-
 > Backpropagation is a very popular neural network learning algorithm because it is conceptually simple, computationally efficient, and because it often works.
 
 Here we will calculate derivative using backprop in a point p=(5,3,2).
