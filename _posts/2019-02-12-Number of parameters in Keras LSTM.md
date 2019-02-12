@@ -2,9 +2,9 @@
 published: true
 ---
 We are defining a sequence of 20 numbers:
-`0  20  40  60  80 100 120 140 160 180 200 220 240 260 280 300 320 340 360 380` we would like to memorize using Keras LSTM
+`0  20  40  60  80 100 120 140 160 180 200 220 240 260 280 300 320 340 360 380` and memorize using Keras LSTM.
 
-We would like to understand the final number of parameters for our model. The `model.summary()` doesn't explain much.
+We would like to understand the final number of parameters for our model even though the `model.summary()` doesn't explain much.
 
 In the following code we feed the LSTM network directly with the values >20, so we are using the "relu" activation function.
 
