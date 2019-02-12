@@ -80,7 +80,7 @@ b_c = b[units * 2: units * 3]
 b_o = b[units * 3:]
 ~~~
 
-We have asked the model to show the layer info. In particular the W, U and b tensors.
+We have asked the model to show the layer info. In particular the `W`, `U` and `b` tensors.
 The output will be like this:
 ~~~
 W 80
@@ -102,17 +102,17 @@ Non-trainable params: 0
 _________________________________________________________________
 ~~~
 
-But why there is 80 parameters for the W tensor and 1600 params for the U tensor and 80 parameters for the b tensor?
+But why there is 80 parameters for the `W` tensor and 1600 params for the `U` tensor and 80 parameters for the `b` tensor?
 
 If you recall the image:
 ![LSTM](https://dejanbatanjac.github.io/images/lstm.png)
 
-There are three gates in LSTM cell and one unit for setting the new cell value (Long Memory). We marked it with LM'. There will be 4 * 20 = 80 parameters W in our LSMT layer, where 20 is the number of LSTM cells in our model.
+There are three gates in LSTM cell and one unit for setting the new cell value (Long Memory). We marked it with LM'. There will be 4 * 20 = 80 parameters `W` in our LSMT layer, where 20 is the number of LSTM cells in our model.
 
-Similarly there will be 80 b parameters in LSTM layer.
+Similarly there will be 80 `b` parameters in LSTM layer.
 
-The number of U parameters is different. While W is same for all LSMT cells (W is connected with the input X, U is separate for each cell. 
+The number of `U` parameters is different. While `W` is same for all LSMT cells (W is connected with the input `X`, `U` is separate for each cell). 
 
-The number of parameters in U would be 4* 20* 20 = 1600, because each LSTM cell has unique 4 * 20 parameters.
+The number of `U` parameters would be 4* 20* 20 = 1600, because each LSTM cell has unique 4 * 20 parameters.
 
 
