@@ -2,7 +2,7 @@
 published: true
 ---
 We are defining a sequence of 20 numbers:
-`0  20  40  60  80 100 120 140 160 180 200 220 240 260 280 300 320 340 360 380`
+`0  20  40  60  80 100 120 140 160 180 200 220 240 260 280 300 320 340 360 380` we would like to memorize using Keras LSTM
 
 We would like to understand the final number of parameters for our model. The `model.summary()` doesn't explain much.
 
@@ -115,4 +115,4 @@ The number of U parameters is different. While W is same for all LSMT cells (W i
 
 The number of parameters in U would be 4* 20* 20 = 1600, because each LSTM cell has unique 4 * 20 parameters.
 
----
+
