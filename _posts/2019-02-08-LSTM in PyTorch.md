@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 Here is the model of LSTM cell with the following notation:
 
