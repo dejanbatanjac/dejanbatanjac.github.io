@@ -23,7 +23,7 @@ Having many LSTM cells we form LSTM layers. Many LSTM layers we stack into LSTM 
 ~~~
 _ _ _ _ _ ... _ 
 . . . . . ... .
-_ _ _ _ _ _ _ _
+_ _ _ _ _ ... _
 ~~~
 
 We would create this with the following code
@@ -32,7 +32,7 @@ nn.LSTM(    input_size=128,        # features
             hidden_size=128,       # rnn hidden unit
             num_layers=2,          # number of stacked layres
             dropout=0.2 )          # only if num_layers > 1
-
+~~~
 
 In here `num_layers=2`, default is: `1`. We call LSTM networks stacked LSTM when two or more LSMT layers.
 
