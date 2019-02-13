@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## Terminology first
 
@@ -110,10 +110,3 @@ The hidden features. In our model we may have so called hidden features. We typi
 
 The iterations = How many batches to complete the one epoch.
 One epoch is when we compute all the training examples, or all the examples.
-
-
-
-
-
-
-
