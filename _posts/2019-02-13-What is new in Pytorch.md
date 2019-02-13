@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## PyTorch 0.4 version
 
