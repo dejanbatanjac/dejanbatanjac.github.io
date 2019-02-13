@@ -1,7 +1,7 @@
 ---
-published: false
+published: true
 ---
-PyTorch is exensible framework. We see that because many new grow on PyTorch.
+PyTorch is extensible framework. We see that because many new grow on PyTorch.
 
 For instance, and probable the most obvious one: [Fast.ai](https://github.com/fastai/fastai), took PyTorch as a foundation.
 
@@ -27,7 +27,7 @@ All modules live under `torch.nn` such as: `torch.nn.Conv2d`, `torch.nn.Linear` 
 Functions are another way to create new things in PyTorch. We have several types of functions:
 * common mathematical functions are implemented under `torch` such as `torch.log` or `torch.sum`
 * neural network related functions under `torch.nn.functional`
-* autograd operators under `torch.autograd.Function` imlementing the forward and backward functions.
+* autograd operators under `torch.autograd.Function` implementing the forward and backward functions.
 
 The last kind of functions mentioned (autograd) allow us to customize PyTorch, introducing the new autograd functionality. Here is the example creating the Fft autograd:
 ~~~
@@ -48,7 +48,7 @@ Note how we defined both `forward()` and `backward()` functions being part of th
 --
 ## nn package, and what is a module?
 
-We mantioned previously the `torch.nn` package in PyTorch. The `nn` package defines a set of Modules, which are roughly equivalent to neural network layers. 
+We mentioned previously the `torch.nn` package in PyTorch. The `nn` package defines a set of Modules, which are roughly equivalent to neural network layers. 
 
 A Module is a unit that receives **input tensors** and computes **output tensors**.
 
@@ -58,15 +58,18 @@ In PyTorch the `nn` defines a set of useful loss functions that are commonly use
 
 Check [here](https://pytorch.org/docs/stable/_modules/torch/nn/modules/loss.html) all the loss functions available. Every new PyTorch version some new loss function my be added.
 
-Note: By definition every loss functon is also a module in PyTorch.
+Note: By definition every loss function is also a module in PyTorch.
 
 ## Optimizers
 
-If you don't plan to manually set the tensor operations, and update the weights in your PyTorch model, you need simple optimization algorithms or **optimizers** such as:
+If you don't plan to manually set the tensor operations, and update the weights of your PyTorch model, you need simple optimization algorithms or **optimizers** such as:
 * AdaGrad 
 * RMSProp 
 * Adam 
 * SGD ...
 
 The `torch.optim` package in PyTorch abstracts the idea of an optimization algorithm.
-torch.optim is a package implementing various optimization algorithms. Most commonly used methods are already supported, and the interface is general enough, so that more sophisticated ones can be also easily integrated in the future.
+
+Most commonly optim methods are already there but you may add the custom optim algorithms.
+
+
