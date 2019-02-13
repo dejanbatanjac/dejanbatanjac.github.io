@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-PyTorch is extensible framework. We see that because many new things grow on PyTorch.
+PyTorch is an extensible framework. We see that because many new things grow on PyTorch.
 
 For instance, and probable the most obvious one: [Fast.ai](https://github.com/fastai/fastai), took PyTorch as a foundation.
 
@@ -29,7 +29,7 @@ Functions are another way to create new things in PyTorch. We have several types
 * neural network related functions under `torch.nn.functional`
 * autograd operators under `torch.autograd.Function` implementing the forward and backward functions.
 
-The last kind of functions mentioned (autograd) allow us to customize PyTorch, introducing the new autograd functionality. Here is the example creating the Fft autograd:
+The last kind of functions mentioned (autograd) allow us to customize PyTorch, introducing the new autograd functionality. Here is the example creating the new autograd:
 ~~~
 class MyReLU(torch.autograd.Function):
   def forward(ctx, x):
