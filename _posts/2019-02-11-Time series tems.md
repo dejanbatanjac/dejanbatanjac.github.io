@@ -1,9 +1,7 @@
 ---
 published: true
 ---
-## Terminology first
-
-Time series, as the name imply, it is a distribution of a value in time.
+Terms: A time series is a sequence of numerical data points in time.
 
 In ML we can identify the following things:
 * the sequence
@@ -16,7 +14,7 @@ In ML we can identify the following things:
 * iterations
 * time steps
 
-Oh my, so many of these!
+Oh my, so many of these terms!
 
 ## No concept of input and output
 
@@ -26,7 +24,7 @@ Let's check on this example:
 
 If we have a time series: 0.1, 0.2, 0.3, 0.4, 0.5, we may say:
 
-**(i)5 examples, one time step each
+**(i) 5 examples, one time step each**
 ~~~
 t=1: 0.1
 t=2: 0.2
@@ -35,7 +33,7 @@ t=4: 0.4
 t=5: 0.5
 ~~~
 
-**(ii)4 examples, two time step each**
+**(ii) 4 examples, two time step each**
 ~~~
 t=1: 0.1 0.2
 t=2: 0.2 0.3
@@ -43,28 +41,29 @@ t=3: 0.3 0.4
 t=4: 0.4 0.5
 ~~~
 
-**(iii)3 examples, three time step each**
+**(iii) 3 examples, three time step each**
 ~~~
 t1: 0.1 0.2 0.3
 t2: 0.2 0.3 0.4
 t3: 0.3 0.4 0.5
 ~~~
 
-**(iv)2 examples, 4 time step each**
+**(iv) 2 examples, 4 time step each**
 
 ~~~
 t1: 0.1 0.2 0.3 0.4
 t2: 0.2 0.3 0.4 0.5
 ~~~
 
-**(v)One example, 5 time steps**
+**(v) One example, 5 time steps**
 
 ~~~
 t1: 0.1 0.2 0.3 0.4 0.5
 ~~~
 
 
->> Here you  can check our freedom, to declare the time seria as we like.
+## Here you  can check our freedom, to declare the time seria as we like.
+
 
 Similar, there are no constraint to define what is the input and what is the output.
 Input variables are also called features. Or input features.
@@ -87,8 +86,7 @@ Notice how we can based on the sequence (v)`t1: 0.1 0.2 0.3 0.4 0.5` define the:
 
 Hopefully this provides some clue that the freedom is on your end, and that you can interpret the sequence (time series) as you like.
 
----
-
+--
 Let me try to provide some feedback on the terminology:
 
 The sequence would be a sequence of some values, based on the original time series. But generally, it may be applied to any data we can sort.
