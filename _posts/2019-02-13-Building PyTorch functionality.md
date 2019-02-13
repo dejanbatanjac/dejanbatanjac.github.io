@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-PyTorch is extensible framework. We see that because many new grow on PyTorch.
+PyTorch is extensible framework. We see that because many new things grow on PyTorch.
 
 For instance, and probable the most obvious one: [Fast.ai](https://github.com/fastai/fastai), took PyTorch as a foundation.
 
