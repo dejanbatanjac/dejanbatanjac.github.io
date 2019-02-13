@@ -27,7 +27,53 @@ All modules live under `torch.nn` such as: `torch.nn.Conv2d`, `torch.nn.Linear` 
 Functions are another way to create new things in PyTorch. We have several types of functions:
 * common mathematical functions are implemented under `torch` such as `torch.log` or `torch.sum`
 * neural network related functions under `torch.nn.functional`
-* autograd operators under `torch.autograd.Function` imlementing the forward and backward functions. 
+* autograd operators under `torch.autograd.Function` imlementing the forward and backward functions.
+
+The last kind of functions mentioned (autograd) allow us to customize PyTorch, introducing the new autograd functionality. Here is the example creating the Fft autograd:
+~~~
+class MyReLU(torch.autograd.Function):
+  def forward(ctx, x):
+    ctx.save_for_backward(x)
+    return x.clamp(min=0)
+
+  def backward(ctx, grad_output):
+    x, = ctx.saved_tensors
+    grad_x = grad_output.clone()
+    grad_x[x < 0] = 0
+    return grad_x
+~~~
+
+Note how we defined both `forward()` and `backward()` functions being part of the MyReLU class inherited from `torch.autograd.Function`.
+
+--
+## nn package, and what is a module?
+
+We mantioned previously the `torch.nn` package in PyTorch. The `nn` package defines a set of Modules, which are roughly equivalent to neural network layers. 
+
+A Module is a unit that receives **input tensors** and computes **output tensors**.
+
+Module also may hold ld internal state which are tensors containing learnable parameters.
+
+In PyTorch the `nn` defines a set of useful loss functions that are commonly used when training neural networks. The Mean Squared Error (MSE) as probable the most used/common loss function.
+
+Check [here](https://pytorch.org/docs/stable/_modules/torch/nn/modules/loss.html) all the loss functions available. Every new PyTorch version some new loss function my be added.
+
+Note: By definition every loss functon is also a module in PyTorch.
+
+## Optimizers
+
+If you don't plan to manually set the tensor operations, and update the weights in your PyTorch model, you need simple optimization algorithms or **optimizers** such as:
+* AdaGrad 
+* RMSProp 
+* Adam 
+* SGD ...
+
+The `torch.optim` package in PyTorch abstracts the idea of an optimization algorithm.
+torch.optim is a package implementing various optimization algorithms. Most commonly used methods are already supported, and the interface is general enough, so that more sophisticated ones can be also easily integrated in the future.
+
+
+
+
 
 
 
