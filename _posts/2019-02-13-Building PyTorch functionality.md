@@ -5,13 +5,13 @@ PyTorch is an extensible framework. We see that because many new things grow on 
 
 For instance, and probable the most obvious one: [Fast.ai](https://github.com/fastai/fastai), took PyTorch as a foundation.
 
-What kind of new functionality we can build:
+What kind of new functionality we can build in PyTorch:
 * New modules
 * New functions
 
 I will provide some vanilla `nn.Module` first:
 ~~~
-class Lambda(nn.Module):
+class Vanilla(nn.Module):
     def __init__(self, f): super().__init__(); self.f=f
     def forward(self, x): return self.f(x)
 ~~~
@@ -31,19 +31,15 @@ Functions are another way to create new things in PyTorch. We have several types
 
 The last kind of functions mentioned (autograd) allow us to customize PyTorch, introducing the new autograd functionality. Here is the example creating the new autograd:
 ~~~
-class MyReLU(torch.autograd.Function):
-  def forward(ctx, x):
-    ctx.save_for_backward(x)
-    return x.clamp(min=0)
+class VanillaAG(torch.autograd.Function):
+  def forward(...):    
+    return tensor
 
-  def backward(ctx, grad_output):
-    x, = ctx.saved_tensors
-    grad_x = grad_output.clone()
-    grad_x[x < 0] = 0
-    return grad_x
+  def backward(...):    
+    return gradient
 ~~~
 
-Note how we defined both `forward()` and `backward()` functions being part of the MyReLU class inherited from `torch.autograd.Function`.
+Note how we defined both `forward()` and `backward()` functions being part of the VanillaAG class inherited from `torch.autograd.Function`.
 
 --
 ## nn package, and what is a module?
@@ -71,5 +67,3 @@ If you don't plan to manually set the tensor operations, and update the weights 
 The `torch.optim` package in PyTorch abstracts the idea of an optimization algorithm.
 
 Most commonly optim methods are already there but you may add the custom optim algorithms.
-
-
