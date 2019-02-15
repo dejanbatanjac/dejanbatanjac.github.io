@@ -41,6 +41,11 @@ class VanillaAG(torch.autograd.Function):
 
 Note how we defined both `forward()` and `backward()` functions being part of the VanillaAG class inherited from `torch.autograd.Function`.
 
+Each autograd operator is really two functions that operate on Tensors. The `forward()` function computes output Tensors from input Tensors. 
+
+The `backward()` function receives the gradient of the output Tensors with respect to some scalar value, and computes the gradient of the input Tensors with respect to that same scalar value.
+
+
 --
 ## nn package, and what is a module?
 
