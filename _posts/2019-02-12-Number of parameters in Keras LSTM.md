@@ -20,7 +20,7 @@ from keras.layers import LSTM
 
 np.random.seed(0) 
 
-SLENG = 20 # sequence lenght
+SLENG = 20 # sequence length
 # numpy array
 seq = np.arange(0, SLENG*SLENG, SLENG)
 print(seq)
@@ -114,5 +114,3 @@ Similarly there will be 80 `b` parameters in LSTM layer.
 The number of `U` parameters is different. While `W` is same for all LSMT cells (W is connected with the input `X`, `U` is separate for each cell). 
 
 The number of `U` parameters would be 4* 20* 20 = 1600, because each LSTM cell has unique 4 * 20 parameters based on input shape.
-
-
