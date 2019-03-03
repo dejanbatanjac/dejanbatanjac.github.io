@@ -35,15 +35,10 @@ One of the most common used loss function is the Euclid distance loss:
 
 `loss_fn = torch.nn.MSELoss()`
 
-Once we found the `loss` we exete the `loss.backward()`. This is an automatic gradient calculation phase. PyTorch has the automatic gradient calculus right out of the box. 
+Once we found the `loss` we execute the `loss.backward()`. The `loss.backward()` will calculate the gradients automatically. Gradients are needed in the next phase, when we use the `optimizer.step()` function to improve our model parameters.
 
-The `loss.backward()` will calculate the gradients. Gradients are needed in the next phase, when using the `optimizer.step()` function we fine tune our model parameters.
+We can get all our model parameters via: `model.parameters()` method. Once we update model parameters, we repeat the forward phase again.
 
-Just to add, we can anytime get all our model parameters as : `model.parameters()` method.
-Once we updated the parameters, we repeat the forward phase again.
-
-We used the `torch.nn.Lineear()` layer in our example, which assumes the linear transformation of our input. Usually some non-linear transformation follows the `Linear` PyTorch layer since we know neural networks learn best when we apply non-linear function to the input.
+In our example we used the `torch.nn.Lineear()` layer, to transformation of our input in linear way (matrix multiplication - using the @ operator). Usually some non-linear transformation follows the `Linear` PyTorch layer since we know neural networks learn best when we apply non-linear function to the input.
 
 Note: Each PyTorch forward phase creates the calculation graph; thanks to that graph we compute the gradients...
-
-
