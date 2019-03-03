@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-In here, we have a PyTorch short training model doodle:
+In here, we have a PyTorch short training model:
 
 ![train](https://raw.githubusercontent.com/dejanbatanjac/dejanbatanjac.github.io/master/images/train.png)
 
@@ -11,7 +11,7 @@ We can write this more formal:
 `y_hat = model(X)`
 
 Read: Compute predicted `y_hat` by passing X to the model.
-We define a model for instance:
+We define our model, for instance:
 
 ~~~
 model = torch.nn.Sequential(
@@ -30,15 +30,15 @@ We use that prediction to create the `loss`, using the `loss_fn` (the loss funct
 
 `loss = loss_fn(y_hat, y)`
 
-Sum of all loss values we call the error but we may also say the loss again.
+Sum of all loss values is the error, but we may also say total loss.
 One of the most common used loss function is the Euclid distance loss:
 
 `loss_fn = torch.nn.MSELoss()`
 
-Once we found the `loss` we execute the `loss.backward()`. The `loss.backward()` will calculate the gradients automatically. Gradients are needed in the next phase, when we use the `optimizer.step()` function to improve our model parameters.
+Once we calculate the `loss` we call `loss.backward()`. The `loss.backward()` will calculate the gradients automatically. Gradients are needed in the next phase, when we use the `optimizer.step()` function to improve our model parameters.
 
 We can get all our model parameters via: `model.parameters()` method. Once we update model parameters, we repeat the forward phase again.
 
-In our example we used the `torch.nn.Lineear()` layer, to transformation of our input in linear way (matrix multiplication - using the @ operator). Usually some non-linear transformation follows the `Linear` PyTorch layer since we know neural networks learn best when we apply non-linear function to the input.
+In our example we used the `torch.nn.Linear()` layer, to transformation the input in linear way (matrix multiplication). A non-linear transformation follows the `Linear` layer since this is know neural networks can best learn.
 
-Note: Each PyTorch forward phase creates the calculation graph; thanks to that graph we compute the gradients...
+Note that each PyTorch forward phase creates the calculation graph; thanks to that graph we compute the gradients...
