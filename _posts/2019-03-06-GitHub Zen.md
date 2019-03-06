@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 This little program will output what GitHub code zen rules:
 
@@ -55,9 +55,3 @@ Just essential features at the very start.
 ## It's not fully shipped until it's fast.
 Setup must be easy as 1-2-3.
 If it's not you are not done.
-
-
-
-
-
-
