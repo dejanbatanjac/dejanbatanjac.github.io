@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-This little program will output what GitHub code zen rules:
+This little program will output random GitHub zen rules:
 
 ~~~
 import requests
@@ -19,16 +19,15 @@ zen()
 I will try to comment on some.
 
 ## Practicality beats purity
-Follow the rules of being practical.
-If this means you forget about linter, or best practices, please do.
-Also don't even try to write perfect code from once. Commit early.
+If this means you forget about linter, please do.
+Being practical, means to sacrifice purity.
+No one asks for perfect code in first commit.
 
 ## Speak like a human.
 Explain your code, so that other humans can understand.
 Including you after 2 months.
 
 ## Keep it logically awesome.
-It doesn't say you need to create perfect code.
 You just need to have clear idea what you do.
 
 ## Avoid administrative distraction.
