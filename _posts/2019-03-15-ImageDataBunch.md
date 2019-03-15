@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 Fastai library works with text, tabular data, collaborative filtering (collab) and vision out of the box. 
   
@@ -71,23 +71,3 @@ Path: /root/.fastai/data/oxford-iiit-pet/images
 ...
 None
 ```
-
-
-
-
-
-
-
-
- 
- 
-
-
-
-
-
-
-
-
- 
- 
