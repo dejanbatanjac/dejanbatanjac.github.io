@@ -1,5 +1,7 @@
 ---
 published: true
+layout: post
+title:  "ImageDataBunch"
 ---
 Fastai library works with text, tabular data, collaborative filtering (collab) and vision out of the box. 
   
