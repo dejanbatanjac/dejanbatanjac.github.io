@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 **Create things on GPU**
 Consider these two lines:
