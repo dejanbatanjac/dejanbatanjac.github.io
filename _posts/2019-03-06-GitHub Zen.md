@@ -52,5 +52,4 @@ Write async services.
 Just essential features at the very start. 
 
 ## It's not fully shipped until it's fast.
-Setup must be easy as 1-2-3.
-If it's not you are not done.
+Setup must be easy as 1-2-3. In case of Python it shoudl run from Github (setyp.py)
