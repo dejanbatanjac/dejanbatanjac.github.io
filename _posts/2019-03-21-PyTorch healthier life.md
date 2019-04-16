@@ -89,10 +89,9 @@ Then you can forward on the GPU by doing:
 Note that `model.cuda()` will change the model inplace while `input.cuda()` will not change input inplace and you need to do `input = input.cuda()`.
 
 
-## Replace `outupt.data`
+## Use detach()
 
 Replace `output.data` with `output.detach()` that is the new way to do it.
-
 
 
 ## CUDA_LAUNCH_BLOCKING=1 to have clear stack trace
