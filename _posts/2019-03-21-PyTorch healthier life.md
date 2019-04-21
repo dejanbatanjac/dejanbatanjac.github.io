@@ -71,8 +71,9 @@ This is equivalent as:
 
 ## What's the difference between view() and expand()?
 
-Expand allows you to repeat a tensor along a dimension of size 1.
-View changes the size of the Tensor without changing the number of elements in it.
+Expand allows you to repeat a tensor along a dimension of size 1. For instance if we have a convolution kernel as a tensor `t = torch.tensor([[1., 2. , 1.], [0., 0., 0.], [-1., -2. , -1.]])` and we would like to repeat that tensor allong three image channels we would use `expand` like this: `t.expand(1,3,3,3)`. What `expand` will do, it will pretend that the original tensor `t` is copied three times.
+
+View changes the size of the Tensor without changing the number of elements in it. It actually set the new "view" on the existing data.
 
 
 ## Use model on GPU
