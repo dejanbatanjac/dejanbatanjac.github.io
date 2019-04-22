@@ -17,14 +17,14 @@ There are 5 things important for the batch norm (BN).
 * Apply BN to a single layer
 * BN works on a sinble mini batch data
 * Normalize the output from the layer activations
-* Multiply normalized output by parameter `p1`
-* Add to all of that the parameter `p2`
+* Multiply normalized output by parameter `weight`
+* Add to all of that the parameter `bias`
 
 We can express this as: 
 
-`y_ = n(f(w1, w2, ... wn, x) * p1 + p2`
+`y_ = n(f(w1, w2, ... wn, x) * weight + bias`
 
-Where `n` is the normalization function, `p1`, and `p2` are our scale and offset parameters and f is our function to create the output from the layer, and `y` are the activations.
+Where `n` is the normalization function, `weight`, and `bias` are our scale and offset parameters and f is our function to create the output from the layer, and `y` are the activations.
 
 `y = f(w1, w2, ... wn, x)`
 
@@ -44,3 +44,21 @@ print(output)
 print(output.mean()) # should be 0
 print(output.std()) # should be 1
 ```
+
+If we dig into the code of the PyTorch class `_BatchNorm` we will find we are dealing with parameters `weight` and `bias` we can make learnable if we set `self.affine=True` : 
+```
+if self.affine:
+            self.weight = Parameter(torch.Tensor(num_features))
+            self.bias = Parameter(torch.Tensor(num_features))
+        else:
+            self.register_parameter('weight', None)
+            self.register_parameter('bias', None)
+        if self.track_running_stats:
+            self.register_buffer('running_mean', torch.zeros(num_features))
+            self.register_buffer('running_var', torch.ones(num_features))
+            self.register_buffer('num_batches_tracked', torch.tensor(0, dtype=torch.long))
+        else:
+            self.register_parameter('running_mean', None)
+            self.register_parameter('running_var', None)
+```
+But we can also see there are two more parameters `running_mean` and `running_var` that appears to be the shared for the every mini batch, that we can learn also.
