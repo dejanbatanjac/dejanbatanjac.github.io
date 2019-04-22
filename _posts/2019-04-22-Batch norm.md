@@ -62,4 +62,4 @@ If we dig into the code of the PyTorch class `_BatchNorm` we will find we are de
             self.register_parameter('running_var', None)
 ```
 
-But we can also see there are two more parameters `running_mean` and `running_var` that appears to be the shared for the every mini batch, that we can learn as well.
+But we can also see there are two more parameters `running_mean` and `running_var` that are shared for the every mini batch, that we can learn as well.
