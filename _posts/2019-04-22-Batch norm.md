@@ -3,33 +3,30 @@ published: true
 ---
 Batch normalization is the regularization technique for neural networks presented for the first time in 2015 in this [paper](https://arxiv.org/abs/1502.03167).  
 
-The paper epxlains the regularization effect, explains the improvements and *tries* to provide the clue why it works. 
+The paper explains the regularization effect, explains the improvements and tries to provide the clue why it works.
 
-## Achievement
+# Achievement
 
-Thanks to the batch norm for the first time the ImageNet exceeding the accuracy of human raters, or ML reached the accuracy of image classification over humans.
+Thanks to the batch norm for the first time the ImageNet exceeding the accuracy of human raters, and we stepped the era where machine learning started to classify images better than humans.
+How it works?
 
-
-## How it works?
-
-There are 5 things important for the batch norm (BN). 
+There are five things important for the batch norm (BN):
 
 * Apply BN to a single layer
-* BN works on a sinble mini batch data
+* BN works on a single mini batch data
 * Normalize the output from the layer activations
-* Multiply normalized output by parameter `weight`
-* Add to all of that the parameter `bias`
+* Multiply normalized output by parameter weight
+* Add to all of that the parameter bias
 
-We can express this as: 
+We can express this as:
 
 `y_ = n(f(w1, w2, ... wn, x) * weight + bias`
 
-Where `n` is the normalization function, `weight`, and `bias` are our scale and offset parameters and f is our function to create the output from the layer, and `y` are the activations.
+Where n is the normalization function, weight, and bias are our scale and offset parameters and f is our function to create the output from the layer, and y are the activations.
 
 `y = f(w1, w2, ... wn, x)`
 
-After the normalization we have the the mean of 0 and standard deviation of 1 for the sinble batch. 
-Here is the example:
+After the normalization we have the the mean of 0 and standard deviation of 1 for the single batch. Here is the example:
 
 ```
 import torch
@@ -45,9 +42,10 @@ print(output.mean()) # should be 0
 print(output.std()) # should be 1
 ```
 
-If we dig into the code of the PyTorch class `_BatchNorm` we will find we are dealing with parameters `weight` and `bias` we can make learnable if we set `self.affine=True` : 
+If we dig into the code of the PyTorch class `_BatchNorm` we will find we are dealing with parameters weight and bias we can make learnable if we set `self.affine=True` :
+
 ```
-if self.affine:
+        if self.affine:
             self.weight = Parameter(torch.Tensor(num_features))
             self.bias = Parameter(torch.Tensor(num_features))
         else:
@@ -61,4 +59,5 @@ if self.affine:
             self.register_parameter('running_mean', None)
             self.register_parameter('running_var', None)
 ```
-But we can also see there are two more parameters `running_mean` and `running_var` that appears to be the shared for the every mini batch, that we can learn also.
+
+But we can also see there are two more parameters running_mean and running_var that appears to be the shared for the every mini batch, that we can learn as well.
