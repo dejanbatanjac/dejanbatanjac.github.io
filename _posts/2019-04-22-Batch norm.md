@@ -3,11 +3,11 @@ published: false
 ---
 Batch normalization is the regularization technique for neural networks presented for the first time in 2015 in this [paper](https://arxiv.org/abs/1502.03167).  
 
-The paper epxlains the regularization effect, explains the improvements and tries to provide the clue why it works. 
+The paper epxlains the regularization effect, explains the improvements and *tries* to provide the clue why it works. 
 
 ## Achievement
 
-Thanks to the batch norm for the first time the ImageNet exceeding the accuracy of human raters, or ML improved the accuracy of image classification over humans.
+Thanks to the batch norm for the first time the ImageNet exceeding the accuracy of human raters, or ML reached the accuracy of image classification over humans.
 
 
 ## How it works?
@@ -28,13 +28,3 @@ Where `n` is the normalization function, `p1`, and `p2` are our scale and offset
 `y = f(w1, w2, ... wn, x)`
 
 ...
-
-
-
-
-
-
-
-
-
-
