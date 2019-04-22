@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 # AlexNet
 
@@ -172,4 +172,3 @@ There is one another architecture that uses BatchNorm2d called inception, but it
 One another but rather older model is VGG. For instance, VGG16. It was very popular at a time but it also had just a few conv2d layers.
 
 Worth to mention DenseNet in here that is basically a slight modification of the ResNet.
-
