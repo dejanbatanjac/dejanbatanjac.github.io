@@ -12,9 +12,10 @@ Thanks to the batch norm for the first time the ImageNet exceeding the accuracy 
 
 ## How it works?
 
-There are 4 three things important for the batch norm. 
+There are 5 things important for the batch norm (BN). 
 
-* Apply BN to a single layer.
+* Apply BN to a single layer
+* BN works on a sinble mini batch data
 * Normalize the output from the layer activations
 * Multiply normalized output by parameter `p1`
 * Add to all of that the parameter `p2`
@@ -27,4 +28,19 @@ Where `n` is the normalization function, `p1`, and `p2` are our scale and offset
 
 `y = f(w1, w2, ... wn, x)`
 
-...
+After the normalization we have the the mean of 0 and standard deviation of 1 for the sinble batch. 
+Here is the example:
+
+```
+import torch
+import torch.nn as nn
+
+# affine=False means nothing to learn
+m = nn.BatchNorm1d(10, affine=False)
+input = 1000*torch.randn(3, 10)
+print(input)
+output = m(input)
+print(output)
+print(output.mean()) # should be 0
+print(output.std()) # should be 1
+```
