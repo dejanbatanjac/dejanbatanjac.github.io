@@ -22,7 +22,7 @@ There are five things important for the batch norm (BN):
 
 We can express this as:
 
-`y_ = n(f(w1, w2, ... wn, x) * weight + bias`
+`y_ = n(f(w1, w2, ... wn, x)) * weight + bias`
 
 Where `n` is the normalization function, `weight`, and `bias` are our scale and offset parameters, `f` is our function to create the output from the layer, `x` and `y` are the activations.
 
