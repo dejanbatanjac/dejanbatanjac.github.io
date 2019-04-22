@@ -8,7 +8,9 @@ The paper explains the regularization effect, explains the improvements and trie
 # Achievement
 
 Thanks to the batch norm for the first time the ImageNet exceeding the accuracy of human raters, and we stepped the era where machine learning started to classify images better than humans.
-How it works?
+
+
+# How it works?
 
 There are five things important for the batch norm (BN):
 
@@ -22,7 +24,7 @@ We can express this as:
 
 `y_ = n(f(w1, w2, ... wn, x) * weight + bias`
 
-Where n is the normalization function, weight, and bias are our scale and offset parameters and f is our function to create the output from the layer, and y are the activations.
+Where `n` is the normalization function, `weight`, and `bias` are our scale and offset parameters, `f` is our function to create the output from the layer, `x` and `y` are the activations.
 
 `y = f(w1, w2, ... wn, x)`
 
@@ -60,4 +62,4 @@ If we dig into the code of the PyTorch class `_BatchNorm` we will find we are de
             self.register_parameter('running_var', None)
 ```
 
-But we can also see there are two more parameters running_mean and running_var that appears to be the shared for the every mini batch, that we can learn as well.
+But we can also see there are two more parameters `running_mean` and `running_var` that appears to be the shared for the every mini batch, that we can learn as well.
