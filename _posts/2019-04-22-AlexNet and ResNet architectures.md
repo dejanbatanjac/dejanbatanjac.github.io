@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 ---
 # AlexNet
 
@@ -170,6 +170,6 @@ The major secret how we achieved to bring that many layers is called the [Batch 
 
 There is one another architecture that uses BatchNorm2d called inception, but it is memory intensive comparing to ResNet. Inception uses the Dropout layer (not present in ResNet).
 
-One another but rather older model is VGG. For instance, VGG16. It was very popular at a time but it also had just a few conv2d layers.
+One another but rather older model is VGG. For instance, VGG16. It was very popular at a time but it also had just 13 conv2d layers.
 
 Worth to mention DenseNet in here that is basically a slight modification of the ResNet.
