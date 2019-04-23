@@ -59,21 +59,22 @@ tensor([[[49., 16., 41., 35.],
 tensor([[[49., 41.],
          [41., 36.]]])
 ```
-Note how MaxPool2d in this particular case found the max of the 2x2 kernel in the 4x4 tensor.
-Note how we used max pooling because max operation will sharpen the edges. If you of our 4x4 tensor as the image max pooling will in this case reduce the size of the image and sharpen the edges. 
+Note how MaxPool2d in this particular case found the max 2x2 kernel values inside 4x4 tensor.
+Max pooling operation will create new shorter image with sharp edges, (extracted features). 
 
-In opposite the average pooling operation would soften the edges, but usually this is not what we want, as we would like to show our features, edges, shapes, etc.
-
-# How to improve the AlexNet?
+In we would use average pooling that would soften the edges (less invasive features extraction).
 
 If we would increase the number of convolution layers in AlexNet, it would be much harder to train. 
 We needed to improve the architecute in order to bring more convolution layers.
 
 # ResNet
 
-ResNet blew people's mind in 2015. ResNet has many more Conv2d layers and even the simple ResNet18 has 20 Conv2d. The existance of Conv2d layers in carefully planned architectures brings deep the neural network and automatically improves the capabilities.
+ResNet blew people's mind in 2015. ResNet is capable of bringing almost "unlimited" number of conv layers. ResNet18 has 18+2 Conv2d layers, but there are resnet with 34, 50, 101 and even 152 layers. 
 
-Here is the ResNet architecture:
+The more Conv2d layers improves the CNN capacity and learning abilities.
+
+
+Here is the ResNet18 architecture:
 ```
 ResNet(
   (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
@@ -161,13 +162,13 @@ ResNet(
 )
 ```
 
-Note that almost all layers will have the kernel_size=(3, 3) and just at the very top we have a bigger kernel_size=(7x7) once, with one exception of kernel_size=(1, 1).
-The major secret how we achieved to bring into that many layers is called the [Batch norm](https://dejanbatanjac.github.io/2019/04/22/Batch-norm.html).
+Note that 18 layers have the kernel_size=(3, 3) and just at the very top we have a bigger kernel_size=(7x7) once, and at the botom we have one kernel of size (1, 1).
+The major secret how we achieved to bring that many layers is called the [Batch norm](https://dejanbatanjac.github.io/2019/04/22/Batch-norm.html).
 
 
 # Other respectable CNN mentions
 
-There is one another architecture that uses BatchNorm2d called inception, but it is memory more intensive comparing to ResNet. Inception uses the Dropout layer (not present in ResNet).
+There is one another architecture that uses BatchNorm2d called inception, but it is memory intensive comparing to ResNet. Inception uses the Dropout layer (not present in ResNet).
 
 One another but rather older model is VGG. For instance, VGG16. It was very popular at a time but it also had just a few conv2d layers.
 
