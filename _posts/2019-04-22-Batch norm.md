@@ -7,7 +7,7 @@ The paper explains the regularization effect, explains the improvements and trie
 
 # Achievement
 
-Thanks to the batch norm for the first time the ImageNet exceeding the accuracy of human raters, and we stepped the era where machine learning started to classify images better than humans.
+Thanks to the batch norm for the first time the ImageNet exceeded the accuracy of human raters, and stepped the era where machine learning started to classify images better than humans (for the particular classification task).
 
 
 # How it works?
@@ -66,8 +66,3 @@ But we can also see there are two more parameters `running_mean` and `running_va
 These running mean and running variance, are statisitcal methods calcualting the [moving average](https://en.wikipedia.org/wiki/Moving_average). What they essentially do you can spot from the image.
 
 <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MovingAverage.GIF/220px-MovingAverage.GIF" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MovingAverage.GIF/330px-MovingAverage.GIF 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MovingAverage.GIF/440px-MovingAverage.GIF 2x" data-file-width="749" data-file-height="549" width="220" height="161">
-
-
-
-
-
