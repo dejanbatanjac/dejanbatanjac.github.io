@@ -12,7 +12,7 @@ Thanks to the batch norm for the first time the ImageNet exceeded the accuracy o
 
 # How it works?
 
-There are five things important for the batch norm (BN):
+There are few things important for the batch norm (BN):
 
 * Apply BN to a single layer for every mini batch
 * Normalize the output from the layer activations
