@@ -89,9 +89,9 @@ a = torch.range(1, 12)
 a = a.view(3, 4)        # reshapes in 3 columns x 4 rows
 ~~~
 
-Note you can use PyTorch `reshape()` method also but PyTorch uses `view()` method would return you the copy if possible.
+Note you can use PyTorch `reshape()` method as well that will create the tensor copy if needed.
 
-As we know, if we spec. the dimension `-1` this will "vectorize" the tensor.
+As we know, if we spec. the dimension `-1` means dynamic dimension. In the next example this means all elements of tensor `a`, and that will make `torch.Size([12])`.
 
     a.view(-1)
     
