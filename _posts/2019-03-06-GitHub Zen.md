@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-This little program will output random GitHub zen rules:
+This little program will output random GitHub zen rules (in fact these are the zen rules of Python) `import this`:
 
 ~~~
 import requests
