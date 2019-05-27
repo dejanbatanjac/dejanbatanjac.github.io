@@ -1,14 +1,14 @@
 ---
 published: true
 ---
-As you may assume in PyTorch images we use should be prepared for learning. This is the image normalization process at the very essence. There are of course the other things we can do but our focus is on normalization.
+As you may assume in PyTorch images we use should be prepared for learning. This part is called image normalization.
 
-In case we used PIL `Image` class and converted from PIL Image to PyTorch Tensor.
+In case we use PIL Image class to convert the image to PyTorch Tensor we will need:
 
     from PIL import Image
     from torchvision.transforms import ToTensor
     
-Our Tensor images will look like this:
+Our Tensor images will look like this after the conversion:
 
     tensor([[[0.1725, 0.2353, 0.2941,  ..., 1.0000, 1.0000, 0.9843],
              [0.1804, 0.2314, 0.2824,  ..., 1.0000, 1.0000, 0.9843],
@@ -33,7 +33,7 @@ Let we use the following PyTorch normalization function:
 What we provide is a Tensor image `x` and `mean` and `std` values for the image set we are working in.
 This means that we evaluated in advance the mean and std for all the images in the set.
 
-Following are some well known `mean` and `std` list tupples for RGB channels: 
+Following are some well known `mean` and `std` list tupples (RGB) for different image sets: 
 
     cifar_stats = ([0.491, 0.482, 0.447], [0.247, 0.243, 0.261])
     imagenet_stats = ([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
@@ -54,15 +54,13 @@ This will output like this:
 
     tensor([1., 2., 3.])
     tensor([[[1.]],
-
             [[2.]],
-
             [[3.]]])
 
 Note how we subtract `x - mean[..., None, None]` for specific RGB channel, and also how we do RGB channel division `std[..., None, None]` after that.
 
-At the end, we will get the result like this setting our data around 0.
+At the end, we will get the result like this where our data pixel values will be around 0.
 
 ...![]({{site.baseurl}}/images/normalization2.png)
 
-You may note that before we had our tensor values between [0., 1.], and now we have positive and negative values around 0, ideal for machine learning.
+You may note that before we had our pixel values inside [0., 1.] range, and now we have positive and negative values around 0, ideal for machine learning.
