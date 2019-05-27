@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 As you may assume PyTorch has a normalization function you can use to normalize the images.
 In case we used PIL module, `Image` class and conversion from PIL Image to PyTorch Tensor.
@@ -62,5 +62,3 @@ Note how we subtract `x - mean[..., None, None]` for specific RGB channel, and a
 At the end, we will get the result like this setting our data around 0.
 
 ...![]({{site.baseurl}}/images/normalization2.png)
-
-
