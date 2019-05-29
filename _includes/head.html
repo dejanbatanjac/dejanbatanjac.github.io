@@ -10,12 +10,14 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   
-  <script> const mathBlocks = document.querySelectorAll('script[type^="math/tex"]');
-Array.from(mathBlocks).forEach((el) => {
-  const tex = el.textContent.replace("% <![CDATA[", "").replace("%]]>", "");
-  el.outerHTML = window.katex.renderToString(tex, {
-    displayMode: el.type === "math/tex; mode=display",
-  });
-});</script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
   
 </head>
