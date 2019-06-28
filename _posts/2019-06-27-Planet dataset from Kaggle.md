@@ -17,7 +17,7 @@ src = (ImageList.from_csv(path, 'train_v2.csv', folder='train-jpg', suffix='.jpg
 ```
 
 
-My guess was that loss should not be inside `ImageList` class but inside some class, probable set with: 
+My guess was that loss should not be inside `ImageList` class but inside some other class, probable set with: 
 
 `self.crit` or `self.loss` or `self.loss_fn`
 
