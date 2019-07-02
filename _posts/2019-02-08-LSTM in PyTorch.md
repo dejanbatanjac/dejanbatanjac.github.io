@@ -5,7 +5,7 @@ Here is the model of LSTM cell with the following notation:
 
 * LM ( long memory, same as c = captivated state )
 * SM ( short memory, same as h = hidden state )
-* Remmember gate ( same as forget gate )
+* Remember gate ( same as forget gate )
 * Save gate ( or input gate)
 * Focus gate ( or output gate )
 * LM' ( new state, that may or may not replace the LM state )
