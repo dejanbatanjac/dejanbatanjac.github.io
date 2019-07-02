@@ -3,11 +3,11 @@ published: true
 layout: post
 title: Impact of Weight Decay
 ---
-I am using in here the Logistic Regression neural network. This is a single linear layer (nn.Linear in PyTorch).
+I am using in here the Logistic Regression neural network. This is a single linear layer (`nn.Linear` in PyTorch).
 
-<sub>That would be Dense layer in TensorFlow.</sub>
+<sub>That would be `Dense` layer in TensorFlow.</sub>
 
-This neural network doesn't even have a single activation function (F.relu or similar)
+This neural network doesn't even have a single activation function (`F.relu` or similar)
 
 The main reason to analyse LR is because it is simple, and can allow us to examine batch loss and impact of Weight Decay on BL.
 
