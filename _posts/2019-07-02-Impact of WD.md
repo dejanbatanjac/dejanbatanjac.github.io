@@ -24,11 +24,11 @@ The main reason to analyse Logistic Regression is because it is simple.
 
 The simplicity of this model can help us to examine batch loss and impact of Weight Decay on bach loss.
 
-I created the following [example](https://github.com/dejanbatanjac/pytorch-learning-101/blob/master/WD.ipynb) using the MNIST dataset in PyTorch.
+Here is the [example](https://github.com/dejanbatanjac/pytorch-learning-101/blob/master/WD.ipynb) using the MNIST dataset in PyTorch.
 
-The model implements custom weight decay, as well uses SGD weight decay and Adam weight decay.
+The model implements custom weight decay, but also uses SGD weight decay and Adam weight decay.
 
-The example has a `probe` function allowing us to test different hyperparameters on the same LR model.
+The example has a `probe` function allowing us to test different hyperparameters on the same model.
 
 ```
 def probe(model, criterion, optimizer, bs, epochs, lr, wd_factor, color):
@@ -48,7 +48,7 @@ As you noted we provide:
 
 ## The impact of the learning rate
 
-First I examined the learning rate to find the one I should use:
+First I examined the learning rate to find the one I should use with SGD:
 
 ```
 criterion = nn.CrossEntropyLoss()
@@ -95,11 +95,11 @@ Validation loss: 0.9654966373986835
 
 From the Leslie Smith [paper](https://arxiv.org/pdf/1803.09820.pdf) I found that `wd=4e-3` is often used so I selected that.
 
-The basic assumption was that the weight decay can lower the oscillations of the batch loss especially present in the previous image, red learning rate. 
+The basic assumption was that the weight decay can lower the oscillations of the batch loss especially present in the previous image (red learning rate). 
 
 I first tried to understand the impact of `weight_decay` on SGD.
 
-The left hand side shows the SGD with no WD, and the right side shows different WDs:
+The left hand side shows the SGD with no WD (black), and the right side shows different SGD WDs:
 
 ![LSTM](/images/lreg2.png)
 
