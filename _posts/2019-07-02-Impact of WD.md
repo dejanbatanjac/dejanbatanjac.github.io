@@ -187,6 +187,8 @@ The higher $\lambda$ the steeper the gradient of $\mathcal{L}$, which in the cas
 
 Is why in this [paper](https://arxiv.org/pdf/1802.07042.pdf) there are some studies that WD may even not be needed, especially when there are some other techniques to regularize the model.
 
+<sub>Note: Weight Decay and L2 regularization are almost identical when the implementation is in question, the difference may be just a single factor of 2.</sub>
+
 Resources:
 [1](https://arxiv.org/pdf/1803.09820.pdf)
 [2](https://arxiv.org/pdf/1802.07042.pdf), 
