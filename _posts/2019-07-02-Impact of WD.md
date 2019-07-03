@@ -161,16 +161,15 @@ At the same time there is a single WD value that really suppressed the oscillati
 
 Some low WD values do not have any impact, and some big WD values do hurt the loss decreasing.
 
-This all leads to the idea there is an ideal WD value for the specific optimizer.
+This all leads to the idea there is ideal WD value for the other specific optimizer setting including the lr.
 
-<sub>Optimizer also means we set the lr right</sub>
+### Great for penalizing the big weights.
 
+When the weight decay coefficient is big, the penalty for the big weights is also big, when it is small there is no such penalty.
 
-What some other people noted weight decay will penalizes big weights.
+### Can hurt the performance at some point.
 
-When the weight decay coefficient is big, the penalty for big weights is also big, when it is small weights still may grow.
-
-However, WD will hurt performance of your neural network at some point. 
+Weight Decay can hurt performance of your neural network at some point. 
 
 Let the prediction loss of your net is $\mathcal{L}$ and the weight decay loss $\mathcal{R}$. 
 
@@ -182,7 +181,11 @@ At the optimium of this loss, the gradients of both terms will have to sum up to
 
 $$ \triangledown \mathcal{L} = -\lambda \triangledown \mathcal{R}. $$
 
-This makes clear that we will not be at an optimium of the training loss. Even more so, the higher $\lambda$ the steeper the gradient of $\mathcal{L}$, which in the case of convex loss functions implies a higher distance from the optimum.
+This makes clear that we will not be at an optimium of the training loss. 
+
+The higher $\lambda$ the steeper the gradient of $\mathcal{L}$, which in the case of convex loss functions implies a higher distance from the optimum.
+
+Is why in this [paper](https://arxiv.org/pdf/1802.07042.pdf) there are some studies that WD may even not be needed, especially when there are some other techniques to regularize the model.
 
 Resources:
 [1](https://arxiv.org/pdf/1803.09820.pdf)
