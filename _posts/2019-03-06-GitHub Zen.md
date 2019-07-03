@@ -45,11 +45,11 @@ Still, it's good to be simple.
 ### Design for failure.
 Write `try` blocks and exceptions.
 
-## Non-blocking is better than blocking.
+### Non-blocking is better than blocking.
 Write async services.
 
-## Favor focus over features.
+### Favor focus over features.
 Just essential features at the very start. 
 
-## It's not fully shipped until it's fast.
+### It's not fully shipped until it's fast.
 Setup must be easy as 1-2-3. In case of Python it should run from Github (setyp.py)
