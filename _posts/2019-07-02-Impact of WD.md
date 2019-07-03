@@ -28,62 +28,27 @@ I created the following [example](https://github.com/dejanbatanjac/pytorch-learn
 
 The model implements custom weight decay, as well uses SGD weight decay and Adam weight decay.
 
-The example has a `probe` function allows me to test different hyperparameters on the same LR model.
+The example has a `probe` function allowing us to test different hyperparameters on the same LR model.
 
 ```
 def probe(model, criterion, optimizer, bs, epochs, lr, wd_factor, color):
-    
-    losses=[]
-    for epoch in range(0,epochs):
-        train_loss = 0
-        valid_loss = 0    
-        print(f"Epoch {epoch}")
-
-        model.train()
-        for i, (data,target) in enumerate(loaders['train']):                
-            optimizer.zero_grad()
-            output = model(data)
-            wd = 0.
-            for p in model.parameters(): 
-                wd += (p**2).sum()
-
-            loss = criterion(output, target)+wd*wd_factor 
-            train_loss += loss.item()
-            loss.backward()            
-            optimizer.step()
-            if (i%1==0):
-                #print(f"Batch {i}, loss {loss.item()}")
-                losses.append(loss.item())
-
-        model.eval()
-        for i, (data,target) in enumerate(loaders['valid']):                
-            output = model(data)
-            loss = criterion(output,target)
-            valid_loss += loss.item()        
-
-        train_loss = train_loss/len(loaders['train'])
-        valid_loss = valid_loss/len(loaders['valid'])        
-
-
-        print(f"Train loss: {train_loss}")
-        print(f"Validation loss: {valid_loss}")        
-        print("wd_factor", wd_factor)
-        plt.plot(losses, color)
-
 ```
+As you noted we provide:
 
-The optimizers are used like this:
+* the model (our LR model)
+* the criterion function which is always `nn.CrossEntropyLoss()` for our MNIST example, 
+* the optimizer, in fact I tested with both SGD, and Adam, but any optimizer can be used.
+* the bach size, in here this is set to 64, 
+* the number of epochs, in here I examined a single epoch only,
+* the learning rate (it depends if we will use the momentum or no),
+* our custom weight decay factor `wd_factor` or 0 if we don't plan to use custom WD
+* and the color
 
-```
-optimizer = torch.optim.Adam(model.parameters(), lr=0.1, weight_decay=4e-3)
-optimizer = torch.optim.SGD(model.parameters(), lr=0.1, weight_decay=4e-3, momentum=.9, nesterov=True)
-```
 
-Our criterion will be `nn.CrossEntropyLoss()`.
 
-## Impact of the learning rate
+## The impact of the learning rate
 
-First I examined the learning rate I should use:
+First I examined the learning rate to find the one I should use:
 
 ```
 criterion = nn.CrossEntropyLoss()
@@ -112,7 +77,7 @@ probe(model, criterion, optimizer, bs, epochs, lr, wd_factor, "b") #blue
 
 This image represents a single epoch. Note how the biggest learning rate (red) decreases the batch loss really fast, but oscillates stronger, comparing to the blue.
 
-At the end the cumulative epoch loss will be lower for the red so I decided to use `lr=1e-1`
+At the end the cumulative epoch loss will be lower for the red so I decided to use `lr=1e-1` (red learning rate)
 
 ```
 Epoch 0 #red
@@ -128,17 +93,17 @@ Validation loss: 0.9654966373986835
 
 ## Using Weight Decay 4e-3
 
-From the [document](https://arxiv.org/pdf/1803.09820.pdf) I found that `wd=4e-3` is often used so I selected that.
+From the Leslie Smith [paper](https://arxiv.org/pdf/1803.09820.pdf) I found that `wd=4e-3` is often used so I selected that.
 
-The basic assumption what weight decay can do is it can fix the oscillations of the batch loss especially present in the previous image, red learning rate. 
+The basic assumption was that the weight decay can lower the oscillations of the batch loss especially present in the previous image, red learning rate. 
 
 I first tried to understand the impact of `weight_decay` on SGD.
-The left side shows the SGD with no WD, and the right side shows WD `4e-4`. 
+
+The left hand side shows the SGD with no WD, and the right side shows different WDs:
 
 ![LSTM](/images/lreg2.png)
 
 ![LSTM](/images/lreg3.png)
-
 
 The next image compares no WD with `4e-2` WD.
 
@@ -147,7 +112,7 @@ The next image compares no WD with `4e-2` WD.
 This really make some change. The oscillations are reduced, but the loss increased a bit.
 
 
-The very next image shows no WD vs. `4e-1` WD. We are kind a increasing the loss overall, and it the oscillations are reduced.
+The very next image shows no WD vs. `4e-1` WD. We are kind a increasing the loss overall, and the oscillations are reduced.
 
 ![LSTM](/images/lreg5.png)
 
@@ -159,14 +124,14 @@ for p in model.parameters():
     wd += (p**2).sum()
 loss = criterion(output, target)+wd*wd_factor 
 ```
-In blue are different WD values. We are on a single epoch with with SGD, and the `1e-1`:
+In blue are different WD values. We are on a single epoch with with SGD, and WD `1e-1`:
 
 ![LSTM](/images/lreg6.png)
 ![LSTM](/images/lreg7.png)
 ![LSTM](/images/lreg8.png)
 ![LSTM](/images/lreg9.png)
 
-As we can see the oscillations are best suppressed for `wd=4e-2`, and again at this `wd` the loss will increase just a bit. 
+As we can see the oscillations are best suppressed for `wd=4e-2`.
 
 
 For the next three images we used the Nestorov momentum. However, we needed to decrease the learning rate to `1e-3` this time.
@@ -190,11 +155,22 @@ WD `4e-1` seams to decrease the batch loss oscillations.
 
 ## Conclusion
 
-Weight Decay is a regularization term that penalizes big weights.
+For every optimizer there is a learning rate that works well for the first epoch. 
+
+At the same time there is a single WD value that really suppressed the oscillations.
+
+Some low WD values do not have any impact, and some big WD values do hurt the loss decreasing.
+
+This all leads to the idea there is an ideal WD value for the specific optimizer.
+
+<sub>Optimizer also means we set the lr right</sub>
+
+
+What some other people noted weight decay will penalizes big weights.
 
 When the weight decay coefficient is big, the penalty for big weights is also big, when it is small weights still may grow.
 
-But it is not surprising that WD will hurt performance of your neural network at some point. 
+However, WD will hurt performance of your neural network at some point. 
 
 Let the prediction loss of your net is $\mathcal{L}$ and the weight decay loss $\mathcal{R}$. 
 
