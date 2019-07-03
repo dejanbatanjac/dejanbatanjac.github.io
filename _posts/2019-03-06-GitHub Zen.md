@@ -18,32 +18,32 @@ zen()
 
 I will try to comment on some.
 
-## Practicality beats purity
+### Practicality beats purity
 If this means you forget about linter, please do.
 Being practical, means to sacrifice purity.
 No one asks for perfect code in first commit.
 
-## Speak like a human.
+### Speak like a human.
 Explain your code, so that other humans can understand.
 Including you after 2 months.
 
-## Keep it logically awesome.
+### Keep it logically awesome.
 You just need to have clear idea what you do.
 
-## Avoid administrative distraction.
+### Avoid administrative distraction.
 Don't let anyone stop you from coding.
 
-## Half measures are as bad as nothing at all.
+### Half measures are as bad as nothing at all.
 Just keep in mind, you are not finished until you tested everything you can think of.
 
-## Responsive is better than fast.
+### Responsive is better than fast.
 Create programs that can talk.
 
-## Approachable is better than simple.
+### Approachable is better than simple.
 Still, it's good to be simple.
 
-## Design for failure.
-Write `try` blocks.
+### Design for failure.
+Write `try` blocks and exceptions.
 
 ## Non-blocking is better than blocking.
 Write async services.
@@ -52,4 +52,4 @@ Write async services.
 Just essential features at the very start. 
 
 ## It's not fully shipped until it's fast.
-Setup must be easy as 1-2-3. In case of Python it shoudl run from Github (setyp.py)
+Setup must be easy as 1-2-3. In case of Python it should run from Github (setyp.py)
