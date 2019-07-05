@@ -173,15 +173,15 @@ Weight Decay can hurt performance of your neural network at some point.
 
 Let the prediction loss of your net is $\mathcal{L}$ and the weight decay loss $\mathcal{R}$. 
 
-Given a coefficient $\lambda$ that establishes a tradeoff between the two, one optimises 
+Given a coefficient $\lambda$ that establishes a tradeoff between the two.
 
 $$\mathcal{L} + \lambda \mathcal{R}.$$
 
-At the optimium of this loss, the gradients of both terms will have to sum up to zero:
+At the optimum of this loss, the gradients of both terms will have to sum up to zero:
 
 $$ \triangledown \mathcal{L} = -\lambda \triangledown \mathcal{R}. $$
 
-This makes clear that we will not be at an optimium of the training loss. 
+This makes clear that we will not be at an optimum of the training loss. 
 
 The higher $\lambda$ the steeper the gradient of $\mathcal{L}$, which in the case of convex loss functions implies a higher distance from the optimum.
 
