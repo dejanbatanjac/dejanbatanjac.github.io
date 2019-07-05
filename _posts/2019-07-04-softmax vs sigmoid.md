@@ -36,7 +36,7 @@ Just by peaking the `max` value after the softmax we get out prediction. It is t
 
 Things are different for the `sigmoid` function. This function can provide us with the top $n$ results based on the threshold.
 
-If the threshold is e.g. `3` from the image you can find three results greater than that number. We use the following formula to evaluate the `sigmoid` function.
+If the threshold is e.g. `3` from the image you can find two results greater than that number. We use the following formula to evaluate the `sigmoid` function.
 
 $$ sigmoid( x ) =  { e^{x} \over 1+ e^{x} } $$
 
