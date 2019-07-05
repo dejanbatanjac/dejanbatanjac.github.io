@@ -28,7 +28,7 @@ The `softmax` funciton:
 
 $$ \sigma1( x_i ) =  {     e^{x_i} \over \sum_{j=1}^k { e^{x_j} } } $$
 
-Can be literally expressed as take the exponent value and divide it by the sum of all other exponents (~`246` in our case). This will make one important feature of `softmax`, that the sum off all softmax values will add to 1.
+Can be literally expressed as take the exponent value and divide it by the sum of all other exponents (~`34` in the image). This will make one important feature of `softmax`, that the sum off all softmax values will add to 1.
 
 Just by peaking the `max` value after the softmax we get out prediction. It is that easy, or the index of the prediction.
 
