@@ -73,7 +73,7 @@ optimizer = torch.optim.SGD(model.parameters(), lr=lr)
 probe(model, criterion, optimizer, bs, epochs, lr, wd_factor, "b") #blue
 ```
 
-![LSTM](/images/lreg1.png)
+![IMG](/images/lreg1.png)
 
 This image represents a single epoch. Note how the biggest learning rate (red) decreases the batch loss really fast, but oscillates stronger, comparing to the blue.
 
@@ -101,20 +101,20 @@ I first tried to understand the impact of `weight_decay` on SGD.
 
 The left hand side shows the SGD with no WD (black), and the right side shows different SGD WDs:
 
-![LSTM](/images/lreg2.png)
+![IMG](/images/lreg2.png)
 
-![LSTM](/images/lreg3.png)
+![IMG](/images/lreg3.png)
 
 The next image compares no WD with `4e-2` WD.
 
-![LSTM](/images/lreg4.png)
+![IMG](/images/lreg4.png)
 
 This really make some change. The oscillations are reduced, but the loss increased a bit.
 
 
 The very next image shows no WD vs. `4e-1` WD. We are kind a increasing the loss overall, and the oscillations are reduced.
 
-![LSTM](/images/lreg5.png)
+![IMG](/images/lreg5.png)
 
 
 Now it is time to check the custom weight decay implemented like this:
@@ -126,10 +126,10 @@ loss = criterion(output, target)+wd*wd_factor
 ```
 In blue are different WD values. We are on a single epoch with with SGD, and WD `1e-1`:
 
-![LSTM](/images/lreg6.png)
-![LSTM](/images/lreg7.png)
-![LSTM](/images/lreg8.png)
-![LSTM](/images/lreg9.png)
+![IMG](/images/lreg6.png)
+![IMG](/images/lreg7.png)
+![IMG](/images/lreg8.png)
+![IMG](/images/lreg9.png)
 
 As we can see the oscillations are best suppressed for `wd=4e-2`.
 
@@ -138,18 +138,18 @@ For the next three images we used the Nestorov momentum. However, we needed to d
 
 WD `4e-1` seams to decrease the batch loss oscillations.
 
-![LSTM](/images/lreg10.png)
-![LSTM](/images/lreg11.png)
-![LSTM](/images/lreg12.png)
+![IMG](/images/lreg10.png)
+![IMG](/images/lreg11.png)
+![IMG](/images/lreg12.png)
 
 
 Finally we examine the Adam optimizer. Again we needed to lower the learning rate to `1e-3`.
 
 WD `4e-1` seams to decrease the batch loss oscillations.
 
-![LSTM](/images/lreg13.png)
-![LSTM](/images/lreg14.png)
-![LSTM](/images/lreg15.png)
+![IMG](/images/lreg13.png)
+![IMG](/images/lreg14.png)
+![IMG](/images/lreg15.png)
 
 
 
