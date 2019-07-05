@@ -26,7 +26,7 @@ What the `exp` function do it will do:
 
 The `softmax` funciton:
 
-$$ \sigma1( x_i ) =  {     e^{x_i} \over \sum_{j=1}^k { e^{x_j} } } $$
+$$ softmax( x_i ) =  {     e^{x_i} \over \sum_{j=1}^k { e^{x_j} } } $$
 
 Can be literally expressed as take the exponent value and divide it by the sum of all other exponents (~`34` in the image). This will make one important feature of `softmax`, that the sum off all softmax values will add to 1.
 
@@ -38,7 +38,7 @@ Things are different for the `sigmoid` function. This function can provide us wi
 
 If the threshold is e.g. `3` from the image you can find three results greater than that number. We use the following formula to evaluate the `sigmoid` function.
 
-$$ \sigma2( x ) =  { e^{x} \over 1+ e^{x} } $$
+$$ sigmoid( x ) =  { e^{x} \over 1+ e^{x} } $$
 
 Exactly, the feature of `sigmoid` is to emphasize multiple values, based on the threshold, and we use it for the multi-label classification problems.
 
