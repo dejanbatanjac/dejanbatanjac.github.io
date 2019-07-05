@@ -18,7 +18,7 @@ These are the predictions for cat, dog, cow, and zebra. They can be positive or 
 If we plan to find exactly one value we should use `softmax` function.
 The character of this function is "there can be only one".
 
-Note the out values are in the `B` column. Then for each `B` value `val` we do create $e^val$ in column `C`.
+Note the out values are in the `B` column. Then for each `B` value `x` we do create $e^x$ in column `C`.
 
 What the `exp` function do it will do:
 * it will make the predictions positive
