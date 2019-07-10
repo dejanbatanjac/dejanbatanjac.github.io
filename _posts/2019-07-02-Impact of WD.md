@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Impact of Weight Decay
 ---
-Logistic Regression is a single linear layer (`nn.Linear` in PyTorch) neural network. We can write a custom module in PyTorch to create one.
+Logistic Regression is a single linear layer (`nn.Linear` in PyTorch) neural network used with `CrossEntropyLoss` PyTorch criterion. We can write a custom module in PyTorch to create one.
 
 ```
 class M(nn.Module):
