@@ -176,7 +176,7 @@ It is great for detecting the edges, since, max operation forces to pick up the 
 It is also great for isolating the image details. Searching for hands in the image for example.
 
 
-### Can we compare `nn.Conv2d` first two parameters with `nn.Linear` first two parameters.
+### Can we compare nn.Conv2d first two parameters with nn.Linear first two parameters.
 
 `nn.Linear` creates a matrix of `NxM`. If we ignore the bias parameters we have `NxM` parameters. 
 
@@ -199,7 +199,7 @@ So generally we cannot compare these two.
 XXX -->
 
 
-### Are the `nn.Conv2d` parameters the filters?
+### Are the nn.Conv2d parameters the filters?
 
 Yes, weight parameters represent the filters.
 
@@ -249,7 +249,7 @@ By increasing the number of filters and by lowering the image using max pooling 
 
 XXX -->
 
-### What does it means `nn.Conv2d(3,10, 2,2)` numbers `3` and `10`?
+### What does it means nn.Conv2d(3,10, 2,2) numbers 3 and 10?
 
 The `in_channels` in the beginning is `3` for images with 3 channels (colored images). For images black and white it should be 1. Some satellite images may have 4 in there.
 
@@ -262,9 +262,10 @@ To explain what dilation is you can simple understand from these two images:
 ![IMG](/images/conv2.png)
 ![IMG](/images/conv3.png)
 
-> Why 3x3 filter is the best.
+### Why 3x3 filter is the best.
 
-Accoding to the paper from Max Zeiler 17.3.3346
+According to the [paper](https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf) from Max Zeiler. 
+17.3.3346
 
 ### Few more tips about convolution
 
