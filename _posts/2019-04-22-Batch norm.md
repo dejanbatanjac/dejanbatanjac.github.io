@@ -15,9 +15,9 @@ Thanks to the batch norm for the first time the ImageNet exceeded the accuracy o
 There are few things important for the batch norm (BN):
 
 * Apply BN to a single layer for every mini batch
-* Normalize the output from the layer activations
-* Multiply normalized output by parameter weight
-* Add to all of that the parameter bias
+* Normalize the output from the batch activations
+* Multiply normalized output by parameter called `weight`
+* Add to all of that the parameter `bias`
 
 We can express this as:
 
@@ -67,3 +67,9 @@ But we can also see there are two more parameters `running_mean` and `running_va
 These running mean and running variance, are statisitcal methods calcualting the [moving average](https://en.wikipedia.org/wiki/Moving_average). What they essentially do you can spot from the image.
 
 <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MovingAverage.GIF/220px-MovingAverage.GIF" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MovingAverage.GIF/330px-MovingAverage.GIF 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MovingAverage.GIF/440px-MovingAverage.GIF 2x" data-file-width="749" data-file-height="549" width="220" height="161">
+
+More general, batch norm is one of the four types of the regularization techniques.
+
+![IMG](/images/batch1.png)
+
+REF: https://arxiv.org/abs/1502.03167
