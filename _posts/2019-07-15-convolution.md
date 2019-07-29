@@ -176,7 +176,7 @@ It is great for detecting the edges, since, max operation forces to pick up the 
 It is also great for isolating the image details. Searching for hands in the image for example.
 
 
-### Can we compare nn.Conv2d first two parameters with nn.Linear first two parameters.
+### Can we compare nn.Conv2d first two parameters with nn.Linear first two parameters?
 
 `nn.Linear` creates a matrix of `NxM`. If we ignore the bias parameters we have `NxM` parameters. 
 
