@@ -32,7 +32,7 @@ Multiple inputs will eventually make separation between classes, needed in a sem
 
 Pseudo labeling as being shown in the paper will outperform conventional methods for semi-supervised learning on the MNIST handwritten digit dataset with small number of labeled data.
 
-You may say pPseudo labeling opened the new era of semi-supervised learning.
+You may say pseudo labeling opened the new era of semi-supervised learning.
 
 
 <!-- 
