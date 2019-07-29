@@ -18,7 +18,7 @@ This is in effect equivalent to entropy regularization.
 
 <b>Entropy</b>, as it relates to machine learning, is a measure of the randomness in the information being processed. Flipping a coin is an example of an action that provides information that is random.
 
-The randomness is greatest when there is no relationship between flipping and the outcome. For a coin that has no affinity for heads or tails, the outcome of any number of tosses is difficult to predict and the entropy will be: $log_2 2$.
+The randomness is greatest when there is no relationship between flipping and the outcome. For a coin that has no affinity for heads or tails, the outcome of any number of tosses is difficult to predict and the entropy will be: $log_2 2=1$.
 
 A maximum entropy is achieved when all events are equally probable, and thus the outcome has highest uncertainty.
 
@@ -30,9 +30,9 @@ The idea is that to train the neural network, we don't need just the quality (ta
 
 Multiple inputs will eventually make separation between classes, needed in a semi-supervised learning.  
 
-Pseudo labeling as being shown in the paper will outperforms conventional methods for semi-supervised learning on the MNIST handwritten digit dataset with small number of labeled data.
+Pseudo labeling as being shown in the paper will outperform conventional methods for semi-supervised learning on the MNIST handwritten digit dataset with small number of labeled data.
 
-This opened the new era of semi-supervised learning also.
+You may say pPseudo labeling opened the new era of semi-supervised learning.
 
 
 <!-- 

@@ -12,6 +12,8 @@ Random forests take all kind of data from from categories and continuos values e
 * pixel data (images)
 * zip codes 
 * random data
+* labels
+* names
 * dates ...
 
 The data often requires modification in order to fit into RF, but often just a minor modification (data engineering).
@@ -20,7 +22,8 @@ Most of the data engineering will be:
 
 * take the log of some column as input instead of original data column
 * convert your date columns into multiple convenient columns such as year, month, day, day of the week...
-* convert categories (classes) to numbers ...
+* convert categories (classes) to numbers 
+* convert names to numbers ...
 
 After preparing the data you will provide all the independent variables, and the dependent variable as a parameter to fit the RF.
 
