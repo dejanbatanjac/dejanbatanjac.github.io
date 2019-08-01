@@ -44,7 +44,7 @@ print(output.mean()) # should be 0
 print(output.std()) # should be 1
 ```
 
-If we dig into the code of the PyTorch class `_BatchNorm` we will find we are dealing with parameters weight and bias we can make learnable if we set `self.affine=True` :
+If we dig into the code of the PyTorch class `_BatchNorm` we will find we are dealing with parameters `weight` and `bias` we can make learnable if we set `self.affine=True` :
 
 ```
         if self.affine:
@@ -64,7 +64,19 @@ If we dig into the code of the PyTorch class `_BatchNorm` we will find we are de
 
 But we can also see there are two more parameters `running_mean` and `running_var` that are shared for the every mini batch, we calculate as well.
 
-These running mean and running variance, are statisitcal methods calcualting the [moving average](https://en.wikipedia.org/wiki/Moving_average). What they essentially do you can spot from the image.
+From the previous code excerpt we have couple things to cover:
+
+First, there is a concept of module parameter (`nn.Parameter`). Parameter is just a tensors limited to the module where it is defined. 
+Usually it will be defined in the module constructor (`__init__` method).
+
+`register_parameter` method in previous code will do some safe checks, but it will set the parameter to `None`, meaning we will not learn the values of `weight` and `bias`.
+
+Once we have module parameter defined, it will appear in the `module.parameters()`.
+`register_buffer` is specific variable that can go to GPU and that can be saved with the model.
+
+As you may have noted before in PyTorch we have the training time and the inference time. While we train (learn/fit) we will constantly update the `running_mean` and `running_var` with the every mini batch. In the inference tme we will just use the values calculated and we will not alter the running mean and var.
+
+Note: running mean and running variance, are statistical methods calculating the [moving average](https://en.wikipedia.org/wiki/Moving_average). What they essentially do you can spot from the image.
 
 <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MovingAverage.GIF/220px-MovingAverage.GIF" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MovingAverage.GIF/330px-MovingAverage.GIF 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MovingAverage.GIF/440px-MovingAverage.GIF 2x" data-file-width="749" data-file-height="549" width="220" height="161">
 
