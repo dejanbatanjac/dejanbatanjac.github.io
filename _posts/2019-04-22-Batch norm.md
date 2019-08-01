@@ -64,17 +64,17 @@ If we dig into the code of the PyTorch class `_BatchNorm` we will find we are de
 
 But we can also see there are two more parameters `running_mean` and `running_var` that are shared for the every mini batch, we calculate as well.
 
-From the previous code excerpt we have couple things to cover:
+Couple things to cover from the previous code:
 
-First, there is a concept of module parameter (`nn.Parameter`). Parameter is just a tensors limited to the module where it is defined. 
+There is a concept of module parameter (`nn.Parameter`). Parameter is just a tensors limited to the module where it is defined. 
 Usually it will be defined in the module constructor (`__init__` method).
 
-`register_parameter` method in previous code will do some safe checks, but it will set the parameter to `None`, meaning we will not learn the values of `weight` and `bias`.
+`register_parameter` method in previous code will do some safe checks before set the parameter to `None`, meaning we will not learn the values of `weight` and `bias` if `self.affine` is not `True`.
 
 Once we have module parameter defined, it will appear in the `module.parameters()`.
-`register_buffer` is specific variable that can go to GPU and that can be saved with the model.
+`register_buffer` is specific tensor variable that can go to GPU and that can be saved with the model.
 
-As you may have noted before in PyTorch we have the training time and the inference time. While we train (learn/fit) we will constantly update the `running_mean` and `running_var` with the every mini batch. In the inference tme we will just use the values calculated and we will not alter the running mean and var.
+As you may noted in PyTorch we have the training time and the inference time. While we train (learn/fit) we will constantly update the `running_mean` and `running_var` with the every mini batch. In the inference time we will just use the values calculated and we will not alter the running mean and var.
 
 Note: running mean and running variance, are statistical methods calculating the [moving average](https://en.wikipedia.org/wiki/Moving_average). What they essentially do you can spot from the image.
 
