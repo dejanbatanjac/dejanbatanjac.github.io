@@ -38,6 +38,12 @@ RuntimeError: output with shape [250] doesn't match the broadcast shape [1, 250]
 RuntimeError: output with shape [1, 250, 1, 1] doesn't match the broadcast shape [1, 250, 1, 250]
 ```
 
-* when...
+* When the model was on CPU and the data was on GPU
 ```
+RuntimeError: Input type (torch.cuda.FloatTensor) and weight type (torch.FloatTensor) should be the same
+```
+
+
+```
+NameError: name 'F' is not defined
 ```
