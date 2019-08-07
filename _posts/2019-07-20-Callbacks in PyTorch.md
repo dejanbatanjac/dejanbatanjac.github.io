@@ -54,7 +54,7 @@ for i in range(1, 4):
     out = model(inp)
 ```
 
-This is possible using hooks like this:
+This is possible using hooks:
 
 ```
 from time import sleep
