@@ -27,7 +27,34 @@ batch number  3
 batch number  4
 ```
 
-How would we do this in PyTorch using hooks?
+I should have a way to set callback inside `forward()` of a module somehow.
+
+```
+import torch
+import torch.nn as nn
+from time import sleep
+
+def batch_print(i):
+    print("batch number ", i)
+
+class M(nn.Module):
+    def __init__(self):        
+        super().__init__()        
+        self.l1 = nn.Linear(1,2)
+        
+    def forward(self, x):                      
+        sleep(1)        
+        x = self.l1(x)
+        if batch_print : batch_print(i)
+        return x
+
+inp = torch.rand(1,1)    
+model = M()
+for i in range(1, 4):
+    out = model(inp)
+```
+
+This is possible using hooks like this:
 
 ```
 from time import sleep
@@ -55,12 +82,15 @@ def batch_print(module, inp, outp):
     print("outp ", outp)
 
 
-model.register_forward_hook(batch_print)
+h = model.register_forward_hook(batch_print)
 for i in range(1,4):
     # simplified batches
     x = torch.randn(1)
     output = model(x)
+
+h.remove()
 ```
+
 Out:
 ```
 batch number 1
@@ -74,14 +104,4 @@ inp  (tensor([-1.2069]),)
 outp  tensor([-0.6396,  0.5076], grad_fn=<AddBackward0>)
 ```
 
-
-
-
-
-
-
-
-
-
-
-
+Lastly the registered a hook (callback) need to be removed `h.remove()` to free memory up.
