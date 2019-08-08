@@ -10,16 +10,20 @@ The paper explains the regularization effect, explains the improvements and trie
 Thanks to the batch norm for the first time the ImageNet exceeded the accuracy of human raters, and stepped the era where machine learning started to classify images better than humans (for the particular classification task).
 
 
-# How it works?
+# How it works in PyTorch?
 
 There are few things important for the batch norm (BN):
 
 * Apply BN to a single layer for every mini batch
 * Normalize the output from the batch activations
-* Multiply normalized output by parameter called `weight`
-* Add to all of that the parameter `bias`
+* In PyTorch if we set`affine=True`
+* *  Multiply normalized output by parameter called `weight` and add to that 
+* * Add to all of that the parameter `bias`
+* If we set `track_running_stats=True` in PyTorch
+* * Running statistics will be calculated
+* * BN output will be less bumpy 
 
-We can express this as:
+Simplified (without using the running statistics) we can express this as:
 
 $$y_ = n(f(w_1, w_2, ... w_n, x)) * weight + bias$$
 
@@ -44,7 +48,7 @@ print(output.mean()) # should be 0
 print(output.std()) # should be 1
 ```
 
-If we dig into the code of the PyTorch class `_BatchNorm` we will find we are dealing with parameters `weight` and `bias` we can make learnable if we set `self.affine=True` :
+PyTorch class `_BatchNorm` explains clearly we use the parameters `weight` and `bias` if we set `self.affine=True` :
 
 ```
         if self.affine:
@@ -62,7 +66,7 @@ If we dig into the code of the PyTorch class `_BatchNorm` we will find we are de
             self.register_parameter('running_var', None)
 ```
 
-But we can also see there are two more parameters `running_mean` and `running_var` that are shared for the every mini batch, we calculate as well.
+Previous code excerpt also shows two more buffers `running_mean` and `running_var` that are calculate every mini batch to to make the BN output less bumpy.
 
 Couple things to cover from the previous code:
 
@@ -72,7 +76,8 @@ Usually it will be defined in the module constructor (`__init__` method).
 `register_parameter` method in previous code will do some safe checks before set the parameter to `None`, meaning we will not learn the values of `weight` and `bias` if `self.affine` is not `True`.
 
 Once we have module parameter defined, it will appear in the `module.parameters()`.
-`register_buffer` is specific tensor variable that can go to GPU and that can be saved with the model.
+
+`register_buffer` is specific tensor that can go to GPU and that can be saved with the model, but it is not meant to be learned (updated) via gradient descent. Instead it is calculated at every mini batch step.
 
 As you may noted in PyTorch we have the training time and the inference time. While we train (learn/fit) we will constantly update the `running_mean` and `running_var` with the every mini batch. In the inference time we will just use the values calculated and we will not alter the running mean and var.
 
@@ -80,7 +85,10 @@ Note: running mean and running variance, are statistical methods calculating the
 
 <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MovingAverage.GIF/220px-MovingAverage.GIF" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MovingAverage.GIF/330px-MovingAverage.GIF 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MovingAverage.GIF/440px-MovingAverage.GIF 2x" data-file-width="749" data-file-height="549" width="220" height="161">
 
-More general, batch norm is one of the four types of the regularization techniques.
+Lastly, it is possible to use BN even if we set `affine=False` and `track_running_stats=False`. It will just work.
+
+
+For completeness, batch norm is one of the four types of the regularization techniques.
 
 ![IMG](/images/batch1.png)
 
