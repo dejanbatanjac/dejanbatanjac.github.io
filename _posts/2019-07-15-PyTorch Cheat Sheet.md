@@ -4,22 +4,22 @@ layout: post
 title: PyTorch Cheat Sheet
 ---
 
-Basic tensor creators
+> ## Tensor creators
 ```
 import torch
 torch.zeros(2,2)
 torch.ones(2,2)
-torch.empty(2, 2)
+torch.empty(2,2)
 torch.rand(2,2)
 torch.randn(2,2)
 ```
 
-Convertor to NumPy
+> ## Convertor to NumPy
 ```
 torch.numpy() 
 ```
 
-Comparison with NumPy
+> ## Comparison with NumPy
 ```
 np.empty((5, 3)) 	        | torch.empty(5, 3)
 np.random.rand(3,2)             | torch.rand(3, 2) 
@@ -43,19 +43,19 @@ class M(nn.Module):
 ```
 
 
-Creating optimizer modules:
+> ## Creating optimizer modules:
 Adam, RMSProp, AdaGrad, SGD...
 
 ```
 o = Adam(model.parameters(), lr=lr)
 ```
 
-Creating loss functions NLLLoss, MSELoss, CrossEntropyLoss...
+> ## Creating loss functions NLLLoss, MSELoss, CrossEntropyLoss...
 ```
 loss = torch.nn.MSELoss(size_average=Fase)
 ```
 
-Using pre-trained models:
+> ## Using pre-trained models:
 ```
 from torchvision.models import resnet18
 r = resnet18()
@@ -63,13 +63,13 @@ r = resnet18()
 # Similar for VGG, Resnet, DenseNet, Inception,...
 ```
 
-Setting the model in train or eval mode:
+> ## Setting the model in train or eval mode:
 ```
 model.train()
 model.eval()
 ```
 
-Set multiple tensor values to 0 based on condition:
+> ## Set multiple tensor values to 0 on condition:
 ```
 t[t<=9.8619e-03] = 0
 ```
@@ -89,12 +89,12 @@ Similar:
 (t>0).sum() # number of elements greater than 0
 ```
 
-Creating the device on GPU:0:
+> ## Creating the device on GPU:0:
 ```
 device = torch.device('cuda',0)
 ```
 
-Save and load a tensor:
+> ## Save and load a tensor:
 ```
 # Save to binary file
 x = torch.tensor([0, 1, 2, 3, 4])
@@ -103,7 +103,7 @@ torch.save(x, 'file.pt')
 t = torch.load('file.pt') 
 ```
 
-Writing PyTorch tensor to a file:
+> ## Writing PyTorch tensor to a file:
 ```
 t = torch.rand(3)
 f = "output.txt"    
@@ -113,4 +113,16 @@ def tensorwrite(file, t, text="tensor"):
         f.close()
         
 tensorwrite(f, t)
+```
+
+> ## Getting actual size of the model:
+```
+import torch 
+import torchvision.models as models
+vgg16 = models.vgg16(pretrained=False)
+
+size = 0
+for p in vgg16.parameters():
+  size += p.nelement() * p.element_size()
+print(size)
 ```
