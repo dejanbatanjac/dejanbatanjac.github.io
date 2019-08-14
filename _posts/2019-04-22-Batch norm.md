@@ -66,7 +66,7 @@ PyTorch class `_BatchNorm` explains clearly we use the parameters `weight` and `
             self.register_parameter('running_var', None)
 ```
 
-Previous code excerpt also shows two more buffers `running_mean` and `running_var` that are calculate every mini batch to to make the BN output less bumpy.
+Previous code excerpt also shows two more buffers `running_mean` and `running_var` that we calculate every mini batch to make the BN output less bumpy.
 
 Couple things to cover from the previous code:
 
