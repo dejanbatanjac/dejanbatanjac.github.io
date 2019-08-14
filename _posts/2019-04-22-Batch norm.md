@@ -70,7 +70,7 @@ Previous code excerpt also shows two more buffers `running_mean` and `running_va
 
 Couple things to cover from the previous code:
 
-There is a concept of module parameter (`nn.Parameter`). Parameter is just a tensors limited to the module where it is defined. 
+There is a concept of module parameter (`nn.Parameter`). Parameter is just a tensor limited to the module where it is defined. 
 Usually it will be defined in the module constructor (`__init__` method).
 
 `register_parameter` method in previous code will do some safe checks before set the parameter to `None`, meaning we will not learn the values of `weight` and `bias` if `self.affine` is not `True`.
