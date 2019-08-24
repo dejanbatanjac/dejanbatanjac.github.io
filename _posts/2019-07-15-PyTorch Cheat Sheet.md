@@ -4,22 +4,51 @@ layout: post
 title: PyTorch Cheat Sheet
 ---
 
-> ## Tensor creators
+>### Tensor creators
+
 ```
 import torch
-torch.zeros(2,2)
-torch.ones(2,2)
-torch.empty(2,2)
-torch.rand(2,2)
-torch.randn(2,2)
+# by data
+t = torch.tensor(1., 1.)
+# by dimension
+t = torch.zeros(2,2)
+t = torch.ones(2,2)
+t = torch.empty(2,2)
+t = torch.rand(2,2)
+t = torch.randn(2,2)
 ```
 
-> ## Convertor to NumPy
+>### Assignment consideration
+
 ```
-torch.numpy() 
+t=torch.tensor(1.)
+a=t
+print(t,a,id(t), id(a))
+a.add_(1.)
+print(t,a,id(t), id(a))
+t.add_(1.)
+print(t,a,id(t), id(a))
+t+=1
+print(t,a,id(t), id(a))
+a+=1
+print(t,a,id(t), id(a))
+a=a+1
+print(t,a,id(t), id(a))
+a.add_(1.)
+print(t,a,id(t), id(a))
+a=a.add(1.)
+print(t,a,id(t), id(a))
+t+=1
+print(t,a,id(t), id(a))
+t=t+1
+print(t,a,id(t), id(a))
+a+=1
+print(t,a,id(t), id(a))
 ```
 
-> ## Comparison with NumPy
+
+>### Comparison with NumPy
+
 ```
 np.empty((5, 3)) 	        | torch.empty(5, 3)
 np.random.rand(3,2)             | torch.rand(3, 2) 
@@ -29,7 +58,7 @@ np.random.randn(*a.shape)       | torch.randn_like(a)
 np.arange(16)                   | torch.range(0,15) 
 ```
 
-nn.Module
+>###nn.Module
 
 ```
 class M(nn.Module):
@@ -42,20 +71,39 @@ class M(nn.Module):
 
 ```
 
+>###Print the module
 
-> ## Creating optimizer modules:
+```
+module = M()
+print(module)
+```
+
+>### Creating optimizer modules:
+
 Adam, RMSProp, AdaGrad, SGD...
 
 ```
 o = Adam(model.parameters(), lr=lr)
 ```
 
-> ## Creating loss functions NLLLoss, MSELoss, CrossEntropyLoss...
+
+>### Initialize optimizer with empty tensor and convert every param to param groups
+
+```
+optimizer = optim.SGD({torch.empty(0)}, lr=1e-2, momentum=0.9 )
+optimizer.param_groups.clear()
+for p in model.named_parameters():
+    optimizer.param_groups.append({'params' ,p})
+    #print(p[0],":",p[1].size() )
+```
+
+>### Creating loss functions NLLLoss, MSELoss, CrossEntropyLoss...
 ```
 loss = torch.nn.MSELoss(size_average=Fase)
 ```
 
-> ## Using pre-trained models:
+>### Using pre-trained models:
+
 ```
 from torchvision.models import resnet18
 r = resnet18()
@@ -63,13 +111,15 @@ r = resnet18()
 # Similar for VGG, Resnet, DenseNet, Inception,...
 ```
 
-> ## Setting the model in train or eval mode:
+>### Setting the model in train or eval mode:
+
 ```
 model.train()
 model.eval()
 ```
 
-> ## Set multiple tensor values to 0 on condition:
+>### Set multiple tensor values to 0 on condition:
+
 ```
 t[t<=9.8619e-03] = 0
 ```
@@ -89,12 +139,14 @@ Similar:
 (t>0).sum() # number of elements greater than 0
 ```
 
-> ## Creating the device on GPU:0:
+>### Creating the device on GPU:0:
+
 ```
 device = torch.device('cuda',0)
 ```
 
-> ## Save and load a tensor:
+>### Save and load a tensor:
+
 ```
 # Save to binary file
 x = torch.tensor([0, 1, 2, 3, 4])
@@ -103,7 +155,8 @@ torch.save(x, 'file.pt')
 t = torch.load('file.pt') 
 ```
 
-> ## Writing PyTorch tensor to a file:
+>### Writing PyTorch tensor to a file:
+
 ```
 t = torch.rand(3)
 f = "output.txt"    
@@ -115,7 +168,8 @@ def tensorwrite(file, t, text="tensor"):
 tensorwrite(f, t)
 ```
 
-> ## Getting actual size of the model:
+>### Getting actual size of the model:
+
 ```
 import torch 
 import torchvision.models as models
