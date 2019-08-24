@@ -58,7 +58,7 @@ np.random.randn(*a.shape)       | torch.randn_like(a)
 np.arange(16)                   | torch.range(0,15) 
 ```
 
->###nn.Module
+>### nn.Module
 
 ```
 class M(nn.Module):
@@ -71,7 +71,7 @@ class M(nn.Module):
 
 ```
 
->###Print the module
+>### Print the module
 
 ```
 module = M()
@@ -83,6 +83,7 @@ print(module)
 Adam, RMSProp, AdaGrad, SGD...
 
 ```
+from torch.optim import *
 o = Adam(model.parameters(), lr=lr)
 ```
 
@@ -98,6 +99,7 @@ for p in model.named_parameters():
 ```
 
 >### Creating loss functions NLLLoss, MSELoss, CrossEntropyLoss...
+
 ```
 loss = torch.nn.MSELoss(size_average=Fase)
 ```
@@ -118,24 +120,17 @@ model.train()
 model.eval()
 ```
 
->### Set multiple tensor values to 0 on condition:
+>### Condition based:
 
 ```
-t[t<=9.8619e-03] = 0
-```
+t[t<=9.8619e-03] = 0 # set where condition
 
-Set all values of a tensor to 0:
-```
-t[True] = 0
-```
+t[True] = 0 # set all to 0:
 
-Check number of tensors values 0:
-```
-(t==0).sum()
-```
-Similar:
-```
+(t==0).sum() # check number of tensors eq. 0:
+
 (t<0).sum() # number of elements smaller than 0
+
 (t>0).sum() # number of elements greater than 0
 ```
 
