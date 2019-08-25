@@ -1,9 +1,39 @@
 ---
 published: true
+layout: post
+title: Color Normalization
 ---
-As you may assume in PyTorch images we use should be prepared for learning. This part is called image normalization.
 
-In case we use PIL Image class to convert the image to PyTorch Tensor we will need:
+As you may assume in machine learning we can apply different normalization techniques.
+
+Most obvious is to normalize the image that is represented as a sequence of bytes (values from 0 to 255) by dividing with 255. This is how all activation values will be inside interval [0,1].
+
+However, better would be to touch both the mean and standard deviation. The following code will do this:
+
+
+    def normalize(x, m, s): return (x-m)/(s+1e-6)
+    def normalize_to(train, valid):
+        m,s = train.mean(),train.std()
+        return normalize(train, m, s), normalize(valid, m, s)
+
+This would be for single channel images like in MNIST.
+
+In here we calculated the train set mean and train set standard deviation (for all images inside the set).
+
+But, there also the aspect multiple channels. That would be to normalize the images you have in your train, validation and test set for each channel. 
+
+We already know these values for some well known data sets:
+Given `mean` and `std` values for well know (RGB) image sets : 
+
+    cifar_stats = ([0.491, 0.482, 0.447], [0.247, 0.243, 0.261])
+    imagenet_stats = ([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+    ...
+
+Note: `[0.491, 0.482, 0.447]` is the mean for the cifar image set; `0.491` is the mean for the Red channel, and so on. The standard deviation for the same image set is represented with this list `[0.247, 0.243, 0.261]` and `0.247` is exactly the std of the Red channel.
+
+## The procedure in practice:
+
+With PyTorch you will often use PIL Image class to convert the image to PyTorch tensor. 
 
     from PIL import Image
     from torchvision.transforms import ToTensor
@@ -19,30 +49,23 @@ Our Tensor images will look like this after the conversion:
              [0.6863, 0.6863, 0.6941,  ..., 0.2392, 0.2902, 0.3137]], ...
 
 
-Note how, `min` and `max` value of this tensor will be: `tensor(0.)` and `tensor(1.)` respectively. 
+Note: `min` and `max` value of this tensor will be: `tensor(0.)` and `tensor(1.)` respectively.
+
+Note: PIL library is not the fastest out there.
+
 The histogram per channel will look like this:
 
 ...![]({{site.baseurl}}/images/normalization1.png)
 
-Let we use the following PyTorch normalization function:
+Let we use the following PyTorch color normalization function:
 
     def normalize(x: torch.FloatTensor, mean: torch.FloatTensor, std: torch.FloatTensor) -> torch.FloatTensor
         "Normalize `x` with `mean` and `std`."
         return (x - mean[..., None, None]) / std[..., None, None]
         
-What we provide is a Tensor image `x` and `mean` and `std` values for the image set we are working in.
-This means that we evaluated in advance the mean and std for all the images in the set.
 
-Following are some well known `mean` and `std` list tupples (RGB) for different image sets: 
-
-    cifar_stats = ([0.491, 0.482, 0.447], [0.247, 0.243, 0.261])
-    imagenet_stats = ([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-    mnist_stats = ([0.15] * 3, [0.15] * 3)
-    
-In particular `[0.491, 0.482, 0.447]` is the mean for the cifar image set; `0.491` is the mean for the Red channel, and so on. The standard deviation for the same image set is represented with this list `[0.247, 0.243, 0.261]` and `0.247` is exactly the std of the Red channel.
-
-        
 Note the Ellipsis notation we used inside `normalize` function. It may be strange what it means in PyTorch.
+
 Let's check this code:
 
     l=Tensor([1,2,3])

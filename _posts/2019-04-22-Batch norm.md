@@ -85,7 +85,7 @@ Note: running mean and running variance, are statistical methods calculating the
 
 ![IMG](/images/maverage.png)
 
-Lastly, it is possible to use BN even if we set `affine=False` and `track_running_stats=False`. It will just work.
+It is possible to use BN even if we set `affine=False` and `track_running_stats=False`. It will just work.
 
 For completeness, batch norm is one of the four types of the regularization techniques.
 
