@@ -20,7 +20,7 @@ This would be for single channel images like in MNIST.
 
 In here we calculated the train set mean and train set standard deviation (for all images inside the set).
 
-But, there also multiple channels case. That would be to normalize the images you have in your train, validation and test set for each channel. 
+But, there's also multiple channels case. That would be to normalize the images you have in your train, validation and test set for each channel. 
 
 These are for instance `mean` and `std` values for well know (RGB) image sets : 
 
