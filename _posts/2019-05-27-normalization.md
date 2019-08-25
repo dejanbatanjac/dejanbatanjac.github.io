@@ -20,10 +20,9 @@ This would be for single channel images like in MNIST.
 
 In here we calculated the train set mean and train set standard deviation (for all images inside the set).
 
-But, there also the aspect multiple channels. That would be to normalize the images you have in your train, validation and test set for each channel. 
+But, there also multiple channels case. That would be to normalize the images you have in your train, validation and test set for each channel. 
 
-We already know these values for some well known data sets:
-Given `mean` and `std` values for well know (RGB) image sets : 
+These are for instance `mean` and `std` values for well know (RGB) image sets : 
 
     cifar_stats = ([0.491, 0.482, 0.447], [0.247, 0.243, 0.261])
     imagenet_stats = ([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
@@ -51,7 +50,7 @@ Our Tensor images will look like this after the conversion:
 
 Note: `min` and `max` value of this tensor will be: `tensor(0.)` and `tensor(1.)` respectively.
 
-Note: PIL library is not the fastest out there.
+>Note: PIL library is not the fastest choice out there.
 
 The histogram per channel will look like this:
 
