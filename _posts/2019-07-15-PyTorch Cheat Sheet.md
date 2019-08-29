@@ -175,3 +175,20 @@ for p in vgg16.parameters():
   size += p.nelement() * p.element_size()
 print(size)
 ```
+
+
+>### addcdiv_
+
+    import torch
+    x = torch.Tensor([1., 3.])
+    y = torch.Tensor([4., 4.])
+    z = torch.Tensor([2., 4.])
+
+    x.addcdiv_(2, y, z)
+    x # tensor([5., 5.])
+
+What just happened?
+
+`x[0]` was `1`, but we added to that `2*y[0]/z[0]`, so we added `4`. Now the operation is in place so `x[0]` will end as `5`. 
+Note: `addcdiv_` will do per element division.
+
