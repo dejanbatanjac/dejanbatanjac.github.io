@@ -57,8 +57,7 @@ I will present you the simplified Adam based on the PyTorch implementation with 
                     state['step'] += 1    
 
                     agrad, agrad2 = state['agrad'], state['agrad2']                
-                    beta1, beta2 = group['betas']            
-
+                    beta1, beta2 = group['betas']
                 
                     agrad.mul_(beta1).add_(1 - beta1, grad)
                     agrad2.mul_(beta2).addcmul_(1 - beta2, grad, grad)
@@ -95,7 +94,7 @@ I would present Adaam, there real Adam by the paper:
             for group in self.param_groups:
                 for p in group['params']:                
                     if p.grad is None:
-                        continue                    
+                        continue
                     grad = p.grad.data                
                     state = self.state[p] 
                     
@@ -107,13 +106,13 @@ I would present Adaam, there real Adam by the paper:
                     state['step'] += 1
                     
                     agrad, agrad2 = state['agrad'], state['agrad2'] 
-                    b1, b2 = group['betas']
+                    beta1, beta2 = group['betas']
                     
-                    agrad.mul_(b1).add_(1 - b1, grad)
-                    agrad2.mul_(b2).addcmul_(1 - b2, grad, grad) 
+                    agrad.mul_(beta1).add_(1 - beta1, grad)
+                    agrad2.mul_(beta2).addcmul_(1 - beta2, grad, grad) 
 
-                    bias_1 = 1 - b1 ** state['step']
-                    bias_2 = 1 - b2 ** state['step'] 
+                    bias_1 = 1 - beta1 ** state['step']
+                    bias_2 = 1 - beta2 ** state['step'] 
                     
                     agrad = agrad.div(bias_1)
                     agrad2 = agrad2.div(bias_2)
