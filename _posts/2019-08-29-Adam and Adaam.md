@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: LAMB
+title: Adam and Adaam
 ---
 
 I wanted to outline that the actual Adam implmentation in PyTorch is little bit different than the [original Adam paper](https://arxiv.org/abs/1412.6980).
