@@ -1,7 +1,7 @@
 ---
-published: false
+published: true
 layout: post
-title: Working with Github from VS Code
+title: Creating Github Pull Requests
 ---
 
 ## Create a Pull Request 
