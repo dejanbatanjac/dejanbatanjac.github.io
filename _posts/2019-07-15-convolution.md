@@ -273,3 +273,17 @@ According to the [paper](https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf) f
 * In PyTorch convolution is actually implemented as correlation.
 * In PyTorach nn.ConvNd and F.convNd do have reverse order of parameters.
 
+
+### Bag of tricks for CONV networks
+
+This [Bag of tricks](http://openaccess.thecvf.com/content_CVPR_2019/papers/He_Bag_of_Tricks_for_Image_Classification_with_Convolutional_Neural_Networks_CVPR_2019_paper.pdf) paper presents many tricks to be used for Convolutional Neural Networks such as:
+
+* Large batch training
+* Low precision training
+* Decay of the learning rate
+* Resnet tweaks
+* Label smoothing
+* Mixup training
+* Transfer learning
+* Semantic segmentation
+
