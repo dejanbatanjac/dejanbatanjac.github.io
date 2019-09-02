@@ -38,7 +38,7 @@ The program above will show the following:
     img = cv2.imread(img)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) # color
     plt.imshow(img)
-    cv2.imshow('image',img) # opens external program, may broke Jupyter session...
+    cv2.imshow('image',img) # opens external program, may broke Jupyter session
 
 When printing images it is always right choice to use matplotlib.
 Note that cv2 is made to return numpy arrays.
