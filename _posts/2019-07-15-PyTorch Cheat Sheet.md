@@ -6,17 +6,34 @@ title: PyTorch Cheat Sheet
 
 >### Tensor creators
 
-```
-import torch
-# by data
-t = torch.tensor(1., 1.)
-# by dimension
-t = torch.zeros(2,2)
-t = torch.ones(2,2)
-t = torch.empty(2,2)
-t = torch.rand(2,2)
-t = torch.randn(2,2)
-```
+    import torch
+    # by data
+    t = torch.tensor(1., 1.)
+    # by dimension
+    t = torch.zeros(2,2)
+    t = torch.ones(2,2)
+    t = torch.empty(2,2)
+    t = torch.rand(2,2)
+    t = torch.randn(2,2)
+
+
+>#### When something is a leaf
+
+    x = torch.Tensor([1,2])
+    print(x)
+    print(x.is_leaf) # True
+    y = x+1
+    print(y.is_leaf) # True
+    x = torch.tensor([1., 2. ], requires_grad=True)
+    print(x)
+    print(x.is_leaf) # True
+    y = x+1
+    print(y.is_leaf) # False
+
+* Tensors that have requires_grad False will be leaf tensors by convention.
+* For tensors that have requires_grad which is True, they will be leaf Tensors if they were created by the user. 
+* This means that they are not the result of an operation and so grad_fn is None.
+
 
 >### Assignment consideration
 
@@ -77,6 +94,16 @@ class M(nn.Module):
 module = M()
 print(module)
 ```
+
+>### Check inner modules
+
+This `modules()` method should provide more info than `children()`.
+
+    for i, _ in enumerate(model.modules()):
+        print (i, _)
+        if (isinstance(_, (nn.Conv1d, nn.Conv2d, nn.Conv3d, nn.Linear))):
+            print(_)
+
 
 >### Creating optimizer modules:
 
