@@ -34,5 +34,5 @@ Note how neural network in first case showed the attention is mostly in the face
 
 We may assume it would be better for the net also to put some attention over the face of the older woman. This means the training should probable last longer.
 
-Also heatmaps can help us isolate examples that don't work quite well yet based on image segmentation (face segmentation in this case). 
+Also heatmaps can help us isolate all examples that don't work quite well yet if we combine it with image segmentation (face segmentation in this case). 
 
