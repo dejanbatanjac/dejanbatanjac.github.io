@@ -14,7 +14,7 @@ I used resenet18 model to create one. Also I needed to provide the input image t
 
 To analyse our resent18 model we would need to get layer input and output size information for the whole model. I did some of that in [this demo](https://gist.github.com/dejanbatanjac/61329992b21fa0e8e02a1d8a5c38079d).
 
-Before the last fc layer we have the average pooling layer with the input size of read from the forward hook:
+Before the last fc layer we have the average pooling layer with the input size of:
 
     torch.Size([1, 512, 7, 7])
 
