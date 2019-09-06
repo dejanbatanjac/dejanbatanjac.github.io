@@ -30,7 +30,7 @@ Consider the next two heatmaps detecting the child vs. older woman.
 
 ![IMG](/images/heatmap2.png) 
 
-Note how neural network in first case showed the attention were on the face mostly, and in case of the granny, the attention was on the right shoulder and throat area. 
+Note how neural network in first case showed the attention is mostly in the face area, and in case of the granny, the attention is on the right shoulder and throat area. 
 
 We may assume it would be better for the net also to put some attention over the face of the older woman. This means the training should probable last longer.
 
