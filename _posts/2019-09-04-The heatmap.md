@@ -24,7 +24,7 @@ This image will show us what *average activation intensities* or the **heatmap**
 
 > Note: the 7x7 size depends on the input image size. After passing convolution layers, if the image is bigger we may end to 10x10 or some other size.
 
-#### What we may use heat maps for?
+#### What we may use heatmaps for?
 
 Consider the next two heatmaps detecting the child vs. older woman.
 
