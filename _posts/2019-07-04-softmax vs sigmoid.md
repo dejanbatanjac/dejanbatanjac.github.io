@@ -30,7 +30,7 @@ $$ softmax( x_i ) =  {     e^{x_i} \over \sum_{j=1}^k { e^{x_j} } } $$
 
 Can be literally expressed as take the exponent value and divide it by the sum of all other exponents (~`34` in the image). This will make one important feature of `softmax`, that the sum off all softmax values will add to 1.
 
-Just by peaking the `max` value after the softmax we get out prediction. It is that easy, or the index of the prediction.
+Just by peaking the `max` value after the softmax we get out prediction.
 
 ### Sigmoid
 
@@ -99,11 +99,6 @@ print(F.sigmoid(inp))
 # tensor([[-0.4010,  0.0468, -0.4071,  0.6252,  1.0899]])
 # tensor([[0.4011, 0.5117, 0.3996, 0.6514, 0.7484]])
 ```
-
-
-
-
-
 
 
 
