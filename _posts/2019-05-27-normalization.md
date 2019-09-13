@@ -81,8 +81,10 @@ This will output like this:
 
 Note how we subtract `x - mean[..., None, None]` for specific RGB channel, and also how we do RGB channel division `std[..., None, None]` after that.
 
-At the end, we will get the result like this where our data pixel values will be around 0.
+At the end, we will get the result like this where our data pixel values will be around 0. 
 
 ...![]({{site.baseurl}}/images/normalization2.png)
 
 You may note that before we had our pixel values inside [0., 1.] range, and now we have positive and negative values around 0, ideal for machine learning.
+
+This last case is used when you need to normalize the whole dataset, not just the single image.

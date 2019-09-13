@@ -91,7 +91,7 @@ out2 = F.softmax(inp, dim=1)
 print(torch.equal(out, out2)) #True
 ```
 
-For the `sigmoid` function the things are quite clear.
+For the `sigmoid` function the things are quite clear, based on logits we get probabilities.
 ```
 inp = torch.randn(1,5)
 print(inp)
@@ -100,6 +100,83 @@ print(F.sigmoid(inp))
 # tensor([[0.4011, 0.5117, 0.3996, 0.6514, 0.7484]])
 ```
 
+### When to use one over the other?
+
+We should use softmax if we do classification with one result, or single label classification (SLC). We should use sigmoid if we have multi-label classification case (MLC).
+
+### Case of SLC:
+
+Use log softmax followed by negative log likelihood loss (nll_loss).
+Here is the implementation of nll_loss:
+
+    def nll_loss(p, target):
+        return -p[range(target.shape[0]), target].mean()
+
+There is one function called cross entropy loss in PyTorch that replaces both softmax and nll_loss.
+
+    lp = F.log_softmax(x, dim=-1)
+    loss = F.nll_loss(lp, target)
+
+Which is equivalent to :
+
+    loss = F.cross_entropy(x, target)
+
+> Do not calculate log of softmax directly instead use log-sum-exp trick:
+
+    def log_softmax(x): 
+        return x - x.exp().sum(-1).log().unsqueeze(-1)
+
+
+### Case of MLC:
+
+We use sigmoid and binary cross entropy functions in PyTorch that do broadcasting.
+
+    def sigmoid(x): return 1/(1 + (-x).exp())
+    def binary_cross_entropy(p, y): return -(p.log()*y + (1-y)*(1-p).log()).mean()
+
+Sigmoid converts anything from (-inf, inf) into probability [0,1]. `binary_cross_entropy` will take the log of this probability later.
+
+We can forget about sigmoid if we use `F.binary_cross_entropy_with_logits` function. This function takes logits directly.
+
+    F.sigmoid + F.binary_cross_entropy = F.binary_cross_entropy_with_logits
+
+`F.sigmoid` will take logits and you may be careful in here in general case
+`logit(sigmoid(x))` is not stable:
+
+
+
+    %matplotlib inline
+    import torch
+    torch.Tensor.ndim = property(lambda x: len(x.size()))
+    import matplotlib.pyplot as plt
+    x=torch.arange(-20, 20, 1e-4)
+    def sigmo(x):
+        return 1/(1+torch.exp(-x))
+
+    def logit(x):
+        return torch.log((x/(1-x)))
+
+    plt.plot(x, logit(x))
+    plt.xlabel("logit")
+    plt.show()
+    plt.close()
+    plt.plot(x, sigmo(x))
+    plt.xlabel("sigmoid")
+    plt.show()
+    plt.close()
+    plt.plot(x, logit(sigmo(x)))
+    plt.xlabel("logit(sigmoid(x))")
+    plt.show()
+    plt.close()
+    y = logit(sigmo(x))
+    plt.plot(x, ((y-x+1e-5)/(x+1e-3)))
+    plt.xlabel("(logit(sigmo(x)-x)/x")
+    plt.show()
+    plt.close()
+
+![IMG](/images/ss2.png)
+
+Still PyTorch implementation of `F.binary_cross_entropy_with_logits` should be numerically stable.
 
 
 
