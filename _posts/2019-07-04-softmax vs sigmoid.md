@@ -5,7 +5,7 @@ title: Softmax vs. Sigmoid functions
 ---
 
 In Machine Learning, you deal with `softmax` and `sigimoid` functions often.
-I wanted to provide some intuition when you should one, over the other.
+I wanted to provide some intuition when you should use one, over the other.
 
 Suppose you have predictions as the output from neural net.
 
