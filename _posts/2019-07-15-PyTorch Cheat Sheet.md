@@ -15,6 +15,7 @@ title: PyTorch Cheat Sheet
     t = torch.empty(2,2)
     t = torch.rand(2,2)
     t = torch.randn(2,2)
+    t = torch.arrange(1,10,0.2)
 
 
 >#### When something is a leaf
