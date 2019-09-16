@@ -8,7 +8,7 @@ title: PyTorch Cheat Sheet
 
     import torch
     # by data
-    t = torch.tensor(1., 1.)
+    t = torch.tensor([1., 1.])
     # by dimension
     t = torch.zeros(2,2)
     t = torch.ones(2,2)
@@ -16,6 +16,14 @@ title: PyTorch Cheat Sheet
     t = torch.rand(2,2)
     t = torch.randn(2,2)
     t = torch.arrange(1,10,0.2)
+
+>### Concat and stack
+
+    t = torch.tensor(1., 1.)
+    c = torch.cat([t,t])
+    s = torch.stack([t,t])
+    print(c.size())
+    print(s.size())
 
 
 >#### When something is a leaf
