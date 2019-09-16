@@ -19,11 +19,11 @@ title: PyTorch Cheat Sheet
 
 >### Concat and stack
 
-    t = torch.tensor(1., 1.)
+    t = torch.tensor([1., 1.])
     c = torch.cat([t,t])
     s = torch.stack([t,t])
-    print(c.size())
-    print(s.size())
+    print(c.size())# torch.Size([4])
+    print(s.size())# torch.Size([2, 2])
 
 
 >#### When something is a leaf
