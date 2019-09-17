@@ -106,7 +106,7 @@ PyTorch code for Resent in [here](https://github.com/pytorch/vision/blob/master/
 
 modules. The first one is used for Resent18, and Resenet34 and later one for all the other (more advanced) architectures.
 
-Both, BasicBlock and Bottleneck have the identity connection as explained in [here](https://dejanbatanjac.github.io/2019/07/15/Resnet-explained.html)
+Both, BasicBlock and Bottleneck have the identity connection as explained in [here](https://dejanbatanjac.github.io/2019/07/15/Resnet-explained.html).
 
 Also interesting is the [Preact resnet](https://arxiv.org/abs/1603.05027) idea.
 
