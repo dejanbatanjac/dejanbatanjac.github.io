@@ -108,6 +108,22 @@ modules. The first one is used for Resent18, and Resenet34 and later one for all
 
 Both, BasicBlock and Bottleneck have the identity connection as explained in [here](https://dejanbatanjac.github.io/2019/07/15/Resnet-explained.html).
 
+BasicBlock is always using conv3x3 while Bottleneck combines conv3x3 and conv1x1 convolutions (kernel size 3 and 1).
+
+What may also be altered is the order inside both BasicBlock and Bottleneck.
+
+    out = self.conv1(x)
+    out = self.bn1(out)
+    out = self.relu(out)
+
+You could set this as:
+
+    out = self.conv1(x)
+    out = self.relu(out)
+    out = self.bn1(out)
+
+While it has lot of sense to regularize at the end.
+
 Also interesting is the [Preact resnet](https://arxiv.org/abs/1603.05027) idea.
 
 
