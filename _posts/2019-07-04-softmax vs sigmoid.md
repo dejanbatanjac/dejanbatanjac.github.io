@@ -136,6 +136,7 @@ We use sigmoid and binary cross entropy functions in PyTorch that do broadcastin
 
 Sigmoid converts anything from (-inf, inf) into probability [0,1]. `binary_cross_entropy` will take the log of this probability later.
 
+
 We can forget about sigmoid if we use `F.binary_cross_entropy_with_logits` function. This function takes logits directly.
 
     F.sigmoid + F.binary_cross_entropy = F.binary_cross_entropy_with_logits
@@ -179,6 +180,34 @@ We can forget about sigmoid if we use `F.binary_cross_entropy_with_logits` funct
 Still PyTorch implementation of `F.binary_cross_entropy_with_logits` should be numerically stable.
 
 
+### An example in SLC
 
+    batch_size, n_classes = 10, 5
+    x = torch.randn(batch_size, n_classes)
+    print("x:",x)
+
+    target = torch.randint(n_classes, size=(batch_size,), dtype=torch.long)
+    print("target:",target)
+
+
+    def log_softmax(x): 
+        return x - x.exp().sum(-1).log().unsqueeze(-1)
+
+    def nll_loss(p, target):
+        return -p[range(target.shape[0]), target].mean()
+
+    pred = log_softmax(x)
+    print ("pred:", pred)
+    ohe = torch.zeros(batch_size, n_classes)
+    ohe[range(ohe.shape[0]), target]=1
+    print("ohe:",ohe)
+    pe = pred[range(target.shape[0]), target]
+    print("pe:",pe)
+    mean = pred[range(target.shape[0]), target].mean()
+    print("mean:",mean)
+    negmean = -mean
+    print("negmean:", negmean)
+    loss = nll_loss(pred, target)
+    print("loss:",loss)
 
 
