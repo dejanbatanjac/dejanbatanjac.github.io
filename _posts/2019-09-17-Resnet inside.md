@@ -110,7 +110,7 @@ Both, BasicBlock and Bottleneck have the identity connection as explained in [he
 
 BasicBlock is always using conv3x3 while Bottleneck combines conv3x3 and conv1x1 convolutions (kernel size 3 and 1).
 
-What may also be altered is the order inside both BasicBlock and Bottleneck.
+What may be altered is the order inside both BasicBlock and Bottleneck.
 
     out = self.conv1(x)
     out = self.bn1(out)
@@ -124,7 +124,9 @@ You could set this as:
 
 While it has lot of sense to regularize at the end.
 
-Also interesting is the [Preact resnet](https://arxiv.org/abs/1603.05027) idea.
+Nice would be also to use stride 2 convolution instead of max pooling.
+
+Check also the [Preact resnet](https://arxiv.org/abs/1603.05027) idea.
 
 
 
