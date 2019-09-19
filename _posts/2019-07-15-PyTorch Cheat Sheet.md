@@ -26,6 +26,16 @@ title: PyTorch Cheat Sheet
     print(s.size())# torch.Size([2, 2])
 
 
+>### Padding
+
+    d = torch.arange(16).reshape(1,4,4).float()
+    print(d)
+    pad = (2, -2) 
+    out = F.pad(d, pad, "constant", 1)  
+    print(out.data.size())
+    print(out)
+
+
 >#### When something is a leaf
 
     x = torch.Tensor([1,2])
