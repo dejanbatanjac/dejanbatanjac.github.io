@@ -28,6 +28,9 @@ title: PyTorch Cheat Sheet
 
 >### Padding
 
+    import torch
+    import torch.nn.functional as F
+
     d = torch.arange(16).reshape(1,4,4).float()
     print(d)
     pad = (2, -2) 
