@@ -16,7 +16,7 @@ There are few things important for the batch norm (BN):
 
 * Apply BN to a single layer for every mini batch
 * Normalize the output from the batch activations
-* In PyTorch if we set`affine=True`
+* In PyTorch if we set `affine=True`
 * *  Multiply normalized output by parameter called `weight`
 * * Add to that the parameter `bias`
 * If we set `track_running_stats=True` in PyTorch
