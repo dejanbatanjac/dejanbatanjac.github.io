@@ -22,8 +22,8 @@ title: PyTorch Cheat Sheet
     t = torch.tensor([1., 1.])
     c = torch.cat([t,t])
     s = torch.stack([t,t])
-    print(c.size())# torch.Size([4])
-    print(s.size())# torch.Size([2, 2])
+    print(c.size())# torch.Size([4]) # torch.Size([4])
+    print(s.size())# torch.Size([2, 2]) # torch.Size([2, 2])
 
 
 >### Padding
