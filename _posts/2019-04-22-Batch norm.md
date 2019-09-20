@@ -25,7 +25,7 @@ There are few things important for the batch norm (BN):
 
 Simplified (without using the running statistics) we can express this as:
 
-$$y_ = n(f(w_1, w_2, ... w_n, x)) * weight + bias$$
+$$y = n(f(w_1, w_2, ... w_n, x)) * weight + bias$$
 
 Where $n$ is the normalization function, $weight$, and $bias$ are our scale and offset parameters, $f$ is our function to create the output from the layer, $x$ and $y$ are the activations.
 
