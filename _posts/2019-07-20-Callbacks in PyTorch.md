@@ -104,4 +104,4 @@ inp  (tensor([-1.2069]),)
 outp  tensor([-0.6396,  0.5076], grad_fn=<AddBackward0>)
 ```
 
-Lastly the registered a hook (callback) need to be removed `h.remove()` to free memory up.
+Lastly remove the registered hook: `h.remove()` to free memory.
