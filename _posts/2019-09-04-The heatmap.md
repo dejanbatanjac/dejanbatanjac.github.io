@@ -20,7 +20,7 @@ Before the last fc layer we have the average pooling layer with the input size o
 
 As we can understand we have batch size we will remove, 512 features and 7x7 maps. If we *average* all 512 features (activations) we will end with the single 7x7 image.
 
-This image will show us what *average activation intensities* or the **heatmap**. 
+This image will show us *average activation intensities* or the **heatmap**. 
 
 > Note: the 7x7 size depends on the input image size. After passing convolution layers, if the image is bigger we may end to 10x10 or some other size.
 
