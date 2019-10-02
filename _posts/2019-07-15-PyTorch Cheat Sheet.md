@@ -98,6 +98,7 @@ np.arange(16)                   | torch.range(0,15)
 ```
 
 >### Check if matrix is symmetric
+
 ```
 def is_symetric(m, rtol=1e-05, atol=1e-08):
     return torch.allclose(m, m.t(), rtol=rtol, atol=atol)
@@ -116,6 +117,26 @@ print(ei)
 sei = torch.symeig(a)
 print(sei)
 ```
+
+>### Checking SVD decomposition
+
+<sub>Formula: `input=U×diag(S)×V.t()`</sub>
+```
+a = torch.randn(5, 3)
+print(a)
+
+u, s, v = torch.svd(a)
+print(u)
+print(s)
+print(v)
+
+mul = torch.mm(torch.mm(u, torch.diag(s)), v.t())
+print(mul)
+
+print(torch.dist(a, mul))
+```
+
+<sub>Note: SVD on CPU uses the LAPACK routine SVD on GPU uses the MAGMA routine.</sub>
 
 >### nn.Module
 
