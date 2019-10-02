@@ -97,6 +97,26 @@ np.random.randn(*a.shape)       | torch.randn_like(a)
 np.arange(16)                   | torch.range(0,15) 
 ```
 
+>### Check if matrix is symmetric
+```
+def is_symetric(m, rtol=1e-05, atol=1e-08):
+    return torch.allclose(m, m.t(), rtol=rtol, atol=atol)
+
+a = torch.randn(5, 5)
+print(a)
+
+a = a + a.t()
+print(a)
+
+print(is_symetric(a))
+
+ei = torch.eig(a)
+print(ei)
+
+sei = torch.symeig(a)
+print(sei)
+```
+
 >### nn.Module
 
 ```
