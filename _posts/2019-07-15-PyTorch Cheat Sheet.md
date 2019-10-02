@@ -138,6 +138,42 @@ print(torch.dist(a, mul))
 
 <sub>Note: SVD on CPU uses the LAPACK routine SVD on GPU uses the MAGMA routine.</sub>
 
+
+>### QR decomposition
+
+<sub>Formula: `input=QR`</sub>
+```
+a = torch.randn(5, 3)
+print(a)
+
+q, r = torch.qr(a)
+
+print(q) #  orthonormal
+print(r) #  upper triangular
+
+print(torch.mm(q.t(), q).round())
+print(torch.mm(q, r)) # same as a
+```
+
+
+>### LU factorization of a (system of linear eq. solver)
+
+<sub>Solving: `a@x=b` ,
+`LU` contains `L` and `U` factors for `LU` factorization of `a`.</sub>
+
+```
+a = torch.randn(5, 5)
+print(a)
+b = torch.randn(3, 5).t()
+print(b)
+x, LU = torch.solve(b, a)
+print(x)
+print(LU)
+print(torch.mm(a, x))
+torch.dist(b, torch.mm(a, x)) #~0
+```
+
+
 >### nn.Module
 
 ```
