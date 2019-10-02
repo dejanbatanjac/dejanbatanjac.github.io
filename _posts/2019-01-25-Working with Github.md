@@ -57,6 +57,10 @@ So what to do?
     git merge --no-edit upstream/master
     git push
 
+Then you will get this message:
+
+>This branch is even with pytorch:master. 
+
 ## 5. Create a branch and add your updates
 
     git checkout -b new-branch
@@ -70,3 +74,4 @@ So what to do?
 ## 7. Create a *Pull request*
 
 ![IMG](/images/github4.png)
+
