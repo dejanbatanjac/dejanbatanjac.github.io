@@ -88,3 +88,38 @@ At the end, we will get the result like this where our data pixel values will be
 You may note that before we had our pixel values inside [0., 1.] range, and now we have positive and negative values around 0, ideal for machine learning.
 
 This last case is used when you need to normalize the whole dataset, not just the single image.
+
+### On GPU
+
+Also here is how to do normalization on GPU for the Imagenet.
+
+```
+mean = torch.Tensor([0.485, 0.456, 0.406]).float().reshape(1,3,1,1)
+std = torch.Tensor([0.229, 0.224, 0.225]).float().reshape(1,3,1,1)
+print(mean)
+print(std)
+```
+
+### On GPU based on batch data
+```
+t = torch.rand(2,3,2,2)
+t.cuda()
+print(t)
+# mean = t
+m = t.mean((0,2,3), keepdim=True)
+s = t.std((0,2,3), keepdim=True)
+
+print(m, m.size())
+print(s, s.size())
+# let's normalize
+
+t = (t-m)/(s+1e-6)
+
+print(t)
+
+m = t.mean((0,2,3), keepdim=True)
+s = t.std((0,2,3), keepdim=True)
+
+print(m, m.size())
+print(s, s.size())
+```
