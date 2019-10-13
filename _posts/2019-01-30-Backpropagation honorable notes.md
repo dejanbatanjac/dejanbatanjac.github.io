@@ -18,7 +18,7 @@ def f(a,b,c):
 y= f(a,b,c)
 print(y)
 
-e =0.01 #learning rate
+e =0.01 #some small number
 
 '''gradients da,db,dc'''
 
