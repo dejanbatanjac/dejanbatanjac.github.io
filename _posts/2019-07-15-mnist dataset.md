@@ -77,10 +77,9 @@ print(Y)
 ### Calculating the accuracy:
 
 The accuracy is something we gradually improve over time.
-We can define the accuracy of the training dataset, while training, but
-in fact more important is the accuracy on the validation dataset.
+We can calculate the batch accuracy, but more important is the accuracy on the whole validation dataset.
 
-We use our model to predict and the accuracy which is the number of correct predictions divided by all predictions.
+Any case, the accuracy is the number of correct predictions divided by all predictions.
 
 We regularly deal with:
 
@@ -95,7 +94,7 @@ Last batch training accuracy 0.8125
 Last batch validation accuracy 0.71484375
 ```
 
-Some default batch sizes when training MINST are 32, 64, or 100 examples.
+Some default batch sizes when training MNIST are 32, 64, or 100 examples.
 
 We are most interested to calculate the accuracy on the validation dataset, because this really has much sense. 
 
