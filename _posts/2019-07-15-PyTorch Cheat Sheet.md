@@ -303,6 +303,7 @@ print(size)
 ```
 >### Deconvolution
 
+
 ```
 x = torch.randn(1, 3, 96, 96)
 trans = nn.ConvTranspose2d(3, 3, kernel_size=2, padding=0, stride=2)
