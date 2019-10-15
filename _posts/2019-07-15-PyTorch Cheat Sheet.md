@@ -301,6 +301,29 @@ for p in vgg16.parameters():
   size += p.nelement() * p.element_size()
 print(size)
 ```
+>### Deconvolution
+
+```
+x = torch.randn(1, 3, 96, 96)
+trans = nn.ConvTranspose2d(3, 3, kernel_size=2, padding=0, stride=2)
+z=trans(x) 
+print(z.size())#torch.Size([1, 3, 192, 192])
+
+```
+
+>### Convolution and max-pooling
+
+```
+x = torch.randn(1, 3, 96, 96)
+
+conv = nn.Conv2d(3, 3, kernel_size=2, padding=0, stride=2)
+z=conv(x) 
+print(z.size())#torch.Size([1, 3, 48, 48])
+
+maxpool = nn.MaxPool2d(kernel_size=2)
+z=maxpool(x) 
+print(z.size())#torch.Size([1, 3, 48, 48])
+```
 
 
 >### addcdiv_
