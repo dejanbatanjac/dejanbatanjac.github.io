@@ -14,6 +14,7 @@ There are two interesting libraries you can read images and transform them. Both
     import PIL    
     from PIL import Image
     import matplotlib.pyplot as plt
+    import torchvision
 
     img = PIL.Image.open("/data/image1234.JPEG")
     img.show()  # will open in external program
