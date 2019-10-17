@@ -9,19 +9,16 @@ You will find here `posts` about artificial intelligence most of the time.
 Current themes of interest would be :
 * The PyTorch (another machine learning library for Python)
 * The TensorFlow and Keras
-* [ConvNetJs](https://cs.stanford.edu/people/karpathy/convnetjs/) (JavaScript machine learning library)
 * all other tools and papers helping me understand the machine learning process
-
-I will certainly focus some articles on the latest TensorFlow 2.0 that you may install via this command:
-{% highlight ruby %}
-!pip install tf-nightly-2.0-preview
-import tensorflow as tf
-{% endhighlight %}
 
 Since GitHub is one of the greatest code repositories online there will be some searching methods explained helping us to grab good quality data.
 
-You can do machine learning in many languages, but Python would probable be the very first choice if you haven't worked with the R programming language.
+You can do machine learning in many languages, but Python would probable be the very first choice.
 
-I will also provide some learning articles in Python, R, JavaScript, Ruby and Go.
+More details about me:
 
-There will be interesting time generating and visualizing the ML models.
+<a href="https://www.linkedin.com/in/sioni/">Linked In</a> | <a href="https://docs.google.com/document/d/1L2B45GNAOaUXPwqjusVkfU5BnWhoQi7esST7U3v03x4/edit?usp=sharing">CV</a> | <a href="https://github.com/dejanbatanjac/">GitHub</a> | 
+<a href="https://dejanbatanjac.github.io/">GitHub blog</a> | 
+<a href="https://play.google.com/store/apps/developer?id=Nus+Games
+">Android Quiz apps</a> | 
+
