@@ -17,9 +17,9 @@ Here is the [demo](https://gist.github.com/dejanbatanjac/81c60e579849c07b8c9e93c
 As you may understand from the demo training was on a very limited set of examples:
 
 ```
-(0.2000, 0.0000) -> tensor([0.2000])
-(0.4000, 0.5000) -> tensor([0.9000])
-(0.0000, 0.5000) -> tensor([0.5000])
+(0.2000, 0.0000) -> 0.2000
+(0.4000, 0.5000) -> 0.9000
+(0.0000, 0.5000) -> 0.5000
 ```
 where the first tuple (numbers we add) were from the list:
 
