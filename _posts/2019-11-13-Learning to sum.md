@@ -7,6 +7,7 @@ title: Learning the sum operation (regression)
 Typical regression problem would be to learn the sum (+) operation with this neural net:
 
 ![IMG](/images/sum2.PNG)
+(https://github.com/lutzroeder/netron)
 
 Although this is fairly easy problem, it is very important to provide some tips on regression, and the advantages over the classification.
 
@@ -36,3 +37,4 @@ The next image shows how the training loss decreased over the time when training
 What is even more important to note, even with the data outside of the original input distribution like in case `0.3000 + 0.7000` = `0.9793` we we got pretty accurate result.
 
 This shows regression can be used as an interpolation (approximation) technique as well.
+
