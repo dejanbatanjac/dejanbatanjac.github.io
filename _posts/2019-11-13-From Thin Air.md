@@ -27,7 +27,9 @@ As you may see experimenting with the learning rate showed me interesting things
 ![IMG](/images/fromthinair2.PNG)
 ![IMG](/images/fromthinair3.PNG)
 
-The best learning rate would be probable around 1e3, although you may not even try this at first since usually people experiment with the range smaller than 1.
+The best learning rate (x-axis) would be probable around 1e3, although you may not even try this at first since usually people experiment with the learning rates smaller than 1.
+
+However, trying the range up to 1e5 showed me the bigger learning rates will just work.
 
 In here the `torch.nn.functional.l1_loss` loss function was used, but other would work as well.
 
