@@ -97,6 +97,16 @@ np.random.randn(*a.shape)       | torch.randn_like(a)
 np.arange(16)                   | torch.range(0,15) 
 ```
 
+>### Finding the max argument
+
+```
+t = torch.rand(4,2,3,3) # bs=4, image is 3x3 
+print(t)
+
+v,i = t.max(dim=1, keepdim=True)
+print(i, i.size())
+```
+
 >### Check if matrix is symmetric
 
 ```
