@@ -33,4 +33,4 @@ The next image shows how the training loss decreased over the time with the trai
 
 What is even more important to note, even if we were out of the training set input range like in case `0.3000 + 0.7000` we we got pretty accurate result `0.9793`.
 
-This all leads to regression can be used with some extent as a interpolation or approximation technique.
+This shows regression can be used with some extent as an interpolation (approximation) technique.
