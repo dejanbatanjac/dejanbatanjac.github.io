@@ -17,6 +17,7 @@ model = torch.nn.Sequential(
 ```
 
 The image was 150x200 pixels big.
+
 ![IMG](/images/fromthinair1.PNG)
 
 The whole work is in this [gist](https://gist.github.com/dejanbatanjac/e929dc4f2b1effcb2513ff5e5b37dd72).
