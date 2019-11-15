@@ -7,7 +7,6 @@ title: Learning the sum operation (regression)
 Typical regression problem would be to learn the sum (+) operation with this neural net:
 
 ![IMG](/images/sum2.PNG)
-(https://github.com/lutzroeder/netron)
 
 Although this is fairly easy problem, it is very important to provide some tips on regression, and the advantages over the classification.
 
