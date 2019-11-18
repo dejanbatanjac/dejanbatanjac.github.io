@@ -168,4 +168,4 @@ print(torch.equal(p1,p2))  # True
 
 This shows that p1 and p2 are the same, we haven't learned anything.
 
-Here is the [gist](https://gist.github.com/dejanbatanjac/81c60e579849c07b8c9e93cf6a9797b5) for this article.
+Here is the [gist](https://gist.github.com/dejanbatanjac/b5ed26a925c75514b8ab6d4e6a328e67) for this article.
