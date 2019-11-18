@@ -4,11 +4,7 @@ layout: post
 title: Freezing layers (parameters) of a neural net
 ---
 
-Freezing neural net parameters means not allowing parameters to learn.
-
-This is often needed if we use already trained models.
-
-There are two ways to freeze in PyTorch:
+Freezing neural net parameters means not allowing parameters to learn. This is often needed if we use already trained models. There are two ways to freeze in PyTorch:
 
 * setting `requires_grad` to `False`
 * setting the learning rate `lr` to zero
@@ -17,7 +13,6 @@ There are two ways to freeze in PyTorch:
 
 ```
 import torch
-bs=1
 from torchvision.models import resnet18
 model = resnet18(pretrained=False)
 optimizer = torch.optim.SGD(model.parameters(), lr=0.1, momentum=0.9)
