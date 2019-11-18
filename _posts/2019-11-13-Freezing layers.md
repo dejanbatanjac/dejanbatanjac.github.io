@@ -67,25 +67,7 @@ for name, p in model.named_parameters():
     print("param name:", name, "requires_grad:", p.requires_grad)
 ```
 
-This code will provide the identical result:
-
-```
-import torch
-from torchvision.models import resnet18
-model = resnet18(pretrained=False)
-optimizer = torch.optim.SGD(model.parameters(), lr=0.1, momentum=0.9)
-
-for name, p in model.named_parameters():
-        p.requires_grad=False
-
-model.conv1.weight.requires_grad_(True)
-model.fc.weight.requires_grad = True
-
-for name, p in model.named_parameters():        
-    print("param name:", name, "requires_grad:", p.requires_grad)
-```
-
-The next code checks what we learned so far:
+The next code is a checker that we update the `model.fc.weight` parameter:
 
 ```
 import torch
