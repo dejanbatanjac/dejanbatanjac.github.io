@@ -46,7 +46,6 @@ You can set all the parameters `requires_grad` to `False` this way:
 for name, p in model.named_parameters():
      p.requires_grad = False
 ```    
-However this is not smart since if all your parameters cannot learn your model is useless.
 
 The next code sets `requires_grad` to `True` for `conv1.weight` and `fc.weight` and `False` for the rest of parameters.
 
