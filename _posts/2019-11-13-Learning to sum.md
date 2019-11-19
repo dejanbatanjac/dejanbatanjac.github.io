@@ -14,7 +14,7 @@ If you would set the neural net for `sum` operation as a classification problem,
 
 With regression, this is not the case. Regression can solve with some error margin any problem close to the original training data distribution.
 
-Here is the [demo](https://gist.github.com/dejanbatanjac/81c60e579849c07b8c9e93cf6a9797b5).
+Here is the [demo](https://gist.github.com/dejanbatanjac/16b3db27fe81fa58564565fb2ab52cd2).
 
 As you may understand from the demo training was on a very limited set of examples:
 
