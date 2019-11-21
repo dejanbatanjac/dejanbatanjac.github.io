@@ -6,7 +6,7 @@ published: true
 Here we will calculate derivative using backprop in a point p=(5,3,2).
 We will simple implement backprop in a point without using the chain rule.
 
-Notice how we defined a function `y=3*(a + b*c)` and how we use the learning rate `e=0.01` to calculate the derivative.
+Notice how we defined a function `y=3*(a + b*c)` and how we use `e=0.01` to calculate the derivative.
 
 ~~~
 a=5
