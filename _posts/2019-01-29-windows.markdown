@@ -8,7 +8,7 @@ published: true
 
 ## Microsoft Windows get rid of non verified apps
 
-One of these is never trust apps that are not digitaly signed. To do so once you install Windows 10(Professional eddition is my choice) do this from PowerShell (run PS as Administrator):
+One of these is never trust apps that are not digitaly signed. To do so once you install Windows 10 do this from PowerShell (run PowerShell as Administrator):
 
 ```
 Get-AppxPackage *3dbuilder* | Remove-AppxPackage 
