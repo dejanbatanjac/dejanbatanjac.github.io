@@ -1,0 +1,59 @@
+---
+layout: post
+title: Windows 10 tips
+date: '2019-02-20 12:13:11 +0100'
+categories: search
+published: true
+---
+
+## Microsoft Windows get rid of non verified apps
+
+One of these is never trust apps that are not digitaly signed. To do so once you install Windows 10(Professional eddition is my choice) do this from PowerShell (run PS as Administrator):
+
+```
+Get-AppxPackage *3dbuilder* | Remove-AppxPackage 
+Get-AppxPackage *windowsalarms* | Remove-AppxPackage
+Get-AppxPackage *windowscalculator* | Remove-AppxPackage
+Get-AppxPackage *windowscommunicationsapps* | Remove-AppxPackage`
+Get-AppxPackage *windowscamera* | Remove-AppxPackage
+Get-AppxPackage *officehub* | Remove-AppxPackage
+Get-AppxPackage *skypeapp* | Remove-AppxPackage
+Get-AppxPackage *getstarted* | Remove-AppxPackage
+Get-AppxPackage *zunemusic* | Remove-AppxPackage
+Get-AppxPackage *windowsmaps* | Remove-AppxPackage
+Get-AppxPackage *solitairecollection* | Remove-AppxPackage
+Get-AppxPackage *bingfinance* | Remove-AppxPackage
+Get-AppxPackage *zunevideo* | Remove-AppxPackage
+Get-AppxPackage *bingnews* | Remove-AppxPackage
+Get-AppxPackage *onenote* | Remove-AppxPackage
+Get-AppxPackage *people* | Remove-AppxPackage
+Get-AppxPackage *windowsphone* | Remove-AppxPackage
+Get-AppxPackage *photos* | Remove-AppxPackage
+Get-AppxPackage *windowsstore* | Remove-AppxPackage
+Get-AppxPackage *bingsports* | Remove-AppxPackage
+Get-AppxPackage *soundrecorder* | Remove-AppxPackage
+Get-AppxPackage *bingweather* | Remove-AppxPackage
+Get-AppxPackage *xboxapp* | Remove-AppxPackage
+```
+For instance if we don't do this the `WinStore.App.exe` will be installed as non verified signer. 
+
+The rule of thumb is **never** install apps if not verified signer. For instance never use Skype that is not verified signer.
+
+You can list all packages and application on your sistem like this:
+
+`Get-AppxPackage -AllUsers | Select Name, PackageFullName`
+
+So you will know what to remove.
+With [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer) you can check there is verfied signer column for all your apps.
+
+
+## Controling the recent items
+
+If you would like to remove recent items on your system you may find them in here:
+```
+%AppData%\Microsoft\Windows\Recent Items
+%AppData%\Microsoft\Windows\Recent\AutomaticDestinations
+%AppData%\Microsoft\Windows\Recent\CustomDestinations
+```
+
+
