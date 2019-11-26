@@ -44,6 +44,7 @@ You can check the same with `git remote -v` that will return at this point:
 
 After day or two you will notice, your fork will be behind the master.
 
+
 ![IMG](/images/github2.png)
 
 So what to do?
