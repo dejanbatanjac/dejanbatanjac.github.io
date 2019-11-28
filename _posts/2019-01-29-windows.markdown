@@ -141,13 +141,12 @@ forEach ($package in $packageNames)
 
 To execute the upper script run PowerShell as Administrator and set the policy first to `Set-ExecutionPolicy RemoteSigned`.
 
-<small>On Windows 10, PowerShell may include:
+<small>On Windows 10, PowerShell may include:</small>
 
-*   Restricted — (Default) Stops any script from running.
-*   RemoteSigned — Runs scripts created on the device. However, scripts created on another computer won't run unless they include a signature of a trusted publisher.
-*   AllSigned — All the scripts will run as long as they've been signed by a trusted publisher.
-*   Unrestricted — Runs any script without any restrictions.
-</small>
+*   <small>Restricted — (Default) Stops any script from running.</small>
+*   <small>RemoteSigned — Runs scripts created on the device. </small>However, scripts created on another computer won't run unless they include a signature of a trusted publisher.</small>
+*   <small>AllSigned — All the scripts will run as long as they've been signed by a trusted publisher.</small>
+*   <small>Unrestricted — Runs any script without any restrictions.</small>
 
 Possible the best way to run script is from Windows PowerShell ISE.
 
