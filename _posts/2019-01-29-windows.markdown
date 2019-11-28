@@ -144,7 +144,7 @@ To execute the upper script run PowerShell as Administrator and set the policy f
 <small>On Windows 10, PowerShell may include:</small>
 
 *   <small>Restricted — (Default) Stops any script from running.</small>
-*   <small>RemoteSigned — Runs scripts created on the device. </small>However, scripts created on another computer won't run unless they include a signature of a trusted publisher.</small>
+*   <small>RemoteSigned — Runs scripts created on the device. However, scripts created on another computer won't run unless they include a signature of a trusted publisher.</small>
 *   <small>AllSigned — All the scripts will run as long as they've been signed by a trusted publisher.</small>
 *   <small>Unrestricted — Runs any script without any restrictions.</small>
 
