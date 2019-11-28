@@ -138,3 +138,19 @@ forEach ($package in $packageNames)
     Remove-Package $package.substring($package.indexOf($packageBase))
 }
 ```
+
+To execute the upper script run PowerShell as Administrator and set the policy first to `Set-ExecutionPolicy RemoteSigned`.
+
+<small>On Windows 10, PowerShell may include:
+
+*   Restricted — (Default) Stops any script from running.
+*   RemoteSigned — Runs scripts created on the device. However, scripts created on another computer won't run unless they include a signature of a trusted publisher.
+*   AllSigned — All the scripts will run as long as they've been signed by a trusted publisher.
+*   Unrestricted — Runs any script without any restrictions.
+</small>
+
+Possible the best way to run script is from Windows PowerShell ISE.
+
+Visit [scriptcenter](https://gallery.technet.microsoft.com/scriptcenter/) for all kind of Windows scripts you may run.
+
+
