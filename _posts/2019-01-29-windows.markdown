@@ -153,3 +153,10 @@ Possible the best way to run script is from Windows PowerShell ISE.
 Visit [scriptcenter](https://gallery.technet.microsoft.com/scriptcenter/) for all kind of Windows scripts you may run.
 
 
+## Uninstall Internet Explorer using PowerShell
+
+Open Start, type PowerShell, right-click the top result, and select the Run as Administrator.
+
+Type the command to disable Internet Explorer 11:
+
+    Disable-WindowsOptionalFeature -FeatureName Internet-Explorer-Optional-amd64 –Online
