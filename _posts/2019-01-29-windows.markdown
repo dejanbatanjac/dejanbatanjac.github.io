@@ -160,3 +160,18 @@ Open Start, type PowerShell, right-click the top result, and select the Run as A
 Type the command to disable Internet Explorer 11:
 
     Disable-WindowsOptionalFeature -FeatureName Internet-Explorer-Optional-amd64 –Online
+
+
+## Install OpenSSH client for Windows
+
+Check for the existing OpenSSH software online:
+
+    Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
+
+Then install the client:    
+
+    Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+
+Start using it:
+
+    Ssh username@servername
