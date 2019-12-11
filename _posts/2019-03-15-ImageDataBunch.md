@@ -73,5 +73,5 @@ Path: /root/.fastai/data/oxford-iiit-pet/images
 ...
 None
 ```
-
-`DataBunch` has train_dl, valid_dl and test_dl inside. 
+<sub>Note:
+`DataBunch` has train_dl, valid_dl and test_dl inside. </sub>
