@@ -73,5 +73,22 @@ Path: /root/.fastai/data/oxford-iiit-pet/images
 ...
 None
 ```
-<sub>Note:
+Tips:
+
+<sub>Tip #1:
 `DataBunch` has train_dl, valid_dl and test_dl inside. </sub>
+
+<sub>Tip #2: Use the configuration `Config` paths.
+```
+Config.DEFAULT_CONFIG = {
+        'data_path': '/content/emp/',
+        'data_archive_path': '/content/emp/',
+        'model_path': '/content/emp/'
+}
+Config.create('/tmp/myconfig.yml')
+Config.DEFAULT_CONFIG_PATH = '/tmp/myconfig.yml'
+
+data_path = Config.data_path()
+print(data_path)
+```
+</sub>
