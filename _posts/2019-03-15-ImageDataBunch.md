@@ -16,7 +16,7 @@ It contains four different submodules to reach that goal:
 - `vision.data` contains the definition of `ImageDataBunch` and `DataBunch`
 - `vision.learner` lets you build models
 
-If you use `ImageDataBunch` class you can put anything that represents an image into it either for: test, train, or valication.
+If you use `ImageDataBunch` class you can put anything that represents an image into it either for: test, train, or validation.
 
 To create `ImageDataBunch` you can use several methods:
 
