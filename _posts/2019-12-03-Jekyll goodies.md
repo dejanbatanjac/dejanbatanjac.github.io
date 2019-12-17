@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Jekyll tips and tricks
 permalink: /jekyll-tips/
