@@ -20,13 +20,13 @@ If you use `ImageDataBunch` class you can put anything that represents an image 
 
 To create `ImageDataBunch` you can use several methods:
 
-- `create_from_ll` -> creates from labeled lists
-- `from_csv` -> creates from a csv file
-- `from_df` -> creates from DataFrame
-- `from_folder` -> creates from imagenet style dataset in `path` with `train`,`valid` and `test` subfolders.
-- `from_lists` -> creates from list of `fnames` in `path`.
-- `from_name_func` -> create from list of `fnames` in `path` with `label_func`
-- `from_name_re` -> uses regular expression to extract the names
+- `create_from_ll` -> (from labeled lists)
+- `from_csv` (from a csv file)
+- `from_df` (from DataFrame)
+- `from_folder` (from imagenet style dataset in `path` with `train`,`valid` and `test` subfolders)
+- `from_lists` (from list of `fnames` in `path`)
+- `from_name_func` (from list of `fnames` in `path` with `label_func`)
+- `from_name_re` (uses regular expression to extract the names)
 
 For example, to load MNIST `from_folder` use this:
 ```
@@ -75,10 +75,10 @@ None
 ```
 Tips:
 
-<sub>Tip #1:
-`DataBunch` has train_dl, valid_dl and test_dl inside. </sub>
+<sub>Note #1:
+`DataBunch` has `train_dl`, `valid_dl` and `test_dl` inside. </sub>
 
-<sub>Tip #2: Use the configuration `Config` paths.
+<sub>Note #2: Use the configuration `Config` paths.</sub>
 ```
 Config.DEFAULT_CONFIG = {
         'data_path': '/content/emp/',
@@ -91,4 +91,3 @@ Config.DEFAULT_CONFIG_PATH = '/tmp/myconfig.yml'
 data_path = Config.data_path()
 print(data_path)
 ```
-</sub>
