@@ -20,7 +20,7 @@ If you use `ImageDataBunch` class you can put anything that represents an image 
 
 To create `ImageDataBunch` you can use several methods:
 
-- `create_from_ll` -> (from labeled lists)
+- `create_from_ll` (from labeled lists)
 - `from_csv` (from a csv file)
 - `from_df` (from DataFrame)
 - `from_folder` (from imagenet style dataset in `path` with `train`,`valid` and `test` subfolders)
@@ -73,7 +73,7 @@ Path: /root/.fastai/data/oxford-iiit-pet/images
 ...
 None
 ```
-Tips:
+Notes:
 
 <sub>Note #1:
 `DataBunch` has `train_dl`, `valid_dl` and `test_dl` inside. </sub>
