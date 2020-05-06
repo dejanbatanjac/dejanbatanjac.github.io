@@ -49,7 +49,11 @@ For RF and classification problems the score is the mean accuracy on the given t
 
 >Do we need a validation dataset dealing with RF?
 
-It is best when we have a separate validation set, but we can get away even if we don't. We may use part of the test dataset as the validation dataset. Usually the validation set will take most recent data.
+It is best when we have a separate validation set, but we can get away even if we don't. We may use part of the test dataset as the validation dataset, and this is unique to random forests. This is called Out-Of-Bag prediction (OOB). OOB is based on the fact that we don't take all the rows (observations) when creating the tree. Instead we may take just 63%, and the remaining 27% observations may be used for the validation.
+
+> In scikit-learn to create the tree for OOB, we pass **oob_score=True**, and then we will have the **oob_score_** at the end that should have the similar coefficient of determination like we have used the separate validation set.
+
+Usually the validation set will take most recent data.
 
 
 >Where to start with RF?
