@@ -16,8 +16,8 @@ This is why we may call Batch Normalization (BN) a milestone technique in the de
 There are few things important for the batch norm (BN):
 
 * BN is to be applied to every mini-batch (mb).
-* For each feature F in the mini-batch (mb), BN computes the mean and variance of that feature.
-* BN will then **normalize** each feature F, by subtracting the mean μ and divide by standard deviation σ of that feature.
+* For each feature $c_i$ (from C features) in the mini-batch (mb), BN computes the mean and variance of that feature.
+* BN will then **normalize** each feature $c_i$, by subtracting the mean μ and will divide by standard deviation σ of that feature.
 * If we have `affine=False` we will have what we stated so far. 
 * If we have `affine=True` we will have two more learnable parameters β and γ. γ is the slope (weight) and β is the intercept (bias) for the affine transformation. These parameters are learnable and initially they will be set to all zeros for β and all ones for γ.
 
@@ -140,7 +140,7 @@ Note: running mean and running variance, are statistical methods calculating the
 
 It is possible to use BN even if we set `affine=False` and `track_running_stats=False`. It will just work.
 
-For completeness, batch norm is one of the four types of the regularization techniques. The other forms exist:
+For completeness, batch norm is one of several norms. The other norms that exist:
 
 * Layer norm
 * Instance norm
