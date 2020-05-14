@@ -16,9 +16,7 @@ BERT Bidirectional Encoder Representations from Transformers
 NSP Next Sentence Prediction
 
 
-
 ## Phrases:
-
 Downstream tasks - tasks using the pretrained models.
 
 

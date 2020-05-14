@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: BERT predicts the words
 permalink: /bert-word-predicting/

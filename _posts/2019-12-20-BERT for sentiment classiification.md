@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: Training sentiment classification using BERT
 permalink: /bert-sentiment-classification/
