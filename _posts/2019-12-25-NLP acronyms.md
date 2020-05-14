@@ -9,9 +9,9 @@ permalink: /nlp-acronyms/
 * NLP Natural Language Processing
 * NLU Natural Language Understanding 
 * NED Named Entity Disambiguation
-* NMT Neural machine translation 
-* BPE byte pair encoding 
-* AGI artificial general intelligence 
+* NMT Neural Machine Translation 
+* BPE Byte Pair Encoding 
+* AGI Artificial General Intelligence 
 * BERT Bidirectional Encoder Representations from Transformers
 * NSP Next Sentence Prediction (like Bert)
 * MLM Masked Language Model (Like Bert)
