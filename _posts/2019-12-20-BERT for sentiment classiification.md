@@ -35,6 +35,7 @@ Grading sentences:
 If you still haven't used [MASS](https://www.microsoft.com/en-us/research/blog/introducing-mass-a-pre-training-method-that-outperforms-bert-and-gpt-in-sequence-to-sequence-language-generation-tasks/], you may be using BERT.
 
 We know BERT is used for:
+
 * single sentence classification task
 * sentence pair classification task
 * multi-label classification
@@ -42,14 +43,23 @@ We know BERT is used for:
 * next sentence prediction 
 * missing word prediction
 * speech tagging (noun, adverb, verb, ..)
-* whiter sentence is grammatically correct and more ...
+* grammar check and more ...
 
 However, BERT is not used for common language modeling tasks such as next word prediction. For that you may use [GPT-2]()
 
 Previous tasks were extracted from the The [BERT paper](https://arxiv.org/abs/1810.04805).
 Let's use BERT on or movie review task.
 
+Working directly with TensorFlow 
+requires to have access to—and 
+include in your code—the full code 
+Of the pretrained model. 
+TensorFlow Hub is a library for sharing machine learning 
+models as self-contained pieces of TensorFlow graph with their weights and assets. 
+
+Modules are automatically downloaded and cached when 
+instantiated. Each time a module m is called 
+e.g. y = m(x), it adds operations to the Current TensorFlow graph to compute y from x. 
 
 
-labelrd vs. unla beled loss vs. ougputs of the m9e3o
 

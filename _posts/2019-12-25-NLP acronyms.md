@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Acronyms and tasks in NLP
+title: Acronyms terms and tasks in NLP
 permalink: /nlp-acronyms/
 ---
 Wanted to have a summary of he NLP acronyms and common tasks.
@@ -37,6 +37,12 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 * NEN Named Entity Normalization
 
 <!-- https://en.wikipedia.org/wiki/Category:Tasks_of_natural_language_processing -->
+
+## Terms
+
+* Logits output token probabilities
+* top_k=n select n tokens with the highest score (logit)
+* 
 
 ## Tasks in NLP:
 
