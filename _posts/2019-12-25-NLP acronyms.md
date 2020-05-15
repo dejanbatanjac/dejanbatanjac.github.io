@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Acronyms and important phrases in NLP
+title: Acronyms and tasks in NLP
 permalink: /nlp-acronyms/
 ---
 Wanted to have a summary of he NLP acronyms and common tasks.
@@ -9,7 +9,7 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 
 ## Acronyms in NLP
 
-* LM Language Modelling
+* LM Language Modelling (predicting the next word given the previous context; needs unlabeled text)
 * NLP Natural Language Processing
 * NLG Natural Language Generation 
 * NLU Natural Language Understanding 
@@ -42,6 +42,7 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 
 * Automatic summarization
 * Collocation extraction
+* Information extraction
 * Entity linking
 * Natural language parsing 
 * Part-of-speech tagging
