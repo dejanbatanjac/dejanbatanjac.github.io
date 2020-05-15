@@ -9,7 +9,7 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 
 ## Acronyms in NLP
 
-* LM Language Modelling (predicting the next word given the previous context; needs unlabeled text)
+* LM Language Modelling (predicting the next word given the previous context)
 * NLP Natural Language Processing
 * NLG Natural Language Generation 
 * NLU Natural Language Understanding 
