@@ -9,6 +9,7 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 
 ## Acronyms in NLP
 
+* LM Language Modelling
 * NLP Natural Language Processing
 * NLG Natural Language Generation 
 * NLU Natural Language Understanding 
