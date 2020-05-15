@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Acronyms metrics and tasks in NLP
+title: Acronyms, metrics and tasks in NLP
 permalink: /nlp-acronyms/
 ---
 Wanted to have a summary of he NLP acronyms and common tasks.
