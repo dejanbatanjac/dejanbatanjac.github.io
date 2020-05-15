@@ -156,5 +156,44 @@ print(torch.__version__)
 
 Transformer architecture shows nice results in Machine Translation (BLEU): EN->DE 28.4 and 41.8 for EN->FR according to the original paper.
 
-$\to 0$,
 
+```python
+import torch
+from pytorch_transformers import *
+
+# Simple and standard API for 6 transformer architectures & 27 pretrained model weights:
+
+MODELS = [(BertModel, RertTokenizer 'bert-base-uncased'),
+(OpenAIGPTModel, OpenAIGPTTokenizer, 'openai-gpt'),
+(GPT2Model, GPT2Tokentizer, 'gpt2'),
+(TransfoXLModel, TransfoXLTokenizer, 'transfo-xl-wt103'),
+(XLNetModel, XLNetTokenizer, 'xlnet-base-cased'),
+(XLMModel, XLMTokentizer, 'xlm-mlm-enfr-1024')]
+
+# Let's encode some text in a sequence of hidden-states using each model:
+for model_class, tokenizer_class, pretrained_weights in MODELS:
+# Load pretrained model/tokenizer
+tokenizer=tokenizer_class.from_pretrained(pretrained_weights)
+model=model_class.from_pretrained(pretrained_weights)
+
+# Encode text
+input_ids=torch.tensor([tokenizer.encode("Here is some text to encode")])
+last_hidden_states=model(input_ids)[0]  # Models outputs are now tuples
+
+# Models can return full list of hidden-states & attentions weights at each layer
+model=model_class.from_pretrained( pretrained_weights,
+                                  output_hidden_states=True, 
+                                  output_attentions=True)
+input_ids=torch.tensor([tokenizer.encode("Let's see hidden-states and attentions")])
+
+all_hidden_states, all_attentions=model(input_ids)[-2:]
+
+# Models are compatible with Torchscript
+model=model_class.from_pretrained(pretrained_weights, torchscript=True)
+traced_model=torch.jit.trace(model, (input_ids,))
+
+# Simple serialization for models and tokenizers
+model.save_pretrained('./directory/to/save/')  # save
+model=model_class.from_pretrained('./directory/to/save/')  # re-load
+# SOTA examples for GLUE, SQUAD, text generation...
+```
