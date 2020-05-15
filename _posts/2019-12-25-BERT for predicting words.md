@@ -22,17 +22,14 @@ In 🤗 (Hugging Face – on a mission to solve NLP, one commit at a time) there
 
 BERT has been trained on the Toronto Book Corpus and Wikipedia and two specific tasks: MLM and NSP.
 
-The training was semi-supervised and based on two tasks:
-
 * masked language modeling (MLM)
 * next sentence prediction on a large textual corpus (NSP)
 
 After the training process BERT models were able to understands the language patterns such as grammar.
 
-MLM should help BERT understand the language structure and rules such as grammar.
+MLM should help BERT understand the language **syntax** such as grammar.
 
-Considering two sequential sentences NSP task should return the result (probability) if the second sentence is following the first one or if it is a fake. This helps BERT understanding the context.
-
+NSP task should return the result (probability) if the second sentence is following the first one. This helps BERT understand the **semantics**.
 
 
 ## Classes
