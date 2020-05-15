@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Acronyms terms and tasks in NLP
+title: Acronyms metrics and tasks in NLP
 permalink: /nlp-acronyms/
 ---
 Wanted to have a summary of he NLP acronyms and common tasks.
@@ -23,26 +23,30 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 * MLM Masked Language Model (Like Bert)
 * CLM Causal Language Model (like GPT2)
 * PBSMT Phrase Based Statistical Machine Translation
-* ROUGE Recall Oriented Understudy for Gisting Evaluation
-* GLUE General Language Understanding Evaluation (consisting of 9 tasks)
-* BLEU BiLingual Evaluation Understudy
+(consisting of 9 tasks)
 * WER Word Error Rate 
 * BERT Bidirectional Encoder Representations from Transformers)
-* SWAG Situations With Adversarial Generations
-* SQuAD Stanford Question Answering Dataset v1.1 and v2.0.
 * GloVe Global Vectors
 * NEL Named Entity Linking
 * NED Named Entity Disambiguation
 * NERD Named Entity Recognition and Disambiguation
 * NEN Named Entity Normalization
+* CoLA Corpus of Linguistic Acceptability (like in T5)
+* SWAG Situations With Adversarial Generations
+
+## Metrics
+
+* BLEU BiLingual Evaluation Understudy
+* ROUGE Recall Oriented Understudy for Gisting Evaluation
+* GLUE General Language Understanding Evaluation 
+* SQuAD Stanford Question Answering Dataset v1.1 and v2.0.
+* GLEU Generalized Language Understanding Evaluation
+* SacreBLEU is a standard BLEU Python package
+* seqeval Python framework for **seq**uence labeling **eval**uation.
+* XNLI Cross-lingual Natural Language Inference
 
 <!-- https://en.wikipedia.org/wiki/Category:Tasks_of_natural_language_processing -->
 
-## Terms
-
-* Logits output token probabilities
-* top_k=n select n tokens with the highest score (logit)
-* 
 
 ## Tasks in NLP:
 
@@ -67,7 +71,6 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 * Word2vec (word embeddings)
 * Downstream tasks (on pretrained models)
 * Word-sense disambiguation
-
 
 
 
