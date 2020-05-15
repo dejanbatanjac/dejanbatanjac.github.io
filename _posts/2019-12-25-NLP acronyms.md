@@ -13,6 +13,7 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 * NLP Natural Language Processing
 * NLG Natural Language Generation 
 * NLU Natural Language Understanding 
+* NLI Natural Language Inference
 * NED Named Entity Disambiguation
 * NER Named Entity Recognition
 * NMT Neural Machine Translation 
@@ -33,6 +34,7 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 * NEN Named Entity Normalization
 * CoLA Corpus of Linguistic Acceptability (like in T5)
 * SWAG Situations With Adversarial Generations
+* WNLI Winograd NLI
 
 ## Metrics
 
@@ -72,6 +74,9 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 * Downstream tasks (on pretrained models)
 * Word-sense disambiguation
 
+## Links
 
+* http://nlpprogress.com/english/common_sense.html
+* https://paperswithcode.com/area/natural-language-processing
 
 <!-- https://en.wikipedia.org/wiki/Glossary_of_artificial_intelligence -->
