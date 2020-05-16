@@ -18,15 +18,13 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 * NER Named Entity Recognition
 * NMT Neural Machine Translation 
 * BPE Byte Pair Encoding 
-* AGI Artificial General Intelligence 
-* BERT Bidirectional Encoder Representations from Transformers
 * NSP Next Sentence Prediction (like Bert)
 * MLM Masked Language Model (Like Bert)
 * CLM Causal Language Model (like GPT2)
 * PBSMT Phrase Based Statistical Machine Translation
 (consisting of 9 tasks)
 * WER Word Error Rate 
-* BERT Bidirectional Encoder Representations from Transformers)
+* BERT Bidirectional Encoder Representations from Transformers
 * GloVe Global Vectors
 * NEL Named Entity Linking
 * NED Named Entity Disambiguation
@@ -44,7 +42,7 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 * SQuAD Stanford Question Answering Dataset v1.1 and v2.0.
 * GLEU Generalized Language Understanding Evaluation
 * SacreBLEU is a standard BLEU Python package
-* seqeval Python framework for **seq**uence labeling **eval**uation.
+* SEQVAL **Seq**uence labeling **Eval**uation.
 * XNLI Cross-lingual Natural Language Inference
 
 <!-- https://en.wikipedia.org/wiki/Category:Tasks_of_natural_language_processing -->
