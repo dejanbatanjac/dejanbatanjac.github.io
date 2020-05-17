@@ -21,6 +21,8 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 * NSP Next Sentence Prediction (like Bert)
 * MLM Masked Language Model (Like Bert)
 * CLM Causal Language Model (like GPT2)
+* RTE Recognizing Textual Entailment
+* MRPC Microsoft Research Paraphrase Corpus
 * PBSMT Phrase Based Statistical Machine Translation
 (consisting of 9 tasks)
 * WER Word Error Rate 
@@ -33,6 +35,7 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 * CoLA Corpus of Linguistic Acceptability (like in T5)
 * SWAG Situations With Adversarial Generations
 * WNLI Winograd NLI
+* STS Semantic Textual Similarity 
 
 ## Metrics
 
@@ -71,10 +74,19 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 * Word2vec (word embeddings)
 * Downstream tasks (on pretrained models)
 * Word-sense disambiguation
+* POS part of speech tagging (assigning tags such as n, v, adj to tokens)
+* Constituent labeling
+* Dependency labeling
+* Named entity labeling
+* SRL Semantic role labeling
+* Coreference (Obama -> the former president)
+* Semantic proto-role (SPR)
+* Relation classification
 
 ## Links
 
 * http://nlpprogress.com/english/common_sense.html
 * https://paperswithcode.com/area/natural-language-processing
+* https://arxiv.org/abs/1905.06316
 
 <!-- https://en.wikipedia.org/wiki/Glossary_of_artificial_intelligence -->
