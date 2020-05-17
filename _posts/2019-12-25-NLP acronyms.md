@@ -44,7 +44,6 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 * GLUE General Language Understanding Evaluation 
 * SQuAD Stanford Question Answering Dataset v1.1 and v2.0.
 * GLEU Generalized Language Understanding Evaluation
-* SacreBLEU is a standard BLEU Python package
 * SEQVAL **Seq**uence labeling **Eval**uation.
 * XNLI Cross-lingual Natural Language Inference
 
