@@ -21,8 +21,8 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 * NSP Next Sentence Prediction (like Bert)
 * MLM Masked Language Model (Like Bert)
 * CLM Causal Language Model (like GPT2)
-* RTE Recognizing Textual Entailment
-* MRPC Microsoft Research Paraphrase Corpus
+* RTE Recognizing Textual Entailment (pair of sentences, and the task is to predict whether the first entails the second; part of GLUE)
+* MRPC Microsoft Research Paraphrase Corpus (pair of sentences, labeled as almost semantically equivalent, or no, part of GLUE)
 * PBSMT Phrase Based Statistical Machine Translation
 (consisting of 9 tasks)
 * WER Word Error Rate 
@@ -32,10 +32,11 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 * NED Named Entity Disambiguation
 * NERD Named Entity Recognition and Disambiguation
 * NEN Named Entity Normalization
-* CoLA Corpus of Linguistic Acceptability (like in T5)
+* CoLA Corpus of Linguistic Acceptability (possible or no, T5 uses this; part of GLUE)
 * SWAG Situations With Adversarial Generations
 * WNLI Winograd NLI
 * STS Semantic Textual Similarity 
+* SST Stanford Sentiment Treebank (positive or negative movie review; part of GLUE) 
 
 ## Metrics
 
@@ -70,8 +71,7 @@ Wanted to have a summary of he NLP acronyms and common tasks.
 * Truecasing
 * Terminology extraction
 * Lemmatisation
-* Word2vec (word embeddings)
-* Downstream tasks (on pretrained models)
+* Downstream tasks (on pretrained models) aka finetuning
 * Word-sense disambiguation
 * POS part of speech tagging (assigning tags such as n, v, adj to tokens)
 * Constituent labeling
