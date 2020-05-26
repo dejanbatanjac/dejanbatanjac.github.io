@@ -53,6 +53,7 @@ Sets the config parameters for famous BERT models. Here is a review that can hel
 
 
 ### bert-base-uncased 
+
 param | value
 ---------|----------
 "attention_probs_dropout_prob"|  0.1
@@ -207,6 +208,7 @@ Now we have three times bigger vocab size with **bert-base-multilingual-uncased*
 
 
 ### bert-base-multilingual-cased
+
 param | value
 ---------|----------
 "attention_probs_dropout_prob"|  0.1
