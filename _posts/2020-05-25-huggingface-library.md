@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Huggingface Config Params Explained
+title: HuggingFace Config Params Explained
 permalink: /huggingface-config
 ---
 - [BERT models](#bert-models)
