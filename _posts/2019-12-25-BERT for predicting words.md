@@ -16,7 +16,7 @@ permalink: /bert-word-predicting/
   - [BertForQuestionAnswering](#bertforquestionanswering)
 - [Demo](#demo)
 
-In 🤗 (Hugging Face – on a mission to solve NLP, one commit at a time) there are interesting BERT model.
+In 🤗 (HuggingFace - on a mission to solve NLP, one commit at a time) there are interesting BERT model.
 
 ## BERT = MLM and NSP
 
@@ -38,14 +38,14 @@ I am analyzing in here just the PyTorch classes, but at the same time the conclu
 
 Base classed related to BERT include:
 
-* BertModel 
-* BertForPreTraining 
-* BertForMaskedLM 
-* BertForNextSentencePrediction 
-* BertForSequenceClassification 
-* BertForMultipleChoice 
-* BertForTokenClassification 
-* BertForQuestionAnswering 
+* **BertModel**
+* **BertForPreTraining**
+* **BertForMaskedLM**
+* **BertForNextSentencePrediction**
+* **BertForSequenceClassification**
+* **BertForMultipleChoice**
+* **BertForTokenClassification**
+* **BertForQuestionAnswering**
 
 There are even more helper BERT classes besides one mentioned in the upper list, but these are the top most classes.
 
