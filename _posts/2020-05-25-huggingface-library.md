@@ -128,7 +128,7 @@ attention_head_size = int(hidden_size / num_attention_heads)
 
 A tip on the attention heads. Each head is a capability to learn independent features. For instance head H1 can learn features f11, f12, and f13. Head H2 can learn some other features f21, f22, f23, and so on. 
 
-Ideally the more heads you have the more language features you can learn. However, there are some papers like Lottery ticket trying to neglect that, saying you can remove most of the heads and you will still have a good model. There are some other papers like Albert saying if you share the parameters among heads is also possible.
+Ideally the more heads you have the more language features you can learn. However, there are some papers like Lottery ticket trying to neglect that, saying you can remove most of the heads and you will still have a good model. There are some other papers like Albert saying to share the parameters among heads is smart and memory efficient.
 
 ### bert-base-cased 
 
