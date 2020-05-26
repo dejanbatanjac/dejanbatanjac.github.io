@@ -741,8 +741,8 @@ param | value
   "vocab_size"|  32128
 
 
-* **d_model** is size of the encoder layers and the pooler layer it is the same was **hidden_size** in BERT.
-* **d_ff** is hidden layer size of the FNN (Feed Forwarded Network).
+* **d_model** is size of the encoder layers and the pooler layer it is the same was **hidden_size** in BERT
+* **d_ff** is hidden layer size of the FNN (Feed Forwarded Network)
 * **d_kv** is self.hidden_size // self.num_attention_heads, the same as **attention_head_size** in BERT
 
 
