@@ -54,7 +54,7 @@ Sets the config parameters for famous BERT models. Here is a review that can hel
 
 ### bert-base-uncased 
 
-<small>
+<sup>
 
 param | value
 ---------|----------
@@ -72,7 +72,7 @@ param | value
 "pad_token_id"|  0
 "type_vocab_size"|  2
 "vocab_size"|  30522
-</small>
+</sup>
 
 To explain **max_position_embeddings** which is actually a limitation I created the example. You cannot have more than 512 embedded tokens, meaning your input is limited.
 
@@ -97,7 +97,7 @@ _Token indices sequence length is longer than the specified maximum sequence len
 
 ### bert-large-uncased 
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -116,7 +116,7 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  30522
 
-</small>
+</sup>
 
 **bert-large-uncased** has the same **vocab_size** as the **bert-base-uncased**, but **hidden_size** is bigger and equal to 1024. Hidden size by num of attention heads should be 64.
 
@@ -138,7 +138,7 @@ Ideally the more heads you have the more language features you can learn. Howeve
 
 ### bert-base-cased 
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -157,13 +157,13 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  28996
 
-</small>
+</sup>
 
 **bert-base-cased** is pretty much the same as **bert-base-uncased** except the vocab size is even smaller. The vocab size directly impacts the model size in MB, bigger **vocab_size** bigger the model in MB. Usually the case is that **cased** models do have bigger **vocab_size** but in here this is not true. We will see some cases where this is the case, because is has sense since the tokens "We" and "we" are considered to be different for the cased model.
 
 ### bert-large-cased 
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -188,14 +188,14 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  28996
 
-</small>
+</sup>
 
 On the other side **bert-large-cased** is very similar to **bert-large-uncased** from few lines ago, but again it has the smaller vocab_size. I think the main reason is they found no no major improvement with the bigger **vocab_size**, and with the smaller **vocab_size** the model is memory efficient (takes fewer MB).
 
 
 ### bert-base-multilingual-uncased
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -220,14 +220,14 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  105879
 
-</small>
+</sup>
 
 Now we have three times bigger vocab size with **bert-base-multilingual-uncased** compared to **bert-large-cased**. This seams to be a good choice since the model covers 100+ languages.
 
 
 ### bert-base-multilingual-cased
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -252,14 +252,14 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  119547
 
-</small>
+</sup>
 
 This is a very big model it has bigger **vocab_size** compared to  **bert-base-multilingual-uncased**.
 
 
 ### bert-large-uncased-whole-word-masking
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -278,12 +278,12 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  30522
 
-</small>
+</sup>
 
 
 ### bert-large-cased-whole-word-masking
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -308,14 +308,14 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  28996
 
-</small>
+</sup>
 
 
 ### bert-large-uncased-whole-word-masking-finetuned-squad
 
 Whenever we see finetuned-squad this means this model is ideal for question answering tasks.
 
-<small> 
+<sup> 
 
 param | value
 ---------|---------- 
@@ -334,11 +334,11 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  30522
 
-</small>
+</sup>
 
 ### bert-large-cased-whole-word-masking-finetuned-squad
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -363,13 +363,13 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  28996
 
-</small>
+</sup>
 
 ### bert-base-cased-finetuned-mrpc
 
 MRPC is a mark this model can be used for sequence classification.
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -388,7 +388,7 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  28996
 
-</small>
+</sup>
 
 ## RoBERTa models
 
@@ -396,7 +396,7 @@ RoBERTa is modified BERT model trained on 10X more text. Their functionality is 
 
 ### roberta-base
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -417,7 +417,7 @@ param | value
 "type_vocab_size"|  1
 "vocab_size"|  50265
 
-</small>
+</sup>
 
 Here is one neat trick to explain what does it actually mean the **hidden_size** and why it is used for. We are using the **roberta-base**.
 
@@ -456,7 +456,7 @@ The _sequence output_ will have dimension [1, 3, 768] since there are 3 tokens i
 
 ### roberta-large
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -477,7 +477,7 @@ param | value
 "type_vocab_size"|  1
 "vocab_size"|  50265
 
-</small>
+</sup>
 
 In here note the **vocab_size** for RoBERTa (**roberta-base** and **roberta-large**) is ~ 50K while for BERT is ~ 30K. Of course, it depends on a model, different models can have arbitrary vocab sizes.
 
@@ -502,7 +502,7 @@ The other GLUE tasks are:
 
 > ss: single sentence tasks, sim: similarity tasks, inf: inference tasks
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -523,7 +523,7 @@ param | value
 "type_vocab_size"|  1
 "vocab_size"|  50265
 
-</small>
+</sup>
 
 
 ### distilroberta-base
@@ -534,7 +534,7 @@ This is not possible some, some accuracy will be lost, but on the other side the
 
 This particular model is used for masked language modeling (predicting the missing word), that may fix the grammar errors for instance.
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -555,13 +555,13 @@ param | value
 "type_vocab_size"|  1
 "vocab_size"|  50265
 
-</small>
+</sup>
 
 ### roberta-base-openai-detector
 
 The following two models are used for sequence classification **RobertaForSequenceClassification**
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -583,12 +583,12 @@ param | value
 "type_vocab_size"|  1
 "vocab_size"|  50265
 
-</small>
+</sup>
 
 
 ### roberta-large-openai-detector
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -610,7 +610,7 @@ param | value
 "type_vocab_size"|  1
 "vocab_size"|  50265
 
-</small>
+</sup>
 
 
 ## ALBERT models
@@ -619,7 +619,7 @@ param | value
 
 ALBERT is A Lite BERT! Project by Google and Toyota. It brings the new param **num_hidden_groups** that is set to 1. With **num_hidden_groups** equal to number of heads we will have BERT again.
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -648,7 +648,7 @@ pad_token_id| 0
 type_vocab_size| 2
 vocab_size| 30000
 
-</small>
+</sup>
 
 ### albert-large-v1
 
@@ -663,7 +663,7 @@ input_ids = torch.tensor(tokenizer.encode("Hello ", add_special_tokens=False)).u
 print(input_ids)
 ```
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -692,7 +692,7 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  30000
 
-</small>
+</sup>
 
 Again the major difference between the base vs. large models is the **hidden_size** 768 vs. 1024, and **intermediate_size** is 3072 vs. 4096.
 
@@ -721,7 +721,7 @@ To train BART several tricks are used:
 * SP (Sentence Permutation) where a document is divided into sentences based on full stops. Sentences are shuffled in random order.
 * DR (Document Rotation) where token is chosen uniformly at random, and the document is rotated so that it begins with that token and then model has been trained to identify the start of the document.
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -756,7 +756,7 @@ param | value
 "scale_embedding"|  false
 "vocab_size"|  50265
 
-</small>
+</sup>
 
 ## GPT2
 
@@ -764,7 +764,7 @@ There are more powerful gpt2 models but this one is the smallest.
 
 ### gpt2
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -789,7 +789,7 @@ param | value
 "summary_use_proj"|  true
 "vocab_size"|  50257
 
-</small>
+</sup>
 
 The meaning of the most important params are:
 
@@ -808,7 +808,7 @@ Used for several tasks (multitask model)
 
 ### t5-small
 
-<small> 
+<sup> 
 
 param | value
 ---------|----------
@@ -830,7 +830,7 @@ param | value
 "relative_attention_num_buckets"|  32
 "vocab_size"|  32128
 
-</small>
+</sup>
 
 
 * **d_model** is size of the encoder layers and the pooler layer it is the same was **hidden_size** in BERT
