@@ -50,7 +50,7 @@ Some interesting models worth to mention based on variety of config parameters a
 
 ## BERT models
 
-Sets the config parameters for famous BERT models. Here is a review that can help us to understand the BERT model better.
+Sets the config parameters for famous BERT models. Here is a review that can help us understand the BERT model better.
 
 
 ### bert-base-uncased 
