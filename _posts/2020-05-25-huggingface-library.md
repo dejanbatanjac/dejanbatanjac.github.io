@@ -194,7 +194,7 @@ param | value
 
 Again the major difference between the base vs. large models is the **hidden_size** 768 vs. 1024, and **intermediate_size** is 3072 vs. 4096.
 
-BERT has 2 x FFNN inside each encoder layer, for each layer, for each position (**max_position_embeddings**), for every head, and the size of these FFNN is:
+BERT has 2 x FFNN inside each encoder layer, for each layer, for each position (**max_position_embeddings**), for every head, and the size of first FFNN is:
 (**intermediate_size** X **hidden_size**). This is the hidden layer also called intermediate layer.
 
 There is a second FFNN of size (**hidden_size** X **intermediate_size**). This is the output layer.
