@@ -149,7 +149,7 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  28996
 
-**bert-base-cased** is pretty much the same as **bert-base-uncased** except the vocab size is even smaller. The vocab size directly impacts the model size in MB, bigger **vocab_size** bigger the model in MB.
+**bert-base-cased** is pretty much the same as **bert-base-uncased** except the vocab size is even smaller. The vocab size directly impacts the model size in MB, bigger **vocab_size** bigger the model in MB. Usually the case is that **cased** models do have bigger **vocab_size** but in here this is not true. We will see some cases where this is the case, because is has sense since the tokens "We" and "we" are considered to be different for the cased model.
 
 ### bert-large-cased 
 
@@ -176,7 +176,7 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  28996
 
-On the other side **bert-large-cased** is very similar to **bert-large-uncased** from few lines ago, but again it has the smaller vocab_size. I think the main reason is there is no major improvement with the bigger **vocab_size**.
+On the other side **bert-large-cased** is very similar to **bert-large-uncased** from few lines ago, but again it has the smaller vocab_size. I think the main reason is they found no no major improvement with the bigger **vocab_size**, and with the smaller **vocab_size** the model is memory efficient (takes fewer MB).
 
 
 ### bert-base-multilingual-uncased
@@ -204,7 +204,7 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  105879
 
-Now we have three times bigger vocab size with **bert-base-multilingual-uncased**. This seams to be a good choice since the model covers 100+ different languages.
+Now we have three times bigger vocab size with **bert-base-multilingual-uncased** compared to **bert-large-cased**. This seams to be a good choice since the model covers 100+ languages.
 
 
 ### bert-base-multilingual-cased
@@ -232,7 +232,7 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  119547
 
-This is a very big model and what is logical it should have the bigger **vocab_size** compared to  **bert-base-multilingual-uncased**.
+This is a very big model it has bigger **vocab_size** compared to  **bert-base-multilingual-uncased**.
 
 
 ### bert-large-uncased-whole-word-masking
@@ -352,7 +352,7 @@ param | value
 
 ## RoBERTa models
 
-RoBERTa are 10X more trained BERT models with few modifications. Their functionality is very similar to BERT.
+RoBERTa is modified BERT model trained on 10X more text. Their functionality is very similar to BERT.
 
 ### roberta-base
 
@@ -399,7 +399,7 @@ print(input_ids) # tensor([[    0, 20920,     2]])
 
 We have \<s>Hello\</s> because RoBERTa uses \<s> and \</s> special tokens. 
 
-> BERT uses [CLS] and [SEP] as starting token and separator token respectively that correspond to RoBERTa tokens we mentioned.
+> BERT uses [CLS] and [SEP] as starting token and separator token respectively that correspond to RoBERTa tokens we mentioned. Note that RoBERTa also can have a separate classification token, but it is usually equivalent to the bos token (\<s>).
 
 Now if you give above sentence to **RobertaModel** you will get two 768 dimension embeddings for each token in the given sentence.
 
@@ -530,23 +530,23 @@ param | value
 
 param | value
 ---------|----------
-  "attention_probs_dropout_prob"|  0.1
-  "bos_token_id"|  0
-  "eos_token_id"|  2
-  "hidden_act"|  "gelu"
-  "hidden_dropout_prob"|  0.1
-  "hidden_size"|  1024
-  "initializer_range"|  0.02
-  "intermediate_size"|  4096
-  "layer_norm_eps"|  1e-05
-  "max_position_embeddings"|  514
-  "model_type"|  "roberta"
-  "num_attention_heads"|  16
-  "num_hidden_layers"|  24
-  "output_past"|  true
-  "pad_token_id"|  1
-  "type_vocab_size"|  1
-  "vocab_size"|  50265
+"attention_probs_dropout_prob"|  0.1
+"bos_token_id"|  0
+"eos_token_id"|  2
+"hidden_act"|  "gelu"
+"hidden_dropout_prob"|  0.1
+"hidden_size"|  1024
+"initializer_range"|  0.02
+"intermediate_size"|  4096
+"layer_norm_eps"|  1e-05
+"max_position_embeddings"|  514
+"model_type"|  "roberta"
+"num_attention_heads"|  16
+"num_hidden_layers"|  24
+"output_past"|  true
+"pad_token_id"|  1
+"type_vocab_size"|  1
+"vocab_size"|  50265
 
 
 ## ALBERT models
@@ -622,7 +622,16 @@ param | value
 "type_vocab_size"|  2
 "vocab_size"|  30000
 
-Again the major difference between the base vs. large models is the hidden size 768 vs. 1024.
+Again the major difference between the base vs. large models is the **hidden_size** 768 vs. 1024, and **intermediate_size** is 3072 vs. 4096.
+
+BERT has 2 x FFNN inside each encoder layer, for each layer, for each position (**max_position_embeddings**), for every head, and the size of these FFNN is:
+(**intermediate_size** X **hidden_size**). This is the hidden layer also called intermediate layer.
+
+There is a second FFNN of size (**hidden_size** X **intermediate_size**). This is the output layer.
+
+Two thirds of all BERT parameters goes to the FFNNs.
+
+
 
 
 ## BART
@@ -722,23 +731,23 @@ Used for several tasks (multitask model)
 
 param | value
 ---------|----------
-  "d_ff"|  2048
-  "d_kv"|  64
-  "d_model"|  512
-  "decoder_start_token_id"|  0
-  "dropout_rate"|  0.1
-  "eos_token_id"|  1
-  "initializer_factor"|  1.0
-  "is_encoder_decoder"|  true
-  "layer_norm_epsilon"|  1e-06
-  "model_type"|  "t5"
-  "n_positions"|  512
-  "num_heads"|  8
-  "num_layers"|  6
-  "output_past"|  true
-  "pad_token_id"|  0
-  "relative_attention_num_buckets"|  32
-  "vocab_size"|  32128
+"d_ff"|  2048
+"d_kv"|  64
+"d_model"|  512
+"decoder_start_token_id"|  0
+"dropout_rate"|  0.1
+"eos_token_id"|  1
+"initializer_factor"|  1.0
+"is_encoder_decoder"|  true
+"layer_norm_epsilon"|  1e-06
+"model_type"|  "t5"
+"n_positions"|  512
+"num_heads"|  8
+"num_layers"|  6
+"output_past"|  true
+"pad_token_id"|  0
+"relative_attention_num_buckets"|  32
+"vocab_size"|  32128
 
 
 * **d_model** is size of the encoder layers and the pooler layer it is the same was **hidden_size** in BERT
