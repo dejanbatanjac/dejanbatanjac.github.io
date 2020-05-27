@@ -160,7 +160,9 @@ param | value
 
 
 
-**bert-base-cased** is pretty much the same as **bert-base-uncased** except the vocab size is even smaller. The vocab size directly impacts the model size in MB, bigger **vocab_size** bigger the model in MB. Usually the case is that **cased** models do have bigger **vocab_size** but in here this is not true. We will see some cases where this is the case, because is has sense since the tokens "We" and "we" are considered to be different for the cased model.
+**bert-base-cased** is pretty much the same as **bert-base-uncased** except the vocab size is even smaller. The vocab size directly impacts the model size in MB. Bigger **vocab_size** bigger the model in MB. Usually the case is that **cased** models do have bigger **vocab_size** but in here this is not true. 
+
+> Tokens "We" and "we" are considered to be different for the cased model.
 
 ### bert-large-cased 
 
@@ -190,8 +192,16 @@ param | value
 "vocab_size"|  28996
 
 
+Again the major difference between the base vs. large models is the **hidden_size** 768 vs. 1024, and **intermediate_size** is 3072 vs. 4096.
 
-On the other side **bert-large-cased** is very similar to **bert-large-uncased** from few lines ago, but again it has the smaller vocab_size. I think the main reason is they found no no major improvement with the bigger **vocab_size**, and with the smaller **vocab_size** the model is memory efficient (takes fewer MB).
+BERT has 2 x FFNN inside each encoder layer, for each layer, for each position (**max_position_embeddings**), for every head, and the size of these FFNN is:
+(**intermediate_size** X **hidden_size**). This is the hidden layer also called intermediate layer.
+
+There is a second FFNN of size (**hidden_size** X **intermediate_size**). This is the output layer.
+
+Two thirds of all BERT parameters goes to the FFNNs.
+
+On the other side **bert-large-cased** is very similar to **bert-large-uncased**, but it has the smaller vocab_size. I think the main reason for smaller vocab size is memory (takes less MB).
 
 
 ### bert-base-multilingual-uncased
@@ -228,7 +238,6 @@ Now we have three times bigger vocab size with **bert-base-multilingual-uncased*
 
 ### bert-base-multilingual-cased
 
- 
 
 param | value
 ---------|----------
@@ -282,6 +291,8 @@ param | value
 
 
 
+
+
 ### bert-large-cased-whole-word-masking
 
  
@@ -314,9 +325,7 @@ param | value
 
 ### bert-large-uncased-whole-word-masking-finetuned-squad
 
-Whenever we see finetuned-squad this means this model is ideal for question answering tasks.
-
- 
+Whenever we see finetuned-squad this means this model is prepared for question answering tasks.
 
 param | value
 ---------|---------- 
@@ -339,6 +348,7 @@ param | value
 
 ### bert-large-cased-whole-word-masking-finetuned-squad
 
+Model has been finetuned on SQUAD. The BERT has been trained on MLM and NSP tasks. These training activities should help BERT learn the grammar and semantics respectively. The two training tasks used different heads, and after the original training, the BERT has been fine tuned on SQUAD. This third task should be the fastest.
  
 
 param | value
@@ -393,10 +403,9 @@ param | value
 
 ## RoBERTa models
 
-RoBERTa is modified BERT model trained on 10X more text. Their functionality is very similar to BERT.
+RoBERTa is modified BERT model trained on 10 times more text. RoBERTa is very similar to BERT.
 
 ### roberta-base
-
  
 
 param | value
@@ -529,13 +538,12 @@ param | value
 
 ### distilroberta-base
 
-Distilled models are using some tricks to get rid of parameters and at the same time keep the original model quality. 
+Distilled models are using some tricks to downsize the number of parameters and at the same time keep the original model quality the best they can.
 
-This is not possible some, some accuracy will be lost, but on the other side the model size will be 3x smaller.
+Even though some accuracy will be lost, the model size will be 3x smaller.
 
-This particular model is used for masked language modeling (predicting the missing word), that may fix the grammar errors for instance.
+This particular model is used for masked language modeling (predicting the missing word) that may fix the grammar errors for instance.
 
- 
 
 param | value
 ---------|----------
@@ -589,7 +597,7 @@ param | value
 
 ### roberta-large-openai-detector
 
- 
+As you can see RoBERTa has almost all the same parameters are BERT. 
 
 param | value
 ---------|----------
@@ -618,7 +626,9 @@ param | value
 
 ### albert-base-v1
 
-ALBERT is A Lite BERT! Project by Google and Toyota. It brings the new param **num_hidden_groups** that is set to 1. With **num_hidden_groups** equal to number of heads we will have BERT again.
+ALBERT is A Lite BERT! Project by Google and Toyota. It brings the new param **num_hidden_groups** that is set to 1. 
+
+With **num_hidden_groups** equal to number of heads we will have BERT again.
 
  
 
@@ -653,7 +663,7 @@ vocab_size| 30000
 
 ### albert-large-v1
 
-This model will need just ~70MB to load even though it has **num_attention_heads=16**. Compared to BERT this is 10x less memory. Specifically applicable for handhold devices.
+This model will need just ~70MB to load even though it has **num_attention_heads=16**. Compared to BERT this is 10x less memory. Specifically applicable for handhold devices, cars and household devices.
 
 ```python
 import torch
@@ -696,14 +706,6 @@ param | value
 
 
 Again the major difference between the base vs. large models is the **hidden_size** 768 vs. 1024, and **intermediate_size** is 3072 vs. 4096.
-
-BERT has 2 x FFNN inside each encoder layer, for each layer, for each position (**max_position_embeddings**), for every head, and the size of these FFNN is:
-(**intermediate_size** X **hidden_size**). This is the hidden layer also called intermediate layer.
-
-There is a second FFNN of size (**hidden_size** X **intermediate_size**). This is the output layer.
-
-Two thirds of all BERT parameters goes to the FFNNs.
-
 
 
 
