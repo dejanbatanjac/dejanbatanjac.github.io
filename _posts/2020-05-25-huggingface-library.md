@@ -33,6 +33,7 @@ permalink: /huggingface-config
 - [T5](#t5)
   - [t5-small](#t5-small)
 
+<style> table{font-size: 9px; color:gray } </style>
 There are four major classes inside HuggingFace library:
 
 * Config class
