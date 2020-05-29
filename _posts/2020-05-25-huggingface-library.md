@@ -840,4 +840,3 @@ param | value
 * **d_ff** is hidden layer size of the FNN (Feed Forwarded Network)
 * **d_kv** is self.hidden_size // self.num_attention_heads, the same as **attention_head_size** in BERT
 
-
