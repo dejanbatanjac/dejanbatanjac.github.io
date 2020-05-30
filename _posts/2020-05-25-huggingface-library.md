@@ -457,7 +457,9 @@ We have \<s>Hello\</s> because RoBERTa uses \<s> and \</s> special tokens.
 
 Now if you give above sentence to **RobertaModel** you will get two 768 dimension embeddings for each token in the given sentence.
 
-The _sequence output_ will have dimension [1, 3, 768] since there are 3 tokens including [BOS] and [EOS] and so called **pooled output** will give output of dimension [1, 1, 768] which is the embedding of [BOS] token.
+The _sequence output_ will have dimension [1, 3, 768] since there are 3 tokens including [BOS] and [EOS]. This is the last hidden state.
+
+There is also the **pooled output** ( [1, 1, 768] ) which is the embedding of [BOS] token.
 
 * use **pooled output** for sentence classification.
 * use **sequence output** for detecting text similarity for instance.
