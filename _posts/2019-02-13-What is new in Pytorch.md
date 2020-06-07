@@ -1,5 +1,6 @@
 ---
 published: true
+title: What is new in PyTorch 1.0?
 ---
 ## PyTorch 0.4 version
 

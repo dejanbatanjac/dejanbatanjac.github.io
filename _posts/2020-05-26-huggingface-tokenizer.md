@@ -4,7 +4,29 @@ layout: post
 title: Huggingface Tokenizer
 permalink: /huggingface-tokenizer
 ---
-## Tokenizer class
+
+In HuggingFace library we deal with two kinds of tokenizers:
+
+* predefined tokenizers
+* custom tokenizers
+
+
+## Predefined tokenizers
+
+You can get the number of tokens in a tokenizer (predefined) simple with the `get_vocab()`.
+
+```python
+from transformers import BertTokenizer
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+v = tokenizer.get_vocab()
+print(len(v))
+tokenizer.add_tokens(['whatever', 'underdog'])
+v = tokenizer.get_vocab()
+print(len(v))
+```
+
+
+## Special tokens
 
 Tokenizer may have or may not have the mask token. Mask token \<mask> is necessary for masked language modeling.
 
@@ -69,5 +91,11 @@ What happens with the labels? 80% of the time we replace labelse with the **toke
 10% of the time random word will appear instead of the "<mask>", and 10% (rest) of the time we just don't do anything, meaning no masking, no altering.
 
 
+## Tokenizer tokenize
 
 
+## Tokenizer encode
+
+
+
+## Tokenizer encode_plus
