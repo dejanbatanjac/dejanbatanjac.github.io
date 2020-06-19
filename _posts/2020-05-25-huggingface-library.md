@@ -41,7 +41,7 @@ There are four major classes inside HuggingFace library:
 * Tokenizer class
 * Preprocessor class
 
-The main discuss in here are different **Config** class parameters for different HuggingFace models. Configuration can help us understand the inter structure of the HuggingFace models.
+The main discuss in here are different **Config** class parameters for different HuggingFace models. Configuration can help us understand the inner structure of the HuggingFace models.
 
 We will not consider all the models from the library as there are 200.000+ models.
 
@@ -199,9 +199,18 @@ BERT has 2 x FFNN inside each encoder layer, for each layer, for each position (
 
 There is a second FFNN of size (**hidden_size** X **intermediate_size**). This is the output layer.
 
-Two thirds of all BERT parameters goes to the FFNNs.
+Two thirds of all BERT parameters goes to the non attention FFNNs, and one third is for the attention FFNN (query, key and value linear layers).
 
-On the other side **bert-large-cased** is very similar to **bert-large-uncased**, but it has the smaller vocab_size. I think the main reason for smaller vocab size is memory (takes less MB).
+```
+BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+```
+
+On the other side **bert-large-cased** is very similar to **bert-large-uncased**, but it has the smaller vocab_size. I think the main reason for smaller vocab size is memory, as smaller vocab size in the end will take less memory compared to the bigger vocab size everything else equal.
 
 
 ### bert-base-multilingual-uncased
