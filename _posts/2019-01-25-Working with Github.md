@@ -72,7 +72,7 @@ Then you will get this message:
     git commit
     git push
 
-## 7. Create a *Pull request*
+## 7. Creating a *Pull request*
 
 ![IMG](/images/github4.png)
 
