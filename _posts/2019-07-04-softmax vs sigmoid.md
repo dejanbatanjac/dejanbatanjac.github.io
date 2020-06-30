@@ -64,7 +64,7 @@ print(torch.sum(out))
 ```
 Note you need to specify the dimension for `softmax`, which is `dim=0` in the previous example (dimension of columns). This is why the total sum will add to 3. since we have three columns.
 
-But we can also functional version of `softmax`. The previous example can be rewritten as:
+But we can also use functional version of `softmax`. The previous example can be rewritten as:
 
 ```
 import torch.nn.functional as F
