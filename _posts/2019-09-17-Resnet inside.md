@@ -16,17 +16,18 @@ Currently PyTorch supports these resnet models:
 
 You wonder how the actual Python Resnet code looks:
 
+```python
     model = resnet18(pretrained=False)
     import inspect
     lines = inspect.getsource(model.__init__)
     print(lines)
     lines = inspect.getsource(model.forward)
     print(lines)
-
+```
 
 It should be like this:
 
-
+```python
     def __init__(self, block, layers, num_classes=1000, zero_init_residual=False,
                  groups=1, width_per_group=64, replace_stride_with_dilation=None,
                  norm_layer=None):
@@ -77,10 +78,11 @@ It should be like this:
                     nn.init.constant_(m.bn3.weight, 0)
                 elif isinstance(m, BasicBlock):
                     nn.init.constant_(m.bn2.weight, 0)
+```
 
 The code in the forward looks like this:
 
-
+```python
     def forward(self, x):
         x = self.conv1(x)
         x = self.bn1(x)
@@ -97,7 +99,7 @@ The code in the forward looks like this:
         x = self.fc(x)
 
         return x
-
+```
 
 PyTorch code for Resent in [here](https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py) also shows we have :
 
@@ -114,15 +116,19 @@ BasicBlock is always using conv3x3 while Bottleneck combines conv3x3 and conv1x1
 
 What may be altered is the order inside both BasicBlock and Bottleneck.
 
+```python
     out = self.conv1(x)
     out = self.bn1(out)
     out = self.relu(out)
+```
 
 You could set this as:
 
+```python
     out = self.conv1(x)
     out = self.relu(out)
     out = self.bn1(out)
+```
 
 While it has lot of sense to regularize at the end.
 
