@@ -73,7 +73,7 @@ class ResSkip(nn.Module):
 
 ```
 
-What we use to call basic blocks have two variants, first made by N identity blocks.
+What we call basic blocks has two variants, first made by N identity blocks.
 
 ```python
 class NIdentityBlocks(nn.Module):  
