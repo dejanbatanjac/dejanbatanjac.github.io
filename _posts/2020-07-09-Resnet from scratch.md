@@ -5,9 +5,9 @@ title: Creating ResNet18 from scratch
 permalink: /resnet18
 ---
 
-Recently I made some ResNet from scratch. Before I show the code check what is [inside ResNets](https://dejanbatanjac.github.io/2019/09/17/Resnet-inside.html).
+Recently I made some ResNet18 from scratch so I could modify it. Before I showed what is [inside ResNets](https://dejanbatanjac.github.io/2019/09/17/Resnet-inside.html) but in low detail.
 
-## Facts
+## Few facts
 
 There are several popular models: 
 * ResNet18
