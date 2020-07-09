@@ -186,7 +186,7 @@ print(nparams) # 11689512
 
 ## Initialization tip
 
-We haven't initialized the conv layers, but to do that I would use this function:
+We haven't initialized the conv layers in a custom way, but to do that I would use this function:
 
 ```
 def reset_parameters(self):
