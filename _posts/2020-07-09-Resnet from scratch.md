@@ -137,7 +137,7 @@ class ResNetTail(nn.Module):
 
 Lastly the full ResNet is a composition. The few things we define is the number of inputs (usually 3) and the number of outputs (usually 1000).
 
-The channels 64 is the initial number of planes (channels) and in the end we have the 512 channels. All ResNet architectures will have these l0, l1, l2, l3 layers doubling the output channels by factor 2.
+The channels 64 is the initial number of planes (channels) and in the end we have the 512 channels. All ResNet architectures will have these l0, l1, l2, l3 layers where l1, l2, and l3 will double the channels by factor 2.
 
 ```python
 class ResNet(nn.Module):
