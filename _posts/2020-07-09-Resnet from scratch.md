@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Creating ResNet18 from scratch
 permalink: /resnet18
