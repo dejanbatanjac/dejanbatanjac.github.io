@@ -188,11 +188,13 @@ print(nparams) # 11689512
 
 We haven't initialized the conv layers in a custom way, but to do that I would use this function:
 
-```
-def reset_parameters(self):
-      init.kaiming_uniform_(self.weight, a=math.sqrt(3))
-      if self.bias is not None:
-          fan_in, _ = init._calculate_fan_in_and_fan_out(self.weight)
-          bound = 1 / math.sqrt(fan_in)
-          init.uniform_(self.bias, -bound, bound)
+```python
+model = ResNet(3, 10, [2,2,2,2]).to('cuda')
+
+for m in model.modules():
+    if isinstance(m, nn.Conv2d):
+        torch.nn.init.kaiming_uniform_(m.weight, a=math.sqrt(3) )
+    if isinstance(m, nn.BatchNorm2d):
+        torch.nn.init.constant_(m.weight, 0.975)
+        torch.nn.init.constant_(m.bias, 0.125)
 ```
