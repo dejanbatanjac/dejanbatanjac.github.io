@@ -44,7 +44,7 @@ Exactly, the feature of `sigmoid` is to emphasize multiple values, based on the 
 
 ### And in PyTorch...
 
-In PyTorch you would use the `torch.nn.Softmax(dim=None)` layer compute `softmax` to an n-dimensional input tensor rescaling them so that the elements of the n-dimensional output tensor lie in the range [0,1] and sum to 1.
+In PyTorch you would use `torch.nn.Softmax(dim=None)` to compute softmax of the n-dimensional input tensor. In here I am rescaling the input manually so that the elements of the n-dimensional output tensor are in the range [0,1].
 
 ```python
 import torch.nn as nn
@@ -103,7 +103,7 @@ print(F.sigmoid(inp))
 # tensor([[0.4011, 0.5117, 0.3996, 0.6514, 0.7484]])
 ```
 
-### When to use one over the other?
+### Single vs. multi-label classification
 
 We should use softmax if we do classification with one result, or single label classification (SLC). We should use sigmoid if we have multi-label classification case (MLC).
 
