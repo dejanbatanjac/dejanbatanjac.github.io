@@ -11,7 +11,7 @@ Suppose you have predictions as the output from neural net.
 
 ![IMG](/images/ss1.png)
 
-These are the predictions for cat, dog, cow, and zebra. They can be positive or negative (no `ReLU` at the end).
+These are the predictions for cat, dog, cow, and zebra. They can be positive or negative (no `ReLU` at the end). 
 
 ### Softmax
 
@@ -28,7 +28,7 @@ The `softmax` funciton:
 
 $$ softmax( x_i ) =  {     e^{x_i} \over \sum_{j=1}^k { e^{x_j} } } $$
 
-Can be literally expressed as take the exponent value and divide it by the sum of all other exponents (~`34` in the image). This will make one important feature of `softmax`, that the sum off all softmax values will add to 1.
+Can be literally expressed as take the exponent value and divide it by the sum of all other exponents. This will make one important feature of `softmax`, that the sum off all softmax values will add to 1.
 
 Just by peaking the `max` value after the softmax we get out prediction.
 
