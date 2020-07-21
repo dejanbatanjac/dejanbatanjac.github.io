@@ -19,6 +19,6 @@ More details about me:
 
 <a href="https://www.linkedin.com/in/sioni/">Linked In</a> | <a href="https://docs.google.com/document/d/1L2B45GNAOaUXPwqjusVkfU5BnWhoQi7esST7U3v03x4/edit?usp=sharing">CV</a> | <a href="https://github.com/dejanbatanjac/">GitHub</a> | 
 <a href="https://dejanbatanjac.github.io/">GitHub blog</a> | 
-<a href="https://play.google.com/store/apps/developer?id=Nus+Games
-">Android Quiz apps</a> | <a href="https://stackoverflow.com/users/5884955/prosti">SO</a> 
+<!--a href="https://play.google.com/store/apps/developer?id=Nus+Games
+">Android Quiz apps</a--> | <a href="https://stackoverflow.com/users/5884955/prosti">SO</a> 
 
