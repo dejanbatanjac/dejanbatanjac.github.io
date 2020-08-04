@@ -23,7 +23,7 @@
   <script src="/js/katex.min.js"></script>
   <script src="/js/katex.auto-render.min.js" type="text/javascript"></script>
   <script>
-    renderMathInElement(document.getElementById("body"), {
+    renderMathInElement(document.getElementsByTagName("body")[0], {
     delimiters: [ {left: "$$", right: "$$", display: true},
                   {left: "\\[", right: "\\]", display: false},
                   {left: "$", right: "$", display: true},
