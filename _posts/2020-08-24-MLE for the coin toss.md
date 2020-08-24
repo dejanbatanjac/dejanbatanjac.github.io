@@ -23,8 +23,11 @@ Leading to:
 $\operatorname{Bin}(H;H+T,p) = \binom{H+T}{H}p^H(1-p)^{T}$
 
 $\operatorname{Bin}(H;H+T,p)_{\operatorname{MLE}} = \underset{p}{\operatorname{arg\,max}} \binom{H+T}{H}p^H(1-p)^{T}$
+
 $=\underset{p}{\operatorname{arg\,max}} \operatorname{log} \big[ \binom{H+T}{H}p^H(1-p)^{T} \big]$
+
 $=\underset{p}{\operatorname{arg\,max}} \big[ \operatorname{log} \binom{H+T}{H} + \operatorname{log} p^H + \operatorname{log}(1-p)^{T} \big]$
+
 $=\underset{p}{\operatorname{arg\,max}} \big[ H \operatorname{log} p + T \operatorname{log}(1-p) \big]$
 
 We used `log` trick to gain numerical stability, and we removed the constant in this transformation process since it will not affect the `argmax`.
@@ -49,7 +52,7 @@ $n = T+H = 11$, and $H=5$
 
 MLE is ${H \over {T+H}} = {5 \over 11}$.
 
-
+<!--
 #### Implementing `argmax` in Python
 
 The `argmax` operator is simple to get the maximum argument. In Python code explaining the `argmax` would be like this:
@@ -74,5 +77,5 @@ Max element :  3
 Indices of Max elements (columns):  [2 1 0 0]
 Indices of Max elements (rows):  [3 1 0]
 ```
-
+-->
 
