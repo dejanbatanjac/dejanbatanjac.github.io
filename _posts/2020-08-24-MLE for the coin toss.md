@@ -55,6 +55,7 @@ $n = T+H = 11$, and $H=5$
 MLE is ${H \over {T+H}} = {5 \over 11}$.
 
 
+
 <!--
 #### Implementing `argmax` in Python
 
