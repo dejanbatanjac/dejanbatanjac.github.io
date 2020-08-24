@@ -44,16 +44,16 @@ $\large p_{\small \text{MLE}} = \frac{H}{T+H}$
 
 We could intuitively get the same conclusion, let's say we have some tossing events:
 
-$\mathcal{T}=\bigl\{h, h, h, t, t, h, t, t, t, h, t\}$, tossing set
+$\mathcal{T}=\\{h, h, h, t, t, h, t, t, t, h, t\\}$, tossing set
 
 $n = T+H = 11$, and $H=5$
 
 MLE is ${H \over {T+H}} = {5 \over 11}$.
 
 
-#### Python `argmax`
+#### Implementing `argmax` in Python
 
-To note, the `argmax` operator is simple to get the maximum argument. In Python code explaining the `argmax`:
+The `argmax` operator is simple to get the maximum argument. In Python code explaining the `argmax` would be like this:
 
 ```python
 import numpy as np
