@@ -7,7 +7,7 @@ permalink: /mle-binomial
 
 In the typical tossing coin example, with probability for the head equal to $p$ and tossing the coin $n$ times let's calculate the MLE probability for the heads.
 
-We know this is typical case of [Binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution){:ref=nofollow} that is given with this formula:
+We know this is typical case of [Binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution){:ref="nofollow"} that is given with this formula:
 
 
 $\operatorname{Bin}(k;n,p) = \binom{n}{k}p^k(1-p)^{n-k}$
