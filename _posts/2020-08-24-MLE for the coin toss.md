@@ -1,12 +1,12 @@
 ---
 published: true
 layout: post
-usemathjax: true
-title: Maximum Likelihood Estimate (MLE) for the coin toss example
+title: MLE for the coin toss example
 permalink: /mle-binomial
 ---
 
-In the typical tossing coin example, with probability for the head equal to $p$ and tossing the coin $n$ times let's calculate the MLE probability for the heads.
+ 
+In the typical tossing coin example, with probability for the head equal to $p$ and tossing the coin $n$ times let's calculate the Maximum Likelihood Estimate (MLE) probability for the heads.
 
 We know this is typical case of [Binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution){:ref="nofollow"} that is given with this formula:
 
@@ -47,11 +47,13 @@ $\large p_{\small \text{MLE}} = \frac{H}{T+H}$
 
 We could intuitively get the same conclusion, let's say we have some tossing events:
 
-$\mathcal{T}=\{h, h, h, t, t, h, t, t, t, h, t \}$, tossing set
+
+$\mathcal{T}=\\{h, h, h, t, t, h, t, t, t, h, t \\}$, tossing set
 
 $n = T+H = 11$, and $H=5$
 
 MLE is ${H \over {T+H}} = {5 \over 11}$.
+
 
 <!--
 #### Implementing `argmax` in Python
@@ -79,4 +81,3 @@ Indices of Max elements (columns):  [2 1 0 0]
 Indices of Max elements (rows):  [3 1 0]
 ```
 -->
-
