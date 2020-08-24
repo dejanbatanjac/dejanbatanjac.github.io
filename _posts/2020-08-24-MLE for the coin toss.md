@@ -1,7 +1,6 @@
 ---
 published: true
 layout: post
-mathjax: true
 title: Maximum Likelihood Estimate (MLE) for the coin toss example
 permalink: /mle-binomial
 ---
