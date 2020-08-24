@@ -28,7 +28,7 @@ print(len(v))
 
 ## Special tokens
 
-Tokenizer may have or may not have the mask token. Mask token \<mask> is necessary for masked language modeling.
+Tokenizer may have the mask token. Mask token (\<mask>) is necessary for masked language modeling.
 
 We need to add this special \<mask> token to the tokenizer. This and all the other special tokens will have the _early_ index values starting from 0.
 
@@ -95,7 +95,5 @@ What happens with the labels? 80% of the time we replace labelse with the **toke
 
 
 ## Tokenizer encode
-
-
 
 ## Tokenizer encode_plus

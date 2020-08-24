@@ -48,12 +48,9 @@ $\large p_{\small \text{MLE}} = \frac{H}{T+H}$
 We could intuitively get the same conclusion, let's say we have some tossing events:
 
 
-$\mathcal{T}=\\{h, h, h, t, t, h, t, t, t, h, t \\}$, tossing set
+$\mathcal{T}=\\{h, h, h, t, t, h, t, t, t, h, t \\}$, where $\mathcal{T}$ is our tossing set with $n = T+H = 11$ elements, and number of heads is $H=5$. Just based on this example:
 
-$n = T+H = 11$, and $H=5$
-
-MLE is ${H \over {T+H}} = {5 \over 11}$.
-
+$\large p_{\small \text{MLE}}$ is ${H \over {T+H}} = {5 \over 11}$.
 
 
 
