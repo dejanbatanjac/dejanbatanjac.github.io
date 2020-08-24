@@ -46,7 +46,7 @@ $\large p_{\small \text{MLE}} = \frac{H}{T+H}$
 
 We could intuitively get the same conclusion, let's say we have some tossing events:
 
-\\( \mathcal{T}=\\ {h, h, h, t, t, h, t, t, t, h, t \\} \\), tossing set
+$\mathcal{T}=\\{h, h, h, t, t, h, t, t, t, h, t \\}$, tossing set
 
 $n = T+H = 11$, and $H=5$
 
