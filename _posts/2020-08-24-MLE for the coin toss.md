@@ -6,7 +6,7 @@ permalink: /mle-binomial
 ---
 
  
-In the typical tossing coin example, with probability for the head equal to $p$ and tossing the coin $n$ times let's calculate the Maximum Likelihood Estimate (MLE) probability for the heads.
+In the typical tossing coin example, with probability for the head equal to $p$ and tossing the coin $n$ times let's calculate the Maximum Likelihood Estimate (MLE) for the heads.
 
 We know this is typical case of [Binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution){:ref="nofollow"} that is given with this formula:
 
