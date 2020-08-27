@@ -89,7 +89,7 @@ If we would like to get word projections in 2D or any kind of analysis we would 
 
 This would lower the dimension of our matrix from `NxN` to `NxK` where `K<<N`
 
-**Example**: Word representation in 2D space:
+*Example*: Word representation in 2D space:
 ```
 He is a king. 
 She is a queen.
@@ -121,6 +121,7 @@ This provided a mean to deal with word analogies, because you could extend this 
 `word2vec` uses n-grams. Here are some possible 3-gram for the text: 
 
 > He is a king. She is a queen.
+
 ```
 [(['he', 'is'], 'a'),
  (['is', 'a'], 'king'),
