@@ -135,9 +135,9 @@ This provided a mean to deal with word analogies, because you could extend this 
 
 [GloVe paper](https://nlp.stanford.edu/pubs/glove.pdf){:rel="nofollow"} was another direction in NLP.
 
-It uses the context window and matrix factorization tricks like we would use used for **big** co-occurrence matrices.
+It uses the context window and matrix factorization tricks like we would use for **big** co-occurrence matrices.
 
-The difference is; instead of measuring word frequencies directly we take the `log` co-occurrence counts which improves the impact of _not so frequent words_.
+The difference is; instead of measuring word frequencies directly we take the `log` co-occurrence counts which improves the treatment of _not so frequent words_.
 
 The paper also solved the problem when the co-occurrence count shouts over the maximal allowed number defined by the data format--in this case the number stays constant.
 
@@ -146,25 +146,25 @@ The paper also solved the problem when the co-occurrence count shouts over the m
 
 In the 2017 the paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762){:rel="nofollow"} changed the horizon of machine learning and NLP in general.
 
-It introduced the attention to NLP. The concept is based on vector dot product, parameters called __Query__, **Key** and **Value** and **softmax** function that learns the most probable combination of tokens. This was the advance from the models that learned the similarity of words.
+It introduced the attention to the NLP. The concept is based on vector dot product, parameters called __Query__, **Key** and **Value** and **softmax** function that learns the most probable combination of tokens. This was the advance from the models that learned the similarity of words.
  
 It almost completely took the NLP world by storm, which at that time continuously made progress with LSTM, GRU and other recursive models--sequential in nature.
 
 With models that are sequential in nature you convert words to tokens first and then you process tokens sequentially trough the model.
 
-Transformer model processes the big number of tokens from once (512, 1024, or even greater) limited just with the amount of available memory and model size).
+Transformer model processes the big number of tokens from once (512, 1024, or even greater) limited just with the amount of available memory and model size.
 
 From the transformer model many new concepts started to grow. For instance, the famous BERT model would be the transformer where we removed the decoder part.
 
-Nowadays great attention is on GPT-2 and GPT-3 models and their modifications/extensions. 
+Nowadays, great attention is on GPT-2 and GPT-3 models and their modifications/extensions. 
 
-GPT based models can generate high quality text based on the initial inputs. These models can create newspaper articles or entire novels or they can generate HTML code just from the words of TODO description or they can create Python code just based on the initial TODO: comments.
+GPT based models can generate high quality text based on the initial inputs. These models can create newspaper articles or entire novels or they can generate HTML code based on some simple description or they can create Python code based on the function initial comments.
 
 In general Transformers models can do all kind of [NLP tasks](https://dejanbatanjac.github.io/nlp-acronyms/).
 
 ## Tokenizers
 
-The key parts of the transformers are the so called tokenizers. Very popular tokenizers today are:
+The key parts of the transformers are the so called **tokenizers**. Very popular tokenizers today are:
 
 * Spacy
 * WordPeace
