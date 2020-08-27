@@ -106,7 +106,7 @@ The next image shows the similar words:
 ## word2vec
 Then in 2013 one very important algorithm `word2vec` came along.
 
-Using this algorithm it was possible to learn the representation of words where each word had 50 or more (up to 1000) latent features.
+Using this algorithm it was possible to learn the representation of words where each word has 50 or more latent features.
 
 The major gain with this latent approach--we are not forced to create matrices of `NxN`, where `N` is the number of distinct words. Instead all we have to learn is the `NxK` matrix where `K` is usually 100 (from 50 till 1000).
 
