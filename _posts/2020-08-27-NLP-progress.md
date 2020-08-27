@@ -68,7 +68,7 @@ We can create the matrix of co-occurrence if we pay attention just to the _next_
 |girl |  |  |  |  |   |  |  |
 -->
 
-We can easily make the sliding window bigger and in both directions so for a **central word** "a" we have two words "is" and "clever" inside a sliding windows of size 1, and for the sliding window of size 2, the **outside words** would be these four words: 
+We can easily make the sliding window bigger and in both directions so for a **central word** "a" we have two words "is" and "clever" inside a sliding windows of size 1, and for the sliding window of size 2, the **outside words** (or _contextual words_ for the word "a") would be these four words: 
 
 * He
 * is
