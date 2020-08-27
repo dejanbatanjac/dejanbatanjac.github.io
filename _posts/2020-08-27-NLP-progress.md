@@ -23,28 +23,28 @@ NLP processing started with regular expressions and with the text normalization 
 
 **Tokenization** is splitting sentences into words with optional removal of stopwords, punctuation, words with less than 3 characters, etc.
 
-__Lemmatization__ assumes morphological word analysis to return the base  form of a word, while stemming is more brute removal of the word endings or affixes in general.
+__Lemmatization__ assumes morphological word analysis to return the base  form of a word, while **stemming** is brute removal of the word endings or affixes in general.
 
 
-First the statistical NLP methods came along together with the model called Bag Of Words (BOW).
+First the **statistical NLP methods** came along together with the model called **Bag Of Words** (BOW).
 
 ## BOW
 
-The __BOW__ idea is to group words together where the order of words is not important.
+The __BOW__ idea is to group words together where the order of words is not important and to analyse word frequencies.
 
 Known statistical methods based on BOW are LSA or Latent Statistical Analysis
-and LDA or Latent Dirichlet Analysis..
+and LDA or Latent Dirichlet Analysis.
 
 With LSA the idea is that if words have similar meaning they will appear in similar text contexts.
 
-It was important because it brought the notion of word similarities. We could later project the words in 2D and get the better word understanding based on similarities.
+It was important because it brought the notion of word similarities. We could later project the words in 2D space and get the better word understanding based on similarities (similar with TSNE).
 
 With LDA you could ask to detect different text categories from your corpora and it could provide the keywords for each category. LDA is actually dimensionality reduction technique.
 
 
 ## Co-occurrence matrix
 
-Needed for many techniques is the co-occurrence matrix. The idea is to create a matrix based on text (distinct words). 
+Needed for many techniques is the **co-occurrence matrix**. The idea is to create a matrix based on distinct text words that are close together. 
 
 For instance with this text:
 
@@ -52,7 +52,7 @@ For instance with this text:
 He is a clever boy.
 She is a clever girl.
 ```
-We can create the matrix of co-occurrence:
+We can create the matrix of co-occurrence if we pay attention just to the _next_ word:
 
 |% | He | is | a  |clever| boy | she | girl
 |-- |  -- | -- | -- | -- | --  | -- | -- |
@@ -64,21 +64,28 @@ We can create the matrix of co-occurrence:
 |she |  | 1 |  |  |   |  |  | 
 |girl |  |  |  |  |   |  |  |
 
-If the text is big we can get big matrices, typically we could limit that to 10,000 words, because we can ignore words we don't care about. However, if we would like to deal with 170,000 English language has the matrix will be very big.
+We can easily make the sliding window bigger and in both directions so for a **central word** "a" we have two words "is" and "clever" inside a sliding windows of size 1, and for the sliding window of size 2, the **outside words** would be these four words: 
 
-The upper matrix has been produced with teh Markov assumption in mind (pay attention on just the next word), but we can easily make the sliding windows bigger and in both directions. 
+* He
+* is
+* clever
+* boy
 
-This is how the co-occurrence matrix will become symmetric, but easily we can create the symmetric matrix in numpy with this trick:
+If the text is big we can get big matrices, typically we could limit that to 10,000 words, because we can ignore words we don't care about. 
+
+If we would like to deal with total 170,000 english words the matrix would be huge.
+
+If we would slide just in one direction the matrix would not be symmetric. In numpy we could make it symmetric with this trick:
 
 ```
 M = M + M.T
 ```
 
-If we would like to get word projections in 2D or any kind of analysis we would need to lower the space so we need to use some PCA and in general SVD technique.
+If we would like to get word projections in 2D or any kind of analysis we would need to lower the space so we need to use dimensionality reduction technique.
 
 This would lower the dimension of our matrix from `NxN` to `NxK` where `K<<N`
 
-Here is one example, for the text:
+**Example**: Word representation in 2D space:
 ```
 He is a king. 
 She is a queen.
@@ -87,25 +94,25 @@ She is a woman.
 Berlin is germany capital.
 Paris is france capital.
 ```
-Find the similar words:
+The next image shows the similar words:
 
 ![similar words](/images/projection2d.png)
 
 
 ## word2vec
-Then in 2013 one very important algorithm `word2vec` came along where.
+Then in 2013 one very important algorithm `word2vec` came along.
 
-Using this algorithm it was possible to learn the representation of words where each word had at least 50 or up to 1000 latent features.
+Using this algorithm it was possible to learn the representation of words where each word had 50 or more (up to 1000) latent features.
 
-The major gain with this latent approach, we are not forced to create matrices of NxN dimension where N is the number of distinct words. Instead all we have to learn is the NxK matrix where K is usually close to 100 (from 50 till 1000 usually).
+The major gain with this latent approach--we are not forced to create matrices of `NxN`, where `N` is the number of distinct words. Instead all we have to learn is the `NxK` matrix where K is usually 100 (from 50 till 1000).
 
-This break-trough idea [published by Mikolov et al.](https://arxiv.org/abs/1301.3781){:rel="nofollow"} was capable of doing word arithmetics.
+This break-trough idea [published by Mikolov et al.](https://arxiv.org/abs/1301.3781){:rel="nofollow"} was capable of doing word arithmetics for the first time:
 
 ```
 W['king'] - W['man'] + W['woman'] = W['queen'] 
 ```
 
-This provided a mean to deal with word analogies, because you could extend this idea to anything, but you could also understand the bias word model or language in general may have.
+This provided a mean to deal with word analogies, because you could extend this idea to anything, but you could also understand the _bias_ in a word model or the bias language in general may have.
 
 `word2vec` uses n-grams. Here are some possible 3-gram for the text: 
 
@@ -121,37 +128,36 @@ This provided a mean to deal with word analogies, because you could extend this 
 
 ## GloVe (Global Vectors) for Word Representation)
 
-[GloVe paper](https://nlp.stanford.edu/pubs/glove.pdf){:rel="nofollow"} was another step forward in NLP.
+[GloVe paper](https://nlp.stanford.edu/pubs/glove.pdf){:rel="nofollow"} was another direction in NLP.
 
-It uses the context window and matrix factorization tricks like we would use used for **big** co-occurrence matrix.
+It uses the context window and matrix factorization tricks like we would use used for **big** co-occurrence matrices.
 
-The difference is; instead of measuring word frequencies directly we take the `log` co-occurrence counts which improves the impact of no so frequent words.
+The difference is; instead of measuring word frequencies directly we take the `log` co-occurrence counts which improves the impact of _not so frequent words_.
 
-The paper also solved the problem when the co-occurrence count overshouts the maximal allowed number defined by the data format; in this case the number stays constant.
+The paper also solved the problem when the co-occurrence count shouts over the maximal allowed number defined by the data format--in this case the number stays constant.
 
 
 ## The Transformer model
 
 In the 2017 the paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762){:rel="nofollow"} changed the horizon of machine learning and NLP in general.
 
-It introduced the attention to NLP. The concept is based on vector dot product, parameters called __Query__, **Key** and **Value** parameters and **softmax** function that extract he most probable combination of tokens.
+It introduced the attention to NLP. The concept is based on vector dot product, parameters called __Query__, **Key** and **Value** and **softmax** function that learns the most probable combination of tokens. This was the advance from the models that learned the similarity of words.
+ 
+It almost completely took the NLP world by storm, which at that time continuously made progress with LSTM, GRU and other recursive models--sequential in nature.
 
-It almost completely took the NLP world which at that time continuously made progress with LSTM, GRU and other recursive models that are sequential in nature.
+With models that are sequential in nature you convert words to tokens first and then you process tokens sequentially trough the model.
 
-With models that are sequential in nature you convert word to tokens first and then you process tokens sequentially trough the model.
-
-Transformer model processes the great number of tokens from once (512, 1024, or even greater) limited just with the amount of available memory and model definition).
+Transformer model processes the big number of tokens from once (512, 1024, or even greater) limited just with the amount of available memory and model size).
 
 From the transformer model many new concepts started to grow. For instance, the famous BERT model would be the transformer where we removed the decoder part.
 
-Nowadays a great attention is on GPT-2 and GPT-3 models and their modifications. 
+Nowadays great attention is on GPT-2 and GPT-3 models and their modifications/extensions. 
 
-GPT based models can generate high quality text based on the initial inputs.
-
+GPT based models can generate high quality text based on the initial inputs. These models can create newspaper articles or entire novels or they can generate HTML code just from the words of TODO description or they can create Python code just based on the initial TODO: comments.
 
 In general Transformers models can do all kind of [NLP tasks](https://dejanbatanjac.github.io/nlp-acronyms/).
 
-## Tokenizers 
+## Tokenizers
 
 The key parts of the transformers are the so called tokenizers. Very popular tokenizers today are:
 
@@ -168,16 +174,15 @@ Here are models that use famous [tokenizers](https://github.com/huggingface/toke
 * Spacy: GPT
 
 
-The great idea of **custom tokenizer** is that you can train the tokenizer to much your text corpora. [Transformers library](https://github.com/huggingface/transformers){:rel="nofollow"} provides such tokenizers and training howto examples.
+The great idea of **custom tokenizer** is that you can train the tokenizer to match your text corpora. [Transformers library](https://huggingface.co/){:rel="nofollow"} provides such tokenizers and training examples.
 
-[Transformers library](https://huggingface.co/){:rel="nofollow"} is all about customizing transformer based models and achieving **transfer learning**, and of course you are not meant just to customize the models or train them from scratch, you can use the already pretrained modes.
+Great accent is on customizing transformer based models and achieving **transfer learning** and training the models from scratch, but you can use the already pretrained modes.
 
 ## NLP libraries
 
 There is a new [Transformers library for NLP](https://github.com/huggingface/nlp){:rel="nofollow"}.
 
-The older good NLP libraries still around you may use for many NLP tasks:
-
+The little older NLP libraries you may use for many NLP tasks:
 
 * nltk (Natural Language Toolkit)
 * word2vec
