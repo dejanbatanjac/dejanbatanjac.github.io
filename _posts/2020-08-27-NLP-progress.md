@@ -8,7 +8,7 @@ permalink: /nlp-progress
 - [BOW](#bow)
 - [Co-occurrence matrix](#co-occurrence-matrix)
 - [word2vec](#word2vec)
-- [GloVe (Global Vectors) for Word Representation)](#glove-global-vectors-for-word-representation)
+- [GloVe (Global Vectors)](#glove-global-vectors)
 - [The Transformer model](#the-transformer-model)
 - [Tokenizers](#tokenizers)
 - [NLP libraries](#nlp-libraries)
@@ -54,6 +54,9 @@ She is a clever girl.
 ```
 We can create the matrix of co-occurrence if we pay attention just to the _next_ word:
 
+![co-occurrence](/images/co-occurrence.png)
+
+<!--
 |% | He | is | a  |clever| boy | she | girl
 |-- |  -- | -- | -- | -- | --  | -- | -- |
 |He |  | 1 |  |  |   |  |  | 
@@ -63,6 +66,7 @@ We can create the matrix of co-occurrence if we pay attention just to the _next_
 |boy |  |  |  |  |   |  |  | 
 |she |  | 1 |  |  |   |  |  | 
 |girl |  |  |  |  |   |  |  |
+-->
 
 We can easily make the sliding window bigger and in both directions so for a **central word** "a" we have two words "is" and "clever" inside a sliding windows of size 1, and for the sliding window of size 2, the **outside words** would be these four words: 
 
@@ -126,7 +130,7 @@ This provided a mean to deal with word analogies, because you could extend this 
  (['is', 'a'], 'queen')]
  ```
 
-## GloVe (Global Vectors) for Word Representation)
+## GloVe (Global Vectors)
 
 [GloVe paper](https://nlp.stanford.edu/pubs/glove.pdf){:rel="nofollow"} was another direction in NLP.
 
