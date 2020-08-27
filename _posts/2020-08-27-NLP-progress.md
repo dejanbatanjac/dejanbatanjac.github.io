@@ -108,7 +108,7 @@ Then in 2013 one very important algorithm `word2vec` came along.
 
 Using this algorithm it was possible to learn the representation of words where each word had 50 or more (up to 1000) latent features.
 
-The major gain with this latent approach--we are not forced to create matrices of `NxN`, where `N` is the number of distinct words. Instead all we have to learn is the `NxK` matrix where K is usually 100 (from 50 till 1000).
+The major gain with this latent approach--we are not forced to create matrices of `NxN`, where `N` is the number of distinct words. Instead all we have to learn is the `NxK` matrix where `K` is usually 100 (from 50 till 1000).
 
 This break-trough idea [published by Mikolov et al.](https://arxiv.org/abs/1301.3781){:rel="nofollow"} was capable of doing word arithmetics for the first time:
 
