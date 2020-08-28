@@ -13,6 +13,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dejanbatanjac.github.io" # the base hostname & protocol for your site
 
 # Build settings
-markdown: kramdown
-mathjax: true
+# markdown: kramdown
+# mathjax: true
 # math_engine: katex
