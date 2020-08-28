@@ -19,6 +19,34 @@
 	<meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="628" />
 
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      },
+      TeX: {
+        equationNumbers: {
+          autoNumber: "AMS"
+        }
+      }
+    });
+  </script>
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML">
+  </script>
+
+MathJax.Hub.Config({
+  
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+  }
+});
+
+
+
 <!--
   <script defer src="/js/katex.min.js"></script>
   <script defer src="/js/auto-render.min.js"></script>
@@ -35,7 +63,7 @@
   </script>
 -->
 
-
+<!-- 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     jax: ["input/TeX","input/MathML","output/SVG", "output/CommonHTML"],
@@ -53,8 +81,12 @@ TeX: {
 </script>
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js">
 </script>
-<!-- <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script> -->
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 
   <script data-ad-client="ca-pub-1993925204978426" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   
