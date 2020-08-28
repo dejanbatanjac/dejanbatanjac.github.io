@@ -126,9 +126,9 @@ The `word2vec` paper showed two **new** model algorithms called **CBOW** and **s
 
 CBOW introduced the average outside word:
 
-$\large \boldsymbol{v} _ {a}=\frac{1}{2 h} \sum _ {n=1}^{h} \boldsymbol{v} _ {w _ {m+n}}+\boldsymbol{v} _ {w _ {m-n}}$
+$\begin{aligned}  \large  \boldsymbol{v} _ {a}=\frac{1}{2 h} \sum _ {n=1}^{k} \boldsymbol{v} _ {w _ {m+n}}+\boldsymbol{v} _ {w _ {m-n}} \end{aligned}$
 
-* k - window size, usually 4
+* $k$ - window size, usually 4
 * $\boldsymbol{v} _ {w}$ center word (embedding vector)
 * $\boldsymbol{v} _ {w-k}, \cdots, \boldsymbol{v} _ {w-1}, \boldsymbol{v} _ {w+1}, \cdots, \boldsymbol{v} _ {w+k}$ context words as embedding vectors
   
@@ -149,30 +149,30 @@ $\begin{aligned}
 
 `skip-gram` is the other name for `word2vec` because this algorithm achieved best precision.
 
-Essentially `skip-gram` uses **logistic regression** and answers the question what is the probability that context word "blue" is _near_ the central word "sky".
+Essentially `skip-gram` uses **logistic regression** and answers the question what is the probability that **neighbor** word "blue" is _near_ the central word "sky".
 
-$P(+ \mid O="blue", C="sky")$
+$P(+ \mid C="sky" , N="blue")$
 
-(read: positive outcome that the **central** word "sky" has the **outside** word "blue")
+(read: positive outcome that the **central** word "sky" has the **neighbor/outside** word "blue")
 
 The paper brought the notion of similarity using the dot product over the word embedding vectors.
 
-$Similarity(O,C) = O \cdot C$ 
+$Similarity(C,N) = C \cdot N$ 
 
 Similarity is not a probability, it can take values outside $[0,1]$ range. We could normalize it, but instead, even better, we fed similarity to logistic regression.
 
-$\begin{aligned} P(+ \mid O,C) =  \dfrac{1}{1+e^{O \cdot C}} \end{aligned}$
+$\begin{aligned} P(+ \mid C,N) =  \dfrac{1}{1+e^{C \cdot N}} \end{aligned}$
 
 In `skip-gram` all outside words are conditionally independent so we can calculate the product of outside words for given central word:
 
-$\begin{aligned} P(+ \mid \cdot) = P(+ \mid O _ i,C); i=1, \cdots ,k \end{aligned}$
+$\begin{aligned} P(+ \mid \cdot) = P(+ \mid C, N _ i) \ \ \ i=1, \cdots , k \end{aligned}$
 
-$\begin{aligned} P(+ \mid \cdot) = \prod _ {i=1}^k \dfrac{1}{1+e^{O _ i \cdot C}} \end{aligned}$
+$\begin{aligned} P(+ \mid \cdot) = \prod _ {i=1}^k \dfrac{1}{1+e^{C \cdot N _ i }} \end{aligned}$
 
 
 Since products are not numerically unstable, we will switch to logs:
 
-$\begin{aligned} \log P(+ \mid \cdot) = \sum _ {i=1}^{k} \log \dfrac{1}{1+e^{O _ i \cdot C}} \end{aligned}$
+$\begin{aligned} \log P(+ \mid \cdot) = \sum _ {i=1}^{k} \log \dfrac{1}{1+e^{C \cdot N _ i}} \end{aligned}$
 
 Similarly we can calculate entire corpus log likelihood:
 
