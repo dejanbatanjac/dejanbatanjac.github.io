@@ -165,14 +165,14 @@ $\begin{aligned} P(+|O,C) =  \dfrac{1}{1+e^{O \cdot C}} \end{aligned}$
 
 In `skip-gram` all outside words are conditionally independent so we can calculate the product of outside words for given central word:
 
-$\begin{aligned} P(+| \cdot) = P(+|O _ i,C), \ \ \ i=1,\cdots ,k \end{aligned}$
+$\begin{aligned} P(+ \mid \cdot) = P(+|O _ i,C), \ \ \ i=1,\cdots ,k \end{aligned}$
 
-$\begin{aligned} P(+| \cdot) = \prod _ {i=1}^k \dfrac{1}{1+e^{O _ i \cdot C}} \end{aligned}$
+$\begin{aligned} P(+ \mid \cdot) = \prod _ {i=1}^k \dfrac{1}{1+e^{O _ i \cdot C}} \end{aligned}$
 
 
 Since products are not numerically unstable, we will switch to logs:
 
-$\begin{aligned} \log P(+| \cdot) = \sum _ {i=1}^{k} \log \dfrac{1}{1+e^{O _ i \cdot C}} \end{aligned}$
+$\begin{aligned} \log P(+ \mid \cdot) = \sum _ {i=1}^{k} \log \dfrac{1}{1+e^{O _ i \cdot C}} \end{aligned}$
 
 Similarly we can calculate entire corpus log likelihood:
 
