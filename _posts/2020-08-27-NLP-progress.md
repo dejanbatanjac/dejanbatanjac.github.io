@@ -151,7 +151,7 @@ $\begin{aligned}
 
 Essentially `skip-gram` uses **logistic regression** and answers the question what is the probability that context word "blue" is _near_ the central word "sky".
 
-$P(+| O="blue", C="sky")$
+$P(+ \mid O="blue", C="sky")$
 
 (read: positive outcome that the **central** word "sky" has the **outside** word "blue")
 
