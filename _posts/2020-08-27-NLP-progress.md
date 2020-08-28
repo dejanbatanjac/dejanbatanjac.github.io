@@ -161,11 +161,11 @@ $Similarity(O,C) = O \cdot C$
 
 Similarity is not a probability, it can take values outside $[0,1]$ range. We could normalize it, but instead, even better, we fed similarity to logistic regression.
 
-$\begin{aligned} P(+|O,C) =  \dfrac{1}{1+e^{O \cdot C}} \end{aligned}$
+$\begin{aligned} P(+ \mid O,C) =  \dfrac{1}{1+e^{O \cdot C}} \end{aligned}$
 
 In `skip-gram` all outside words are conditionally independent so we can calculate the product of outside words for given central word:
 
-$\begin{aligned} P(+ \mid \cdot) = P(+|O _ i,C); i=1,\cdots ,k \end{aligned}$
+$\begin{aligned} P(+ \mid \cdot) = P(+|O _ i,C); i=1, \cdots ,k \end{aligned}$
 
 $\begin{aligned} P(+ \mid \cdot) = \prod _ {i=1}^k \dfrac{1}{1+e^{O _ i \cdot C}} \end{aligned}$
 
