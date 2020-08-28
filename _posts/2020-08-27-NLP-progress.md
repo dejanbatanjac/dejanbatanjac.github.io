@@ -118,18 +118,7 @@ W['king'] - W['man'] + W['woman'] = W['queen']
 
 This provided a mean to deal with word analogies, because you could extend this idea to anything, but you could also understand the _bias_ in a word model or the bias language in general may have.
 
-`word2vec` uses n-grams. Here are some possible 3-gram for the text: 
 
-> He is a king. She is a queen.
-
-```
-[(['he', 'is'], 'a'),
- (['is', 'a'], 'king'),
- (['a', 'king'], 'she'),
- (['king', 'she'], 'is'),
- (['she', 'is'], 'a'),
- (['is', 'a'], 'queen')]
- ```
 
 ## GloVe (Global Vectors)
 
