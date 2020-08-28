@@ -133,8 +133,8 @@ $\large \boldsymbol{v} _ {a}=\frac{1}{2 h} \sum _ {n=1}^{h} \boldsymbol{v} _ {w 
 * $\boldsymbol{v} _ {w-k}, \cdots, \boldsymbol{v} _ {w-1}, \boldsymbol{v} _ {w+1}, \cdots, \boldsymbol{v} _ {w+k}$ context words as embedding vectors
   
 $\begin{aligned} 
-\log \mathrm{p}(\boldsymbol{w}) & \approx \sum _ {m=1}^{M} \log \mathrm{p}\left(w _ {m} \mid w _ {m-h}, w _ {m-h+1}, \ldots, w _ {m+h-1}, w _ {m+h}\right) \\ &=\sum _ {m=1}^{M} \log \frac{\exp \left(\boldsymbol{u} _ {w _ {m}} \cdot {\boldsymbol{v}} _ {a}\right)}{\sum_{j=1}^{V} \exp \left(\boldsymbol{u} _ {j} \cdot 
-{\boldsymbol{v}} _ {a}\right)} \\ &=\sum _ {m=1}^{M} \boldsymbol{u} _ {w _ {m}} \cdot 
+\log \mathrm{p}(\boldsymbol{w}) & \approx \sum _ {m=1}^{M} \log \mathrm{p}\left(w _ {m} \mid w _ {m-h}, w _ {m-h+1}, \ldots, w _ {m+h-1}, w _ {m+h}\right) \\\\ &=\sum _ {m=1}^{M} \log \frac{\exp \left(\boldsymbol{u} _ {w _ {m}} \cdot {\boldsymbol{v}} _ {a}\right)}{\sum_{j=1}^{V} \exp \left(\boldsymbol{u} _ {j} \cdot 
+{\boldsymbol{v}} _ {a}\right)} \\\\ &=\sum _ {m=1}^{M} \boldsymbol{u} _ {w _ {m}} \cdot 
 {\boldsymbol{v}} _ {a}-\log \sum _ {j=1}^{V} \exp \left(\boldsymbol{u} _ {j} \cdot 
 {\boldsymbol{v}} _ {a}\right) \end{aligned}$
 
@@ -177,7 +177,7 @@ $\log P(+| \cdot) = \sum _ {i=1}^{k} \log \dfrac{1}{1+e^{O _ i \cdot C}}$
 Similarly we can calculate entire corpus log likelihood:
 
 
-$\begin{aligned} \log \mathrm{p}(\boldsymbol{w}) & \approx \sum _ {m=1}^{M} \sum _ {n=1}^{k _ {m}} \log \mathrm{p}\left(w _ {m-n} \mid w _ {m}\right)+\log \mathrm{p}\left(w _ {m+n} \mid w _ {m}\right) \\ &=\sum _ {m=1}^{M} \sum _ {n=1}^{k _ {m}} \log \frac{\exp \left(\boldsymbol{u} _ {w _ {m-n}} \cdot \boldsymbol{v} _ {w _ {m}}\right)}{\sum _ {j=1}^{V} \exp \left(\boldsymbol{u} _ {j} \cdot \boldsymbol{v} _ {w _ {m}}\right)}+\log \frac{\exp \left(\boldsymbol{u} _ {w _ {m+n}} \cdot \boldsymbol{v} _ {w _ {m}}\right)}{\sum _ {j=1}^{V} \exp \left(\boldsymbol{u} _ {j} \cdot \boldsymbol{v} _ {w _ {m}}\right)} \\ &=\sum _ {m=1}^{M} \boldsymbol{\sum _ {n=1}^{k _ {m}} \boldsymbol{u} _ {w _ {m-n }} \cdot \boldsymbol{v} _ {w _ {m}}+\boldsymbol{u} _ {w _ {m+n}} \cdot \boldsymbol{v} _ {w _ {m}} -2 \operatorname {log} \sum _ {j=1}^{V} \operatorname {exp} ( \boldsymbol {u} _ {j}\cdot \boldsymbol{v} _ {w _ {m}})} \end{aligned}$
+$\begin{aligned} \log \mathrm{p}(\boldsymbol{w}) & \approx \sum _ {m=1}^{M} \sum _ {n=1}^{k _ {m}} \log \mathrm{p}\left(w _ {m-n} \mid w _ {m}\right)+\log \mathrm{p}\left(w _ {m+n} \mid w _ {m}\right) \\\\ &=\sum _ {m=1}^{M} \sum _ {n=1}^{k _ {m}} \log \frac{\exp \left(\boldsymbol{u} _ {w _ {m-n}} \cdot \boldsymbol{v} _ {w _ {m}}\right)}{\sum _ {j=1}^{V} \exp \left(\boldsymbol{u} _ {j} \cdot \boldsymbol{v} _ {w _ {m}}\right)}+\log \frac{\exp \left(\boldsymbol{u} _ {w _ {m+n}} \cdot \boldsymbol{v} _ {w _ {m}}\right)}{\sum _ {j=1}^{V} \exp \left(\boldsymbol{u} _ {j} \cdot \boldsymbol{v} _ {w _ {m}}\right)} \\\\ &=\sum _ {m=1}^{M} \boldsymbol{\sum _ {n=1}^{k _ {m}} \boldsymbol{u} _ {w _ {m-n }} \cdot \boldsymbol{v} _ {w _ {m}}+\boldsymbol{u} _ {w _ {m+n}} \cdot \boldsymbol{v} _ {w _ {m}} -2 \operatorname {log} \sum _ {j=1}^{V} \operatorname {exp} ( \boldsymbol {u} _ {j}\cdot \boldsymbol{v} _ {w _ {m}})} \end{aligned}$
 
 
 
