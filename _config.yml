@@ -14,5 +14,5 @@ url: "https://dejanbatanjac.github.io" # the base hostname & protocol for your s
 
 # Build settings
 markdown: kramdown
-# mathjax: true
-math_engine: katex
+mathjax: true
+# math_engine: katex
