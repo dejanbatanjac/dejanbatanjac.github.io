@@ -170,7 +170,7 @@ $\begin{aligned} P(+ \mid \cdot) = P(+ \mid C, N _ i) \ \ \ i=1, \cdots , k \end
 $\begin{aligned} P(+ \mid \cdot) = \prod _ {i=1}^k \dfrac{1}{1+e^{C \cdot N _ i }} \end{aligned}$
 
 
-Since products are not numerically unstable, we will switch to logs:
+Since products are not numerically stable, we will switch to logs:
 
 $\begin{aligned} \log P(+ \mid \cdot) = \sum _ {i=1}^{k} \log \dfrac{1}{1+e^{C \cdot N _ i}} \end{aligned}$
 
