@@ -8,6 +8,8 @@ permalink: /nlp-progress
 - [BOW](#bow)
 - [Co-occurrence matrix](#co-occurrence-matrix)
 - [word2vec](#word2vec)
+- [CBOW](#cbow)
+- [Skip-gram](#skip-gram)
 - [GloVe (Global Vectors)](#glove-global-vectors)
 - [The Transformer model](#the-transformer-model)
 - [Tokenizers](#tokenizers)
@@ -108,7 +110,7 @@ Then in 2013 one very important algorithm `word2vec` came along.
 
 Using this algorithm it was possible to learn the representation of words where each word has 50 or more latent features.
 
-The major gain with this latent approach--we are not forced to create matrices of `NxN`, where `N` is the number of distinct words. Instead all we have to learn is the `NxK` matrix where `K` is usually 100 (from 50 till 1000).
+The major gain with this latent approach--we are not forced to create co-occurrence matrices of `NxN`, where `N` is the number of distinct words. Instead all we have to learn is the `NxK` matrix where `K` is usually 100 (from 50 till 1000).
 
 This break-trough idea [published by Mikolov et al.](https://arxiv.org/abs/1301.3781){:rel="nofollow"} was capable of doing word arithmetics for the first time:
 
@@ -117,6 +119,65 @@ W['king'] - W['man'] + W['woman'] = W['queen']
 ```
 
 This provided a mean to deal with word analogies, because you could extend this idea to anything, but you could also understand the _bias_ in a word model or the bias language in general may have.
+
+The `word2vec` paper showed two **new** model algorithms called **CBOW** and **skip-gram**. CBOW is fast to train and skip-grap is more precise on majority of tasks they studied.
+
+## CBOW 
+
+CBOW introduced the average outside word:
+
+$\large \boldsymbol{v}_{a}=\frac{1}{2 h} \sum_{n=1}^{h} \boldsymbol{v}_{w_{m+n}}+\boldsymbol{v}_{w_{m-n}}$
+
+* k - window size, usually 4
+* $\boldsymbol{v}_{w}$ center word (embedding vector)
+* $\boldsymbol{v}_{w-k}, \cdots, \boldsymbol{v}_{w-1}, \boldsymbol{v}_{w+1}, \cdots, \boldsymbol{v}_{w+k}$ context words as embedding vectors
+  
+$\begin{aligned} 
+\log \mathrm{p}(\boldsymbol{w}) & \approx \sum_{m=1}^{M} \log \mathrm{p}\left(w_{m} \mid w_{m-h}, w_{m-h+1}, \ldots, w_{m+h-1}, w_{m+h}\right) \\ &=\sum_{m=1}^{M} \log \frac{\exp \left(\boldsymbol{u}_{w_{m}} \cdot {\boldsymbol{v}}_{a}\right)}{\sum_{j=1}^{V} \exp \left(\boldsymbol{u}_{j} \cdot 
+{\boldsymbol{v}}_{a}\right)} \\ &=\sum_{m=1}^{M} \boldsymbol{u}_{w_{m}} \cdot 
+{\boldsymbol{v}}_{a}-\log \sum_{j=1}^{V} \exp \left(\boldsymbol{u}_{j} \cdot 
+{\boldsymbol{v}}_{a}\right) \end{aligned}$
+
+* $M$ - number of words in words lexicon
+* $w_{m}$ - center word at position $m$
+* $\log \mathrm{p}(\boldsymbol{w})$ - entire corpus log likelihood
+* $V$ - number of randomly sampled negative samples
+
+
+
+## Skip-gram
+
+`skip-gram` is the other name for `word2vec` because this algorithm achieved best precision.
+
+Essentially `skip-gram` uses **logistic regression** and answers the question what is the probability that context word "blue" is _near_ the central word "sky".
+
+$P(+| O="blue", C="sky")$
+
+(read: positive outcome that the **central** word "sky" has the **outside** word "blue")
+
+The paper brought the notion of similarity using the dot product over the word embedding vectors.
+
+$Similarity(O,C) = O \cdot C$ 
+
+Similarity is not a probability, it can take values outside $[0,1]$ range. We could normalize it, but instead, even better, we fed similarity to logistic regression.
+
+$P(+|O,C) =  \dfrac{1}{1+e^{O \cdot C}}$
+
+In `skip-gram` all outside words are conditionally independent so we can calculate the product of outside words for given central word:
+
+$P(+| \cdot) = P(+|O_i,C), \ \ \ i=1,\cdots ,k$
+
+$P(+| \cdot) = \prod_{i=1}^k \dfrac{1}{1+e^{O_i \cdot C}}$
+
+
+Since products are not numerically unstable, we will switch to logs:
+
+$\log P(+| \cdot) = \sum_{i=1}^{k} \log \dfrac{1}{1+e^{O_i \cdot C}}$
+
+Similarly we can calculate entire corpus log likelihood:
+
+
+$\begin{aligned} \log \mathrm{p}(\boldsymbol{w}) & \approx \sum_{m=1}^{M} \sum_{n=1}^{k_{m}} \log \mathrm{p}\left(w_{m-n} \mid w_{m}\right)+\log \mathrm{p}\left(w_{m+n} \mid w_{m}\right) \\ &=\sum_{m=1}^{M} \sum_{n=1}^{k_{m}} \log \frac{\exp \left(\boldsymbol{u}_{w_{m-n}} \cdot \boldsymbol{v}_{w_{m}}\right)}{\sum_{j=1}^{V} \exp \left(\boldsymbol{u}_{j} \cdot \boldsymbol{v}_{w_{m}}\right)}+\log \frac{\exp \left(\boldsymbol{u}_{w_{m+n}} \cdot \boldsymbol{v}_{w_{m}}\right)}{\sum_{j=1}^{V} \exp \left(\boldsymbol{u}_{j} \cdot \boldsymbol{v}_{w_{m}}\right)} \\ &=\sum_{m=1}^{M} \boldsymbol{\sum_{n=1}^{k_{m}} \boldsymbol{u}_{w_{m-n }} \cdot \boldsymbol{v}_{w_{m}}+\boldsymbol{u}_{w_{m+n}} \cdot \boldsymbol{v}_{w_{m}} -2 \operatorname {log} \sum_{j=1}^{V} \operatorname {exp} ( \boldsymbol {u}_{j}\cdot \boldsymbol{v}_{w_{m}})} \end{aligned}$
 
 
 
