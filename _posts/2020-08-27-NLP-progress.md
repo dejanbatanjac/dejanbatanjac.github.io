@@ -130,7 +130,7 @@ $\large \boldsymbol{v}_{a}=\frac{1}{2 h} \sum_{n=1}^{h} \boldsymbol{v}_{w_{m+n}}
 
 * k - window size, usually 4
 * $\boldsymbol{v}_{w}$ center word (embedding vector)
-* <span>$\boldsymbol{v}_{w-k}, \cdots, \boldsymbol{v}_{w-1}, \boldsymbol{v}_{w+1}, \cdots, \boldsymbol{v}_{w+k}$</span> context words as embedding vectors
+* $\boldsymbol{v} _ {w-k}, \cdots, \boldsymbol{v} _ {w-1}, \boldsymbol{v} _ {w+1}, \cdots, \boldsymbol{v} _ {w+k}$</span> context words as embedding vectors
   
 $\begin{aligned} 
 \log \mathrm{p}(\boldsymbol{w}) & \approx \sum_{m=1}^{M} \log \mathrm{p}\left(w_{m} \mid w_{m-h}, w_{m-h+1}, \ldots, w_{m+h-1}, w_{m+h}\right) \\ &=\sum_{m=1}^{M} \log \frac{\exp \left(\boldsymbol{u}_{w_{m}} \cdot {\boldsymbol{v}}_{a}\right)}{\sum_{j=1}^{V} \exp \left(\boldsymbol{u}_{j} \cdot 
