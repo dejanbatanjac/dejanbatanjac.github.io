@@ -126,20 +126,20 @@ The `word2vec` paper showed two **new** model algorithms called **CBOW** and **s
 
 CBOW introduced the average outside word:
 
-$\large \boldsymbol{v}_{a}=\frac{1}{2 h} \sum_{n=1}^{h} \boldsymbol{v}_{w_{m+n}}+\boldsymbol{v}_{w_{m-n}}$
+$\large \boldsymbol{v} _ {a}=\frac{1}{2 h} \sum _ {n=1}^{h} \boldsymbol{v} _ {w _ {m+n}}+\boldsymbol{v} _ {w _ {m-n}}$
 
 * k - window size, usually 4
-* $\boldsymbol{v}_{w}$ center word (embedding vector)
-* $\boldsymbol{v} _ {w-k}, \cdots, \boldsymbol{v} _ {w-1}, \boldsymbol{v} _ {w+1}, \cdots, \boldsymbol{v} _ {w+k}$</span> context words as embedding vectors
+* $\boldsymbol{v} _ {w}$ center word (embedding vector)
+* $\boldsymbol{v}  _  {w-k}, \cdots, \boldsymbol{v}  _  {w-1}, \boldsymbol{v} _ {w+1}, \cdots, \boldsymbol{v} _ {w+k}$ context words as embedding vectors
   
 $\begin{aligned} 
-\log \mathrm{p}(\boldsymbol{w}) & \approx \sum_{m=1}^{M} \log \mathrm{p}\left(w_{m} \mid w_{m-h}, w_{m-h+1}, \ldots, w_{m+h-1}, w_{m+h}\right) \\ &=\sum_{m=1}^{M} \log \frac{\exp \left(\boldsymbol{u}_{w_{m}} \cdot {\boldsymbol{v}}_{a}\right)}{\sum_{j=1}^{V} \exp \left(\boldsymbol{u}_{j} \cdot 
-{\boldsymbol{v}}_{a}\right)} \\ &=\sum_{m=1}^{M} \boldsymbol{u}_{w_{m}} \cdot 
-{\boldsymbol{v}}_{a}-\log \sum_{j=1}^{V} \exp \left(\boldsymbol{u}_{j} \cdot 
-{\boldsymbol{v}}_{a}\right) \end{aligned}$
+\log \mathrm{p}(\boldsymbol{w}) & \approx \sum _ {m=1}^{M} \log \mathrm{p}\left(w _ {m} \mid w _ {m-h}, w _ {m-h+1}, \ldots, w _ {m+h-1}, w  _  {m+h}\right) \\ &=\sum _ {m=1}^{M} \log \frac{\exp \left(\boldsymbol{u} _ {w _ {m}} \cdot {\boldsymbol{v}} _ {a}\right)}{\sum_{j=1}^{V} \exp \left(\boldsymbol{u}  _  {j} \cdot 
+{\boldsymbol{v}} _ {a}\right)} \\ &=\sum _ {m=1}^{M} \boldsymbol{u} _ {w _ {m}} \cdot 
+{\boldsymbol{v}} _ {a}-\log \sum _ {j=1}^{V} \exp \left(\boldsymbol{u} _ {j} \cdot 
+{\boldsymbol{v}} _ {a}\right) \end{aligned}$
 
 * $M$ - number of words in words lexicon
-* $w_{m}$ - center word at position $m$
+* $w _ {m}$ - center word at position $m$
 * $\log \mathrm{p}(\boldsymbol{w})$ - entire corpus log likelihood
 * $V$ - number of randomly sampled negative samples
 
@@ -165,19 +165,19 @@ $P(+|O,C) =  \dfrac{1}{1+e^{O \cdot C}}$
 
 In `skip-gram` all outside words are conditionally independent so we can calculate the product of outside words for given central word:
 
-$P(+| \cdot) = P(+|O_i,C), \ \ \ i=1,\cdots ,k$
+$P(+| \cdot) = P(+|O _ i,C), \ \ \ i=1,\cdots ,k$
 
-$P(+| \cdot) = \prod_{i=1}^k \dfrac{1}{1+e^{O_i \cdot C}}$
+$P(+| \cdot) = \prod _ {i=1}^k \dfrac{1}{1+e^{O _ i \cdot C}}$
 
 
 Since products are not numerically unstable, we will switch to logs:
 
-$\log P(+| \cdot) = \sum_{i=1}^{k} \log \dfrac{1}{1+e^{O_i \cdot C}}$
+$\log P(+| \cdot) = \sum _ {i=1}^{k} \log \dfrac{1}{1+e^{O _ i \cdot C}}$
 
 Similarly we can calculate entire corpus log likelihood:
 
 
-$\begin{aligned} \log \mathrm{p}(\boldsymbol{w}) & \approx \sum_{m=1}^{M} \sum_{n=1}^{k_{m}} \log \mathrm{p}\left(w_{m-n} \mid w_{m}\right)+\log \mathrm{p}\left(w_{m+n} \mid w_{m}\right) \\ &=\sum_{m=1}^{M} \sum_{n=1}^{k_{m}} \log \frac{\exp \left(\boldsymbol{u}_{w_{m-n}} \cdot \boldsymbol{v}_{w_{m}}\right)}{\sum_{j=1}^{V} \exp \left(\boldsymbol{u}_{j} \cdot \boldsymbol{v}_{w_{m}}\right)}+\log \frac{\exp \left(\boldsymbol{u}_{w_{m+n}} \cdot \boldsymbol{v}_{w_{m}}\right)}{\sum_{j=1}^{V} \exp \left(\boldsymbol{u}_{j} \cdot \boldsymbol{v}_{w_{m}}\right)} \\ &=\sum_{m=1}^{M} \boldsymbol{\sum_{n=1}^{k_{m}} \boldsymbol{u}_{w_{m-n }} \cdot \boldsymbol{v}_{w_{m}}+\boldsymbol{u}_{w_{m+n}} \cdot \boldsymbol{v}_{w_{m}} -2 \operatorname {log} \sum_{j=1}^{V} \operatorname {exp} ( \boldsymbol {u}_{j}\cdot \boldsymbol{v}_{w_{m}})} \end{aligned}$
+$\begin{aligned} \log \mathrm{p}(\boldsymbol{w}) & \approx \sum _ {m=1}^{M} \sum _ {n=1}^{k _ {m}} \log \mathrm{p}\left(w _ {m-n} \mid w _ {m}\right)+\log \mathrm{p}\left(w _ {m+n} \mid w _ {m}\right) \\ &=\sum _ {m=1}^{M} \sum _ {n=1}^{k _ {m}} \log \frac{\exp \left(\boldsymbol{u} _ {w _ {m-n}} \cdot \boldsymbol{v} _ {w _ {m}}\right)}{\sum _ {j=1}^{V} \exp \left(\boldsymbol{u} _ {j} \cdot \boldsymbol{v} _ {w _ {m}}\right)}+\log \frac{\exp \left(\boldsymbol{u} _ {w _ {m+n}} \cdot \boldsymbol{v} _ {w _ {m}}\right)}{\sum _ {j=1}^{V} \exp \left(\boldsymbol{u} _ {j} \cdot \boldsymbol{v} _ {w _ {m}}\right)} \\ &=\sum _ {m=1}^{M} \boldsymbol{\sum _ {n=1}^{k _ {m}} \boldsymbol{u} _ {w _ {m-n }} \cdot \boldsymbol{v} _ {w _ {m}}+\boldsymbol{u} _ {w _ {m+n}} \cdot \boldsymbol{v} _ {w _ {m}} -2 \operatorname {log} \sum _ {j=1}^{V} \operatorname {exp} ( \boldsymbol {u} _ {j}\cdot \boldsymbol{v} _ {w _ {m}})} \end{aligned}$
 
 
 
