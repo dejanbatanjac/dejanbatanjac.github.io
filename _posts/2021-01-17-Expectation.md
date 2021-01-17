@@ -11,11 +11,11 @@ In here I will set some notation of the mathematical expectation of discrete and
 
 In case of the discrete variable the expectation, or expected value, of some function $f(x)$ with respect to a probability distribution $P(x)$ is the average, or mean value, that $f$ takes on when $x$ is drawn from $P$:
 
-<span>
 
-$\mathbb{E}_{\mathrm{x} \sim P} [ f(x) ]= \sum_{x} P(x) f(x)$
 
-</span>
+$\mathbb{E}\\_{\mathrm{x} \sim P} [ f(x) ]= \sum\\_{x} P(x) f(x)$
+
+
 
 $\mathrm{x} \sim P$ means $\mathrm{x}$ is drawn from distribution $P(x)$ or just from $P$. Inside the $[\ldots]$ brackets we should have some function $f(x)$, or in special case just $x$.
 
@@ -48,11 +48,10 @@ $\mathbb{E}$
 
 Expectations are linear:
 
-<span>
 
-$\mathbb{E}_{\mathrm{x}}[\alpha f(x)+\beta g(x)]=\alpha \mathbb{E}_{\mathrm{x}}[f(x)]+\beta \mathbb{E}_{\mathrm{x}}[g(x)]$
+$\mathbb{E} \_ {\mathrm{x}}[\alpha f(x)+\beta g(x)]=\alpha \mathbb{E}_{\mathrm{x}}[f(x)]+\beta \mathbb{E}_{\mathrm{x}}[g(x)]$
 
-</span>
+
 
 We define the <span> $\mathbb X = \{{\pmb x^{(1)}}, \ldots ,{\pmb x^{(m)}}\}$ </span>
 
