@@ -1,9 +1,36 @@
 ---
 published: true
 layout: post
-title: Machine Learning brainstorming (probabilistic approach)
+title: ML brainstorming 
 permalink: /ml-brainstorming
 ---
+- [Types of machine learning](#types-of-machine-learning)
+- [Why do we have train, validation and test set](#why-do-we-have-train-validation-and-test-set)
+- [What is overfitting](#what-is-overfitting)
+- [What is the cross validation](#what-is-the-cross-validation)
+- [Problem with cross validation when the number of features is big and number of samples is small](#problem-with-cross-validation-when-the-number-of-features-is-big-and-number-of-samples-is-small)
+- [Parametric vs. non parametric models](#parametric-vs-non-parametric-models)
+- [Generative vs. discriminative learning](#generative-vs-discriminative-learning)
+- [Probability vs. likelihood what is the difference](#probability-vs-likelihood-what-is-the-difference)
+- [The two approaches to probability](#the-two-approaches-to-probability)
+- [What is Bayesian approach](#what-is-bayesian-approach)
+- [What is random variable](#what-is-random-variable)
+- [How you estimate the distribution from data](#how-you-estimate-the-distribution-from-data)
+- [What is the difference MLE and MAP](#what-is-the-difference-mle-and-map)
+- [How to calculate $P(\mathcal D ; \theta )$](#how-to-calculate-pmathcal-d--theta-)
+- [Again : Estimate distribution from data](#again--estimate-distribution-from-data)
+  - [For MLA: $P(\mathcal D;\theta)$](#for-mla-pmathcal-dtheta)
+  - [For MAP: $P(\boldsymbol{\theta} | \mathcal D)$](#for-map-pboldsymboltheta--mathcal-d)
+- [Classification (probabilistic definition)](#classification-probabilistic-definition)
+- [How unsupervised learning is different than supervised](#how-unsupervised-learning-is-different-than-supervised)
+- [Estimating RV](#estimating-rv)
+- [Comparing LR and NP](#comparing-lr-and-np)
+- [Comparing LR and SVM](#comparing-lr-and-svm)
+- [Gradient descent vs. Newton method](#gradient-descent-vs-newton-method)
+- [GD vs Adagrad](#gd-vs-adagrad)
+
+This will be the Machine learning brainstorming
+(probabilistic approach).
 ## Types of machine learning
 
 Machine learning is usually divided into two main types:
@@ -188,15 +215,15 @@ It's like systematically trying different parameters and defining what are the b
 
 MLE gives the value which maximizes the likelihood $P(\mathcal D \mid \theta)$. And MAP gives you the value which maximizes the posterior probability $P(\theta \mid \mathcal D)$.
 
-## How to calculate $P(\mathcal D \mid \theta )$
+## How to calculate $P(\mathcal D ; \theta )$
 
 In practice it is hard to solve
 
-$P(\mathcal D \mid \theta)$
+$P(\mathcal D ; \theta)$
 
 but if we assume:
 
-$P(\mathcal D \mid \theta) = \prod_{i} P(\mathcal D_{i} \mid \theta)$, where $\mathcal D_{i}$ is a particular value from a dataset.
+$P(\mathcal D ; \theta) = \prod_{i} P(\mathcal D_{i} \mid \theta)$, where $\mathcal D_{i}$ is a particular value from a dataset.
 
 We get a simple formula to calculate the probability. In many cases this works. Why?
 
