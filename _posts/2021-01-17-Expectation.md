@@ -1,101 +1,106 @@
 ---
 published: true
 layout: post
-title: Probability notation
-permalink: /probability-notation
+title: Expectation
+permalink: /expectation
 ---
-- [Basic probability notation](#basic-probability-notation)
-- [Conditional probability](#conditional-probability)
-- [Chain rule of probabilities](#chain-rule-of-probabilities)
-- [Notations of Random Variables](#notations-of-random-variables)
-- [How to denote random variable $X$ has $k$ possible values?](#how-to-denote-random-variable-x-has-k-possible-values)
 
-## Basic probability notation
-The probability that $\mathrm x = x$ is denoted as $P(x)$
+In here I will set some notation of the mathematical expectation of discrete and continuous random variable (RV)
 
-Sometimes we deﬁne a variable ﬁrst, then use $\sim$ notation to
-specify which distribution it follows later: $\mathrm x ∼ P(\mathrm x)$
+### Discrete RV expectation
 
-Probability mass functions can act on many variables at the same time known as **joint probability distribution**. 
+In case of the discrete variable the expectation, or expected value, of some function $f(x)$ with respect to a probability distribution $P(x)$ is the average, or mean value, that $f$ takes on when $x$ is drawn from $P$:
 
-$P(x, y) = P(\mathrm x=x, \mathrm y=y)$
+$\mathbb{E}_{\mathrm{x} \sim P}[f(x)]=\sum_{x} P(x) f(x)$
 
-For $u(x;a, b)$ we say $x$ is "parametrized by" $a$ and $b$.
+$\mathrm{x} \sim P$ means $\mathrm{x}$ is drawn from distribution $P(x)$ or just from $P$. Inside the $[\ldots]$ brackets we should have some function $f(x)$, or in special case just $x$.
 
-## Conditional probability
+### Continuous RV expectation
 
-$P(\mathrm{y}=y \mid \mathrm{x}=x)=\large \frac{P(\mathrm{y}=y, \mathrm{x}=x)}{P(\mathrm{x}=x)}$
+For continuous variables it is computed with the integral:
 
-This can be rewritten as:
-
-$P(\mathrm{y} \mid \mathrm{x})=\large \frac{P(\mathrm{y}, \mathrm{x})}{P(\mathrm{x})}$
-
-Or as:
-
-$P(\mathrm{Y} \mid \mathrm{X})=\large \frac{P(\mathrm{Y}, \mathrm{X})}{P(\mathrm{X})}$
+$\mathbb{E}_{\mathrm{x} \sim p}[f(x)]=\int p(x) f(x) d x$
 
 
-It means:
+If the identity of the distribution is clear from the context we may write simple:
 
-We are interested in the probability of event $\text Y$, given that some
-other event $\text X$ has happened. This is called a conditional probability.
+$\mathbb{E}_{\mathrm{x} }[f(x)]$
 
-
-## Chain rule of probabilities
-
-Any joint probability distribution over many random variables may be decomposed
-into conditional distributions over only one variable:
-
-$P\left(\mathrm{x}^{(1)}, \ldots, \mathrm{x}^{(n)}\right)=P\left(\mathrm{x}^{(1)}\right) \Pi_{i=2}^{n} P\left(\mathrm{x}^{(i)} \mid \mathrm{x}^{(1)}, \ldots, \mathrm{x}^{(i-1)}\right)$
-
-_Example:_
-
-$\begin{aligned} P(\mathrm{a}, \mathrm{b}, \mathrm{c}) &=P(\mathrm{a} \mid \mathrm{b}, \mathrm{c}) P(\mathrm{b}, \mathrm{c}) \\ P(\mathrm{b}, \mathrm{c}) &=P(\mathrm{b} \mid \mathrm{c}) P(\mathrm{c}) \\ P(\mathrm{a}, \mathrm{b}, \mathrm{c}) &=P(\mathrm{a} \mid \mathrm{b}, \mathrm{c}) P(\mathrm{b} \mid \mathrm{c}) P(\mathrm{c}) \end{aligned}$
-
-_Example: Probability based on a graph_
-
-```python
-import graphviz
-from sklearn.tree import export_graphviz
-from matplotlib import pyplot as plt
-
-tree="""
-digraph Box {
-a->b 
-a->c 
-b->c
-b->d
-c->e
-}
-"""
-graphviz.Source(tree)
-```
-![graphviz](/images/2021/graph.png)
+If the random variable is clear from the context we may write:
 
 
-$P(\mathrm{a}, \mathrm{b}, \mathrm{c}, \mathrm{d}, \mathrm{e})=P(\mathrm{a}) P(\mathrm{b} \mid \mathrm{a}) P(\mathrm{c} \mid \mathrm{a}, \mathrm{b}) P(\mathrm{d} \mid \mathrm{b}) P(\mathrm{e} \mid \mathrm{c})$
+$\mathbb{E}[f(x)]$
 
 
-## Notations of Random Variables
+By default, we can assume that
 
-In the literature to denote a RV both notations are acceptable:
+$\mathbb{E}[\cdot]$
 
-* $\mathrm X$, or
-* $X$
-* $\mathrm x$
+averages over the values of all the random variables inside the brackets. 
 
-## How to denote random variable $X$ has $k$ possible values?
+Likewise, when there is no ambiguity, we may omit the square brackets:
 
-Answer:
-$\{x_i\}_{i=1}^k$
+$\mathbb{E}$
+
+Expectations are linear:
+
+$\mathbb{E}_{\mathrm{x}}[\alpha f(x)+\beta g(x)]=\alpha \mathbb{E}_{\mathrm{x}}[f(x)]+\beta \mathbb{E}_{\mathrm{x}}[g(x)]$
 
 
-The probability distribution of a discrete random variable is described by a list of probabilities associated with each of its possible values. 
+We define the $\mathbb X = \{{\pmb x^{(1)}}, \ldots ,{\pmb x^{(m)}}\}$
 
-This list of probabilities is called a probability mass function (PMF)
+$p_{data}(\mathrm x)$
 
-For example: 
-$\operatorname{Pr}(X = red) = 0.3, \operatorname{Pr}(X = yellow) = 0.45, \operatorname{Pr}(X = blue) = 0.25$.
+$p_{model}(\pmb {\mathrm x}; \pmb \theta)$
 
-Each probability in a probability mass function is a value greater than or equal
-to 0. The sum of probabilities equals 1.
+
+$p_{model}(\pmb {x}; \pmb \theta)$ maps any concrete configuration to $p_{data}(\pmb {x})$
+
+$\theta_{ML} = arg max$
+
+
+$\begin{aligned} \boldsymbol{\theta}_{\mathrm{ML}} &=\underset{\boldsymbol{\theta}}{\arg \max } p_{\text {model }}(\mathbb{X} ; \boldsymbol{\theta}) \\ &=\underset{\boldsymbol{\theta}}{\arg \max } \prod_{i=1}^{m} p_{\text {model }}\left(\boldsymbol{x}^{(i)} ; \boldsymbol{\theta}\right) \end{aligned}$
+
+
+For numeric stability:
+
+$\boldsymbol{\theta}_{\mathrm{ML}}=\underset{\boldsymbol{\theta}}{\arg \max } \sum_{i=1}^{m} \log p_{\text {model }}\left(\boldsymbol{x}^{(i)} ; \boldsymbol{\theta}\right)$
+
+Defined by train data:
+
+$\boldsymbol{\theta}_{\mathrm{ML}}=\underset{\boldsymbol{\theta}}{\arg \max } \mathbb{E}_{\mathbf{x} \sim \hat{p}_{\text {data }}} \log p_{\text {model }}(\boldsymbol{x} ; \boldsymbol{\theta})$
+
+Final:
+
+$D_{\mathrm{KL}}\left(\hat{p}_{\text {data }} \| p_{\text {model }}\right)=
+\mathbb{E}_{\mathbf{x} \sim \hat{p}_{\text {data }}}
+\left[\overbrace{\log \hat{p}_{\text {data }}(\pmb{x})}^{\ data \ generating \ process}-\log p_{\text {model }}(\pmb{x})\right]$
+
+Important part: 
+
+$\mathbb{E}_{\mathbf{x} \sim \hat{p}_{\text {data }}}\left[-\log p_{\text {model }}(\pmb{x})\right]$
+
+where
+
+$\hat{p}_{\text {data }}$ empiracal distribution
+
+${p}_{\text {data }}$ true distribution
+
+Once we have the expectation we can define the variance and covariance.
+
+## Variance
+
+
+Variance give us the measure how much values of a function of a random variable $\text x$ vary as we sample different values of $\mathrm x$ from it's probability distribution.
+
+
+$\operatorname{Var}(f(x))=\mathbb{E}\left[(f(x)-\mathbb{E}[f(x)])^{2}\right]$
+
+
+
+
+## Covariance
+
+The covariance gives some sense of how much two values are linearly related to each other, as well as the scale of these variables:
+
+$\operatorname{Cov}\left(f(x), g(y)\right)=\mathbb{E}[(f(x)-\mathbb{E}[f(x)])(g(y)-\mathbb{E}[g(y)])]$
