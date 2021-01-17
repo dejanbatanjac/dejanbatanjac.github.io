@@ -13,7 +13,7 @@ In case of the discrete variable the expectation, or expected value, of some fun
 
 
 
-$\mathbb{E}\\_{\mathrm{x} \sim P} [ f(x) ]= \sum\\_{x} P(x) f(x)$
+<span>$\mathbb{E}_{\mathrm{x} \sim P} [ f(x) ]= \sum_{x} P(x) f(x)$</span>
 
 
 
