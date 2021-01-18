@@ -53,11 +53,10 @@ $\mathbb{E} \_ {\mathrm{x}}[\alpha f(x)+\beta g(x)]=\alpha \mathbb{E}_{\mathrm{x
 </div>
 
 
-We define the 
+We define:
 <div>
 
 $\mathbb X = \{{\pmb x^{(1)}}, \ldots ,{\pmb x^{(m)}}\}$ 
-
 </div>
 
 $p_{data}(\mathrm x)$
