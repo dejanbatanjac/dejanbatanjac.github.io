@@ -11,6 +11,8 @@ In here I will set some notation of the mathematical expectation of discrete and
 
 In case of the discrete variable the expectation, or expected value, of some function $f(x)$ with respect to a probability distribution $P(x)$ is the average, or mean value, that $f$ takes on when $x$ is drawn from $P$:
 
+\[\begin{align} P(\theta \vert X) &= \frac{P(X \vert \theta) P(\theta)}{P(X)} \\[10pt] &\propto P(X \vert \theta) P(\theta) \end{align}\] 
+
 <div>
 
 $\begin{aligned} \mathbb{E}_{\mathrm{x} \sim P} [ f(x) ]= \sum_{x} P(x) f(x) \end{aligned}$
