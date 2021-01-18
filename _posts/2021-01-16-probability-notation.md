@@ -77,7 +77,7 @@ $P(\mathrm{a}, \mathrm{b}, \mathrm{c}, \mathrm{d}, \mathrm{e})=P(\mathrm{a}) P(\
 
 ## Notations of Random Variables
 
-In the literature to denote a RV both notations are acceptable:
+In the literature to denote a RV all these notations are acceptable:
 
 * $\mathrm X$, or
 * $X$
