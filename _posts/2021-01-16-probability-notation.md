@@ -8,7 +8,6 @@ permalink: /probability-notation
 - [Conditional probability](#conditional-probability)
 - [Chain rule of probabilities](#chain-rule-of-probabilities)
 - [Notations of Random Variables](#notations-of-random-variables)
-- [How to denote random variable $X$ has $k$ possible values?](#how-to-denote-random-variable-x-has-k-possible-values)
 
 ## Basic probability notation
 The probability that $\mathrm x = x$ is denoted as $P(x)$
@@ -84,7 +83,7 @@ In the literature to denote a RV both notations are acceptable:
 * $X$
 * $\mathrm x$
 
-## How to denote random variable $X$ has $k$ possible values?
+_Example: How to denote random variable $X$ has $k$ possible values?_
 
 Answer:
 $\{x_i\}_{i=1}^k$
@@ -92,10 +91,11 @@ $\{x_i\}_{i=1}^k$
 
 The probability distribution of a discrete random variable is described by a list of probabilities associated with each of its possible values. 
 
-This list of probabilities is called a probability mass function (PMF)
+This list of probabilities is called a probability mass function (PMF).
 
-For example: 
-$\operatorname{Pr}(X = red) = 0.3, \operatorname{Pr}(X = yellow) = 0.45, \operatorname{Pr}(X = blue) = 0.25$.
+_Example: Sum of all probabilities should add to 1_
+
+$\operatorname{P}(X = red) = 0.3, \operatorname{P}(X = yellow) = 0.45, \operatorname{P}(X = blue) = 0.25$.
 
 Each probability in a probability mass function is a value greater than or equal
 to 0. The sum of probabilities equals 1.
