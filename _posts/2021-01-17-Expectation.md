@@ -47,12 +47,17 @@ $\mathbb{E}$
 
 Expectations are linear:
 
+<div>
 
 $\mathbb{E} \_ {\mathrm{x}}[\alpha f(x)+\beta g(x)]=\alpha \mathbb{E}_{\mathrm{x}}[f(x)]+\beta \mathbb{E}_{\mathrm{x}}[g(x)]$
+</div>
 
 
+We define the <div> 
 
-We define the <span> $\mathbb X = \{{\pmb x^{(1)}}, \ldots ,{\pmb x^{(m)}}\}$ </span>
+$\mathbb X = \{{\pmb x^{(1)}}, \ldots ,{\pmb x^{(m)}}\}$ 
+
+</div>
 
 $p_{data}(\mathrm x)$
 
@@ -63,31 +68,51 @@ $p_{model}(\pmb {x}; \pmb \theta)$ maps any concrete configuration to $p_{data}(
 
 $\theta_{ML} = arg max$
 
+<div>
 
 $\begin{aligned} \boldsymbol{\theta}_{\mathrm{ML}} &=\underset{\boldsymbol{\theta}}{\arg \max } p_{\text {model }}(\mathbb{X} ; \boldsymbol{\theta}) \\ &=\underset{\boldsymbol{\theta}}{\arg \max } \prod_{i=1}^{m} p_{\text {model }}\left(\boldsymbol{x}^{(i)} ; \boldsymbol{\theta}\right) \end{aligned}$
-
+</div>
 
 For numeric stability:
+<div>
 
 $\boldsymbol{\theta}_{\mathrm{ML}}=\underset{\boldsymbol{\theta}}{\arg \max } \sum_{i=1}^{m} \log p_{\text {model }}\left(\boldsymbol{x}^{(i)} ; \boldsymbol{\theta}\right)$
+</div>
 
 Defined by train data:
+<div>
 
 $\boldsymbol{\theta}_{\mathrm{ML}}=\underset{\boldsymbol{\theta}}{\arg \max } \mathbb{E}_{\mathbf{x} \sim \hat{p}_{\text {data }}} \log p_{\text {model }}(\boldsymbol{x} ; \boldsymbol{\theta})$
+</div>
 
 Final:
-
+<div>
 $D_{\mathrm{KL}}\left(\hat{p}_{\text {data }} \| p_{\text {model }}\right)=
 \mathbb{E}_{\mathbf{x} \sim \hat{p}_{\text {data }}}
 \left[\overbrace{\log \hat{p}_{\text {data }}(\pmb{x})}^{\ data \ generating \ process}-\log p_{\text {model }}(\pmb{x})\right]$
+</div>
 
 Important part: 
+<div>
 
 $\mathbb{E}_{\mathbf{x} \sim \hat{p}_{\text {data }}}\left[-\log p_{\text {model }}(\pmb{x})\right]$
+</div>
 
 where:
 
-$\hat{p}_{\text {data }}$ is empirical distribution, ${p}_{\text {data }}$ is true distribution
+<div>
+
+$\hat{p}_{\text {data }}$ 
+<div>
+
+is empirical distribution, 
+
+<div>
+
+${p}_{\text {data }}$ 
+<div>
+
+is true distribution.
 
 Once we have the expectation we can define the variance and covariance.
 
