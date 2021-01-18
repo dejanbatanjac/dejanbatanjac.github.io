@@ -53,7 +53,8 @@ $\mathbb{E} \_ {\mathrm{x}}[\alpha f(x)+\beta g(x)]=\alpha \mathbb{E}_{\mathrm{x
 </div>
 
 
-We define the <div> 
+We define the 
+<div>
 
 $\mathbb X = \{{\pmb x^{(1)}}, \ldots ,{\pmb x^{(m)}}\}$ 
 
@@ -66,7 +67,6 @@ $p_{model}(\pmb {\mathrm x}; \pmb \theta)$
 
 $p_{model}(\pmb {x}; \pmb \theta)$ maps any concrete configuration to $p_{data}(\pmb {x})$
 
-$\theta_{ML} = arg max$
 
 <div>
 
@@ -76,7 +76,7 @@ $\begin{aligned} \boldsymbol{\theta}_{\mathrm{ML}} &=\underset{\boldsymbol{\thet
 For numeric stability:
 <div>
 
-$\boldsymbol{\theta}_{\mathrm{ML}}=\underset{\boldsymbol{\theta}}{\arg \max } \sum_{i=1}^{m} \log p_{\text {model }}\left(\boldsymbol{x}^{(i)} ; \boldsymbol{\theta}\right)$
+$\begin{aligned}\boldsymbol{\theta}_{\mathrm{ML}}=\underset{\boldsymbol{\theta}}{\arg \max } \sum_{i=1}^{m} \log p_{\text {model }}\left(\boldsymbol{x}^{(i)} ; \boldsymbol{\theta}\right) \end{aligned}$
 </div>
 
 Defined by train data:
@@ -87,6 +87,7 @@ $\boldsymbol{\theta}_{\mathrm{ML}}=\underset{\boldsymbol{\theta}}{\arg \max } \m
 
 Final:
 <div>
+
 $D_{\mathrm{KL}}\left(\hat{p}_{\text {data }} \| p_{\text {model }}\right)=
 \mathbb{E}_{\mathbf{x} \sim \hat{p}_{\text {data }}}
 \left[\overbrace{\log \hat{p}_{\text {data }}(\pmb{x})}^{\ data \ generating \ process}-\log p_{\text {model }}(\pmb{x})\right]$
