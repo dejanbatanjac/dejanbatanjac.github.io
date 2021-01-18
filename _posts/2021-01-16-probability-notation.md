@@ -83,7 +83,7 @@ In the literature to denote a RV all these notations are acceptable:
 * $X$
 * $\mathrm x$
 
-_Example: How to denote random variable $X$ has $k$ possible values?_
+**Example**: _How to denote random variable $X$ has $k$ possible values?_
 
 Answer:
 $\{x_i\}_{i=1}^k$
@@ -93,7 +93,7 @@ The probability distribution of a discrete random variable is described by a lis
 
 This list of probabilities is called a probability mass function (PMF).
 
-_Example: Sum of all probabilities should add to 1_
+**Example**: _Sum of all probabilities should add to 1_
 
 $P(X = red) = 0.3, P(X = yellow) = 0.45, P(X = blue) = 0.25$.
 
