@@ -100,17 +100,15 @@ $\mathbb{E}_{\mathbf{x} \sim \hat{p}_{\text {data }}}\left[-\log p_{\text {model
 
 where:
 
-<div>
+<span>
 
-$\hat{p}_{\text {data }}$ 
-<div>
+$\hat{p}_{\text {data }}$ </span>
 
 is empirical distribution, 
 
-<div>
+<span>
 
-${p}_{\text {data }}$ 
-<div>
+${p}_{\text {data }}$ </span>
 
 is true distribution.
 
