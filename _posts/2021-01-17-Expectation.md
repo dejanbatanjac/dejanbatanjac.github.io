@@ -35,17 +35,12 @@ If the random variable is clear from the context we may write:
 $\mathbb{E}[f(x)]$
 
 
-By default, we can assume that
+By default, we can assume that $\mathbb{E}[\cdot]$ averages over the values of all the random variables inside the brackets. 
 
-$\mathbb{E}[\cdot]$
+Likewise, when there is no ambiguity, we may omit the square brackets and just write $\mathbb{E}$.
 
-averages over the values of all the random variables inside the brackets. 
 
-Likewise, when there is no ambiguity, we may omit the square brackets:
-
-$\mathbb{E}$
-
-Expectations are linear:
+When expectations are linear:
 
 <div>
 
