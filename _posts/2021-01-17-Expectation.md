@@ -49,14 +49,14 @@ Expectations are linear:
 
 <div>
 
-$\mathbb{E} \_ {\mathrm{x}}[\alpha f(x)+\beta g(x)]=\alpha \mathbb{E}_{\mathrm{x}}[f(x)]+\beta \mathbb{E}_{\mathrm{x}}[g(x)]$
+$\mathbb{E}_{\mathrm{x}}[\alpha f(x)+\beta g(x)]=\alpha \mathbb{E}_{\mathrm{x}}[f(x)]+\beta \mathbb{E}_{\mathrm{x}}[g(x)]$
 </div>
 
 
 We define:
 <div>
 
-$\mathbb X = \{{\pmb x^{(1)}}, \ldots ,{\pmb x^{(m)}}\}$ 
+$\mathbb X = \{ {\pmb x^{(1)}}, \ldots ,{\pmb x^{(m)}}\}$ 
 </div>
 
 $p_{data}(\mathrm x)$
