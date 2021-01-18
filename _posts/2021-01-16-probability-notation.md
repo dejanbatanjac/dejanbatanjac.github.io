@@ -95,7 +95,7 @@ This list of probabilities is called a probability mass function (PMF).
 
 _Example: Sum of all probabilities should add to 1_
 
-$\operatorname{P}(X = red) = 0.3, \operatorname{P}(X = yellow) = 0.45, \operatorname{P}(X = blue) = 0.25$.
+$P(X = red) = 0.3, P(X = yellow) = 0.45, P(X = blue) = 0.25$.
 
 Each probability in a probability mass function is a value greater than or equal
 to 0. The sum of probabilities equals 1.
