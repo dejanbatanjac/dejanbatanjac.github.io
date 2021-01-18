@@ -102,13 +102,15 @@ where:
 
 <span>
 
-$\hat{p}_{\text {data }}$ </span>
+$\hat{p}_{\text {data }}$ 
+</span>
 
 is empirical distribution, 
 
 <span>
 
-${p}_{\text {data }}$ </span>
+${p}_{\text {data }}$ 
+</span>
 
 is true distribution.
 
