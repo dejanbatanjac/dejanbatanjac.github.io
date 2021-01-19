@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Expectation
 permalink: /expectation
@@ -16,7 +16,7 @@ In case of the discrete variable the expectation, or expected value, of some fun
 $\begin{aligned} \mathbb{E}_{\mathrm{x} \sim P} [ f(x) ]= \sum_{x} P(x) f(x) \end{aligned}$
 
 
-$\mathrm{x} \sim P$ means $\mathrm{x}$ is drawn from distribution $P(x)$ or just from $P$. Inside the $[\ldots]$ brackets we should have some function $f(x)$, or in special case just $x$.
+$$\mathrm{x} \sim P$$ means $\mathrm{x}$ is drawn from distribution $P(x)$ or just from $P$. Inside the $[\ldots]$ brackets we should have some function $f(x)$, or in special case just $x$.
 
 ### Continuous RV expectation
 
