@@ -5,39 +5,102 @@ title: Probability notation
 permalink: /probability-notation
 ---
 - [Basic probability notation](#basic-probability-notation)
-- [Conditional probability](#conditional-probability)
+  - [Random variable](#random-variable)
+  - [The Event](#the-event)
+  - [Probability definition](#probability-definition)
+- [Probability of two events](#probability-of-two-events)
+  - [Joint probability](#joint-probability)
+  - [Conditional probability](#conditional-probability)
 - [Chain rule of probabilities](#chain-rule-of-probabilities)
-- [Notations of Random Variables](#notations-of-random-variables)
 
 ## Basic probability notation
-The probability that $\mathrm x = x$ is denoted as $P(x)$
+
+### Random variable
+
+A *Random Variable* is a set of possible values from a random experiment. It should have associated probability distribution $P$.
+
+In the literature to denote a Random Variable all these notations are acceptable:
+
+* $\mathrm X$, or
+* $X$
+* $\mathrm x$
+
+> We need to distinguish between algebra unknown variable $x$, and probability random variable $\mathrm x$.
+
+The probability that $\mathrm x = x$ is denoted as $P( x )$. 
 
 Sometimes we deﬁne a variable ﬁrst, then use $\sim$ notation to
-specify which distribution it follows later: $\mathrm x ∼ P(\mathrm x)$
+specify which distribution it follows later: $\mathrm x ∼ P(x)$
 
-Probability mass functions can act on many variables at the same time known as **joint probability distribution**. 
+### The Event
 
-$P(x, y) = P(\mathrm x=x, \mathrm y=y)$
+An event $E$ is a set of outcomes (1+) from an experiment. An event can be:
 
-For $u(x;a, b)$ we say $x$ is "parametrized by" $a$ and $b$.
+* rolling a dice and getting 1
+* getting head on coin toss
+* getting an Ace from a deck of cards
 
-## Conditional probability
+Two events can be dependent or independent.
+Two events can occur at the same time or no.
 
-$P(\mathrm{y}=y \mid \mathrm{x}=x)=\large \frac{P(\mathrm{y}=y, \mathrm{x}=x)}{P(\mathrm{x}=x)}$
+### Probability definition
 
-This can be rewritten as:
+Probability is simple likelihood of an event occurring.
 
-$P(\mathrm{y} \mid \mathrm{x})=\large \frac{P(\mathrm{y}, \mathrm{x})}{P(\mathrm{x})}$
+We use the term likelihood for something that already happened. We use the term probability for something that will happen.
 
-Or as:
+**Example**: _How to denote random variable $X$ has $k$ possible values?_
 
-$P(\mathrm{Y} \mid \mathrm{X})=\large \frac{P(\mathrm{Y}, \mathrm{X})}{P(\mathrm{X})}$
+Answer:
+$\mathrm x = \{x_i\}_{i=1}^k$
 
 
-It means:
+The probability distribution of a discrete random variable $\mathrm x$ is described by a list of probabilities associated with each of its possible values $x_i$. 
 
-We are interested in the probability of event $\text Y$, given that some
-other event $\text X$ has happened. This is called a conditional probability.
+## Probability of two events
+If we have two events we can define two probability types:
+
+* joint probability
+* conditional probability
+
+### Joint probability
+
+Conditions:
+
+> Two events $E_1$ and $E_2$ must happen at the **same time**. 
+> 
+> Two events $E_1$ and $E_2$ must be *independent*.
+
+*Example:* 
+Throwing two dice simultaneously.
+
+*Notation:*
+
+$P(x, y) = P(\mathrm x=x, \mathrm y=y) = P(x)*P(y)$
+
+
+
+### Conditional probability
+
+*Notation:*
+
+$P(H | E)$ can be expressed as:
+
+Probability of an event $H$ given the knowledge that an event $E$ has already occurred.
+
+$H$ is called the Hypothesis, $E$ is the Evidence.
+
+The next formula is the Bayes rule:
+
+$P(H \mid E) = \large \frac {P(H) P(E \mid H)}{P(E)}$
+
+Where:
+
+* $P(H \mid E)$ is posterior probability
+* $P(H E)$ is prior probability
+* $P(E \mid H) / P(E)$ is the likelihood ratio
+* $P(E \mid H)$ is likelihood
+
 
 
 ## Chain rule of probabilities
@@ -51,7 +114,10 @@ _Example:_
 
 $\begin{aligned} P(\mathrm{a}, \mathrm{b}, \mathrm{c}) &=P(\mathrm{a} \mid \mathrm{b}, \mathrm{c}) P(\mathrm{b}, \mathrm{c}) \\ P(\mathrm{b}, \mathrm{c}) &=P(\mathrm{b} \mid \mathrm{c}) P(\mathrm{c}) \\ P(\mathrm{a}, \mathrm{b}, \mathrm{c}) &=P(\mathrm{a} \mid \mathrm{b}, \mathrm{c}) P(\mathrm{b} \mid \mathrm{c}) P(\mathrm{c}) \end{aligned}$
 
-_Example: Probability based on a graph_
+*Example:* Chain rule graph
+
+
+$P(\mathrm{a}, \mathrm{b}, \mathrm{c}, \mathrm{d}, \mathrm{e})=P(\mathrm{a}) P(\mathrm{b} \mid \mathrm{a}) P(\mathrm{c} \mid \mathrm{a}, \mathrm{b}) P(\mathrm{d} \mid \mathrm{b}) P(\mathrm{e} \mid \mathrm{c})$
 
 ```python
 import graphviz
@@ -72,30 +138,18 @@ graphviz.Source(tree)
 ![graphviz](/images/2021/graph.png)
 
 
-$P(\mathrm{a}, \mathrm{b}, \mathrm{c}, \mathrm{d}, \mathrm{e})=P(\mathrm{a}) P(\mathrm{b} \mid \mathrm{a}) P(\mathrm{c} \mid \mathrm{a}, \mathrm{b}) P(\mathrm{d} \mid \mathrm{b}) P(\mathrm{e} \mid \mathrm{c})$
 
 
-## Notations of Random Variables
-
-In the literature to denote a RV all these notations are acceptable:
-
-* $\mathrm X$, or
-* $X$
-* $\mathrm x$
-
-**Example**: _How to denote random variable $X$ has $k$ possible values?_
-
-Answer:
-$\{x_i\}_{i=1}^k$
 
 
-The probability distribution of a discrete random variable is described by a list of probabilities associated with each of its possible values. 
-
-This list of probabilities is called a probability mass function (PMF).
 
 **Example**: _Sum of all probabilities should add to 1_
 
-$P(X = red) = 0.3, P(X = yellow) = 0.45, P(X = blue) = 0.25$.
+$P(\mathrm x=red) = 0.3$
 
-Each probability in a probability mass function is a value greater than or equal
-to 0. The sum of probabilities equals 1.
+$P(\mathrm x=yellow) = 0.45$
+
+$P(\mathrm x=blue) = 0.25$.
+
+The sum of **all** probabilities for random variable $\mathrm x$ should add to 1.
+
