@@ -112,7 +112,7 @@ Special case of _joint probability_ is **conditional probability**.
 
 In here we don't have the premise that the two events are _independent_.
 
-$P(e_1, e_2) = P(e_1)* P(e_2 \mid e_1)$
+$P(e_1, e_2) = P(e_1)* P(e_2 \mid e_1)$,
 $P(e_2, e_1) = P(e_2)* P(e_1 \mid e_2)$
 
 
