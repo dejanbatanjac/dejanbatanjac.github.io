@@ -8,13 +8,13 @@ permalink: /probability-notation
   - [Random variable](#random-variable)
   - [The Event](#the-event)
   - [Probability definition](#probability-definition)
+- [Probability of a single event (marginal probability)](#probability-of-a-single-event-marginal-probability)
 - [Probability of two events](#probability-of-two-events)
   - [Union probability](#union-probability)
   - [Joint probability](#joint-probability)
   - [Conditional probability](#conditional-probability)
 - [Chain rule of probabilities](#chain-rule-of-probabilities)
 - [Different notation meaning](#different-notation-meaning)
-- [Marginal probability](#marginal-probability)
 
 ## Basic probability notation
 
@@ -66,6 +66,13 @@ Probability is simple likelihood of an event occurring.
 
 We use the term likelihood for something that already happened. We use the term probability for something that will happen.
 
+## Probability of a single event (marginal probability)
+
+Probability of an event occurring $P(e)$ unconditionally. This means $P(e)$ is not conditioned on another event. We usually call marginal probability just probability.
+
+**Example:** Newborn child is a boy
+
+The probability that a newborn child is a boy is $P(boy) = 0.5$.
 
 ## Probability of two events
 If we have two events we can define different probability types:
@@ -178,10 +185,3 @@ $P(x\mid y,z)$ is similar to $P(x\mid y)$ but now $\mathrm z$ is random variable
 
 Lastly $P(x\mid y;z)$ should mean that $z$ is a set of parameters, not a random variable.
 
-## Marginal probability
-
-Probability of an event occurring $P(e)$ unconditionally. This means $P(e)$ is not conditioned on another event. We usually call marginal probability just probability.
-
-**Example:** Newborn child is a boy
-
-The probability that a newborn child is a boy is $P(boy) = 0.5$.
