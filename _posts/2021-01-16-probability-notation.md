@@ -109,7 +109,7 @@ $P(x, y) = P(\mathrm x=x, \mathrm y=y) = P(x)*P(y)$
 
 ### Conditional probability
 
-Conditional probability is probability of an event occurring, given that another event (by assumption, presumption, assertion or evidence) has already occurred.
+Conditional probability is the probability of one event occurring in the presence of another event (by assumption, assertion or evidence).
 
 In here we don't have the premise that the two events are _independent_.
 
