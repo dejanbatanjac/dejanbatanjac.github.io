@@ -102,7 +102,8 @@ Throwing two dice simultaneously.
 **Notation:**
 
 $P(x, y) = P(\mathrm x=x, \mathrm y=y) = P(x)*P(y)$
-$P(e_1, e_2) = P(e_1)*P(e_2)$
+
+> Tip: You can change $x$ and $y$ with $e_1$ and $e_2$
 
 
 ### Conditional probability
