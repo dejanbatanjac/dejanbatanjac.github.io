@@ -149,7 +149,7 @@ $P\left(x^{(1)}, \ldots, x^{(n)}\right)=P\left(x^{(1)}\right) \Pi_{i=2}^{n} P\le
 
 **Example:** Chain rule 1
 
-$$\begin{aligned} P(a, b, c) &=P(a \mid b, c) P(b, c) \\ P(b, c) &=P(b \mid c) P(c) \\ P(a, b, c) &=P(a \mid b, c) P(b \mid c) P(c) \end{aligned}$$
+$\begin{aligned} P(a, b, c) &=P(a \mid b, c) P(b, c), \\ P(b, c) &=P(b \mid c) P(c), \\ P(a, b, c) &=P(a \mid b, c) P(b \mid c) P(c) \end{aligned}$
 
 **Example:** Chain rule 2
 
