@@ -200,3 +200,6 @@ $P(x|y)$ is the conditional distribution of $\mathrm x$ given $\mathrm y$. It on
 
 $P(x,y)$ is the joint probability density of $\mathrm x$ and $\mathrm y$ at the point $(x,y)$. It only makes sense if $\mathrm x$ and $\mathrm y$ are random variables. 
 
+$P(x|y,z)$ is similar to $P(x|y)$ but now $\mathrm z$ is random variable.
+
+Lastly $P(x|y;z)$ should mean that $z$ is a set of parameters, not a random variable.
