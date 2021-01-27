@@ -43,7 +43,7 @@ The probability distribution of a discrete random variable $\mathrm x$ is descri
 
 ### The Event
 
-An event $E$ is a set of outcomes (1+) from an experiment. An event can be:
+An event $E$ is a set of outcomes (one or more than one) from an experiment. An event can be:
 
 * rolling a dice and getting 1
 * getting head on coin toss
