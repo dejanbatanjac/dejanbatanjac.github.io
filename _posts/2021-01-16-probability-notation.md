@@ -32,6 +32,15 @@ The probability that $\mathrm x = x$ is denoted as $P( x )$.
 Sometimes we deﬁne a variable ﬁrst, then use $\sim$ notation to
 specify which distribution it follows later: $\mathrm x ∼ P(x)$
 
+**Example**: _How to denote random variable $X$ has $k$ possible values?_
+
+Answer:
+$\mathrm x = \{x_i\}_{i=1}^k$
+
+
+The probability distribution of a discrete random variable $\mathrm x$ is described by a list of probabilities associated with each of its possible values $x_i$. 
+
+
 ### The Event
 
 An event $E$ is a set of outcomes (1+) from an experiment. An event can be:
@@ -49,13 +58,6 @@ Probability is simple likelihood of an event occurring.
 
 We use the term likelihood for something that already happened. We use the term probability for something that will happen.
 
-**Example**: _How to denote random variable $X$ has $k$ possible values?_
-
-Answer:
-$\mathrm x = \{x_i\}_{i=1}^k$
-
-
-The probability distribution of a discrete random variable $\mathrm x$ is described by a list of probabilities associated with each of its possible values $x_i$. 
 
 ## Probability of two events
 If we have two events we can define two probability types:
