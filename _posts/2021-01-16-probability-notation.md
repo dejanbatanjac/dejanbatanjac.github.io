@@ -84,7 +84,7 @@ $P(x, y) = P(\mathrm x=x, \mathrm y=y) = P(x)*P(y)$
 
 *Notation:*
 
-$P(H | E)$ can be expressed as:
+$P(H \mid E)$ can be expressed as:
 
 Probability of an event $H$ given the knowledge that an event $E$ has already occurred.
 
