@@ -73,10 +73,11 @@ Conditions:
 > 
 > Two events $E_1$ and $E_2$ must be *independent*.
 
-*Example:* 
+**Example:** 
+
 Throwing two dice simultaneously.
 
-*Notation:*
+**Notation:**
 
 $P(x, y) = P(\mathrm x=x, \mathrm y=y) = P(x)*P(y)$
 
@@ -84,7 +85,7 @@ $P(x, y) = P(\mathrm x=x, \mathrm y=y) = P(x)*P(y)$
 
 ### Conditional probability
 
-*Notation:*
+**Notation:**
 
 $P(h \mid e)$ can be expressed as:
 
@@ -112,11 +113,11 @@ into conditional distributions over only one variable:
 
 $P\left(\mathrm{x}^{(1)}, \ldots, \mathrm{x}^{(n)}\right)=P\left(\mathrm{x}^{(1)}\right) \Pi_{i=2}^{n} P\left(\mathrm{x}^{(i)} \mid \mathrm{x}^{(1)}, \ldots, \mathrm{x}^{(i-1)}\right)$
 
-_Example:_
+**Example:** Chain rule
 
 $\begin{aligned} P(\mathrm{a}, \mathrm{b}, \mathrm{c}) &=P(\mathrm{a} \mid \mathrm{b}, \mathrm{c}) P(\mathrm{b}, \mathrm{c}) \\ P(\mathrm{b}, \mathrm{c}) &=P(\mathrm{b} \mid \mathrm{c}) P(\mathrm{c}) \\ P(\mathrm{a}, \mathrm{b}, \mathrm{c}) &=P(\mathrm{a} \mid \mathrm{b}, \mathrm{c}) P(\mathrm{b} \mid \mathrm{c}) P(\mathrm{c}) \end{aligned}$
 
-*Example:* Chain rule graph
+**Example:** Chain rule graph
 
 
 $P(\mathrm{a}, \mathrm{b}, \mathrm{c}, \mathrm{d}, \mathrm{e})=P(\mathrm{a}) P(\mathrm{b} \mid \mathrm{a}) P(\mathrm{c} \mid \mathrm{a}, \mathrm{b}) P(\mathrm{d} \mid \mathrm{b}) P(\mathrm{e} \mid \mathrm{c})$
