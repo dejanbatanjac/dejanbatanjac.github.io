@@ -50,7 +50,7 @@ Also for the discrete random variable $\mathrm x$ with the expression $P(x)$ we 
 
 ### The Event
 
-An event $e$ is a set of outcomes (one or more than one) from an experiment. An event can be:
+An event $e$ is a set of outcomes (one or more) from an experiment. An event can be:
 
 * rolling a dice and getting 1
 * getting head on coin toss
@@ -109,22 +109,19 @@ $P(x, y) = P(\mathrm x=x, \mathrm y=y) = P(x)*P(y)$
 
 ### Conditional probability
 
-Special case of _joint probability_ is **conditional probability**.
+Conditional probability is probability of an event occurring, given that another event (by assumption, presumption, assertion or evidence) has already occurred.
 
 In here we don't have the premise that the two events are _independent_.
-
-$P(e_1, e_2) = P(e_1)* P(e_2 \mid e_1)$,
-$P(e_2, e_1) = P(e_2)* P(e_1 \mid e_2)$
-
-
-
-**Notation:** _To grasp it easy we can use letters $h$ and $e$_
 
 $P(h \mid e)$ can be expressed as:
 
 Probability of an event $h$ given the knowledge that an event $e$ has already occurred.
 
 $h$ is called the **hypothesis**, $e$ is the **evidence**.
+
+> Events $h$ and $e$ **may or may not** happen simultaneously.
+
+> If $P(h \mid e) = P(h)$ then events $h$ and $e$ are independent.
 
 The next formula is the Bayes rule:
 
