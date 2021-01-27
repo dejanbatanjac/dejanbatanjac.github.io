@@ -109,21 +109,20 @@ $P(x, y) = P(\mathrm x=x, \mathrm y=y) = P(x)*P(y)$
 
 ### Conditional probability
 
-Conditional probability is the probability of one event occurring in the presence of another event (by assumption, assertion or evidence).
-
-In here we don't have the premise that the two events are _independent_.
-
 $P(h \mid e)$ can be expressed as:
 
-Probability of an event $h$ given the knowledge that an event $e$ has already occurred.
+Probability of event $e$ occurring, given that another event $h$ occurs.
 
 $h$ is called the **hypothesis**, $e$ is the **evidence**.
 
+> Event occurring may be by assumption, assertion or evidence.
+
+In here we don't have the premise that the two events are _independent_. If $P(h \mid e) = P(h)$ then events $h$ and $e$ are independent.
+
 > Events $h$ and $e$ **may or may not** happen simultaneously.
 
-> If $P(h \mid e) = P(h)$ then events $h$ and $e$ are independent.
 
-The next formula is the Bayes rule:
+The next formula is known as Bayes rule:
 
 $P(h \mid e) = \large \frac {P(h) P(e \mid h)}{P(e)}$
 
