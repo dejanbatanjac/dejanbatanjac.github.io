@@ -86,22 +86,22 @@ $P(x, y) = P(\mathrm x=x, \mathrm y=y) = P(x)*P(y)$
 
 *Notation:*
 
-$P(H \mid E)$ can be expressed as:
+$P(h \mid e)$ can be expressed as:
 
-Probability of an event $H$ given the knowledge that an event $E$ has already occurred.
+Probability of an event $h$ given the knowledge that an event $e$ has already occurred.
 
-$H$ is called the Hypothesis, $E$ is the Evidence.
+$h$ is called the **hypothesis**, $e$ is the **evidence**.
 
 The next formula is the Bayes rule:
 
-$P(H \mid E) = \large \frac {P(H) P(E \mid H)}{P(E)}$
+$P(h \mid e) = \large \frac {P(h) P(e \mid h)}{P(e)}$
 
 Where:
 
-* $P(H \mid E)$ is posterior probability
-* $P(H )$ is prior probability
-* $P(E \mid H) / P(E)$ is the likelihood ratio
-* $P(E \mid H)$ is likelihood
+* $P(h \mid e)$ is posterior probability
+* $P(h )$ is prior probability
+* $P(e \mid h) / P(e)$ is the likelihood ratio
+* $P(e \mid h)$ is likelihood
 
 
 
