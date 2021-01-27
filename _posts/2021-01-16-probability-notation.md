@@ -14,6 +14,7 @@ permalink: /probability-notation
   - [Conditional probability](#conditional-probability)
 - [Chain rule of probabilities](#chain-rule-of-probabilities)
 - [Different notation meaning](#different-notation-meaning)
+- [Marginal probability](#marginal-probability)
 
 ## Basic probability notation
 
@@ -176,3 +177,11 @@ $P(x,y)$ is the joint probability density of $\mathrm x$ and $\mathrm y$ at the 
 $P(x\mid y,z)$ is similar to $P(x\mid y)$ but now $\mathrm z$ is random variable.
 
 Lastly $P(x\mid y;z)$ should mean that $z$ is a set of parameters, not a random variable.
+
+## Marginal probability
+
+Probability of an event occurring $P(e)$ unconditionally. This means $P(e)$ is not conditioned on another event. We usually call marginal probability just probability.
+
+**Example:** Newborn child is a boy
+
+The probability that a newborn child is a boy is $P(boy) = 0.5$.
