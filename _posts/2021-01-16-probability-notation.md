@@ -9,6 +9,7 @@ permalink: /probability-notation
   - [The Event](#the-event)
   - [Probability definition](#probability-definition)
 - [Probability of two events](#probability-of-two-events)
+  - [Union probability](#union-probability)
   - [Joint probability](#joint-probability)
   - [Conditional probability](#conditional-probability)
 - [Chain rule of probabilities](#chain-rule-of-probabilities)
@@ -32,6 +33,7 @@ The probability that $\mathrm x = x$ is denoted as $P( x )$.
 Sometimes we deﬁne a variable ﬁrst, then use $\sim$ notation to
 specify which distribution it follows later: $\mathrm x ∼ P(x)$
 
+
 **Example**: _How to denote random variable $X$ has $k$ possible values?_
 
 Answer:
@@ -40,10 +42,14 @@ $\mathrm x = \{x_i\}_{i=1}^k$
 
 The probability distribution of a discrete random variable $\mathrm x$ is described by a list of probabilities associated with each of its possible values $x_i$. 
 
+Also for the discrete random variable $\mathrm x$ with the expression $P(x)$ we say probability that the event $x$ is true.
+
+> In here $P$ is **pmf** (probability mass function).
+
 
 ### The Event
 
-An event $E$ is a set of outcomes (one or more than one) from an experiment. An event can be:
+An event $e$ is a set of outcomes (one or more than one) from an experiment. An event can be:
 
 * rolling a dice and getting 1
 * getting head on coin toss
@@ -60,18 +66,34 @@ We use the term likelihood for something that already happened. We use the term 
 
 
 ## Probability of two events
-If we have two events we can define two probability types:
+If we have two events we can define different probability types:
 
+* union probability
 * joint probability
 * conditional probability
 
+
+### Union probability
+
+If events are _mutually exclusive_:
+
+$P( e_1 \cup e_2) =P(e_1) + P(e_2)$
+
+If events are not _mutually exclusive_:
+
+$P( e_1 \cup e_2) =P(e_1) + P(e_2) -  P(e_1 \cap e_2)$ 
+
 ### Joint probability
 
-Conditions:
+We can use both notations:
 
-> Two events $E_1$ and $E_2$ must happen at the **same time**. 
+$P( e_1 \cap e_2) = P(e_1, e_2)$
+
+**Special conditions:**
+
+> Two events $e_1$ and $e_2$ must happen at the **same time**. 
 > 
-> Two events $E_1$ and $E_2$ must be *independent*.
+> Two events $e_1$ and $e_2$ must be **independent**.
 
 **Example:** 
 
@@ -80,12 +102,21 @@ Throwing two dice simultaneously.
 **Notation:**
 
 $P(x, y) = P(\mathrm x=x, \mathrm y=y) = P(x)*P(y)$
-
+$P(e_1, e_2) = P(e_1)*P(e_2)$
 
 
 ### Conditional probability
 
-**Notation:**
+Special case of _joint probability_ is **conditional probability**.
+
+In here we don't have the premise that the two events are _independent_.
+
+$P(e_1, e_2) = P(e_1)* P(e_2 \mid e_1)$
+$P(e_2, e_1) = P(e_2)* P(e_1 \mid e_2)$
+
+
+
+**Notation:** _To grasp it easy we can use letters $h$ and $e$_
 
 $P(h \mid e)$ can be expressed as:
 
@@ -104,6 +135,7 @@ Where:
 * $P(e \mid h) / P(e)$ is the likelihood ratio
 * $P(e \mid h)$ is likelihood
 
+> To get the Bayes formula just start with  conditional probability when $P(e_1, e_2) = P(e_2, e_1)$
 
 
 ## Chain rule of probabilities
