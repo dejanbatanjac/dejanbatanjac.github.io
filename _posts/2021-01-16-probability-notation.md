@@ -145,38 +145,15 @@ Where:
 Any joint probability distribution over many random variables may be decomposed
 into conditional distributions over only one variable:
 
-$P\left(\mathrm{x}^{(1)}, \ldots, \mathrm{x}^{(n)}\right)=P\left(\mathrm{x}^{(1)}\right) \Pi_{i=2}^{n} P\left(\mathrm{x}^{(i)} \mid \mathrm{x}^{(1)}, \ldots, \mathrm{x}^{(i-1)}\right)$
+$P\left(x^{(1)}, \ldots, x^{(n)}\right)=P\left(x^{(1)}\right) \Pi_{i=2}^{n} P\left(x^{(i)} \mid x^{(1)}, \ldots, x^{(i-1)}\right)$
 
-**Example:** Chain rule
+**Example:** Chain rule 1
 
-$$\begin{aligned} P(\mathrm{a}, \mathrm{b}, \mathrm{c}) &=P(\mathrm{a} \mid \mathrm{b}, \mathrm{c}) P(\mathrm{b}, \mathrm{c}) \\ P(\mathrm{b}, \mathrm{c}) &=P(\mathrm{b} \mid \mathrm{c}) P(\mathrm{c}) \\ P(\mathrm{a}, \mathrm{b}, \mathrm{c}) &=P(\mathrm{a} \mid \mathrm{b}, \mathrm{c}) P(\mathrm{b} \mid \mathrm{c}) P(\mathrm{c}) \end{aligned}$$
+$$\begin{aligned} P(a, b, c) &=P(a \mid b, c) P(b, c) \\ P(b, c) &=P(b \mid c) P(c) \\ P(a, b, c) &=P(a \mid b, c) P(b \mid c) P(c) \end{aligned}$$
 
-**Example:** Chain rule graph
+**Example:** Chain rule 2
 
-
-$P(\mathrm{a}, \mathrm{b}, \mathrm{c}, \mathrm{d}, \mathrm{e})=P(\mathrm{a}) P(\mathrm{b} \mid \mathrm{a}) P(\mathrm{c} \mid \mathrm{a}, \mathrm{b}) P(\mathrm{d} \mid \mathrm{b}) P(\mathrm{e} \mid \mathrm{c})$
-
-```python
-import graphviz
-from sklearn.tree import export_graphviz
-from matplotlib import pyplot as plt
-
-tree="""
-digraph Box {
-a->b 
-a->c 
-b->c
-b->d
-c->e
-}
-"""
-graphviz.Source(tree)
-```
-![graphviz](/images/2021/graph.png)
-
-
-
-
+$P(a, b, c, d, e)=P(a \mid b,c,d,e) P(b \mid c,d,e) P(c \mid d, e) P(d \mid e) P(e)$
 
 
 
