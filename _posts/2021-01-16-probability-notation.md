@@ -97,7 +97,7 @@ $P(H \mid E) = \large \frac {P(H) P(E \mid H)}{P(E)}$
 Where:
 
 * $P(H \mid E)$ is posterior probability
-* $P(H E)$ is prior probability
+* $P(H )$ is prior probability
 * $P(E \mid H) / P(E)$ is the likelihood ratio
 * $P(E \mid H)$ is likelihood
 
