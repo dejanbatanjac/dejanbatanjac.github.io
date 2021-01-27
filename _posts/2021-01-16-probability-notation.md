@@ -13,6 +13,7 @@ permalink: /probability-notation
   - [Joint probability](#joint-probability)
   - [Conditional probability](#conditional-probability)
 - [Chain rule of probabilities](#chain-rule-of-probabilities)
+- [Different notation meaning](#different-notation-meaning)
 
 ## Basic probability notation
 
@@ -188,4 +189,14 @@ $P(\mathrm x=yellow) = 0.45$
 $P(\mathrm x=blue) = 0.25$.
 
 The sum of **all** probabilities for random variable $\mathrm x$ should add to 1.
+
+## Different notation meaning
+
+$P(x; y)$ is the density of the random variable $\mathrm x$ at the point $x$, where $y$ is set of parameters. 
+
+
+$P(x|y)$ is the conditional distribution of $\mathrm x$ given $\mathrm y$. It only makes sense if $\mathrm x$ and $\mathrm y$ are random variables.
+
+
+$P(x,y)$ is the joint probability density of $\mathrm x$ and $\mathrm y$ at the point $(x,y)$. It only makes sense if $\mathrm x$ and $\mathrm y$ are random variables. 
 
