@@ -13,6 +13,7 @@ permalink: /probability-notation
   - [Union probability](#union-probability)
   - [Joint probability](#joint-probability)
   - [Conditional probability](#conditional-probability)
+- [Bayes rule](#bayes-rule)
 - [Chain rule of probabilities](#chain-rule-of-probabilities)
 - [Different notation meaning](#different-notation-meaning)
 
@@ -129,10 +130,18 @@ In here we don't have the premise that the two events are _independent_. If $P(h
 
 > Events $h$ and $e$ **may or may not** happen simultaneously.
 
+ $P(h \mid e) = \large {P(h \cap e) \over P(e)}$
 
+**Example:** Given yuo pick a red card what is the probability that it is 5?
+
+$P(5|red) =\large {P(5 \cap red) \over P(red)} = {1/26 \over 1/2}=\frac{1}{13}$ 
+
+## Bayes rule
 The next formula is known as Bayes rule:
 
 $P(h \mid e) = \large \frac {P(h) P(e \mid h)}{P(e)}$
+
+$P(h \mid e) = \large \frac {P(h) P(e \mid h)}{P(e \mid h)P(h)+P(e \mid \overline h)P(\overline h)}$
 
 Where:
 
