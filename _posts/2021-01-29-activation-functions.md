@@ -93,7 +93,7 @@ The problem with this function is the infinite range of values it may return. Us
 
 ## Binary step
 
-Defined super simple this is one of the most basic functions
+Defined super simple this is one of the most basic functions:
 
 <div>
 
