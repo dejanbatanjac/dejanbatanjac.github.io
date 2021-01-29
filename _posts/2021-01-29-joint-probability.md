@@ -23,7 +23,7 @@ You may imagine $Y$ is a stock price, and $X$ are different factors we take. Thi
 
 Let's make a claim:
 
-> If I know the joint probability distribution of random variables ${X_1, ... , X_n}$ I can easily answer specific joint or conditional probability questions on any subset of these variables...
+> If we know the joint probability distribution of random variables ${X_1, ... , X_n}$ we can easily answer specific joint or conditional probability questions on any subset of these variables...
 
 If I know $P(X_1, X_2, ..., X_n)$ I can answer questions like:
 
