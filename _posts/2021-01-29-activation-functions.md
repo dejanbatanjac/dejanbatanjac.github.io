@@ -146,6 +146,8 @@ $f\left(x\right) = \large \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}$
 
 The tanh function became preferred over the sigmoid function as it gave better performance for multi-layer neural networks. But it did not solve the vanishing gradient problem that sigmoids suffered, which was tackled more effectively with the introduction of ReLU activations.
 
+Derivate: $f(x)' = 1-f(x)^2$
+
 ## GELU
 
 $\begin{aligned} & f(x) = \frac{1}{2} x\left(1+\operatorname{erf}\left(\frac{x}{\sqrt{2}}\right)\right) =& x \Phi(x) \end{aligned}$
