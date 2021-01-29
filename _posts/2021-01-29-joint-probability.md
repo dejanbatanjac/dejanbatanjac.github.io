@@ -183,4 +183,6 @@ Where we have mandy different values for a column we may use inequalities, such 
 
 Still $2^{50}$ is super big = 1.125.899.906.842.624
 
-This is **MAP (Maximum a Posteriori)** approximation can help us. We use a prior belief to express the end probability better. Actually we define some probability distribution for our random variable $Y$. We can try out different distributions and find the best one.
+This is where **MAP (Maximum a Posteriori)** approximation can help. We use a _prior belief_ to express the end probability better. 
+
+Actually we define some probability distribution for our random variable $Y$. We can try out different distributions and find the best one.
