@@ -191,3 +191,4 @@ where
 
 $\text{softplus}\left(x\right) = \ln\left(1+e^{x}\right)$
 
+

@@ -161,8 +161,10 @@ into conditional distributions over only one variable:
 $P\left(x^{(1)}, \ldots, x^{(n)}\right)=P\left(x^{(1)}\right) \Pi_{i=2}^{n} P\left(x^{(i)} \mid x^{(1)}, \ldots, x^{(i-1)}\right)$
 
 **Example:** Chain rule 1
+<div>
 
 $\begin{aligned} P(a, b, c) &=P(a \mid b, c) P(b, c), \\ P(b, c) &=P(b \mid c) P(c), \\ P(a, b, c) &=P(a \mid b, c) P(b \mid c) P(c) \end{aligned}$
+</div>
 
 **Example:** Chain rule 2
 
