@@ -5,10 +5,11 @@ title: The Power of Joint Probability
 permalink: /joint-probability
 ---
 - [What is joint probability of Random Variables](#what-is-joint-probability-of-random-variables)
-- [I will make a claim](#i-will-make-a-claim)
-- [Showcase (basic MLE example)](#showcase-basic-mle-example)
-- [Consequences of the upper showcase](#consequences-of-the-upper-showcase)
+- [If we know joint probability...](#if-we-know-joint-probability)
+- [Example with random dataset](#example-with-random-dataset)
+- [Conclusion: MLE](#conclusion-mle)
 - [Problem when we don't have enough rows](#problem-when-we-dont-have-enough-rows)
+- [Solution: MAP](#solution-map)
 
 ## What is joint probability of Random Variables
 
@@ -18,7 +19,9 @@ If we learn function $f:X→Y$ we actually learn $P(Y \mid X)$, where $Y$ is a t
 
 You may imagine $Y$ is a stock price, and $X$ are different factors we take. So joint probability of random variables is just a function.
 
-## I will make a claim
+## If we know joint probability...
+
+Let's make a claim:
 
 > If I know the joint probability distribution of random variables ${X_1, ... , X_n}$ I can easily answer specific joint or conditional probability questions on any subset of these variables...
 
@@ -26,7 +29,7 @@ If I know $P(X_1, X_2, ..., X_n)$ I can answer questions like:
 
 $P(X_1 \mid X_2,  ... , X_n)$ or $P(X_1 \mid X_2)$ or $P(X_1, X_2)$, or $P(X_2 \mid X_1, X_3)$, or $P(X_1, X_2 \mid X_3, X_4)$ the list may be long.
 
-## Showcase (basic MLE example)
+## Example with random dataset
 Let's create an example:
 
 ```python
@@ -160,7 +163,7 @@ Out:
 
 0.6058784488672743
 
-## Consequences of the upper showcase
+## Conclusion: MLE
 
 So if we know joint probability distribution of random variables $X_1,...X_n$  then we can calculate conditional and joint probability distributions for any subsets of these variables.
 
@@ -183,6 +186,8 @@ Where we have mandy different values for a column we may use inequalities, such 
 
 Still $2^{50}$ is super big = 1.125.899.906.842.624
 
+
+## Solution: MAP 
 This is where **MAP (Maximum a Posteriori)** approximation can help. We use a _prior belief_ to express the end probability better. 
 
 Actually we define some probability distribution for our random variable $Y$. We can try out different distributions and find the best one.
