@@ -15,7 +15,6 @@ permalink: /activation-functions
 - [Swish](#swish)
 - [Softplus](#softplus)
 - [Mish](#mish)
-- [SQNL](#sqnl)
 
 ## Activation functions overview
 
@@ -142,16 +141,14 @@ The tanh function became preferred over the sigmoid function as it gave better p
 
 ## GELU
 
-$\begin{aligned} & f(x) = \frac{1}{2} x\left(1+\operatorname{erf}\left(\frac{x}{\sqrt{2}}\right)\right) \\=& x \Phi(x) \end{aligned}$
+$\begin{aligned} & f(x) = \frac{1}{2} x\left(1+\operatorname{erf}\left(\frac{x}{\sqrt{2}}\right)\right) =& x \Phi(x) \end{aligned}$
 
 where $X\sim \mathcal{N}(0,1)$.
 
 
 The Gaussian Error Linear Unit, or GELU is $x\Phi(x)$, where $\Phi(x)$ the standard Gaussian cumulative distribution function. 
 
-The GELU nonlinearity weights inputs by their percentile, rather than gates inputs by their sign as in ReLUs ($x\mathbf{1}_{x>0}$). Consequently the GELU can be thought of as a smoother ReLU.
-
-One can approximate the GELU with $0.5x\left(1+\tanh\left[\sqrt{2/\pi}\left(x + 0.044715x^{3}\right)\right]\right)$ or $x\sigma\left(1.702x\right),$ but PyTorch's exact implementation is sufficiently fast such that these approximations may be unnecessary. 
+One can approximate the GELU with: $0.5x\left(1+\tanh\left[\sqrt{2/\pi}\left(x + 0.044715x^{3}\right)\right]\right)$ or $x\sigma\left(1.702x\right),$ but PyTorch's exact implementation is sufficiently fast such that these approximations may be unnecessary. 
 
 GELUs are used in GPT-3, BERT, and most other Transformers.
 
@@ -186,16 +183,4 @@ $f\left(x\right) = x\cdot\tanh{\text{softplus}\left(x\right)}$
 where
 
 $\text{softplus}\left(x\right) = \ln\left(1+e^{x}\right)$
-
-
-## SQNL
-
-Square nonlinearity (SQNL) is defined as a complex function.
-
-$f(x) = \left\{\begin{array}{ll}1 & \text { if } x>2.0 \\ x-\frac{x^{2}}{4} & \text { if } 0 \leq x \leq 2.0 \\ x+\frac{x^{2}}{4} & \text { if }-2.0 \leq x<0 \\ -1 & \text { if } x<-2.0\end{array}\right.$
-
-
-Still the derivate is simple:
-
-$1 \mp \frac{x}{2}$
 
