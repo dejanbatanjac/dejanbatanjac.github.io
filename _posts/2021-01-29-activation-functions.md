@@ -137,7 +137,7 @@ Drawback: sharp damp gradients during backpropagation from deeper hidden layers 
 
 Derivate of this function is:
 
-$f(x)(1-f(x))$
+$f(x)' = f(x)(1-f(x))$
 
 What is the problem with gradients we just described:
 
