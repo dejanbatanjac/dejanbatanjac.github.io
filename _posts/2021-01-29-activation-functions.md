@@ -110,8 +110,10 @@ Rectified Linear Units, or ReLUs, are the most common activation forms. Linearit
 
 
 ## Leaky ReLU
+<div>
 
 $f(x) = \left\{\begin{array}{ll}0.01 x & \text { if } x<0 \\ x & \text { if } x \geq 0\end{array}\right.$
+</div>
 
 Leaky Rectified Linear Unit, or Leaky ReLU, is based on a ReLU, but it has a small slope for negative values instead of a flat slope. 
 
@@ -120,8 +122,10 @@ The slope coefficient is determined before training, (not during training). This
 
 There is one modification of Leaky ReLU called parametrized Leaky ReLU:
 
-$f(x) = \left\{\begin{array}{ll}\alpha x & \text { if } x<0 \\ x & \text { if } x \geq 0\end{array}\right.$
+<div>
 
+$f(x) = \left\{\begin{array}{ll}\alpha x & \text { if } x<0 \\ x & \text { if } x \geq 0\end{array}\right.$
+</div>
 
 
 ## Sigmoid
