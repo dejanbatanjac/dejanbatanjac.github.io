@@ -5,7 +5,7 @@ title: The Power of Joint Probability
 permalink: /joint-probability
 ---
 - [What is joint probability of Random Variables](#what-is-joint-probability-of-random-variables)
-- [If we know joint probability...](#if-we-know-joint-probability)
+- [If we know the joint probability...](#if-we-know-the-joint-probability)
 - [Example with random dataset](#example-with-random-dataset)
 - [Conclusion: MLE](#conclusion-mle)
 - [Problem when we don't have enough rows](#problem-when-we-dont-have-enough-rows)
@@ -19,7 +19,7 @@ If we learn function $f:X→Y$ we actually learn $P(Y \mid X)$, where $Y$ is a t
 
 You may imagine $Y$ is a stock price, and $X$ are different factors we take. This way joint probability $Y$ of random variables $X$ is a function.
 
-## If we know joint probability...
+## If we know the joint probability...
 
 Let's make a claim:
 
