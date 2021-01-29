@@ -168,7 +168,7 @@ Looks like we have "chiavi della città".
 
 We can use this to solve any classification or regression problem.
 
-Condition is we should have all the rows we need and all the probabilities. For instance if we wish to predict if kids can read based on their age and gender we should set _P( can_read | gender, age)_.
+Condition is we should have all the rows we need and all the probabilities. For instance, if we wish to predict if kids can read based on their age and gender we should set $( can\_read | gender, age)$.
 
 This is a basic setup of the **MLE (Maximum Likelihood Estimation)** technique. We just need to have enough data (number of rows).
 
