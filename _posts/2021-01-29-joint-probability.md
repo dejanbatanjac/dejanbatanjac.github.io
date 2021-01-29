@@ -6,9 +6,9 @@ permalink: /joint-probability
 ---
 - [What is joint probability of Random Variables](#what-is-joint-probability-of-random-variables)
 - [I will make a claim](#i-will-make-a-claim)
-- [Showcase](#showcase)
+- [Showcase (basic MLE example)](#showcase-basic-mle-example)
 - [Consequences of the upper showcase](#consequences-of-the-upper-showcase)
-- [Problem and solution](#problem-and-solution)
+- [Problem when we don't have enough rows](#problem-when-we-dont-have-enough-rows)
 
 ## What is joint probability of Random Variables
 
@@ -26,7 +26,7 @@ If I know $P(X_1, X_2, ..., X_n)$ I can answer questions like:
 
 $P(X_1 \mid X_2,  ... , X_n)$ or $P(X_1 \mid X_2)$ or $P(X_1, X_2)$, or $P(X_2 \mid X_1, X_3)$, or $P(X_1, X_2 \mid X_3, X_4)$ the list may be long.
 
-## Showcase
+## Showcase (basic MLE example)
 Let's create an example:
 
 ```python
@@ -173,7 +173,7 @@ Condition is we should have all the rows we need and all the probabilities. For 
 This is a basic setup of the **MLE (Maximum Likelihood Estimation)** technique. We just need to have enough data (number of rows).
 
 
-## Problem and solution
+## Problem when we don't have enough rows
 
 What if we don't have enough data? Say we have 50 random variables. Many of those are non categorical. If all of the random variables would be categorical with exactly 2 categories each, this would be $2^{50}$ rows we need to cover all the probabilities we need.
 
