@@ -8,7 +8,7 @@ We will simple implement backprop in a point without using the chain rule.
 
 Notice how we defined a function `y=3*(a + b*c)` and how we use `e=0.01` to calculate the derivative.
 
-~~~
+~~~python
 a=5
 b=3
 c=2
@@ -49,7 +49,7 @@ In here we used calculus to effectively get the values `da`, `db` and `dc`.
 ### When this calculus may fail?
 
 Consider this example:
-~~~
+~~~python
 import numpy as np
 import matplotlib.pyplot as plt
 

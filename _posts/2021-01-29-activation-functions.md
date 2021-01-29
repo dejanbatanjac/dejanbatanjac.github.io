@@ -139,6 +139,44 @@ Derivate of this function is:
 
 $f(x)(1-f(x))$
 
+What is the problem with gradients we just described:
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def f(x): #sigmoid
+  return 1 / (1 + np.exp(-x))
+
+x = np.linspace(-10, 10, 100)
+y = f(x)
+
+fig, ax = plt.subplots()
+ax.plot(x, y)
+plt.show()
+
+e = 0.001
+x=1
+dx = (f(x+e)-f(x))/e
+print("gradient at point 1:", dx)
+x=20
+dx = (f(x+e)-f(x))/e
+print("gradient at point 20:", dx)
+```
+
+![sigmoid function](https://dejanbatanjac.github.io/images/sigmoidx.png)
+
+
+Note we got the following output:
+
+```
+gradient at point 1: 0.1965664984852067 
+gradient at point 20: 2.0601298444944405e-09 
+```
+
+Look how the second gradient at point x=20 is almost 0. Multiplying that number with the similar **small** number would produce what is called the computational instability. In this case vanishing gradient problem.
+
+
 
 ## Tanh
 
