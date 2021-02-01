@@ -65,7 +65,7 @@ In case of the **discrete random variable** $X$ the expectation, or expected is:
 
 $\begin{aligned} \mathbb{E}(X)=\sum_{x \in S} x P(x)\end{aligned}$
 
-where $f$ is probability density function PDF.
+where $P$ is probability density function PDF.
 
 ### Continuous Random Variable Expectation
 
