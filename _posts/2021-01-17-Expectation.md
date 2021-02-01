@@ -35,7 +35,7 @@ The idea is to outline some of the most important notations, properties and rule
 
 ## Random experiment
 
-Random experiment is modeled by a probability space $((\Omega, \mathscr F, P)$. 
+Random experiment is modeled by a probability space $(\Omega, \mathscr F, P)$. 
 
 $\Omega$ is the set of outcomes, $\mathscr F$ the collection of events, and $P$ the probability measure on the sample space $(\Omega, \mathscr F)$. 
 
