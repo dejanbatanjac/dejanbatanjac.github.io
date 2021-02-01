@@ -39,11 +39,10 @@ Random experiment is modeled by a probability space $(\Omega, \mathscr F, P)$.
 
 $\Omega$ is the set of outcomes, $\mathscr F$ the collection of events, and $P$ the probability measure on the sample space $(\Omega, \mathscr F)$. 
 
-Suppose that $X$ is a random variable for the experiment, taking values in $S \subseteq \mathbb R$. 
 
 ## Random Variable
 
-Random variable is a product of the random experiment that has associated probability distribution.
+$X$ is a random variable for the experiment, taking values in $S \subseteq \mathbb R$. We say random variable is a product of the random experiment that has associated probability distribution.
 
 
 ## Expected value
