@@ -164,7 +164,7 @@ dx = (f(x+e)-f(x))/e
 print("gradient at point 20:", dx)
 ```
 
-![sigmoid function](/mmages/sigmoidx.png)
+![sigmoid function](/images/sigmoidx.png)
 
 
 Note we got the following output:
