@@ -72,7 +72,7 @@ where $f$ is probability density function PDF.
 In case $X$ has **continuous distribution**:
 
 
-$\begin{aligned}\mathbb{E}(X)=\int_{S} x \ p(x) d x\end{aligned}$
+$\begin{aligned}\mathbb{E}(X)=\int_{S} x \ P(x) d x\end{aligned}$
 
 > $X$ may have mixed discrete and continuos distribution
 
@@ -81,16 +81,16 @@ In general case we may write:
 
 <div>
 
-$\begin{aligned} \mathbb{E}_{\mathrm{x} \sim P} [ f(X) ]= \sum_{x} P(x) f(x) \end{aligned}$
+$\begin{aligned} \mathbb{E}_{X \sim P} [ f(X) ]= \sum_{x} P(x) f(x) \end{aligned}$
 </div>
 
-$\mathrm{x} \sim P$ means $\mathrm{x}$ is drawn from distribution $P(x)$ or just from $P$.
+$X \sim P$ means $X$ is drawn from distribution $P(x)$ or just from $P$.
 
 Where $Y = f(X)$ is also a random variable. 
 
 > The last is know as **change of variables theorem**.
 
-This enables us a formula for computing $\mathbb{E}_{\mathrm{x} \sim P} [ f(X) ]$ without having to first find the probability density function $f(X)$.
+This enables us a formula for computing $\mathbb{E}_{X \sim P} [ f(X) ]$ without having to first find the probability density function $f(X)$.
 
 ### General continuous RV rewrite
 
@@ -98,7 +98,7 @@ For continuous variables we compute the integral:
 
 <div>
 
-$\begin{aligned} \mathbb{E}_{\mathrm{x} \sim p}[f(X)]=\int_{S} p(x) f(x) d x\end{aligned}$
+$\begin{aligned} \mathbb{E}_{X \sim P}[f(X)]=\int_{S} P(x) f(x) d x\end{aligned}$
 </div>
 
 
