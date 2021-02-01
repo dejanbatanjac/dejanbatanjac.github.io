@@ -23,7 +23,7 @@ permalink: /expectation
 - [Correlation](#correlation)
 
 
-![expectation](/images/2021/expectation.jpg)
+![expectation](/images/2021/Expectation.jpg)
 
 
 ## Intro
