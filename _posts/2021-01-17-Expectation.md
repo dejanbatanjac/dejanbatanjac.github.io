@@ -1,129 +1,202 @@
 ---
-published: false
+published: true
 layout: post
-title: Expectation
+title: Expectation of Random Variable
 permalink: /expectation
 ---
+- [Intro](#intro)
+- [Random experiment](#random-experiment)
+- [Random Variable](#random-variable)
+- [Expected value](#expected-value)
+  - [Discrete Random Variable Expectation](#discrete-random-variable-expectation)
+  - [Continuous Random Variable Expectation](#continuous-random-variable-expectation)
+  - [General discrete RV rewrite](#general-discrete-rv-rewrite)
+  - [General continuous RV rewrite](#general-continuous-rv-rewrite)
+- [Properties](#properties)
+  - [Linearity](#linearity)
+  - [Symmetry](#symmetry)
+  - [Independence](#independence)
+- [Variance](#variance)
+- [Standard Deviation](#standard-deviation)
+- [Covariance](#covariance)
+  - [Properties of covariance:](#properties-of-covariance)
+- [Correlation](#correlation)
+
+## Intro
 
 In here I will set some notation of the mathematical expectation of discrete and continuous Random Variable (RV).
+
+The idea is to outline some of the most important notations, properties and rules.
+
+## Random experiment
+
+Random experiment is modeled by a probability space $((\Omega, \mathscr F, P)$. 
+
+$\Omega$ is the set of outcomes, $\mathscr F$ the collection of events, and $P$ the probability measure on the sample space $(\Omega, \mathscr F)$. 
+
+Suppose that $X$ is a random variable for the experiment, taking values in $S \subseteq \R$. 
+
+## Random Variable
+
+Random variable is a product of the random experiment that has associated probability distribution.
+
+
+## Expected value
+In probability theory, the expected value of a random variable $X$ denoted as $\mathbb{E}(X)$ is generalization of the **weighted average**, and is intuitively the arithmetic mean of a large number of independent realizations of $X$.
+
+Synonym names:
+
+* mean
+* average
+* first moment
+* center of distribution
+* expected value of random variable
+
+
+The expected value of a real-valued random variable gives a measure of the center of the distribution of the variable. 
+
+
+By taking the expected value of **various functions of a general random variable**, we can measure many interesting features of its distribution, including spread, skewness, kurtosis, and correlation. 
+
+Generating functions are certain types of expected value that completely determine the distribution of the variable. 
 
 
 ### Discrete Random Variable Expectation
 
-In case of the discrete variable the expectation, or expected value, of some function $f(x)$ with respect to a probability distribution $P(x)$ is the average, or mean value, that $f$ takes on when $x$ is drawn from $P$:
+In case of the **discrete random variable** $X$ the expectation, or expected is:
+
+$\begin{aligned} \mathbb{E}(X)=\sum_{x \in S} x P(x)\end{aligned}$
+
+where $f$ is probability density function PDF.
+
+### Continuous Random Variable Expectation
+
+In case $X$ has **continuous distribution**:
 
 
-$\begin{aligned} \mathbb{E}_{\mathrm{x} \sim P} [ f(x) ]= \sum_{x} P(x) f(x) \end{aligned}$
+$\begin{aligned}\mathbb{E}(X)=\int_{S} x \ p(x) d x\end{aligned}$
+
+> $X$ may have mixed discrete and continuos distribution
+
+### General discrete RV rewrite
+In general case we may write:
+
+$\begin{aligned} \mathbb{E}_{\mathrm{x} \sim P} [ f(X) ]= \sum_{x} P(x) f(x) \end{aligned}$
 
 
-$\mathrm{x} \sim P$ means $\mathrm{x}$ is drawn from distribution $P(x)$ or just from $P$. Inside the $[\ldots]$ brackets we should have some function $f(x)$, or in special case just $x$.
+$\mathrm{x} \sim P$ means $\mathrm{x}$ is drawn from distribution $P(x)$ or just from $P$.
 
-### Continuous RV expectation
+Where $Y = f(X)$ is also a random variable. 
 
-For continuous variables it is computed with the integral:
+> The last is know as **change of variables theorem**.
 
-$\mathbb{E}_{\mathrm{x} \sim p}[f(x)]=\int p(x) f(x) d x$
+This enables us a formula for computing $\mathbb{E}_{\mathrm{x} \sim P} [ f(X) ]$ without having to first find the probability density function $f(X)$.
 
+### General continuous RV rewrite
 
-If the identity of the distribution is clear from the context we may write simple:
+For continuous variables we compute the integral:
 
-$\mathbb{E}_{\mathrm{x} }[f(x)]$
-
-If the random variable is clear from the context we may write:
-
-
-$\mathbb{E}[f(x)]$
+$\begin{aligned} \mathbb{E}_{\mathrm{x} \sim p}[f(X)]=\int_{S} p(x) f(x) d x\end{aligned}$
 
 
-By default, we can assume that $\mathbb{E}[\cdot]$ averages over the values of all the random variables inside the brackets. 
-
-Likewise, when there is no ambiguity, we may omit the square brackets and just write $\mathbb{E}$.
 
 
-When expectations are linear:
 
-<div>
+## Properties
 
-$\mathbb{E}_{\mathrm{x}}[\alpha f(x)+\beta g(x)]=\alpha \mathbb{E}_{\mathrm{x}}[f(x)]+\beta \mathbb{E}_{\mathrm{x}}[g(x)]$
-</div>
+### Linearity
 
+There are two simple rules
 
-We define:
-<div>
+addition: $\mathbb E(X + Y) = \mathbb E(X) + \mathbb E(Y)$
 
-$\mathbb X = \{ {\pmb x^{(1)}}, \ldots ,{\pmb x^{(m)}}\}$ 
-</div>
+scalding: $\mathbb{E}(c X)=c \ \mathbb{E}(X)$
 
-$p_{data}(\mathrm x)$
+That help us form:
 
-$p_{model}(\pmb {\mathrm x}; \pmb \theta)$
+$\mathbb E[\alpha X+\beta Y]=\alpha \ \mathbb E[X]+\beta \ \mathbb E[Y]$
 
 
-$p_{model}(\pmb {x}; \pmb \theta)$ maps any concrete configuration to $p_{data}(\pmb {x})$
+Linearity of expectation is the property that the expected value of the sum of random variables is equal to the sum of their individual expected values.
+
+Note that in if we scale the random variable $X$ the mean will also be scaled. If in the previous case the mean  of $X$ was 1, $\mathbb E[X]=1$, then the mean of $\alpha X$ will be $\alpha$, $\mathbb E[\alpha X]=\alpha$.
 
 
-<div>
+### Symmetry
 
-$\begin{aligned} \boldsymbol{\theta}_{\mathrm{ML}} &=\underset{\boldsymbol{\theta}}{\arg \max } p_{\text {model }}(\mathbb{X} ; \boldsymbol{\theta}) \\ &=\underset{\boldsymbol{\theta}}{\arg \max } \prod_{i=1}^{m} p_{\text {model }}\left(\boldsymbol{x}^{(i)} ; \boldsymbol{\theta}\right) \end{aligned}$
-</div>
+If $X$ has distribution that is symmetric about $a \in \mathbb{R}$, then $\mathbb{E}(X)=a$. 
 
-For numeric stability:
-<div>
 
-$\begin{aligned}\boldsymbol{\theta}_{\mathrm{ML}}=\underset{\boldsymbol{\theta}}{\arg \max } \sum_{i=1}^{m} \log p_{\text {model }}\left(\boldsymbol{x}^{(i)} ; \boldsymbol{\theta}\right) \end{aligned}$
-</div>
+**Proof:**
 
-Defined by train data:
-<div>
+$\mathbb{E}(a-X)=\mathbb{E}(X-a)$ so by linearity 
 
-$\boldsymbol{\theta}_{\mathrm{ML}}=\underset{\boldsymbol{\theta}}{\arg \max } \mathbb{E}_{\mathbf{x} \sim \hat{p}_{\text {data }}} \log p_{\text {model }}(\boldsymbol{x} ; \boldsymbol{\theta})$
-</div>
+$a-\mathbb{E}(X)=\mathbb{E}(X)-a .$
 
-Final:
-<div>
+$\mathbb{E}(X)= a$
 
-$D_{\mathrm{KL}}\left(\hat{p}_{\text {data }} \| p_{\text {model }}\right)=
-\mathbb{E}_{\mathbf{x} \sim \hat{p}_{\text {data }}}
-\left[\overbrace{\log \hat{p}_{\text {data }}(\pmb{x})}^{\ data \ generating \ process}-\log p_{\text {model }}(\pmb{x})\right]$
-</div>
 
-Important part: 
-<div>
+### Independence
 
-$\mathbb{E}_{\mathbf{x} \sim \hat{p}_{\text {data }}}\left[-\log p_{\text {model }}(\pmb{x})\right]$
-</div>
+If and are independent real-valued random variables then $\mathbb{E}(X Y)=\mathbb{E}(X) \mathbb{E}(Y)$
 
-where:
 
-<div>
 
-$\hat{p}_{\text {data }}$ 
-</div>
-
-is empirical distribution, 
-
-<div>
-
-${p}_{\text {data }}$ 
-</div>
-
-is true distribution.
-
-Once we have the expectation we can define the variance and covariance.
 
 ## Variance
 
-
-Variance give us the measure how much values of a function of a random variable $\text x$ vary as we sample different values of $\mathrm x$ from it's probability distribution.
-
-
-$\operatorname{Var}(f(x))=\mathbb{E}\left[(f(x)-\mathbb{E}[f(x)])^{2}\right]$
+Variance give us the measure how much values of a function of a random variable $X$ vary as we sample different values of $X$ from it's probability distribution.
 
 
+$\operatorname{var}(f(X))=\mathbb{E}\left[(f(X)-\mathbb{E}[f(X)])^{2}\right]$
+
+Or simple:
+
+$\operatorname{var}(X)=\mathbb{E}\left[(X-\mathbb{E}(X))^{2}\right]$
+
+Or even simpler:
+
+$\operatorname{var}(X)=\mathbb{E}\left(X^{2}\right)-[\mathbb{E}(X)]^{2}$
+## Standard Deviation
+
+We can simple define it via Variance:
+
+$\sigma = \operatorname{sd}(X)=\sqrt{\operatorname{var}(X)}$
 
 
 ## Covariance
 
 The covariance gives some sense of how much two values are linearly related to each other, as well as the scale of these variables:
 
-$\operatorname{Cov}\left(f(x), g(y)\right)=\mathbb{E}[(f(x)-\mathbb{E}[f(x)])(g(y)-\mathbb{E}[g(y)])]$
+$\operatorname{cov}(X, Y)=\mathbb{E}([X-\mathbb{E}(X)][Y-\mathbb{E}(Y)])$
+
+or if we use change of variables theorem: 
+
+$\operatorname{cov}\left(f(X), g(Y)\right)=\mathbb{E}[(f(X)-\mathbb{E}[f(X)])(g(Y)-\mathbb{E}[g(Y)])]$
+
+### Properties of covariance:
+
+**Joint rule** 
+
+$\operatorname{cov}(X, Y)=\mathbb{E}(X Y)-\mathbb{E}(X) \mathbb{E}(Y)$
+
+When $X$ and $Y$ are not correlated:
+
+$\operatorname{cov}(X, Y)=0$
+
+$\mathbb{E}(X Y) =\mathbb{E}(X) \mathbb{E}(Y)$
+
+**Symmetry**
+
+$\operatorname{cov}(X, Y)=\operatorname{cov}(Y, X)$
+
+**We can use it to define variance**
+
+$\operatorname{cov}(X, X)=\operatorname{var}(X)$
+
+## Correlation
+
+To define correlation we use the fact we need to normalize the covariance:
+
+$\begin{aligned} \operatorname{cor}(X, Y)= \frac{\operatorname{cov}(X, Y)}{\operatorname{sd}(X) \operatorname{sd}(Y)} \end{aligned}$
+
