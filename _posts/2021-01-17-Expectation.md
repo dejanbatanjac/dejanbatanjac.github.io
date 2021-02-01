@@ -22,6 +22,10 @@ permalink: /expectation
   - [Properties of covariance:](#properties-of-covariance)
 - [Correlation](#correlation)
 
+
+![expectation](/images/2021/expectations.png)
+
+
 ## Intro
 
 In here I will set some notation of the mathematical expectation of discrete and continuous Random Variable (RV).
@@ -51,9 +55,6 @@ Synonym names:
 * first moment
 * center of distribution
 * expected value of random variable
-
-
-The expected value of a real-valued random variable gives a measure of the center of the distribution of the variable. 
 
 
 By taking the expected value of **various functions of a general random variable**, we can measure many interesting features of its distribution, including spread, skewness, kurtosis, and correlation. 
