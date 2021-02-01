@@ -34,7 +34,7 @@ Random experiment is modeled by a probability space $((\Omega, \mathscr F, P)$.
 
 $\Omega$ is the set of outcomes, $\mathscr F$ the collection of events, and $P$ the probability measure on the sample space $(\Omega, \mathscr F)$. 
 
-Suppose that $X$ is a random variable for the experiment, taking values in $S \subseteq \R$. 
+Suppose that $X$ is a random variable for the experiment, taking values in $S \subseteq \mathbb R$. 
 
 ## Random Variable
 
@@ -81,8 +81,10 @@ $\begin{aligned}\mathbb{E}(X)=\int_{S} x \ p(x) d x\end{aligned}$
 ### General discrete RV rewrite
 In general case we may write:
 
-$\begin{aligned} \mathbb{E}_{\mathrm{x} \sim P} [ f(X) ]= \sum_{x} P(x) f(x) \end{aligned}$
+<div>
 
+$\begin{aligned} \mathbb{E}_{\mathrm{x} \sim P} [ f(X) ]= \sum_{x} P(x) f(x) \end{aligned}$
+</div>
 
 $\mathrm{x} \sim P$ means $\mathrm{x}$ is drawn from distribution $P(x)$ or just from $P$.
 
@@ -96,8 +98,10 @@ This enables us a formula for computing $\mathbb{E}_{\mathrm{x} \sim P} [ f(X) ]
 
 For continuous variables we compute the integral:
 
-$\begin{aligned} \mathbb{E}_{\mathrm{x} \sim p}[f(X)]=\int_{S} p(x) f(x) d x\end{aligned}$
+<div>
 
+$\begin{aligned} \mathbb{E}_{\mathrm{x} \sim p}[f(X)]=\int_{S} p(x) f(x) d x\end{aligned}$
+</div>
 
 
 
