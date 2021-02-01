@@ -21,6 +21,7 @@ permalink: /expectation
 - [Covariance](#covariance)
   - [Properties of covariance:](#properties-of-covariance)
 - [Correlation](#correlation)
+- [Moments greater than 2](#moments-greater-than-2)
 
 
 ![expectation](/images/2021/expect.jpg)
@@ -58,9 +59,6 @@ Synonym names:
 
 
 By taking the expected value of **various functions of a general random variable**, we can measure many interesting features of its distribution, including spread, skewness, kurtosis, and correlation. 
-
-Generating functions are certain types of expected value that completely determine the distribution of the variable. 
-
 
 ### Discrete Random Variable Expectation
 
@@ -205,3 +203,14 @@ To define correlation we use the fact we need to normalize the covariance:
 
 $\begin{aligned} \operatorname{cor}(X, Y)= \frac{\operatorname{cov}(X, Y)}{\operatorname{sd}(X) \operatorname{sd}(Y)} \end{aligned}$
 
+
+## Moments greater than 2
+
+Third moment also know as **skewness**:
+
+$skw(X) = \mathbb E\left[\left(\frac{X - \mu}{\sigma}\right)^3\right]$
+
+
+Fourth moment **kurtosis**:
+
+$kur(X) = \mathbb E\left[\left(\frac{X - \mu}{\sigma}\right)^4\right]$
