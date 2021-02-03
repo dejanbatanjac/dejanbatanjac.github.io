@@ -140,7 +140,7 @@ $\mathbb{E}(X)= a$
 
 ### Independence
 
-If and are independent real-valued random variables then $\mathbb{E}(X Y)=\mathbb{E}(X) \mathbb{E}(Y)$
+If $X$ and $Y$ are independent real-valued random variables then $\mathbb{E}(X Y)=\mathbb{E}(X) \mathbb{E}(Y)$
 
 
 
