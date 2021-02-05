@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: KL Divergence | Relative Entropy
-permalink: /bias-variance-noise-trade-off
+permalink: /kl-divergence
 ---
 - [Terminology](#terminology)
 - [What is KL divergence really](#what-is-kl-divergence-really)
