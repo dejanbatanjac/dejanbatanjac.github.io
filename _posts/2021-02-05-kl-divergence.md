@@ -146,7 +146,6 @@ To compute the KL divergence between two Gaussian univariate functions we have t
 
 $$\begin{aligned} D_{KL}(p \| q) &=-\int p(x) \log q(x) d x+\int p(x) \log p(x) d x \\ &=\frac{1}{2} \log \left(2 \pi \sigma_{2}^{2}\right)+\frac{\sigma_{1}^{2}+\left(\mu_{1}-\mu_{2}\right)^{2}}{2 \sigma_{2}^{2}}-\frac{1}{2}\left(1+\log 2 \pi \sigma_{1}^{2}\right) \\ &=\log \frac{\sigma_{2}}{\sigma_{1}}+\frac{\sigma_{1}^{2}+\left(\mu_{1}-\mu_{2}\right)^{2}}{2 \sigma_{2}^{2}}-\frac{1}{2} \end{aligned}$$
 
----
 
 **Calculation:**
 
@@ -197,10 +196,12 @@ SMD <- (mu1-mu2)/sd1
 integrate(min.f1f2, -Inf, Inf, mu1=mu1, mu2=mu2, sd1=sd1, sd2=sd2)
 ```
 
-![gauss 2](/images/2021/02/ovl1.png)
+![gauss 2](/images/2021/02/OVL1.png)
+
 In here the OVL coefficient will be 0.617
 
-![gauss 2](/images/2021/02/ovl2.png)
+![gauss 2](/images/2021/02/OVL2.png)
+
 In here the OVL coefficient will be 0.96
 
 > We should conclude that OVL coefficient may provide some intuition on the KL divergence.
