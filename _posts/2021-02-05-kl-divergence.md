@@ -75,16 +75,21 @@ $\begin{aligned}D_{KL}(q \| p) = - \mathbb{E}_{q}\left[-\log \frac{q}{p}\right]\
 
 ## KL divergence properties
 
+<div>
+
 $\begin{array}{l}
 \text { 1. } D_{KL}(q \| p) \neq D_{KL}(p \| q) \\
 \text { 2. } D_{KL} \mathcal{L}(q \| q)=0 \\
 \text { 3. } D_{KL} \mathcal{L}(q \| p) \geq 0
 \end{array}$
+</div>
 
 The last property is easy to prove thanks to the Jensen's inequality for concave functions and logarithm is a concave function (the function is concave if it's second derivative is negative).
 
-$\begin{aligned}-D_{KL}(q \| p) &=\mathbb{E}_{q}\left[-\log \frac{q}{p}\right]=\mathbb{E}_{q}\left[\log \frac{p}{q}\right] \\ & \leq \log \left[\mathbb{E}_{q} \frac{p}{q}\right]=\log \int q(x) \frac{p(x)}{q(x)} d x=0 \end{aligned}$
+<div>
 
+$\begin{aligned}-D_{KL}(q \| p) &=\mathbb{E}_{q}\left[-\log \frac{q}{p}\right]=\mathbb{E}_{q}\left[\log \frac{p}{q}\right] \\ & \leq \log \left[\mathbb{E}_{q} \frac{p}{q}\right]=\log \int q(x) \frac{p(x)}{q(x)} d x=0 \end{aligned}$
+</div>
 ## KL intuition building
 
 Now let's compare KL divergence of two Gaussian distributions:
