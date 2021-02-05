@@ -27,10 +27,10 @@ def kl(a, b):
     numpy formula to calculate the KL divergence
 
     Parameters:
-      a: pd of the random variable X
-      b: pd of the random variable X
+      a: probability distribution of RV X
+      b: another probability distribution of RV X
     Output:
-      kl score always positive or 0 in case a=b)
+      kl score always positive, or 0 in case a=b
     '''
     a = np.asarray(a, dtype=np.float)
     b = np.asarray(b, dtype=np.float)
