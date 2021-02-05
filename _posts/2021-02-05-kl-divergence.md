@@ -84,12 +84,15 @@ $\begin{array}{l}
 \end{array}$
 </div>
 
-The last property is easy to prove thanks to the Jensen's inequality for concave functions and logarithm is a concave function (the function is concave if it's second derivative is negative).
+The last property is easy to prove thanks to the Jensen's inequality for concave functions and logarithm is a concave function. 
+
+>The function is concave if it's second derivative is negative
 
 <div>
 
 $\begin{aligned}-D_{KL}(q \| p) &=\mathbb{E}_{q}\left[-\log \frac{q}{p}\right]=\mathbb{E}_{q}\left[\log \frac{p}{q}\right] \\ & \leq \log \left[\mathbb{E}_{q} \frac{p}{q}\right]=\log \int q(x) \frac{p(x)}{q(x)} d x=0 \end{aligned}$
 </div>
+
 ## KL intuition building
 
 Now let's compare KL divergence of two Gaussian distributions:
