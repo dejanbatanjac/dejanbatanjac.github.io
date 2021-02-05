@@ -21,7 +21,9 @@ permalink: /probability-notation
 
 ### Random variable
 
-A *Random Variable* is a set of possible values from a random experiment. It should have associated probability distribution $P$.
+A *Random Variable* is a set of possible values from a random experiment. It should have associated **probability distribution** $P$. 
+
+> <sub>It should also have **sample space** $S$ from where it takes the concrete values.</sub>
 
 In the literature to denote a Random Variable all these notations are acceptable:
 
