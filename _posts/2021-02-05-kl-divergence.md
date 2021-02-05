@@ -222,7 +222,7 @@ The relation is this:
 $D_{KL}(p \|q) = H(q, p) - H(p)$
 
 
-The upper equation holds for the discrete case where:
+The upper equation **also** holds for the discrete case where:
 
 $\begin{aligned} H(p,q) = -\sum_x p\log q\end{aligned}$
 
