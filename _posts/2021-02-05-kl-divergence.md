@@ -93,14 +93,15 @@ The last property is easy to prove thanks to the Jensen's inequality for concave
 $\begin{aligned}-D_{KL}(q \| p) &=\mathbb{E}_{q}\left[-\log \frac{q}{p}\right]=\mathbb{E}_{q}\left[\log \frac{p}{q}\right] \\ & \leq \log \left[\mathbb{E}_{q} \frac{p}{q}\right]=\log \int q(x) \frac{p(x)}{q(x)} d x=0 \end{aligned}$
 </div>
 
+
 ## KL intuition building
 
 Now let's compare KL divergence of two Gaussian distributions:
 
-$f(x)=\large \frac{1}{\sigma \sqrt{2 \pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}}$
+$f(x)=\Large \frac{1}{\sqrt{2 \pi \sigma^{2}}} e^{-\frac{(x-\mu)^{2}}{2 \sigma^{2}}}$
 
 
-
+>I like to use this formula with $\sigma^2$, because it is inverse to precision $\tau$.
 
 
 We make the Python program to draw this PDF.
@@ -122,9 +123,9 @@ def gaussian_pdf(mu, sigma, x):
     '''
     
     'coeficient'
-    c = 1/(sigma * np.sqrt(2*math.pi))
+    c = 1/(np.sqrt(2*math.pi*sigma**2))
     'exponent'
-    e = -0.5  * ((x-mu)/sigma)**2
+    e = ((x-mu)**2/2*sigma**2)
     
     return c*np.exp(e)
     
