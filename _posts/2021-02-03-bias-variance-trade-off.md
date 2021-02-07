@@ -225,7 +225,7 @@ If this is the case:
 
 ### How to reduce the high bias?
 
-**If you are not in high variance mode you your train and test errors should be close.**
+**If you are not in high variance mode your train and test errors should be close.**
 
 If you have high bias: the model being used is not robust enough to produce an accurate prediction.
 
