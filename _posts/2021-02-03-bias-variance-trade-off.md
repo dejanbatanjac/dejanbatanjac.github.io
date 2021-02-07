@@ -20,7 +20,6 @@ permalink: /bias-variance-noise-trade-off
 - [Model complexity trade off](#model-complexity-trade-off)
 - [Intuition on bias and variance](#intuition-on-bias-and-variance)
   - [How to reduce high variance?](#how-to-reduce-high-variance)
-  - [Train and test error are both above the threshold](#train-and-test-error-are-both-above-the-threshold)
   - [How to reduce the high bias?](#how-to-reduce-the-high-bias)
 
 One of the most important formula in statistics and machine learning is **bias variance trade off**. It actually **generalize** to **Bias, Variance Noise trade off** here I will show how.
@@ -129,18 +128,28 @@ $$
 &=0
 \end{aligned}
 $$
-Returning to the earlier expression, we're left with the variance and another term
+
+
+Returning to the earlier expression, we're left with the variance and another term:
+
+
 $$
 \mathbb E_{\mathbb{x}, y, D}\left[\left(h_{D}(\mathbb{x})-y\right)^{2}\right]=\underbrace{\mathbb E_{\mathbb{x}, D}\left[\left(h_{D}(\mathbb{x})-\bar{h}(\mathbb{x})\right)^{2}\right]}_{\text {Variance }}+\mathbb E_{\mathbb{x}, y}\left[(\bar{h}(\mathbb{x})-y)^{2}\right]
 $$
+
+
 We can break down the second term in the above equation as follows:
+
+
 $$
 \begin{aligned}
 \mathbb E_{\mathbb{x}, y}\left[(\bar{h}(\mathbb{x})-y)^{2}\right] &=\mathbb E_{\mathbb{x}, y}\left[(\bar{h}(\mathbb{x})-\bar{y}(\mathbb{x}))+(\bar{y}(\mathbb{x})-y)^{2}\right] \\
 &=\underbrace{\mathbb E_{\mathbb{x}, y}\left[(\bar{y}(\mathbb{x})-y)^{2}\right]}_{\text {Noise }}+\underbrace{\mathbb E_{\mathbb{x}}\left[(\bar{h}(\mathbb{x})-\bar{y}(\mathbb{x}))^{2}\right]}_{\text {Bias }^{2}}+2 \mathbb E_{\mathbb{x}, y}[(\bar{h}(\mathbb{x})-\bar{y}(\mathbb{x}))(\bar{y}(\mathbb{x})-y)]
 \end{aligned}
 $$
-The third term in the equation above is $0,$ as we show below
+
+The third term in the equation above is $0,$ as we show below:
+
 $$
 \begin{aligned}
 \mathbb E_{\mathbb{x}, y}[(\bar{h}(\mathbb{x})-\bar{y}(\mathbb{x}))(\bar{y}(\mathbb{x})-y)] &=\mathbb E_{\mathbb{x}}\left[\mathbb E_{y \mid \mathbb{x}}[\bar{y}(\mathbb{x})-y](\bar{h}(\mathbb{x})-\bar{y}(\mathbb{x}))\right] \\
@@ -154,9 +163,10 @@ $$
 ## Final Formula
 
 **Total error** can be decomposed to **bias**, **variance** and **noise**.
+<div>
 
 $\begin{aligned}\underbrace{\mathbb E_{\mathbb{x}, y, D}\left[\left(h_{D}(\mathbb{x})-y\right)^{2}\right]}_{\text {Expected Test Error }}= &\underbrace{\mathbb E_{\mathbb{x}, D}\left[\left(h_{D}(\mathbb{x})-\bar{h}(\mathbb{x})\right)^{2}\right]}_{\text {Variance }} \\ \\ &+\underbrace{\mathbb E_{\mathbb{x}, y}\left[(\bar{y}(\mathbb{x})-y)^{2}\right]}_{\text {Noise }}\\ \\ &+\underbrace{\mathbb E_{\mathbb{x}}\left[(\bar{h}(\mathbb{x})-\bar{y}(\mathbb{x}))^{2}\right]}_{\text {Bias }^{2}}\end{aligned}$
-
+</div>
 
 ### Variance:
 
@@ -202,8 +212,6 @@ It is completely opposite from the bias perspective. The model complexity, make 
 ### How to reduce high variance?
 
 You can detect high variance if the training error is much lower than test error.
-
-### Train and test error are both above the threshold
 
 If this is the case:
 
