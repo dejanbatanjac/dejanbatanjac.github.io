@@ -182,7 +182,7 @@ What if we don't have enough data? Say we have 50 random variables. Many of thos
 
 But if we have one feature with 3 categories, such as year = {3,4,5} we already have this would be $3*2^{49}$ which is greater than $2^{50}$.
 
-Where we have mandy different values for a column we may use inequalities, such as `age<=4`, `age>4`, and we could choose these inequality points similar as the ID3 algorithm can do for us (using Entropy and Information Gain).
+Where we have many different values for a column we may use inequalities, such as `age<=4`, `age>4`, and we could choose these inequality points similar as the ID3 algorithm can do for us (using Entropy and Information Gain).
 
 Still $2^{50}$ is super big = 1.125.899.906.842.624
 
