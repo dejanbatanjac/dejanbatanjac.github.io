@@ -68,7 +68,7 @@ Out:
 [100 rows x 4 columns]
 ```
 
-Now we 100 rows while we could easily have just 12 rows of probabilities. There are rows with the same `gender`, `age` and `can_read` but with the different `probability`.
+Now we have 100 rows while we could easily have just 12 rows of probabilities. There are rows with the same `gender`, `age` and `can_read` but with the different `probability`.
 
 We will average probability for those rows.
 
