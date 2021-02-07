@@ -93,8 +93,6 @@ Now, it would be great if we can say what is the best class $h_D$? This is why w
 
 $\begin{aligned}\mathbb E_{(\mathbb{x}, y) \sim P}\left[\left(h_{D}(\mathbb{x})-y\right)^{2}\right]=\int_{x}\int_{y}\left(h_{D}(\mathbb{x})-y\right)^{2} \operatorname{P}(\mathbb{x}, y) \partial y \partial \mathbb{x}\end{aligned}$
 
-This is for specific hypothesis function on a specific dataset.
-
 
 ## Expected hypothesis (given $\mathcal A$): 
 
