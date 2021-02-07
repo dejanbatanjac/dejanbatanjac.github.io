@@ -43,14 +43,20 @@ Let's have a multivariate random variable or random vector $X$ and a target rand
 
 The joint distribution of $X$ and $Y$ is also a random variable $D \sim P(X,Y)$. 
 
-When we draw concrete dataset $\mathcal D$ is drawn from **sample space** $P(X,Y)^n$ we get our dataset $\mathcal D$ with $n$ rows.
+We draw concrete dataset $\mathcal D$ from **sample space** $P(X,Y)^n$ to get our dataset $\mathcal D$ with $n$ rows.
 
 > The domain of random variable is called a sample space. This is a set of all possible outcomes, but we don't bother much with it now.
 
 
 ## The dataset model again
 
-Let's have the same dataset: $\mathcal D = \{(\mathbb{x}_i, y_i)\}_{i=1}^n$, where:
+Let's have the same dataset: 
+<div>
+
+$\mathcal D = \{(\mathbb{x}_i, y_i)\}_{i=1}^n$
+</div>
+
+where:
 * $y \in \mathbb{R}$ is our **target** or **label** 
 * $\mathbb{x} \in \mathbb{R}^d$ is our features vector (read: a row in a dataset not including the target) composed from $d$ columns
 * training dataset has $n$ inputs (rows)
