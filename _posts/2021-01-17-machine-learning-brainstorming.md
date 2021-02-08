@@ -6,7 +6,7 @@ permalink: /ml-brainstorming
 ---
 - [Types of machine learning](#types-of-machine-learning)
 - [Why do we have train, validation and test set](#why-do-we-have-train-validation-and-test-set)
-- [What is overfitting](#what-is-overfitting)
+- [What is overfitting?](#what-is-overfitting)
 - [What is the cross validation](#what-is-the-cross-validation)
 - [Problem with cross validation when the number of features is big and number of samples is small](#problem-with-cross-validation-when-the-number-of-features-is-big-and-number-of-samples-is-small)
 - [Parametric vs. non parametric models](#parametric-vs-non-parametric-models)
@@ -66,7 +66,7 @@ But there need to be some never used data (read: test set) for our final check. 
 The test set purpose is to reflect some real data, that we haven't seen before.
 
 
-## What is overfitting
+## What is overfitting?
 
 If you would train and test on the same data you do a _methodological mistake_.
 
