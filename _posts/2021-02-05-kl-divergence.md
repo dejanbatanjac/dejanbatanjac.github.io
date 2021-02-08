@@ -10,6 +10,9 @@ permalink: /kl-divergence
 - [KL intuition building](#kl-intuition-building)
 - [OVL of two univariate Gaussian](#ovl-of-two-univariate-gaussian)
 - [Express KL divergence via Cross Entropy minus Entropy](#express-kl-divergence-via-cross-entropy-minus-entropy)
+- [Machine learning application](#machine-learning-application)
+- [KL as a distance metric](#kl-as-a-distance-metric)
+- [Conclusion](#conclusion)
 
 
 ## Terminology
@@ -228,3 +231,32 @@ The upper equation **also** holds for the discrete case where:
 $\begin{aligned} H(p,q) = -\sum_x p\log q\end{aligned}$
 
 $\begin{aligned} D_{KL}(p \| q) = \sum_{x} p\log {\frac{p}{q}} \end{aligned}$
+
+## Machine learning application
+
+We may use [KL divergence as a loss function](https://pytorch.org/docs/stable/generated/torch.nn.KLDivLoss.html){:rel="nofollow"}.
+
+Most likely you can use it for **autoencoders**. This is why  autoencoders are very good at obtaining the hight likelihood of the data into a latent probability distribution.
+
+> **Latent** means hidden in latin. Autoencoder latent variables capture **in some invisible way** the probability distribution from the data.
+
+GANs would naturally follow because they also try to extract the probability distribution from the training data, and KL divergence can help reading this distribution.
+
+KL divergence can also be used in multiclass classification scenarios instead Softmax function and in reinforcement learning.
+
+## KL as a distance metric
+
+$D_{KL}(p \| q)$ is not a metric of distance, because:
+
+$D_{KL}(p \| q) \ne D_{KL}(q \| p)$
+
+but we can make it a distance with **Jensen-Shannon transformation**.
+
+$D_{JS}(p \| q) =\frac{1}{2} D_{KL}(p \| m)+\frac{1}{2} D_{KL}(q \| m)$
+
+where $m=\frac{1}{2}(p+q)$
+## Conclusion
+
+KL Divergence or Relative Entropy is a measure how two distributions are different.
+
+Both the problems of supervised learning and reinforcement learning are simply minimizing the KL divergence objective.
