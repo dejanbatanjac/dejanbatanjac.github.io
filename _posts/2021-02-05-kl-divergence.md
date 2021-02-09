@@ -236,7 +236,7 @@ $\begin{aligned} D_{KL}(p \| q) = \sum_{x} p\log {\frac{p}{q}} \end{aligned}$
 
 We may use [KL divergence as a loss function](https://pytorch.org/docs/stable/generated/torch.nn.KLDivLoss.html){:rel="nofollow"}.
 
-Most likely you can use it for **autoencoders**. This is why  autoencoders are very good at obtaining the [high likelihood of the input data](https://youtu.be/HGYYEUSm-0Q?t=1262){rel="nofollow"}.
+Most likely you can use it for **autoencoders**. This is why  autoencoders are very good at obtaining the [high likelihood of the input data](https://youtu.be/HGYYEUSm-0Q?t=1262){:rel="nofollow"}.
 
 > **Latent** means hidden in latin. Autoencoder latent variables capture **in some invisible way** the probability distribution from the data.
 
