@@ -240,9 +240,9 @@ Most likely you can use it for **autoencoders**. This is why  autoencoders are v
 
 > **Latent** means hidden in latin. Autoencoder latent variables capture **in some invisible way** the probability distribution from the data.
 
-GANs would naturally follow because they also try to extract the probability distribution from the training data, and KL divergence can help reading this distribution.
+GANs would naturally follow because they also try to extract the probability distribution from the training data, and KL divergence and similar losses are used.
 
-KL divergence can also be used in multiclass classification scenarios instead Softmax function and in reinforcement learning.
+KL divergence can also be used in multiclass classification scenarios instead Softmax function and in reinforcement learning. This is not strange because to implement KL divergence you basically need to use the Softmax function.
 
 ## KL as a distance metric
 
