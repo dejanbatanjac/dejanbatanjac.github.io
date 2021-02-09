@@ -259,4 +259,4 @@ where $m=\frac{1}{2}(p+q)$
 
 KL Divergence or Relative Entropy is a measure how two distributions are different.
 
-Both the problems of supervised learning and reinforcement learning are simply minimizing the KL divergence objective.
+Both the problems of supervised learning and reinforcement learning are simply using it as the objective.
