@@ -104,7 +104,7 @@ Now let's compare KL divergence of two Gaussian distributions:
 $f(x)=\Large \frac{1}{\sqrt{2 \pi \sigma^{2}}} e^{-\frac{(x-\mu)^{2}}{2 \sigma^{2}}}$
 
 
->I like to use this formula with $\sigma^2$, because it is inverse to precision $\tau$.
+>I like to use this formula with $\sigma^2$, because it is inverse to precision $\gamma$.
 
 
 We make the Python program to draw this PDF.
