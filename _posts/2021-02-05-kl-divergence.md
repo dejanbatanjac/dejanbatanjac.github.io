@@ -89,7 +89,7 @@ $\begin{array}{l}
 
 The last property is easy to prove thanks to the Jensen's inequality for concave functions and logarithm is a concave function. 
 
->The function is concave if it's second derivative is negative
+>The function is concave if its second derivative is negative
 
 <div>
 
