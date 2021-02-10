@@ -4,8 +4,9 @@ layout: post
 title: Random Forest
 ---
 - [Intro](#intro)
-- [Do we need a validation dataset dealing with RF?](#do-we-need-a-validation-dataset-dealing-with-rf)
 - [Where to start with RF?](#where-to-start-with-rf)
+  - [Important RF hyper parameters | Scikit](#important-rf-hyper-parameters--scikit)
+- [Do we need a validation dataset dealing with RF?](#do-we-need-a-validation-dataset-dealing-with-rf)
 - [Inside RF | How Random Forest work](#inside-rf--how-random-forest-work)
 - [Extra Trees](#extra-trees)
 
@@ -53,17 +54,6 @@ For RF and classification problems the score is the **mean accuracy** on the giv
 * RF doesn't assume data interactions.
 * RF is very hard to overfit
 
-
-## Do we need a validation dataset dealing with RF?
-
-It is best when we have a separate validation set, but we can get away even if we don't. We may use part of the test dataset as the validation dataset, and this is unique to random forests. This is called Out-Of-Bag prediction (**OOB**).
-
-OOB is based on the fact that we don't take all the rows (observations) when creating the tree. Instead we may take just 63%, and the remaining 27% observations may be used for the validation.
-
-> In scikit-learn to create the tree for OOB, we pass **oob_score=True**, and then we will have the **oob_score_** at the end that should have the similar coefficient of determination like we have used the separate validation set.
-
-Usually the validation set will take most recent data.
-
 ## Where to start with RF?
 
 Probable one very nice starting point is to use the [scikit](https://scikit-learn.org).
@@ -73,6 +63,33 @@ For the regression tasks we can start with [RandomForestRegressor](https://sciki
 For the classification tasks we can start with the [RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
 
 One nice thing I noticed with scikit RF, is you can do tasks in parallel (multiple processor support exists).
+
+### Important RF hyper parameters | Scikit 
+
+* `n_estimators` 
+* `max_features`
+* `min_sample_leaf`
+
+
+`n_estimators` hyperparameter is the number of DT inside RF
+
+`max_features` maximum number of features RF considers to split a node. It can be simple `int` value you set. It can be `sqrt` or `log2`. This means from the complete number of features consider just `sqrt` or `log2` of features. If yo don't know what to set, `auto` is by default.
+
+`min_sample_leaf` is the minimum number of leafs required to split an internal node.
+
+## Do we need a validation dataset dealing with RF?
+
+
+It is best when we have a separate validation set, but we can get away even if we don't. We may use part of the test dataset as the validation dataset, and this is unique to random forests. This is called Out-Of-Bag prediction (**OOB**).
+
+`oob_score` is RF cross-validation method. In this case about one-third of the data is not used to train the model, instead it is used for validation.
+
+OOB is based on the fact that we don't take all the rows (observations) when creating the tree. Instead we may take just 63%, and the remaining 27% observations may be used for the validation.
+
+> In scikit-learn to create the tree for OOB, we pass **oob_score=True**, and then we will have the **oob_score_** at the end that should have the similar coefficient of determination like we have used the separate validation set.
+
+Usually the validation set will take most recent data.
+
 
 ## Inside RF | How Random Forest work
 
@@ -86,9 +103,9 @@ Decision tree simple uses algorithms like:
 * Chi-square automatic interaction detection (CHAID)
 * MARS: extends decision trees to handle numerical data better
 
-At the very core algorithm tries to find the best binary split for the data so the **entropy** or **gini** is minimized in the branches taking in account the number of elements.
+At the very core algorithm tries to find the best binary split for the data so the weighted sum **entropy** or **gini**  multiplied by the number of elements in the branch is minimized.
 
-You can think of entropy or gini are measures of purity. So the best split intuitively will be on a feature that has the highest correlation to the target. We think of the algorithm like finding that feature randomly or with some heuristic and splits so that the weighted average $n_1*e_1 + n_2*e_2$ has the lowest possible score.
+You can think of entropy or gini are measures of purity. So the best split intuitively will be on a feature that has the highest correlation to the target. We think of the previous algorithms like finding that feature **brute force** or with some heuristic and splits so that the weighted average $n_1*e_1 + n_2*e_2$ has the lowest possible score.
 
 This means we need to eliminate the entropy and at the same time to create spits that are close to even in terms of the number of tree elements.
 
