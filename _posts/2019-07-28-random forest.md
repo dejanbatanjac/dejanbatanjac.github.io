@@ -105,10 +105,8 @@ Final **RF bias** should be like the single DT bias.
 
 Similar to **random forest** are **extra trees**.
 
-Random forest is named because each tree inside uses random subset of datasets for training and validation. 
+Random forest would use all/some features to test all possible splits first.
 
-> The ratio should be 1/e for validation and 2/e for training so each tree will effectively use the whole data. 
-
-While random forest would use fraction of features to test all possible splits first, extra trees will split without testing. 
+Extra trees will **split without testing** which **saves time**.
 
 This is why extra threes need to be much deeper in oder to work.
