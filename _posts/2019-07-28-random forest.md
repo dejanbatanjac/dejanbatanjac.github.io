@@ -7,7 +7,7 @@ title: Random Forest
 - [Where to start with RF?](#where-to-start-with-rf)
   - [Important RF hyper parameters | Scikit](#important-rf-hyper-parameters--scikit)
 - [Do we need a validation dataset dealing with RF?](#do-we-need-a-validation-dataset-dealing-with-rf)
-- [Inside RF | How Random Forest work](#inside-rf--how-random-forest-work)
+- [Inside RF, how it works](#inside-rf-how-it-works)
 - [Extra Trees](#extra-trees)
 
 ## Intro
@@ -91,7 +91,7 @@ OOB is based on the fact that we don't take all the rows (observations) when cre
 Usually the validation set will take most recent data.
 
 
-## Inside RF | How Random Forest work
+## Inside RF, how it works
 
 To understand how RF works, we first need to understand how **Decision Tree** (DT) works.
 
