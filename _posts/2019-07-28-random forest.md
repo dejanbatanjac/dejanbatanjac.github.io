@@ -5,7 +5,7 @@ title: Random Forest
 ---
 - [Intro](#intro)
 - [Where to start with RF?](#where-to-start-with-rf)
-  - [Important RF hyper parameters | Scikit](#important-rf-hyper-parameters--scikit)
+  - [Important RF hyper parameters in scikit-learn](#important-rf-hyper-parameters-in-scikit-learn)
 - [Do we need a validation dataset dealing with RF?](#do-we-need-a-validation-dataset-dealing-with-rf)
 - [Inside RF, how it works](#inside-rf-how-it-works)
 - [Extra Trees](#extra-trees)
@@ -64,7 +64,7 @@ For the classification tasks we can start with the [RandomForestClassifier](http
 
 One nice thing I noticed with scikit RF, is you can do tasks in parallel (multiple processor support exists).
 
-### Important RF hyper parameters | Scikit 
+### Important RF hyper parameters in scikit-learn 
 
 * `n_estimators` 
 * `max_features`
