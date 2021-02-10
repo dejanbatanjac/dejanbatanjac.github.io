@@ -37,7 +37,7 @@ $R^2$ is the proportion of the variance in the dependent variable that is predic
 
 $R^2$ can take values from -inf, to 1, where 1 is excellent, while 0 and anything less than 0 is considered very bad.
 
-For RF and classification problems the score is the mean accuracy on the given test data.
+For RF and classification problems the score is the **mean accuracy** on the given test data.
 
 >What is good when dealing with RF:
 
@@ -49,14 +49,15 @@ For RF and classification problems the score is the mean accuracy on the given t
 
 >Do we need a validation dataset dealing with RF?
 
-It is best when we have a separate validation set, but we can get away even if we don't. We may use part of the test dataset as the validation dataset, and this is unique to random forests. This is called Out-Of-Bag prediction (OOB). OOB is based on the fact that we don't take all the rows (observations) when creating the tree. Instead we may take just 63%, and the remaining 27% observations may be used for the validation.
+It is best when we have a separate validation set, but we can get away even if we don't. We may use part of the test dataset as the validation dataset, and this is unique to random forests. This is called Out-Of-Bag prediction (**OOB**).
+
+OOB is based on the fact that we don't take all the rows (observations) when creating the tree. Instead we may take just 63%, and the remaining 27% observations may be used for the validation.
 
 > In scikit-learn to create the tree for OOB, we pass **oob_score=True**, and then we will have the **oob_score_** at the end that should have the similar coefficient of determination like we have used the separate validation set.
 
 Usually the validation set will take most recent data.
 
-
->Where to start with RF?
+## Where to start with RF?
 
 Probable one very nice starting point is to use the [scikit](https://scikit-learn.org).
 
@@ -66,4 +67,41 @@ For the classification tasks we can start with the [RandomForestClassifier](http
 
 One nice thing I noticed with scikit RF, is you can do tasks in parallel (multiple processor support exists).
 
+## How RF works
 
+To understand how RF works, we first need to understand how **Decision Tree** (DT) works.
+
+Decision tree simple uses algorithms like:
+
+* ID3 (Iterative Dichotomiser 3)
+* C4.5 (successor of ID3)
+* CART (Classification And Regression Tree)
+* Chi-square automatic interaction detection (CHAID)
+* MARS: extends decision trees to handle numerical data better
+
+At the very core algorithm tries to find the best binary split for the data so the **entropy** or **gini** is minimized in the branches taking in account the number of elements.
+
+You can think of entropy or gini are measures of purity. So the best split intuitively will be on a feature that has the highest correlation to the target. We think of the algorithm like finding that feature randomly or with some heuristic and splits so that the weighted average $n_1*e_1 + n_2*e_2$ has the lowest possible score.
+
+This means we need to eliminate the entropy and at the same time to create spits that are close to even in terms of the number of tree elements.
+
+Random forest are random because:
+* for each DT is train and validated on slightly different data
+* each DT may take slightly different features
+
+
+Final **RF bias** should be like the single DT bias.
+**RF variance** decreases when we combine trees and thus we decrease the chances of overfitting.
+
+
+## Extra Trees
+
+Similar to **random forest** are **extra trees**.
+
+Random forest is named because each tree inside uses random subset of datasets for training and validation. 
+
+> The ratio should be 1/e for validation and 2/e for training so each tree will effectively use the whole data. 
+
+While random forest would use fraction of features to test all possible splits first, extra trees will split without testing. 
+
+This is why extra threes need to be much deeper in oder to work.
