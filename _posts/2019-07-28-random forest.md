@@ -3,6 +3,13 @@ published: true
 layout: post
 title: Random Forest
 ---
+- [Intro](#intro)
+- [Do we need a validation dataset dealing with RF?](#do-we-need-a-validation-dataset-dealing-with-rf)
+- [Where to start with RF?](#where-to-start-with-rf)
+- [Inside RF | How Random Forest work](#inside-rf--how-random-forest-work)
+- [Extra Trees](#extra-trees)
+
+## Intro
 
 Random Forest (RF) is universal machine learning technique.
 It's a way of predicting category or continuous variables with columns of any kind that we first convert to numbers (floats).
@@ -47,7 +54,7 @@ For RF and classification problems the score is the **mean accuracy** on the giv
 * RF is very hard to overfit
 
 
->Do we need a validation dataset dealing with RF?
+## Do we need a validation dataset dealing with RF?
 
 It is best when we have a separate validation set, but we can get away even if we don't. We may use part of the test dataset as the validation dataset, and this is unique to random forests. This is called Out-Of-Bag prediction (**OOB**).
 
@@ -67,7 +74,7 @@ For the classification tasks we can start with the [RandomForestClassifier](http
 
 One nice thing I noticed with scikit RF, is you can do tasks in parallel (multiple processor support exists).
 
-## How RF works
+## Inside RF | How Random Forest work
 
 To understand how RF works, we first need to understand how **Decision Tree** (DT) works.
 
@@ -86,8 +93,8 @@ You can think of entropy or gini are measures of purity. So the best split intui
 This means we need to eliminate the entropy and at the same time to create spits that are close to even in terms of the number of tree elements.
 
 Random forest are random because:
-* for each DT is train and validated on slightly different data
-* each DT may take slightly different features
+* each DT is trained and validated on slightly different data
+* each DT may take slightly different features 
 
 
 Final **RF bias** should be like the single DT bias.
