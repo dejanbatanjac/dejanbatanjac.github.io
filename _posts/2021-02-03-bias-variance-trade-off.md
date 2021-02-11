@@ -24,7 +24,7 @@ permalink: /bias-variance-noise-trade-off
 
 One of the most important formula in statistics and machine learning is **bias variance trade off**. It actually **generalize** to **Bias, Variance Noise trade off** here I will show how.
 
-Engineering job is to find the equilibrium of these three, since intuitively if you make one of them smaller, the other usually get bigger.
+Engineering job is to find the equilibrium of these three, since intuitively if you make one of them smaller, the other two usually get bigger.
 
 The following analysis will track one regression problem and explain the decomposition of the expected test error from the **probabilistic approach**.
 
@@ -45,8 +45,7 @@ The joint distribution of $X$ and $Y$ is also a random variable $D \sim P(X,Y)$.
 
 We draw concrete dataset $\mathcal D$ from **sample space** with $n$ rows from $P(X,Y)^n$ 
 
-> The domain of random variable is called a sample space. This is a set of all possible outcomes, but we don't bother much with that.
-
+> The domain of random variable is called a sample space. This is a set of all possible outcomes, let's define that.
 
 ## The dataset model again
 
@@ -65,7 +64,7 @@ where:
 
 > We tackle a typical regression problem with MSE but the idea can generalize.
 
-> Specific quirk is assuming there is just a single realization $\mathcal D$ of a random variable $D$. Even though I can draw infinitely meany datasets $\mathcal D$ from $D$. This is for simplicity. I will just write $D$ from now on. I need that $D$ to be at the same time random variable, to estimate the first moment, and to be concrete to work on it.
+> Specific quirk is assuming there is just a single realization $\mathcal D$ of a random variable $D$. Even though I can draw infinitely meany datasets $\mathcal D$ from $D$. For simplicity I will just write $D$ from now on. I need $D$ to be at the same time random variable (to estimate the first moment) and to be concrete dataset I work on.
 
 
 ## The expected label (target)
