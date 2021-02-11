@@ -240,9 +240,11 @@ Most likely you can use it for **autoencoders**. This is why  autoencoders are v
 
 > **Latent** means hidden in latin. Autoencoder latent variables capture **in some invisible way** the probability distribution from the data.
 
-GANs would naturally follow because they also try to extract the probability distribution from the training data, and KL divergence and similar losses are used.
-
 KL divergence can also be used in multiclass classification scenarios instead Softmax function and in reinforcement learning. This is not strange because to implement KL divergence you basically need to use the Softmax function.
+
+
+There we can find KL divergence is also used in reinforcement learning and all kind of generative models such as: Variational Autoencoder, Boltzmann machines, and GANs, Markov Chains.
+
 
 ## KL as a distance metric
 
@@ -255,8 +257,10 @@ but we can make it a distance with **Jensen-Shannon transformation**.
 $D_{JS}(p \| q) =\frac{1}{2} D_{KL}(p \| m)+\frac{1}{2} D_{KL}(q \| m)$
 
 where $m=\frac{1}{2}(p+q)$
+
+> as;p 
 ## Conclusion
 
 KL Divergence or Relative Entropy is a measure how two distributions are different.
 
-Both the problems of supervised learning and reinforcement learning are simply using it as the objective.
+Many machine learning problems are using KL divergence and especially it can be used as objective for supervised machine learning, EM methods such as GMM, and generative models.
