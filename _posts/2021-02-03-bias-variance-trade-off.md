@@ -103,7 +103,7 @@ $\begin{aligned}\mathbb E_{(\boldsymbol{x}, y) \sim P}\left[\left(h_{D}(\boldsym
 
 ## Expected hypothesis (given $\mathcal A$): 
 
-Note since there are different possible hypothesis on a dataset, we typically need the best one according to our metric (minimal loss).
+Note since there are different possible hypothesis on a dataset, we need the best one according to our metric (minimal loss).
 
 > We can think of the expected hypothesis and expected test error as well.
 
