@@ -258,7 +258,8 @@ $D_{JS}(p \| q) =\frac{1}{2} D_{KL}(p \| m)+\frac{1}{2} D_{KL}(q \| m)$
 
 where $m=\frac{1}{2}(p+q)$
 
-> as;p 
+> The fact the KL divergence is not a metric $D_{KL}(p \| q) \ne D_{KL}(q \| p)$ can be used because we can try to minimize either direct or reverse KL divergence.
+
 ## Conclusion
 
 KL Divergence or Relative Entropy is a measure how two distributions are different.
