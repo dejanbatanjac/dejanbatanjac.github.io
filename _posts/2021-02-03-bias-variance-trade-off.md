@@ -89,11 +89,11 @@ $h_{D} = \mathcal A(D)$
 Now, $D$ is a random variable and $\mathcal A$ is the algorithm so $h_D$ is also a random variable.
 
 
-The specific meaning of this random variable $h_D$ is that it represents **all the hypothesis** from all different algorithm classes.
+The specific meaning of this random variable $h_D$ is that it represents **all the hypothesis** from **all different algorithm classes**.
 
 > For instance hyperparameter tuning would be all the hypothesis and different algorithm classes would be KNN and DNN.
 
-Now, it would be great if we can say what is the best class $h_D$? This is why we will from now on use the MSE loss metric. (most common for regression problems).
+Now, it would be great if we can say what is the best class $h_D$? This is why we will from now on use the MSE loss metric (most common for regression problems).
 
 
 ## Expected test error (given $h_D$)
