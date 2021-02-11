@@ -264,4 +264,4 @@ where $m=\frac{1}{2}(p+q)$
 
 KL Divergence or Relative Entropy is a measure how two distributions are different.
 
-Many machine learning problems are using KL divergence and especially it can be used as objective for supervised machine learning, EM methods such as GMM, and generative models.
+Many machine learning problems are using KL divergence and especially it can be used as the objective function for supervised machine learning, EM methods such as GMM, and generative models.
