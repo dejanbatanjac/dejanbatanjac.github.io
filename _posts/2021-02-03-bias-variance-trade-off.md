@@ -69,16 +69,15 @@ where:
 
 ## The expected label (target)
 
-If we are **selling cars**, there may be two cars, with the exactly same equipment, but the target price may differ.
+If we are **selling cars**, there may be two exact cars, with the same equipment, but the target price may differ.
 
 That different targets $y$ for the same feature vector $\boldsymbol x$ is what brings data inartistic noise. 
-
-> Check at the the noise part of the total error.
 
 This is why we need **the expected target** value $\bar y(\boldsymbol x)$ where $\boldsymbol x$ is a vector of features.
 
 $\bar{y}(\boldsymbol x)=\mathbb E_{y \mid \boldsymbol{x}}[Y]=\int_{y} y P(y \mid \boldsymbol{x}) \partial y$
 
+> Check the noise part of the total error later on.
 
 ## Hypothesis  $h_D$
 
