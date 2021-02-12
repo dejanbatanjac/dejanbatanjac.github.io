@@ -243,7 +243,7 @@ Most likely you can use it for **autoencoders**. This is why  autoencoders are v
 KL divergence can also be used in multiclass classification scenarios instead Softmax function and in reinforcement learning. This is not strange because to implement KL divergence you basically need to use the Softmax function.
 
 
-There we can find KL divergence is also used in reinforcement learning and all kind of generative models such as: Variational Autoencoder, Boltzmann machines, and GANs, Markov Chains.
+There we can find KL divergence is also used in reinforcement learning and all kind of generative models such as: Variational Autoencoder, Boltzmann machines, GANs...
 
 
 ## KL as a distance metric
