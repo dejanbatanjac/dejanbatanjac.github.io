@@ -2,7 +2,6 @@
 published: true
 layout: post
 title: Number of Parameters in Keras LSTM
-permalink: /Number-of-parameters-in-Keras-LSTM.html
 ---
 We are defining a sequence of 20 numbers:
 `0  20  40  60  80 100 120 140 160 180 200 220 240 260 280 300 320 340 360 380` and memorize using Keras LSTM.
