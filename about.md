@@ -15,7 +15,7 @@ Current themes of interest would be :
 * all other tools, papers, courses helping me understand the machine learning process
 
 I like to update my posts just like machine learning algorithms update their neural networks.
-If you like some of the post consider sharing them. That would help me.
+If you like some of the post consider sharing them. That would help.
 
 
 More details about me:
