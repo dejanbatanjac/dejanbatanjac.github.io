@@ -59,14 +59,14 @@ Expected value of the distribution $p$:
 
 $\begin{aligned}\mu = \int_{-\infty}^{\infty} x p(x) \mathrm{d} x \end{aligned}$
 
-Standard deviation formula, uses the expected value $\mu$.
+Variation formula, uses the expected value $\mu$.
  
 $\begin{aligned}\sigma^{2} =\int_{-\infty}^{\infty}(x-\mu)^{2} p(x) \mathrm{d} x \end{aligned}$
 
 
 KL divergence answers the question how different are two probability distributions $p$ and $q$ at any point $x$. 
 
-$\begin{aligned}D_{KL} (q \| p)=\int_{-\infty}^{\infty} q(x) \log \frac{q(x)}{p(x)} d x\end{aligned}$
+$\begin{aligned}D_{KL} (q \parallel p)=\int_{-\infty}^{\infty} q(x) \log \frac{q(x)}{p(x)} d x\end{aligned}$
 
 Recall that the $q(x)$ and $p(x)$ are probabilities and that the Shannon information is defined as:
 
@@ -74,16 +74,16 @@ $I(x) = -\log_2 q(x)$
 
 This means KL is the **expected value of information** ratio.
 
-$\begin{aligned}D_{KL}(q \| p) = - \mathbb{E}_{q}\left[-\log \frac{q}{p}\right]\end{aligned}$
+$\begin{aligned}D_{KL}(q \parallel p) = - \mathbb{E}_{q}\left[-\log \frac{q}{p}\right]\end{aligned}$
 
 ## KL divergence properties
 
 <div>
 
 $\begin{array}{l}
-\text { 1. } D_{KL}(q \| p) \neq D_{KL}(p \| q) \\
-\text { 2. } D_{KL} \mathcal{L}(q \| q)=0 \\
-\text { 3. } D_{KL} \mathcal{L}(q \| p) \geq 0
+\text { 1. } D_{KL}(q \parallel p) \neq D_{KL}(p \parallel q) \\
+\text { 2. } D_{KL} \mathcal{L}(q \parallel q)=0 \\
+\text { 3. } D_{KL} \mathcal{L}(q \parallel p) \geq 0
 \end{array}$
 </div>
 
@@ -93,7 +93,7 @@ The last property is easy to prove thanks to the Jensen's inequality for concave
 
 <div>
 
-$\begin{aligned}-D_{KL}(q \| p) &=\mathbb{E}_{q}\left[-\log \frac{q}{p}\right]=\mathbb{E}_{q}\left[\log \frac{p}{q}\right] \\ & \leq \log \left[\mathbb{E}_{q} \frac{p}{q}\right]=\log \int q(x) \frac{p(x)}{q(x)} d x=0 \end{aligned}$
+$\begin{aligned}-D_{KL}(q \parallel p) &=\mathbb{E}_{q}\left[-\log \frac{q}{p}\right]=\mathbb{E}_{q}\left[\log \frac{p}{q}\right] \\ & \leq \log \left[\mathbb{E}_{q} \frac{p}{q}\right]=\log \int q(x) \frac{p(x)}{q(x)} d x=0 \end{aligned}$
 </div>
 
 
@@ -156,7 +156,7 @@ plt.plot(x,gaussian_pdf(1,10,x),color='g') # mu=1, sigma=10
 
 To compute the KL divergence between two Gaussian univariate functions we have the formula:
 
-$$\begin{aligned} D_{KL}(p \| q) &=-\int p(x) \log q(x) d x+\int p(x) \log p(x) d x \\ &=\frac{1}{2} \log \left(2 \pi \sigma_{2}^{2}\right)+\frac{\sigma_{1}^{2}+\left(\mu_{1}-\mu_{2}\right)^{2}}{2 \sigma_{2}^{2}}-\frac{1}{2}\left(1+\log 2 \pi \sigma_{1}^{2}\right) \\ &=\log \frac{\sigma_{2}}{\sigma_{1}}+\frac{\sigma_{1}^{2}+\left(\mu_{1}-\mu_{2}\right)^{2}}{2 \sigma_{2}^{2}}-\frac{1}{2} \end{aligned}$$
+$$\begin{aligned} D_{KL}(p \parallel q) &=-\int p(x) \log q(x) d x+\int p(x) \log p(x) d x \\ &=\frac{1}{2} \log \left(2 \pi \sigma_{2}^{2}\right)+\frac{\sigma_{1}^{2}+\left(\mu_{1}-\mu_{2}\right)^{2}}{2 \sigma_{2}^{2}}-\frac{1}{2}\left(1+\log 2 \pi \sigma_{1}^{2}\right) \\ &=\log \frac{\sigma_{2}}{\sigma_{1}}+\frac{\sigma_{1}^{2}+\left(\mu_{1}-\mu_{2}\right)^{2}}{2 \sigma_{2}^{2}}-\frac{1}{2} \end{aligned}$$
 
 
 **Calculation:**
@@ -164,12 +164,12 @@ $$\begin{aligned} D_{KL}(p \| q) &=-\int p(x) \log q(x) d x+\int p(x) \log p(x) 
 In the first case:
 $\mathcal N(0,1)$ and $\mathcal N(1,1)$
 
-$D_{KL}(p\|q)=0.5$
+$D_{KL}(p\parallel q)=0.5$
 
 Second case:
 $\mathcal N(0,10)$ and $\mathcal N(1,10)$
 
-$D_{KL}(p\|q)=0.005$
+$D_{KL}(p\parallel q)=0.005$
 
 > Note in the second case the divergence is smaller.
 
@@ -223,14 +223,14 @@ In here the OVL coefficient will be 0.96
 
 The relation is this:
 
-$D_{KL}(p \|q) = H(q, p) - H(p)$
+$D_{KL}(p \parallel q) = H(q, p) - H(p)$
 
 
 The upper equation **also** holds for the discrete case where:
 
 $\begin{aligned} H(p,q) = -\sum_x p\log q\end{aligned}$
 
-$\begin{aligned} D_{KL}(p \| q) = \sum_{x} p\log {\frac{p}{q}} \end{aligned}$
+$\begin{aligned} D_{KL}(p \parallel q) = \sum_{x} p\log {\frac{p}{q}} \end{aligned}$
 
 ## Machine learning application
 
@@ -248,17 +248,17 @@ There we can find KL divergence is also used in reinforcement learning and all k
 
 ## KL as a distance metric
 
-$D_{KL}(p \| q)$ is not a metric of distance, because:
+$D_{KL}(p \parallel q)$ is not a metric of distance, because:
 
-$D_{KL}(p \| q) \ne D_{KL}(q \| p)$
+$D_{KL}(p \parallel q) \ne D_{KL}(q \parallel p)$
 
 but we can make it a distance with **Jensen-Shannon transformation**.
 
-$D_{JS}(p \| q) =\frac{1}{2} D_{KL}(p \| m)+\frac{1}{2} D_{KL}(q \| m)$
+$D_{JS}(p \parallel q) =\frac{1}{2} D_{KL}(p \parallel m)+\frac{1}{2} D_{KL}(q \parallel m)$
 
 where $m=\frac{1}{2}(p+q)$
 
-> The fact the KL divergence is not a metric $D_{KL}(p \| q) \ne D_{KL}(q \| p)$ can be used because we can try to minimize either direct or reverse KL divergence.
+> The fact the KL divergence is not a metric $D_{KL}(p \parallel q) \ne D_{KL}(q \parallel p)$ can be used because we can try to minimize either direct or reverse KL divergence.
 
 ## Conclusion
 
