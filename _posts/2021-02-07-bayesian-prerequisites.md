@@ -9,9 +9,11 @@ permalink: /bayesian-prerequisites
 
 $P(a,b)=P(a|b)P(b)$
 
-Add the new condition:
+To the previous equation add the new condition $\mid c$
 
 $P(a,b \mid c)=P(a|b,c)P(b \mid c)$
+
+
 
 
 ## MAP

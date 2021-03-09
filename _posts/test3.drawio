@@ -1,0 +1,43 @@
+<mxfile host="65bd71144e" modified="2021-02-17T18:34:53.032Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" etag="uljoCrmtLHtEvdH4XKZC" version="14.2.4" type="embed">
+    <diagram id="iK9O6zpl0unEknwgo6_2" name="Page-1">
+        <mxGraphModel dx="888" dy="601" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="1">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="44" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=0;container=1;collapsible=0;childLayout=tableLayout;swimlaneFillColor=none;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="212" y="170" width="307" height="317" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=#fa6800;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#C73500;fontColor=#ffffff;" vertex="1" parent="44">
+                    <mxGeometry width="307" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=#008a00;top=0;left=0;bottom=0;right=0;strokeColor=#005700;fontColor=#ffffff;" vertex="1" parent="45">
+                    <mxGeometry width="154" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;top=0;left=0;bottom=0;right=0;strokeColor=#B20000;fontColor=#ffffff;fillColor=#e51400;gradientDirection=west;" vertex="1" parent="45">
+                    <mxGeometry x="154" width="153" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="44">
+                    <mxGeometry y="160" width="307" height="157" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;top=0;left=0;bottom=0;right=0;fontColor=#ffffff;gradientDirection=east;strokeColor=#314354;fillColor=#647687;" vertex="1" parent="48">
+                    <mxGeometry width="154" height="157" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;top=0;left=0;bottom=0;right=0;" vertex="1" parent="48">
+                    <mxGeometry x="154" width="153" height="157" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="" style="image;html=1;image=img/lib/clip_art/people/Suit_Woman_Blue_128x128.png;strokeColor=#F0F0F0;fillColor=#FFE6CC;gradientColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="254" y="207" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="" style="image;html=1;image=img/lib/clip_art/people/Waiter_Woman_Black_128x128.png;strokeColor=#F0F0F0;fillColor=#FFE6CC;gradientColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="401" y="214" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="" style="image;html=1;image=img/lib/clip_art/people/Worker_Woman_Black_128x128.png;strokeColor=#F0F0F0;fillColor=#FFE6CC;gradientColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="403" y="370" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="" style="image;html=1;image=img/lib/clip_art/people/Suit_Woman_Green_128x128.png;strokeColor=#F0F0F0;fillColor=#FFE6CC;gradientColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="254" y="366" width="80" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

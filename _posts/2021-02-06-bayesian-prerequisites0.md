@@ -11,6 +11,7 @@ permalink: /probability-models
   - [Bayes rule](#bayes-rule)
 - [Combine two random variables](#combine-two-random-variables)
   - [Examples](#examples)
+- [Marginal likelihood](#marginal-likelihood)
 
 ## Discrete and continuous Random Variables
 
@@ -85,4 +86,17 @@ $Z \sim N\left(\mu_{X}-\mu_{Y}, \sigma_{X}^{2}+\sigma_{Y}^{2}\right)$
 ### Examples
 
 
+## Marginal likelihood
 
+Given a set of independent identically distributed data points $\mathbf{X}=\left(x_{1}, \ldots, x_{n}\right),$ where $x_{i} \sim p\left(x_{i} \mid \theta\right)$ according to some probability distribution parameterized by $\theta$, where $\theta$ itself is a random variable described by a distribution, i.e. $\theta \sim p(\theta \mid \alpha),$ the marginal likelihood in general asks what the probability $p(\mathbf{X} \mid \alpha)$ is, where $\theta$ has been marginalized out (integrated out):
+$$
+p(\mathbf{X} \mid \alpha)=\int_{\theta} p(\mathbf{X} \mid \theta) p(\theta \mid \alpha) \mathrm{d} \theta
+$$
+The above definition is phrased in the context of Bayesian statistics. In classical (frequentist) statistics, the concept of marginal likelihood occurs instead in the context of a joint parameter $\theta=(\psi, \lambda),$ where $\psi$ is the actual parameter of interest, and $\lambda$ is a non-interesting nuisance parameter. If there exists a probability distribution for $\lambda,$ it is often desirable to consider the likelihood function only in terms of $\psi$, by marginalizing out $\lambda$ :
+$$
+\mathcal{L}(\psi ; \mathbf{X})=p(\mathbf{X} \mid \psi)=\int_{\lambda} p(\mathbf{X} \mid \lambda, \psi) p(\lambda \mid \psi) \mathrm{d} \lambda
+$$
+Unfortunately, marginal likelihoods are generally difficult to compute. Exact solutions are known for a small class of distributions, particularly when the marginalized-out
+parameter is the conjugate prior of the distribution of the data. In other cases, some kind of numerical integration method is needed, either a general method such as Gaussian integration or a Monte Carlo method, or a method specialized to statistical problems such as the Laplace approximation, Gibbs/Metropolis sampling, or the EM algorithm.
+
+It is also possible to apply the above considerations to a single random variable (data point) $x$, rather than a set of observations. In a Bayesian context, this is equivalent to the prior predictive distribution of a data point.
