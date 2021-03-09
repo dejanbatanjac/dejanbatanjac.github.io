@@ -77,7 +77,7 @@ In here `agrad` and `agrad2` are average gradients calculated and also the so ca
 
 The previous is based on the fact that $\epsilon$ is very small. If we plan to use bigger $\epsilon$ this would not be correct. 
 
-I would present Adaam, there real Adam by the paper:
+I would present Adaam, the real Adam by the paper:
 
     class Adaam(Optimizer):
 
