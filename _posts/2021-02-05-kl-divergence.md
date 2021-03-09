@@ -236,15 +236,24 @@ $\begin{aligned} D_{KL}(p \parallel q) = \sum_{x} p\log {\frac{p}{q}} \end{align
 
 We may use [KL divergence as a loss function](https://pytorch.org/docs/stable/generated/torch.nn.KLDivLoss.html){:rel="nofollow"}.
 
-Most likely you can use it for **autoencoders**. This is why  autoencoders are very good at obtaining the [high likelihood of the input data](https://youtu.be/HGYYEUSm-0Q?t=1262){:rel="nofollow"}.
+Frequent use is for**autoencoders**. This is why  autoencoders are very good at obtaining the [high likelihood of the input data](https://youtu.be/HGYYEUSm-0Q?t=1262){:rel="nofollow"}.
 
 > **Latent** means hidden in latin. Autoencoder latent variables capture **in some invisible way** the probability distribution from the data.
 
-KL divergence can also be used in multiclass classification scenarios instead Softmax function and in reinforcement learning. This is not strange because to implement KL divergence you basically need to use the Softmax function.
+KL divergence loss can also be used in multiclass classification scenarios instead CrossEntropy loss function. In fact, either using KL divergence loss (relative entropy) or CrossEntropy loss **is the same** if we are dealing with distributions that do not alter their parameters.
 
+<!-- 
+> From implementation side CrossEntropy is `nll_loss` of `log_softmax`.
 
-There we can find KL divergence is also used in reinforcement learning and all kind of generative models such as: Variational Autoencoder, Boltzmann machines, GANs...
+> `log_softmax` do not calculate `log` of `softmax` directly (`softmax().log()`) instead it uses **log-sum-exp trick**
 
+> logits go to `softmax` or `log_softmax`
+
+> logits are just some values that are not probabilities, outside of [0,1] interval.
+
+> KL divergence implementation is almost the same as CrossEntropy implementation. -->
+
+> KL divergence is also fist thought objective function for reinforcement learning. 
 
 ## KL as a distance metric
 
@@ -264,4 +273,4 @@ where $m=\frac{1}{2}(p+q)$
 
 KL Divergence or Relative Entropy is a measure how two distributions are different.
 
-Many machine learning problems are using KL divergence and especially it can be used as the objective function for supervised machine learning, and for generative models.
+Many machine learning problems are using KL divergence loss and especially it can be used as the objective function for **supervised machine learning**, and for **generative models**.
