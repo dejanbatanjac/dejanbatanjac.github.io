@@ -19,3 +19,4 @@ If you work out the math you see that $P(\mathbf{x}) > 0.5$ defines a hyperplane
 With $k$NN you don't have an hyperplane in general. Imagine some dense region of positive points. The decision boundary to classify test instances around those points will look like a curve - not a hyperplane.
 
 
+
