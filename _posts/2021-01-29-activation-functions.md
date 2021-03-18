@@ -43,24 +43,13 @@ The most important features to track for the specific activation functions are:
 * if derivate is monotonic
 
 
-<!-- * Identity
-* Binary step
-* ReLU
-* Sigmoid (logistic, or soft step) 
-* Tanh 
-* GELU
-* Leaky ReLU
-* Swish
+<!-- * more
 * PReLU
 * GLU
-* Softplus
 * Maxout
 * ELU
-* Mish
-* ReLU6
 * Hard Swish
 * SELU
-* Softsign 
 * Shifted Softplus
 * CReLU
 * RReLU
@@ -324,7 +313,8 @@ The derivate which is exactly the sigmoid function:
 
 $f(x)=\Large \frac{1}{1+e^{-x}}$
 
-In PyTorch there are two more params:
+In PyTorch there are two more params you can tweak:
+
 * beta=1
 * threshold=20
 
