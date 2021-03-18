@@ -68,7 +68,7 @@ Defined super simple this is one of the most basic functions:
 $f(x) =\left\{\begin{array}{ll}0 & \text { if } x<0 \\ 1 & \text { if } x \geq 0\end{array}\right.$
 </div>
 
-The problem with this function it is: derivate is not defined for $x=0$.
+The problem with this function is: derivate is not defined for $x=0$.
 
 ![binary step](/images/2021/01/bstep.png)
 
