@@ -226,7 +226,7 @@ Look how the second gradient at point x=20 is almost 0. Multiplying that number 
 
 ## Hard Sigmoid
 
-![hard-sigmoid](/images/2021/01/sigmoid.png)
+![hard-sigmoid](/images/2021/01/hard-sigmoid.png)
 
 ## Tanh
 
