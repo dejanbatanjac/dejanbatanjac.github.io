@@ -227,13 +227,11 @@ Look how the second gradient at point x=20 is almost 0. Multiplying that number 
 ## Hard Sigmoid
 
 <div>
-$$
-f(x)=\left\{\begin{array}{ll}
+$f(x)=\left\{\begin{array}{ll}
 0 & \text { if } x \leq-3 \\
 1 & \text { if } x \geq+3 \\
 x / 6+1 / 2 & \text { else }
-\end{array}\right.
-$$
+\end{array}\right.$
 
 </div>
 
