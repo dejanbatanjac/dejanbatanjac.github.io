@@ -270,7 +270,7 @@ This function is proposed by Bengio. It is like a `tanh()` but it doesn't goes t
 <div>
 $f(x)=\left\{\begin{array}{ll}1 & \text { if } x>1 \\ -1 & \text { if } x<-1 \\ x & \text { else }\end{array}\right.$
 
-<div>
+</div>
 
 ![hardtanh](/images/2021/01/hardtanh.png)
 
