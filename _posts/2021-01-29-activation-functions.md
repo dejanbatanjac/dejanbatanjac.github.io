@@ -154,7 +154,10 @@ $f(x) = \left\{\begin{array}{ll}\alpha x & \text { if } x<0 \\ x & \text { if } 
 
 ## ELU
 
+<div>
+
 $\mathrm{ELU}(x)=\left\{\begin{array}{ll}x, & \text { if } x>0 \\ \alpha *(\exp (x)-1), & \text { if } x \leq 0\end{array}\right.$
+</div>
 
 Or:
 
@@ -245,7 +248,7 @@ With `tanh()` this is not the case, because the output mean should be around zer
 
 ## SoftSign
 
-$f(x)=\frac{x}{1+|x|}$
+$f(x)=\frac{x}{1+ \mid x \mid}$
 
 This function is proposed by Bengio. It is like a `tanh()` but it doesn't goes to the asymptotes as fast as `tanh()`.
 
@@ -253,8 +256,10 @@ This function is proposed by Bengio. It is like a `tanh()` but it doesn't goes t
 
 
 ## HardTanh 
-
+<div>
 $f(x)=\left\{\begin{array}{ll}1 & \text { if } x>1 \\ -1 & \text { if } x<-1 \\ x & \text { else }\end{array}\right.$
+
+<div>
 
 ![hardtanh](/images/2021/01/hardtanh.png)
 
@@ -279,6 +284,28 @@ $f(x) = \ln \left(1+e^{x}\right)$
 
 
 ![softplus](/images/2021/01/softplus.png)
+
+<!-- 
+x = np.linspace(-10, 10, 1000)
+y = torch.nn.functional.softplus(torch.from_numpy(x))
+y5 = torch.nn.functional.softplus(torch.from_numpy(x), beta=5)
+y05 = torch.nn.functional.softplus(torch.from_numpy(x), beta=0.5)
+
+fig = plt.figure(figsize=(9, 7), dpi=90)
+plt.style.use('ggplot')
+plt.title("torch.nn.functional.softplus()")
+plt.xlabel("input")
+plt.ylabel("output")
+plt.plot(x,y, label="beta=1" )
+plt.plot(x,y5, label="beta=5")
+plt.plot(x,y05, label="beta=0.5", color="green")
+plt.ylim(-6, 6)
+plt.xlim(-6,6)
+plt.margins(0.5)
+plt.legend()
+# plt.grid()
+
+plt.show() -->
 
 It can be viewed as a smooth version of ReLU, or **differentiable** version of ReLU.
 
