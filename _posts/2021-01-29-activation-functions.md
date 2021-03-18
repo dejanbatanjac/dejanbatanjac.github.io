@@ -43,34 +43,7 @@ The most important features to track for the specific activation functions are:
 * if derivate is monotonic
 
 
-<!-- * more
-* PReLU
-* GLU
-* Maxout
-* ELU
-* Hard Swish
-* SELU
-* Shifted Softplus
-* CReLU
-* RReLU
-* Hard Sigmoid
-* SiLU
-* KAF
-* TanhExp
-* SReLU
-* modReLU
-* Hermite 
-* ARiA
-* E-swish
-* m-arcsinh
-* PELU
-* ELiSH
-* HardELiSH
-* SERLU
-* nlsig
-* Lecun's Tanh
-* Hardtanh 
-* ASAF -->
+
 
 I will shortly cover some of the functions present in PyTorch:
 
@@ -84,7 +57,7 @@ $f(x) = x$
 
 Has a very simple derivate. When we deal with activation functions, usually we like to have a nice derivate for the activation function.
 
-The problem with this function is the infinite range of values it may return. Usually we like $(-1,1)$ or $(0,1)$ ranges.
+The problem with this function, it will not introduce nonlinearity. To do that we can use [hardtanh](#hardtanh) that works surprisingly well for many tasks.
 
 ## Binary step
 
@@ -267,6 +240,8 @@ Default values:
 * `min_val=-1`
 * `max_val=1`
 
+You can tweak and use some other values.
+
 ## Swish
 
 $f(x) = \Large \frac{x}{1+e^{-\beta x}}$
@@ -347,3 +322,31 @@ def mish(x):
     return x*torch.tanh(torch.nn.functional.softplus(x))
 ```
 
+<!-- * more
+* PReLU
+* GLU
+* Maxout
+* ELU
+* Hard Swish
+* SELU
+* Shifted Softplus
+* CReLU
+* RReLU
+* Hard Sigmoid
+* SiLU
+* KAF
+* TanhExp
+* SReLU
+* modReLU
+* Hermite 
+* ARiA
+* E-swish
+* m-arcsinh
+* PELU
+* ELiSH
+* HardELiSH
+* SERLU
+* nlsig
+* Lecun's Tanh
+* Hardtanh 
+* ASAF -->
