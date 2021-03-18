@@ -49,7 +49,7 @@ I will shortly cover some of the functions present in PyTorch:
 
 ## Identity
 
-The most simple (intriguing) function:
+Very simple function:
 
 $f(x) = x$
 
