@@ -71,7 +71,7 @@ MLE and MAP are parameter estimators and the process to find parameters is calle
 
 **MAP** is using minimum of the negative log posterior function to estimate Maximum a Posteriori fit.
 
-Together with estimating parameters probabilistic models are used for **modeling, inference** and **prediction**. Later problems are connected with the difficult integrations unless we have **conjugate prior and posterior**.
+Together with estimating parameters probabilistic models are used for **inference** and **prediction**. Later problems are connected with the difficult integrations unless we have **conjugate prior and posterior**.
 
 Probabilistic model is specified by the joint distribution of all its random variables. This joint distribution will not show how random variables are connected together. For RV inner connection we use graphs.
 
