@@ -5,7 +5,7 @@ title: Bayesian prerequisites | Gaussian
 permalink: /bayesian-gaussian
 ---
 
-In Bayesian statistics Gaussian or normal distribution is frequent. Gaussian distribution has closed-form solution for marginal and conditional dependencies, MLE, linear regression, etc. 
+In Bayesian statistics Gaussian or normal distribution is frequent. Gaussian distribution has closed-form solution for marginal and conditional dependencies which is neat.
 
 
 ## Parameters
