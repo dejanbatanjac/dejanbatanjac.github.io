@@ -179,8 +179,7 @@ $$
 
 ## Product of two Gaussians
 
-The product of two Gaussians
-
+The product of two Gaussians:
 $$
 \mathcal{N}\left(\boldsymbol{x} \mid \boldsymbol{\mu}_{1}, \boldsymbol{\Sigma}_{1}\right) \mathcal{N}\left(\boldsymbol{x} \mid \boldsymbol{\mu}_{2}, \boldsymbol{\Sigma}_{2}\right)=\mathcal{N}(\boldsymbol{x} \mid \boldsymbol{\mu}, \boldsymbol{\Sigma}) \frac{\exp \left(-\frac{1}{2}\left(\boldsymbol{\mu}_{1}-\boldsymbol{\mu}_{2}\right)^{\top} \boldsymbol{S}^{-1}\left(\boldsymbol{\mu}_{1}-\boldsymbol{\mu}_{2}\right)\right)}{\sqrt{\operatorname{det}(2 \pi \boldsymbol{S})}}
 $$
