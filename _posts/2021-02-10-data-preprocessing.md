@@ -26,7 +26,7 @@ Simplified, daily job of a machine learning engineer is to:
 6. predict
 7. evaluate the predictions
 
-We will examine in here the first and second step.
+We will examine in here ideas for the first and second step.
 
 To recall models we work with can be:
 * **linear** and 
