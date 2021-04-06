@@ -206,11 +206,7 @@ $$
 \boldsymbol{\mu}=\boldsymbol{\Sigma}_{1} \mathbf{S}^{-1} \boldsymbol{\mu}_{2}+\boldsymbol{\Sigma}_{2} \mathbf{S}^{-1} \boldsymbol{\mu}_{1} \quad \boldsymbol{\Sigma}=\boldsymbol{\Sigma}_{1} \mathbf{S}^{-1} \boldsymbol{\Sigma}_{2}
 $$
 
-where 
-
-$$\mathbf{S} \equiv \boldsymbol{\Sigma}_{1}+\boldsymbol{\Sigma}_{2}
-$$
-
+where $\mathbf{S} \equiv \boldsymbol{\Sigma}_{1}$ $+\boldsymbol{\Sigma}_{2}$
 
 
 ## Gaussian mixture mean and variance
@@ -225,7 +221,9 @@ The mean of the mixture density $p(x)$ is given by the weighted sum of the means
 $$
 \mathbb{E}[x]=\alpha \mu_{1}+(1-\alpha) \mu_{2}
 $$
+
 The variance of the mixture density $p(x)$ is given by
+
 $$
 \mathbb{V}[x]=\left[\alpha \sigma_{1}^{2}+(1-\alpha) \sigma_{2}^{2}\right]+\left(\left[\alpha \mu_{1}^{2}+(1-\alpha) \mu_{2}^{2}\right]-\left[\alpha \mu_{1}+(1-\alpha) \mu_{2}\right]^{2}\right)
 $$
