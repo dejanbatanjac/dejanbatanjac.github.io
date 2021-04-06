@@ -206,7 +206,10 @@ $$
 \boldsymbol{\mu}=\boldsymbol{\Sigma}_{1} \mathbf{S}^{-1} \boldsymbol{\mu}_{2}+\boldsymbol{\Sigma}_{2} \mathbf{S}^{-1} \boldsymbol{\mu}_{1} \quad \boldsymbol{\Sigma}=\boldsymbol{\Sigma}_{1} \mathbf{S}^{-1} \boldsymbol{\Sigma}_{2}
 $$
 
-where $\mathbf{S} \equiv \boldsymbol{\Sigma}_{1}+\boldsymbol{\Sigma}_{2}$.
+where 
+
+$$\mathbf{S} \equiv \boldsymbol{\Sigma}_{1}+\boldsymbol{\Sigma}_{2}
+$$
 
 
 
@@ -232,7 +235,7 @@ $$
 $\boldsymbol{y}=\boldsymbol{T x}+\gamma$
 
 
-where $\boldsymbol{x} \perp \gamma, \gamma \sim \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma}),$ and $\boldsymbol{x} \sim \mathcal{N}\left(\boldsymbol{\mu}_{x}, \boldsymbol{\Sigma}_{x}\right)$. 
+where $\boldsymbol{x} \perp \gamma, \gamma \sim \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma}),$ and <span>$\boldsymbol{x} \sim \mathcal{N}\left(\boldsymbol{\mu}_{x}, \boldsymbol{\Sigma}_{x}\right)$.</span> 
 
 
 The marginal $p(\boldsymbol{y})=\int_{\boldsymbol{x}} p(\boldsymbol{y} \mid \boldsymbol{x}) p(\boldsymbol{x})$ is a
@@ -318,7 +321,7 @@ $$
 
 The likelihood $p(y \mid \boldsymbol{x}, \boldsymbol{\theta})$ is a function of parameters $\boldsymbol{\theta}$ but **it may not integrate to 1**. -->
 
-### Simple linear regression
+### Simple linear regression and Gaussian noise
 
 In here we consider linear functions $f: \mathbb{R} \rightarrow \mathbb{R}$
 
