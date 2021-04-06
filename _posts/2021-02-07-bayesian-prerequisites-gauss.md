@@ -214,7 +214,6 @@ $$
 ## Gaussian mixture mean and variance
 
 Let's check two univariate Gaussian densities:
-
 $$
 p(x)=\alpha p_{1}(x)+(1-\alpha) p_{2}(x)
 $$
