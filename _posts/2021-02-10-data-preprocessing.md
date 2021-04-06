@@ -66,7 +66,7 @@ If we multiply a numeric feature with some constant, this is called **scaling**.
 
 If we scale a **single feature** by multiplying it with a single constant we alter the relative proportion it has to other features, so this is not common.
 
-It is very common to normalize a feature as in the next examples:
+It is very common to scale or normalize a feature as in the next examples:
 
 **Example**: Scale to [0,1]
 
