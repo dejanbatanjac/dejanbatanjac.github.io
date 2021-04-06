@@ -91,6 +91,8 @@ Out:
 0.125
 ```
 
+---
+
 **Example**: _Comparing reviews_
 
 Suppose one reseller has 80 positive reviews out of 100. The other reseller has two reviews, both positive. You could say the one with 100% approval is better?
@@ -100,11 +102,11 @@ We can express pdf using Gamma function:
 
 $f(x) = \frac{\Gamma(a+b)}{\Gamma(a) \Gamma(b)} x^{a-1}(1-x)^{b-1}$
 
-**First case**: 80 positive out of 100 is $beta(81,21)$
+**First case**: 80 positive out of 100 is $\operatorname{Beta}(81,21)$
 
 $\theta_1 \text{PDF}:\frac{101!}{80!20!} x^{80} (1-x)^{20}$
 
-**Second case**: 2 positive out of 2 is $beta(3,1)$
+**Second case**: 2 positive out of 2 is $\operatorname{Beta}(3,1)$
 
 $\theta_2 \text{PDF}:3y^{2}$
 
