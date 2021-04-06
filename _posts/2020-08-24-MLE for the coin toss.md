@@ -53,11 +53,12 @@ $\mathcal{T}=\\{h, h, h, t, t, h, t, t, t, h, t \\}$, where $\mathcal{T}$ is our
 $\large p_{\small \text{MLE}}$ is ${H \over {T+H}} = {5 \over 11}$.
 
 
-## Short intro to Bernoulli and Binomial distribution
+## Addendum
 
 ### Bernoulli distribution
 
-Bernoulli distribution is a distribution for a single binary random variable $X$ with state $x \in\{0,1\}$. It is governed by a single continuous parameter $\mu \in[0,1]$ that represents the probability of $X=1 .$ The Bernoulli distribution $\operatorname{Ber}(\mu)$ is defined as
+Bernoulli distribution is a distribution for a single binary random variable $X$ with state $x \in\{0,1\}$. It is governed by a single continuous parameter $\mu \in[0,1]$ that represents the probability of $X=1 .$ The Bernoulli distribution $\operatorname{Ber}(\mu)$ is defined as:
+
 $$
 \begin{aligned}
 p(x \mid \mu) &=\mu^{x}(1-\mu)^{1-x}, \quad x \in\{0,1\}, \\
@@ -65,6 +66,7 @@ p(x \mid \mu) &=\mu^{x}(1-\mu)^{1-x}, \quad x \in\{0,1\}, \\
 \mathbb{V}[x] &=\mu(1-\mu)
 \end{aligned}
 $$
+
 where $\mathbb{E}[x]$ and $\mathbb{V}[x]$ are the mean and variance of the binary random variable $X$.
 
 ### Binomial distribution
@@ -72,6 +74,7 @@ where $\mathbb{E}[x]$ and $\mathbb{V}[x]$ are the mean and variance of the binar
 Binomial distribution is generalization of the Bernoulli distribution.
 
 In particular, the Binomial can be used to describe the probability of observing $m$ occurrences of $X=1$ in a set of $N$ samples from a Bernoulli distribution where $p(X=1)=\mu \in[0,1] .$ The Binomial distribution $\operatorname{Bin}(N, \mu)$ is defined as:
+
 $$
 \begin{aligned}
 p(m \mid N, \mu) &=\left(\begin{array}{c}
@@ -82,6 +85,7 @@ m
 \mathbb{V}[m] &=N \mu(1-\mu)
 \end{aligned}
 $$
+
 where $\mathbb{E}[m]$ and $\mathbb{V}[m]$ are the mean and variance of $m$, respectively.
 
 
