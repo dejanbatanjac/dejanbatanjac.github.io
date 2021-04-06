@@ -171,8 +171,7 @@ $$
 p(\boldsymbol{x}+\boldsymbol{y})=\mathcal{N}\left(\boldsymbol{\mu}_{\boldsymbol{x}}+\boldsymbol{\mu}_{\boldsymbol{y}}, \boldsymbol{\Sigma}_{x}+\boldsymbol{\Sigma}_{\boldsymbol{y}}\right)
 $$
 
-Or more general:
-
+Or more general: 
 $$
 p(a \boldsymbol{x}+b \boldsymbol{y})=\mathcal{N}\left(a \boldsymbol{\mu}_{x}+b \boldsymbol{\mu}_{y}, a^{2} \boldsymbol{\Sigma}_{x}+b^{2} \boldsymbol{\Sigma}_{y}\right)
 $$
