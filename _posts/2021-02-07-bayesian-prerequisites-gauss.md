@@ -206,7 +206,9 @@ $$
 $$
 
 where 
-$$\mathbf{S} \equiv \boldsymbol{\Sigma}_{1}$ $+\boldsymbol{\Sigma}_{2}$$
+$$
+\mathbf{S} \equiv \boldsymbol{\Sigma}_{1}+\boldsymbol{\Sigma}_{2}
+$$
 
 
 ## Gaussian mixture mean and variance
