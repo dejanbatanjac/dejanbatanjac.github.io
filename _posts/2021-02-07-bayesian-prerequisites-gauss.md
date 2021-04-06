@@ -185,6 +185,7 @@ The product of two Gaussians
 $$
 \mathcal{N}\left(\boldsymbol{x} \mid \boldsymbol{\mu}_{1}, \boldsymbol{\Sigma}_{1}\right) \mathcal{N}\left(\boldsymbol{x} \mid \boldsymbol{\mu}_{2}, \boldsymbol{\Sigma}_{2}\right)=\mathcal{N}(\boldsymbol{x} \mid \boldsymbol{\mu}, \boldsymbol{\Sigma}) \frac{\exp \left(-\frac{1}{2}\left(\boldsymbol{\mu}_{1}-\boldsymbol{\mu}_{2}\right)^{\top} \boldsymbol{S}^{-1}\left(\boldsymbol{\mu}_{1}-\boldsymbol{\mu}_{2}\right)\right)}{\sqrt{\operatorname{det}(2 \pi \boldsymbol{S})}}
 $$
+
 <!-- 
 $\mathcal{N}(\boldsymbol{x} \mid \boldsymbol{a}, \boldsymbol{A}) \mathcal{N}(\boldsymbol{x} \mid \boldsymbol{b}, \boldsymbol{B})$
 is a Gaussian distribution scaled by a $c \in \mathbb{R}$, given by $c \mathcal{N}(\boldsymbol{x} \mid \boldsymbol{c}, \boldsymbol{C})$ with
@@ -282,8 +283,8 @@ $$
 &=\frac{1}{2 \sigma^{2}} \sum_{n=1}^{N}\left(y_{n}-\boldsymbol{x}_{n}^{\top} \boldsymbol{\theta}\right)^{2}-\sum_{n=1}^{N} \log \frac{1}{\sqrt{2 \pi \sigma^{2}}}
 \end{aligned}
 $$
-<!-- 
-### Gaussian noise for likelihood function
+
+<!-- ### Gaussian noise for likelihood function
 
 We start with the LR (linear regression) prerequisites:
 * data inputs $\boldsymbol{x} \in \mathbb{R}^{d}$
