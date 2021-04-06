@@ -224,8 +224,7 @@ $$
 \mathbb{E}[x]=\alpha \mu_{1}+(1-\alpha) \mu_{2}
 $$
 
-The variance of the mixture density $p(x)$ is given by
-
+The variance of the mixture density $p(x)$ is given by:
 $$
 \mathbb{V}[x]=\left[\alpha \sigma_{1}^{2}+(1-\alpha) \sigma_{2}^{2}\right]+\left(\left[\alpha \mu_{1}^{2}+(1-\alpha) \mu_{2}^{2}\right]-\left[\alpha \mu_{1}+(1-\alpha) \mu_{2}\right]^{2}\right)
 $$
