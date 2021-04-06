@@ -73,20 +73,20 @@ where $\mathbb{E}[x]$ and $\mathbb{V}[x]$ are the mean and variance of the binar
 
 Binomial distribution is generalization of the Bernoulli distribution.
 
-In particular, the Binomial can be used to describe the probability of observing $m$ occurrences of $X=1$ in a set of $N$ samples from a Bernoulli distribution where $p(X=1)=\mu \in[0,1] .$ The Binomial distribution $\operatorname{Bin}(N, \mu)$ is defined as:
+In particular, the Binomial can be used to describe the probability of observing $m$ occurrences of $X=1$ in a set of $N$ samples (number of trials) from a Bernoulli distribution where $p(X=1)=\mu \in[0,1] .$ The Binomial distribution $\operatorname{Bin}(N, \mu)$ is defined as:
 
 $$
 \begin{aligned}
-p(m \mid N, \mu) &=\left(\begin{array}{c}
+p(x \mid N, \mu, m) &=\left(\begin{array}{c}
 N \\
 m
 \end{array}\right) \mu^{m}(1-\mu)^{N-m} \\
-\mathbb{E}[m] &=N \mu \\
-\mathbb{V}[m] &=N \mu(1-\mu)
+\mathbb{E}[x] &=N \mu \\
+\mathbb{V}[x] &=N \mu(1-\mu)
 \end{aligned}
 $$
 
-where $\mathbb{E}[m]$ and $\mathbb{V}[m]$ are the mean and variance of $m$, respectively.
+where $\mathbb{E}[x]$ and $\mathbb{V}[x]$ are the mean and variance of $m$, respectively.
 
 
 <!--
