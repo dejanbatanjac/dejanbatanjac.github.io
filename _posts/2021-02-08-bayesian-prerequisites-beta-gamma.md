@@ -6,6 +6,7 @@ permalink: /bayesian-prerequisites-beta-gamma
 ---
 - [Beta distribution](#beta-distribution)
 - [Gamma distribution](#gamma-distribution)
+- [Appendix](#appendix)
 
 
 In here I will create short intro for beta and gamma distributions two very important distributions form [different univariate distributions](http://www.math.wm.edu/~leemis/chart/UDR/UDR.html).
@@ -74,7 +75,7 @@ $p(\theta \mid X)=B\left(N_{1}+a, N_{0}+b\right)$
 
 ---
 
-**Example**: _Percentage of pdf inside interval_
+**Example**: _Percentage of PDF inside interval_
 
 Let's calculate $Beta(3,1)$ inside $[0,0.5]$ interval using R code.
 
@@ -152,6 +153,23 @@ If we replace variance with inverse precision we get:
 
 $\mathcal{N}\left(x \mid \mu, \gamma^{-1}\right)=\frac{\sqrt{\gamma}}{\sqrt{2 \pi}} e^{-\gamma \frac{(x-\mu)^{2}}{2}}$
 
+
+> The Wishart distribution is the generalization of the Gamma distribution to positive-definite matrices. The Wishart distribution importance is close to normal distribution in order of importance.
+
+> Erlang distribution is Gamma distribution for $a \in \mathbb N$.
+
+
+## Appendix
+
+Exponential family of distribution is huge, among many others, exponential families includes:
+
+* normal
+* exponential
+* beta
+* gamma
+* chi-squared
+* geometric
+* etc.
 
 
 
