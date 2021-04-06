@@ -332,7 +332,7 @@ The parameter $\theta$ is know as the slope.
 Maximum likelihood estimator for the slope parameter is given:
 
 $$
-\theta_{\mathrm{ML}}=\left(\boldsymbol{X}^{\top} \boldsymbol{X}\right)^{-1} \boldsymbol{X}^{\top} \boldsymbol{y}=\frac{\boldsymbol{X}^{\top} \boldsymbol{y}}{\boldsymbol{X}^{\top} \boldsymbol{X}} 
+\theta_{\mathrm{ML}}=\left(\boldsymbol{x}^{\top} \boldsymbol{x}\right)^{-1} \boldsymbol{x}^{\top} \boldsymbol{y}=\frac{\boldsymbol{x}^{\top} \boldsymbol{y}}{\boldsymbol{x}^{\top} \boldsymbol{x}} 
 $$
-where $\boldsymbol{X}=\left[x_{1}, \ldots, x_{N}\right]^{\top} \in \mathbb{R}^{n}, \boldsymbol{y}=\left[y_{1}, \ldots, y_{n}\right]^{\top} \in \mathbb{R}^{n}$
+where $\boldsymbol{x}=\left[x_{1}, \ldots, x_{n}\right]^{\top} \in \mathbb{R}^{n}, \boldsymbol{y}=\left[y_{1}, \ldots, y_{n}\right]^{\top} \in \mathbb{R}^{n}$
 
