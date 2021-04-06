@@ -14,7 +14,7 @@ permalink: /data-preprocessing
   - [Categorical features encoding](#categorical-features-encoding)
 - [Datetime features](#datetime-features)
 - [Handling missing values](#handling-missing-values)
-  
+
 
 Simplified, daily job of a machine learning engineer is to:
 
