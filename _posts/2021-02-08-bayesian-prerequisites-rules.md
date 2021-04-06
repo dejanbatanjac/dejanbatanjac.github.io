@@ -69,7 +69,7 @@ MLE and MAP are parameter estimators and the process to find parameters is calle
 
 **MLE** is a function seeking for a model as a set of parameters that best fits the data. MLE uses likelihood function (minimum of the negative log likelihood function) to estimate the fit.
 
-**MAP** is using minimum of the negative log posterior function to estimate Maximum a Posteriori fit.
+**MAP** is using minimum of the negative log posterior function to estimate Maximum a Posteriori fit. We say also MAP is summarization of the posterior.
 
 Together with estimating parameters probabilistic models are used for **inference** and **prediction**. Later problems are connected with the difficult integrations unless we have **conjugate prior and posterior**.
 
