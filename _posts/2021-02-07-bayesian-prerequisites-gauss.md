@@ -250,8 +250,9 @@ $$
 ## Entropy of Gaussian
 
 $p(\boldsymbol x) = \mathcal{N}(\boldsymbol x \mid \mu, \Sigma)$ is our PDF entropy is given by:
+&nbsp;
 $$
-H(X) \equiv- \mathbb E_{p(\boldsymbol x)} \log p(\boldsymbol x) = \int_{\mathbb R^d} p(\boldsymbol x) \log p(\boldsymbol x) = \frac{1}{2} \log \operatorname{det}(2 \pi \Sigma)+\frac{d}{2}
+H \equiv- \mathbb E_{p(\boldsymbol x)} \log p(\boldsymbol x) = \int_{\mathbb R^d} p(\boldsymbol x) \log p(\boldsymbol x) = \frac{1}{2} \log \operatorname{det}(2 \pi \Sigma)+\frac{d}{2}
 $$
 
 ## Translated, scaled, rotated random variable
