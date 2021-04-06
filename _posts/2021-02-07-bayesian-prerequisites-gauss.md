@@ -234,7 +234,10 @@ $$
 If we have linear transform: $\boldsymbol{y}=\boldsymbol{T x}+\gamma$
 
 
-where $\boldsymbol{x} \perp \gamma, \gamma \sim \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma}), \boldsymbol{x} \sim \mathcal{N}(\boldsymbol{\mu}_{x},$ $\boldsymbol{\Sigma}_{x})$
+where 
+$$
+\boldsymbol{x} \perp \gamma, \gamma \sim \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Sigma}), \boldsymbol{x} \sim \mathcal{N}(\boldsymbol{\mu}_{x},\boldsymbol{\Sigma}_{x})
+$$
 
 
 The marginal $p(\boldsymbol{y})=\int_{\boldsymbol{x}} p(\boldsymbol{y} \mid \boldsymbol{x}) p(\boldsymbol{x})$ is a
