@@ -113,7 +113,7 @@ Rejection sampling doesn't work well for high dimensions.
 
 ## MCMC
 
-MCMC methods are extensions of previous methods when previous methods are slow to compute.
+Markov chain Monte Carlo methods are extensions of previous methods when previous methods are slow to compute.
 
 This is why when we think of sampling methods we often think of MCMC.
 
@@ -289,13 +289,14 @@ x_{3}^{1} & \sim p\left(x_{3} \mid x_{1}=x_{1}^{1}, x_{2}=x_{2}^{1}\right)
 \end{aligned}
 $$
 
-In time-step $k+1$
+In time-step $k+1$:
+
 $$
-\begin{array}{l}
+\begin{aligned}
 x_{1}^{k+1} \sim p\left(x_{1} \mid x_{2}=x_{2}^{k}, x_{3}=x_{3}^{k}\right) \\
 x_{2}^{k+1} \sim p\left(x_{2} \mid x_{1}=x_{1}^{k+1}, x_{3}=x_{3}^{k}\right) \\
 x_{3}^{k+1} \sim p\left(x_{3} \mid x_{1}=x_{1}^{k+1}, x_{2}=x_{2}^{k+1}\right)
-\end{array}
+\end{aligned}
 $$
 
 As you may see for our 3D case we have 3 steps (states) per time state. Gibbs sampling is easy to implement, but its conversion is relatively slow when dimensionality is big.
