@@ -5,7 +5,6 @@ title: Bayesian prerequisites | Sampling
 permalink: /bayesian-sampling
 ---
 - [Sampling and variational algorithms](#sampling-and-variational-algorithms)
-- [Sampling algorithms](#sampling-algorithms)
 - [Importance Sampling](#importance-sampling)
 - [Rejection sampling](#rejection-sampling)
 - [MCMC](#mcmc)
@@ -26,9 +25,6 @@ There exist two main families of algorithms Bayesian use:
 * variational algorithms
 
 Variational algorithms are a family of techniques for approximating intractable integrals arising in Bayesian inference and machine learning.
-
-
-## Sampling algorithms
 
 Sampling algorithms produce answers by generating random numbers from a distribution of interest.
 
