@@ -293,9 +293,9 @@ In time-step $k+1$:
 
 $$
 \begin{aligned}
-x_{1}^{k+1} \sim p\left(x_{1} \mid x_{2}=x_{2}^{k}, x_{3}=x_{3}^{k}\right) \\
-x_{2}^{k+1} \sim p\left(x_{2} \mid x_{1}=x_{1}^{k+1}, x_{3}=x_{3}^{k}\right) \\
-x_{3}^{k+1} \sim p\left(x_{3} \mid x_{1}=x_{1}^{k+1}, x_{2}=x_{2}^{k+1}\right)
+x_{1}^{k+1} & \sim p\left(x_{1} \mid x_{2}=x_{2}^{k}, x_{3}=x_{3}^{k}\right) \\
+x_{2}^{k+1} & \sim p\left(x_{2} \mid x_{1}=x_{1}^{k+1}, x_{3}=x_{3}^{k}\right) \\
+x_{3}^{k+1} & \sim p\left(x_{3} \mid x_{1}=x_{1}^{k+1}, x_{2}=x_{2}^{k+1}\right)
 \end{aligned}
 $$
 
