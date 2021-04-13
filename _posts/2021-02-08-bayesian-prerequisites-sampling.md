@@ -61,9 +61,9 @@ My idea is to provide a basic classification and intuition for the methods. You 
 
 We only know to sample from **few** distributions including Uniform and Gaussian. Distribution $p(x)$ may not be one of them. So how to sample from $p(x)$?
 
-Importance sampling takes an easy-to-sample distribution $q(X)$ into play from where we generate samples.
+Importance sampling takes an easy-to-sample distribution $q(x)$ into play from where we generate samples.
 
-We use un-normalized distribution $\tilde q(X)$ in general case to generate $n$ samples and then we compute:
+We use un-normalized distribution $\tilde q(x)$ in general case to generate $n$ samples and then we compute:
 
 $$
 w_{i}=\frac{\tilde{p}\left(x_i\right)}{\tilde{q}\left(x_i\right)}
