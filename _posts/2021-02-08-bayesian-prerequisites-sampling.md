@@ -404,7 +404,7 @@ Short feedback of the two techniques:
 
 Reference: 
 
-* [Kolmogorov probability axioms](https://en.wikipedia.org/wiki/Probability_axioms){:rel="nofollow"}.
+* [Kolmogorov probability axioms](https://en.wikipedia.org/wiki/Probability_axioms){:rel="nofollow"}
 * [Importance sampling](https://pyro.ai/examples/inclined_plane.html){:rel="nofollow"}
 * [Metropolis-Hastings paper](https://bayes.wustl.edu/Manual/EquationOfState.pdf){:rel="nofollow"}
 * [Metropolis-Hastings algorithm explanation](https://www.quantstart.com/articles/Markov-Chain-Monte-Carlo-for-Bayesian-Inference-The-Metropolis-Algorithm/){:rel="nofollow"}
