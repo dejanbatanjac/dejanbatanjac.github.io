@@ -53,9 +53,9 @@ $$
 
 Monte Carlo sampling depend on the sample size $\large n$ and should not depend on the dimensionality of random variable $X$ or cardinality.
 
-Two very popular Monte Carlo methods are **Importance** and **Rejection** sampling. After that we cover Markov Chain Monte Carlo methods: **Gibbs** and **Metropolis Hasting** sampling.
+Two very popular Monte Carlo methods are **Importance** and **Rejection** sampling. After that we cover few Markov Chain Monte Carlo methods including **Gibbs** and **Metropolis Hasting** sampling.
 
-My idea is to provide a bigger picture and intuition for the methods. You may check the reference materials for the strict mathematical definitions and proofs.
+My idea is to provide a basic classification and intuition for the methods. You may check the reference materials for the strict mathematical definitions and more details.
 
 ## Importance Sampling
 
