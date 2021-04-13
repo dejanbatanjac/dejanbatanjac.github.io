@@ -321,9 +321,7 @@ Metropolis-Hastings is a six step algorithm:
 * generate a random number, compare with desire to move, and decide: move or stay
 * repeat
 
-**Requirement**:
-
-For a given probability density function $p(x)$, we only require that we have a function $f(x)$ that is proportional to $p(x)$! 
+**Requirement**: For a given probability density function $p(x)$, we only require that we have a function $f(x)$ that is proportional to $p(x)$! 
 
 MH is extremely useful when sampling posterior distributions in Bayesian inference where the marginal likelihood (the denominator) is hard to compute.
 
