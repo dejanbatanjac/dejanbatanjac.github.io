@@ -290,7 +290,7 @@ x_{3}^{k+1} & \sim p\left(x_{3} \mid x_{1}=x_{1}^{k+1}, x_{2}=x_{2}^{k+1}\right)
 \end{aligned}
 $$
 
-As you may see for our 3D case we have 3 steps (states) per time state. Gibbs sampling is easy to implement, but its conversion is relatively slow when dimensionality is big.
+As you may see for our 3D case we have 3 steps (states) per time state. Gibbs sampling is easy to implement, but it is relatively slow when dimensionality is big.
 
 We **cannot** parallelize Gibbs sampling per time step.
 
