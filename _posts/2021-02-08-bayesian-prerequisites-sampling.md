@@ -131,7 +131,7 @@ $$
 At each time interval there is fixed probability to switch to any state. After many time steps states we **may** or **may not** converge to stationary distribution.
 
 
-The next Markov chain afte each timestep alters the state and it will not converge to stationary probability distribution:
+In the next Markov chain will not converge to stationary probability distribution (states are altered each timestep):
 
 ![non converging](/images/2021/04/smc-nc.png)
 
