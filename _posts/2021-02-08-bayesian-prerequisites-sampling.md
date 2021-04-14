@@ -215,9 +215,9 @@ As you may note we have the exact same result as in the first Python example.
 
 You may think this has to have something with the init state, but if you alter the init state: `state = np.array([0.5, 0.5]) # init` we get the same result.
 
-We found what is called the **stationary distribution** of states and frequent we denote it with $\pi$.
+We found what is called the **stationary distribution** of states and frequent we denote it with $\pi$. The first Python example is simple Monte Carlo and the second is Markov chain Monte Carlo method. The first example had 100000 iterations while the second method had just 20 iteration. In general **MCMC perform faster than naive Monte Carlo**.
 
-The math behind it:
+The math behind MCMC:
 
 $$
 \begin{aligned}
