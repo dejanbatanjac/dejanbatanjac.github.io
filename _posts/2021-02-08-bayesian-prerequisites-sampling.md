@@ -84,7 +84,7 @@ As we say importance sampling is **not** a method to direct sample from distribu
 
 **Importance sampling** methods are originally designed for **integral approximations** such as *approximating intractable posterior distributions* or *marginal likelihoods*.
 
-In general three most common cases. Sampling methods from a distribution with density $p$ are used:
+Sampling methods from a distribution with density $p$ are used in these most common cases: 
 
 * to get an idea about this distribution
 * to solve an integration problem related to it
