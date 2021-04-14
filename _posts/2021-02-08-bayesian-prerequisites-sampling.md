@@ -4,7 +4,7 @@ layout: post
 title: Bayesian prerequisites | Sampling
 permalink: /bayesian-sampling
 ---
-- [Sampling and variational algorithms](#sampling-and-variational-algorithms)
+- [Sampling](#sampling)
 - [Importance Sampling](#importance-sampling)
 - [Rejection sampling](#rejection-sampling)
 - [MCMC](#mcmc)
@@ -13,18 +13,11 @@ permalink: /bayesian-sampling
 - [Hamiltonian Monte Carlo](#hamiltonian-monte-carlo)
 - [NUTS](#nuts)
 - [MCMC software](#mcmc-software)
-- [Variational Inference Algorithms](#variational-inference-algorithms)
+- [Compare Sampling and Variational Inference Algorithms](#compare-sampling-and-variational-inference-algorithms)
 
 
 
-## Sampling and variational algorithms 
-
-There exist two main families of algorithms Bayesian use: 
-
-* sampling algorithms
-* variational algorithms
-
-Variational algorithms are a family of techniques for approximating intractable integrals arising in Bayesian inference and machine learning.
+## Sampling 
 
 Sampling algorithms produce answers by generating random numbers from a distribution of interest.
 
@@ -383,7 +376,9 @@ Here is comparison of methods by speed in reverse order (first one is the slowes
 
 
 
-## Variational Inference Algorithms
+## Compare Sampling and Variational Inference Algorithms
+
+Variational algorithms are a family of techniques for approximating intractable integrals arising in Bayesian inference and machine learning.
 
 Although sampling algorithms were invented first ( during the II world war ), **variational inference methods** dominates the field because these methods are fast.
 
