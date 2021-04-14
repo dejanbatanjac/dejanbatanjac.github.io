@@ -378,7 +378,7 @@ Here is comparison of methods by speed in reverse order (first one is the slowes
 
 ## Compare Sampling and Variational Inference Algorithms
 
-Variational algorithms are a family of techniques for approximating intractable integrals arising in Bayesian inference and machine learning.
+Variational algorithms are a family of techniques for approximating intractable integrals arising in Bayesian inference and machine learning. They threat inference problems as optimization.
 
 Although sampling algorithms were invented first ( during the II world war ), **variational inference methods** dominates the field because these methods are fast.
 
