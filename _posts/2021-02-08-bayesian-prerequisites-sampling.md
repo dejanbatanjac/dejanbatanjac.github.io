@@ -86,7 +86,7 @@ Sampling methods from a distribution with density $p$ are used in these most com
 
 ## Rejection sampling
 
-Accept-reject or **rejection sampling** method is used to sample from **hard to sample** distributions. In here we sample based on **acceptance** or **rejection**. 
+Accept-reject or **rejection sampling** method is used to sample from **hard-to-sample** distributions. In here we sample based on **acceptance** or **rejection**. 
 
 ![rejection sampling](/images/2021/04/rejection.png)
 
