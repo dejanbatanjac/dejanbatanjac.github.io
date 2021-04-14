@@ -235,11 +235,11 @@ $$
 If here:
 
 * $p(x)$ is the distribution we sample from
-* we build the Markov chain that converge to $p(x)$.
+* we build Markov chain that converge to $p(x)$.
 * we start from any state
 * we simulate for many (say $M$ = 10.000) time steps
 
-Nice thing with this MCMC:
+Nice thing with MCMC:
 * easy to implement
 * easy to parallelize
 * unbiased (the higher M better convergence)
