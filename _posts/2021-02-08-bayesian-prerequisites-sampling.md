@@ -107,7 +107,7 @@ The only condition we are using is one **If condition** to check if current samp
 
 > We frequently consider the case where $q$ is uniform, but it is possible to use any easy-to-sample distribution. $q$ is know as **proposal** distribution.
 
-Rejection sampling doesn't work well for high dimensions.
+Rejection sampling doesn't work well in dimensions.
 
 ## MCMC
 
@@ -133,11 +133,11 @@ At each time interval there is fixed probability to switch to any state. After m
 
 The next Markov chain afte each timestep alters the state and it will not converge to stationary probability distribution:
 
-![non converging](/images/2021/04/mc-nc.png/)
+![non converging](/images/2021/04/mc-nc.png)
 
 Opposite the next Markov chain will converge to stationary distribution:
 
-![converging](/images/2021/04/mc-c.png/)
+![converging](/images/2021/04/mc-c.png)
 
 To calculate the stationary states we use the following Python code:
 
