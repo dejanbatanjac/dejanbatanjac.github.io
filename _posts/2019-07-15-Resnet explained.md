@@ -18,12 +18,12 @@ $$h_{t+1} - h_t = c(c(h_t))) $$
 or 
 $$h_{t+1} - h_t = R(h_t)$$
 
-This part $ h_{t+1} - h_t $ is called the <b>residual</b> and that is why we have the Resnet name.
+This part $ h_{t+1} - h_t $ is called the **residual** and that is why we have the Resnet name.
 
 Important: Inside the Resnet block there is no stride and no max pooling layers, so we are dealing with the same dimensionality inside the block.
 
 Typically the architecture of Resnet is not using the dropout also.
 
-The architecture also means several Resnet blocks are setting at top of each other.
+The architecture also means several Resnet blocks are sitting at top of each other.
 
 
