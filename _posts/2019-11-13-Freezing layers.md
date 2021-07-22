@@ -9,11 +9,11 @@ Freezing neural net parameters means not allowing parameters to learn. This is o
 * setting `requires_grad` to `False`
 * setting the learning rate `lr` to zero
 
-Let's use resnet18 model to examine freezing layers.
+Let's use the resnet18 model to examine freezing layers.
 
 ## Using requires_grad
 
-```
+```python
 import torch
 from torchvision.models import resnet18
 model = resnet18(pretrained=False)
@@ -37,21 +37,21 @@ As we can see all the parameters are able to learn, `requires_grad` is True.
 
 You can set particular parameter `requires_grad` to `False` like this (both are the same):
 
-```    
+```python
 model.fc.weight.requires_grad_(False)
 model.fc.weight.requires_grad = False
 ```
 
 You can set all the parameters `requires_grad` to `False` this way:
 
-```
+```python
 for name, p in model.named_parameters():
      p.requires_grad = False
 ```    
 
 The next code sets `requires_grad` to `True` for `conv1.weight` and `fc.weight` and `False` for the rest of parameters.
 
-```
+```python
 import torch
 from torchvision.models import resnet18
 model = resnet18(pretrained=False)
@@ -71,7 +71,7 @@ for name, p in model.named_parameters():
 
 The next code is a checker that we update the `model.fc.weight` parameter:
 
-```
+```python
 import torch
 from torchvision.models import resnet18
 model = resnet18(pretrained=False)
@@ -106,13 +106,13 @@ print(p1,p2)
 
 ## Zero learning rate
 
-The `param_groups` is optimizer list of dictionaries. It usually has just a single group (item list) with the following keys:
+The `param_groups` is an optimizer list of dictionaries. It usually has just a single group (item list) with the following keys:
 
     dict_keys(['params', 'lr', 'momentum', 'dampening', 'weight_decay', 'nesterov'])
 
 For example:
 
-```
+```python
 import torch
 from torchvision.models import resnet18
 model = resnet18(pretrained=False)
@@ -123,7 +123,7 @@ for param_group in optimizer.param_groups:
 
 We can create two groups for the same model like this:
 
-```
+```python
 model = resnet18(pretrained=False)
 optimizer.param_groups.clear()
 optimizer.param_groups.append({'params' : model.conv1.parameters(), 'lr' : 0.3, 'name': 'model.conv1' })
@@ -134,7 +134,7 @@ for param_group in optimizer.param_groups:
 
 Or we can create a new group for every param:
 
-```
+```python
 optimizer.param_groups.clear() 
 for name, param in model.named_parameters():
     optimizer.add_param_group({'params' : param, 'lr' : 0.1, 'name':name})    
@@ -142,7 +142,7 @@ for name, param in model.named_parameters():
 
 Let's check setting `fc.weight` learning rate to 0:
 
-```
+```python
 for p in optimizer.param_groups:
     if p['name']=='fc.weight':
         p['lr']=0
