@@ -47,10 +47,6 @@ permalink: /ml-brainstorming
   - [Whitening version of Batch Norm](#whitening-version-of-batch-norm)
   - [Other regularization options](#other-regularization-options)
 - [Optimizers](#optimizers)
-  - [GD](#gd)
-  - [SGD](#sgd)
-  - [Adam](#adam)
-  - [AdaGrad](#adagrad)
 - [General task of Machine Learning](#general-task-of-machine-learning)
 - [Nice Resources](#nice-resources)
  
@@ -65,19 +61,20 @@ Machine learning is usually divided into three main types:
  
 Predictive learning has the mapping from input $\mathbf x$ to output $y$.
  
-$\mathcal{D}=\left\{\left(\mathbf{x}_{i}, y_{i}\right)\right\}_{i=1}^{N}$
+$$\mathcal{D}=\left\{\left(\mathbf{x}_{i}, y_{i}\right)\right\}_{i=1}^{N}$$
  
 Where $N$ is the number of training examples, $y_i$ is the single output feature, $\mathbf{x}_{i}$ is all the input features and $\mathcal{D}$ is the training set.
  
 Descriptive learning doesn't have a target.
  
-$\mathcal{D}=\left\{\mathbf{x}_{i}\right\}_{i=1}^{N}$
+$$\mathcal{D}=\left\{\mathbf{x}_{i}\right\}_{i=1}^{N}$$
  
 It is sometimes called _knowledge discovery_ and our goal is to find _data patterns_.
  
 The problem with descriptive learning is there is no obvious error metric to use.
  
 > There is a mixture from the first two types called semi-supervised learning
+
 ## Why do we have train, validation and test set
  
 We need all three sets, train set to train, validation set to check if we are good. 
@@ -468,12 +465,11 @@ Linear regression has a closed form solution meaning that the algorithm can get 
  
 ### Logistic Regression
  
-Logistic regression uses sigmoid function which transforms output and returns probability value from 0 to 1. 
- 
+Logistic regression uses sigmoid function which transforms output and returns reguular probability value from 0 to 1. 
+
 This output value will be mapped to two or more classes.
- 
+
 If two classes of output we represent this with: $y=\{0,1\}$ and call it **binary** logistic regression.
- 
  
 The cost function of logistic regression is log loss or Cross-Entropy loss. 
  
@@ -595,22 +591,11 @@ Other regularization options include:
  
 ## Optimizers
  
-### GD
- 
-Not practical because it performs computations on the whole dataset.
- 
-### SGD
- 
-SGD only computes a mini-batch of data examples. 
- 
-### Adam 
- 
-Adam is the best among the adaptive optimizers in most of the cases. Good with sparse data: the adaptive learning rate is perfect for this type of datasets.
- 
-### AdaGrad
- 
-In the Adagrad optimizer, there is no momentum. Adagrad uses different learning rates for each dimension.
- 
+* GD (Not practical because it performs computations on the whole dataset)
+* SGD (only computes a mini-batch of data examples)
+* Adam (the best among the adaptive optimizers in most of the cases and good with sparse data, has the adaptive learning rate)
+*  AdaGrad (has no momentum, uses different learning rates for each dimension)
+
 ## General task of Machine Learning
  
 The general task in ML is to reduce Entropy.
