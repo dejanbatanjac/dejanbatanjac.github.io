@@ -61,15 +61,18 @@ Machine learning is usually divided into three main types:
 
 Predictive learning has the mapping from input $\mathbf x$ to output $y$.
 
+<div>
 
 $\begin{aligned}\mathcal{D}=\left\{\left(\mathbf{x}_{i}, y_{i}\right)\right\}_{i=1}^{N}\end{aligned}$
-
+</div>
 
 Where $N$ is the number of training examples, $y_i$ is the single output feature, $\mathbf{x}_{i}$ is all the input features and $\mathcal{D}$ is the training set.
  
 Descriptive learning doesn't have a target.
+<div>
 
-$\begin{aligned}\mathcal{D}=\left\{\mathbf{x}_{i}\right\}_{i=1}^{N}\end{aligned}$
+$\mathcal{D}=\left\{\mathbf{x}_{i}\right\}_{i=1}^{N}$
+<div>
 
 
 It is sometimes called _knowledge discovery_ and our goal is to find _data patterns_.
