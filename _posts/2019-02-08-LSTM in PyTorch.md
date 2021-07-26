@@ -1,5 +1,7 @@
 ---
 published: true
+layout: post
+title: LSTM in PyTorch
 ---
 Here is the model of LSTM cell with the following notation:
 
