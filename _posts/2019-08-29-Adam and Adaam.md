@@ -28,7 +28,7 @@ The paper suggests Adam should be implemented like this:
  
 However, if we convert the [Adam optimizer from PyTorch](https://pytorch.org/docs/stable/_modules/torch/optim/adam.html) you will note that the implementation is not by the paper.
  
-I will present you the simplified Adam based on the PyTorch implementation with weight decay and other unneeded stuff removed:
+I present in here the simplified version of Adam based on the PyTorch implementation with weight decay removed:
  
     class Adam(Optimizer): #simplified but like in PyTorch
  
