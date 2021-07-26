@@ -45,6 +45,7 @@ permalink: /ml-brainstorming
   - [L1 and L2 regularization](#l1-and-l2-regularization)
   - [Batch Norm](#batch-norm)
   - [Whitening version of Batch Norm](#whitening-version-of-batch-norm)
+  - [Other norms](#other-norms)
   - [Other regularization options](#other-regularization-options)
 - [Optimizers](#optimizers)
 - [General task of Machine Learning](#general-task-of-machine-learning)
@@ -585,6 +586,18 @@ This way we say batch normalization works together with gradient descents.
 Batch norm does a good job at controlling distributions of individual channels, but doesn't tackle covariance between channels. 
  
 Whitening version of the batch norm will do ZCA to remove input correlations.
+
+### Other norms
+
+There is no universal normalization method that can solve all application problems.
+
+Other norms are Layer norm especially used in the transformer architecture.
+
+Instance norm normalizes each element of the batch independently across spatial locations only and for all the channels.
+
+![nomrs](/images/2021/07/norms.png)
+
+
  
 ### Other regularization options
  
