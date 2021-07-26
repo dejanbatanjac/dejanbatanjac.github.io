@@ -564,7 +564,9 @@ Use L1 or Lasso regularization if you have a great number of weights to shrink t
  
 This way we can use L1 for feature selection, as we can drop any variables associated with coefficients that go to zero.
  
-Use L2 or Ridge regularization or Weight Decay will penalize weights evenly. L2 is useful when you have collinear features.
+Use L2 or Ridge regularization will penalize weights evenly. L2 is useful when you have collinear features.
+
+> L1, L2 are also know as Weight Decay
  
 ### Batch Norm
  
