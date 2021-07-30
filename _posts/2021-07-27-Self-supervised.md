@@ -37,7 +37,7 @@ In self-supervised learning labels are generated from the data itself.
  
 If we have a sentence: **This is a cat**.
  
-We can label this sentence. We can label each word with a specific word type, or we can label the whole sentence either positive or negative. This is a supervised approach.
+We can label each word with a specific word type, or we can label the whole sentence either positive or negative. This is a supervised approach.
  
 Self-supervised learning approach is what BERT will do. If we omit the word and try to guess it.
  
