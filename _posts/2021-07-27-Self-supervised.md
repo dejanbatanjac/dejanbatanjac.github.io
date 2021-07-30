@@ -82,8 +82,7 @@ Probably the most popular task for self-supervised learning are siamese images. 
  
 ![siamese](/images/2021/07/siamese.png)
  
- 
-The model has two encoders creating hidden representations $h$. Encoders share the same weights. The cost function or energy function is based on the inner (dot or scalar) product between hidden representations.
+The model is called joint embedding architecture. It has two encoders creating hidden representations $h$. Encoders share the same weights. The cost function or energy function is based on the inner (dot or scalar) product between hidden representations.
  
 > The inner product is bigger if the features are close enough, else it is smaller.
  
