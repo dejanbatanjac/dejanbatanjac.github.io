@@ -140,6 +140,7 @@ Another approach is to use latent-variable predictive models. This is probably t
  
 Latent-variable predictive models:
  
-* eliminate the need for contrastive learning that is time demanding
+* eliminate the need for contrastive images because we may need a lot of contrastive images to train
 * immediately introduce multiple outputs based on the latent variable $z$.
+
 
