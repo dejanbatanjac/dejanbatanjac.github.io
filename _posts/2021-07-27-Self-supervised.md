@@ -63,7 +63,7 @@ For the text problems you can do masking which is a classification problem at th
  
 For the vision task is not a **discrete** problem to solve if you mask part of the image and try to reconstruct the missing part there will be many ways to replace the missing part.
  
-![augmentations](/images/2021/07/augmentations.jpg)
+![augmentations](/images/2021/07/augmentations.png)
  
 From this reason it is hard to reason about the problem dimensionality in case of vision tasks.
  
