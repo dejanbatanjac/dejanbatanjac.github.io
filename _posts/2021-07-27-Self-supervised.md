@@ -29,7 +29,7 @@ Self-supervised learning together with semi-supervised learning are currently po
 The rise of non-supervised learning in Word2Vec and GloVE brought BERT as a self-supervised learning model. 
  
 Today, the NLP trend is either self-supervised or semi-supervised: RoBERTa, XLM-R, GPT-2, GPT-3, T5, etc.
- 
+
  
 ## What is self-supervised learning?
  
@@ -102,7 +102,7 @@ Yann explains the reasoning behind introducing the contrastive images like this:
  
 _When $x$ and $y$ are slightly different the system is trained to produce the low energy. The difficult part is to train the model so it produces high energy._
  
-This means we need to create different embeddings (features) for different images.
+This means we need to create different embeddings (features) for different images in order for the model to effectively learn.
  
  
 ## Latent-variable predictive architecture
