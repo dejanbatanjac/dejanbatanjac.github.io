@@ -22,14 +22,20 @@ On the other hand, completely autonomous driving confuses our greatest ML system
  
 That's because people rely on prior knowledge of how the world works. This prior knowledge is what is known as **common sense**.
  
-Self-supervised learning is a way to learn the  **common sense** as explained in the article.
+In this context self-supervised learning is simple a way to learn the  **common sense**.
  
-Self-supervised learning together with semi-supervised learning are currently popular approaches in machine learning.
+Both self-supervised and semi-supervised learning are currently hot trends in machine learning.
  
-The rise of non-supervised learning in Word2Vec and GloVE brought BERT as a self-supervised learning model. 
+For instance the rise of non-supervised learning in Word2Vec and GloVE somehow brought BERT as a self-supervised learning model which addresses the problems Word2Vec and GloVE have.
  
-Today, the NLP trend is either self-supervised or semi-supervised: RoBERTa, XLM-R, GPT-2, GPT-3, T5, etc.
-
+Word2Vec will generate the same vector for each word from the dictionary. The problem is then when we use homonyms or multiple-meaning words.
+ 
+BERT will generate different vectors for the same word being used in two different contexts, so it fixes the problems with homonyms.
+ 
+GloVe is very similar to Word2Vec and one may perform better than other just based on a dataset of choice.
+ 
+Today, the NLP trend is either self-supervised or semi-supervised if we consider the dominant models such as: RoBERTa, XLM-R, GPT-2, GPT-3, T5, etc.
+ 
  
 ## What is self-supervised learning?
  
@@ -43,13 +49,13 @@ Self-supervised learning approach is what BERT will do. If we omit the word and 
  
 **This is [mask] cat**.
  
-Now, the label is whatever is missing. And the task of self-supervised machine learning is to figure out the label given the masked sentence.
+Now, the label is whatever is missing, and the task of self-supervised machine learning is to figure out the label given the masked sentence.
  
-> Self-supervised is because we create the labels from the data, otherwise it would be unsupervised.
+> We call it self-supervised learning because we create the labels from the data, otherwise it would be unsupervised learning.
  
-To create the labels in the previous case we used masking.
+To create the labels in the previous case we used the technique called **masking**.
  
-Don't confuse self-supervised learning with semi-supervised learning which is a combination of supervised and unsupervised machine learning methods. Ine semi-supervised learning some examples are labeled and the rest are unlabeled.
+Don't confuse self-supervised learning with semi-supervised learning which is a combination of supervised and unsupervised machine learning methods. In semi-supervised learning some examples are labeled and the others are unlabeled.
  
  
 ## Predicting hidden parts from non hidden parts
@@ -57,11 +63,11 @@ Don't confuse self-supervised learning with semi-supervised learning which is a 
 ![options ssl](/images/2021/07/self-supervised.options.png)
  
  
-Now, there are some obvious differences to notice when applying self-supervised learning on text and on video.
+There are some obvious differences to notice when applying self-supervised learning on text and on video.
  
 For the text problems you can do masking which is a classification problem at the end. The masked words can be anything from the vocabulary. The dimensionality of the classification problem is the size of the vocabulary.
  
-For the vision task is not a **discrete** problem to solve if you mask part of the image and try to reconstruct the missing part there will be many ways to replace the missing part.
+In case of the vision problems we don't have a **discrete** problem to solve. If we mask a part of the image and try to reconstruct what's missing there will be many ways to replace what's missing.
  
 ![augmentations](/images/2021/07/augmentations.jpg)
  
@@ -70,7 +76,7 @@ From this reason it is hard to reason about the problem dimensionality in case o
  
 ## Introducing the Energy function
  
-In a computer vision loss function can also be called energy function. 
+In computer vision a loss function can also be called the energy function. 
  
 ![energy function for video](/images/2021/07/energy.video.png)
  
@@ -78,27 +84,27 @@ We can reason about $y$ as a continuation of $x$ based on $F(x,y)$. If $F(x,y)$ 
  
 ## SSL by comparing image features
  
-Probably the most popular task for self-supervised learning are siamese images. You can create them with slight distortion of the original or as in the next image with the crop effect.
+Probably the most popular task for self-supervised learning are siamese images. You can create them with slight distortion of the original such as the crop effect.
  
 ![siamese](/images/2021/07/siamese.png)
  
-The model is called joint embedding architecture. It has two encoders creating hidden representations $h$. Encoders share the same weights. The cost function or energy function is based on the inner (dot or scalar) product between hidden representations.
+This model is called the joint embedding architecture. It has two encoders creating hidden representations $h$. Encoders share the same weights. The cost function or energy function is based on the inner (dot or scalar) product between hidden representations.
  
-> The inner product is bigger if the features are close enough, else it is smaller.
+> The inner product is bigger if the features are close enough, else it's smaller.
  
-Now we are comparing the image features $h$ which is different when comparing the images directly.
+Here we are comparing the image features $h$. This is different from comparing the images directly.
  
 ### The collapse problem with siamese images
  
 There is a catch with these siamese images. If we had just two similar images we would run to a problem called collapse. 
  
-We avoid collapse problems by introducing contrastive images to the original chess pieces. Contrastive image means _somehow_ different from the original.
+We avoid collapsing  by introducing contrastive images to the original chess pieces. Contrastive image means _somehow_ different from the original.
  
 ![collapse problem](/images/2021/07/ssl.energy.gif)
  
-The gif blue dots are similar images and green dots are contrastive images.
+The blue dots from the animation are similar images and green dots are contrastive images.
  
-Yann explains the reasoning behind introducing the contrastive images like this:
+Yann explains in the article the reasoning behind introducing the contrastive images:
  
 _When $x$ and $y$ are slightly different the system is trained to produce the low energy. The difficult part is to train the model so it produces high energy._
  
@@ -126,7 +132,7 @@ The gain with latent-variable predictive architecture is that we don't need to u
  
 ## Conclusion
  
-Self-supervised learning is the latest trend in machine learning. Just to name GPT-3 and BERT.
+Self-supervised learning is the latest trend in machine learning. Just to name GPT-3 and BERT models that use it.
  
 BERT is an example of self-supervised learning for NLP tasks. 
  
@@ -142,5 +148,3 @@ Latent-variable predictive models:
  
 * eliminate the need for contrastive images because we may need a lot of contrastive images to train
 * immediately introduce multiple outputs based on the latent variable $z$.
-
-
