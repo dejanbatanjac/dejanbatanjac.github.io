@@ -1,12 +1,12 @@
 ---
 published: true
 layout: post
-title: Callbacks vs. PyTorch hooks
+title: Python Callbacks vs. PyTorch hooks
 ---
 
 Consider this simple example of a callback in Python:
 
-```
+```python
 from time import sleep
 
 def batch_print(i):
@@ -29,7 +29,7 @@ batch number  4
 
 I should have a way to set callback inside `forward()` of a module somehow.
 
-```
+```python
 import torch
 import torch.nn as nn
 from time import sleep
@@ -56,7 +56,7 @@ for i in range(1, 4):
 
 This is possible using hooks:
 
-```
+```python
 from time import sleep
 
 import torch
