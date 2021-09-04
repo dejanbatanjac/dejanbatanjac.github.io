@@ -69,6 +69,66 @@ Probability is the simple likelihood of an event occurring.
  
 We use the term likelihood for something that already happened. We use the term probability for something that will happen.
  
+So we can use likelihood for hypotheses, and probability to attach to possible results of the experiments.
+ 
+Probabilities always sum to 1 as we know this is a fundamental property of a probability distribution.
+ 
+This property is a direct consequence of the fact that the support for a probability distribution is mutually exclusive. The support is a set of possible values of a random variable having that distribution. 
+ 
+For instance for the coin toss example we can either have the tail of the head outcomes. So the cardinality of the support is 2.
+ 
+The likelihood is not a probability distribution, unless normalized. So the likelihood may not sum up to 1.
+ 
+ 
+<!-- ## Probability vs. likelihood from the perspective of binomial trial
+ 
+I find it excellent here to continue the explanation of the probability and likelihood difference from the perspective of the binomial trials. 
+ 
+As we know the binomial trials (or Bernoulli trial) is a random experiment with exactly two possible outcomes:
+ 
+* success
+* failure
+ 
+To describe the [binomial trial](https://programming-review.com/r/binomial) there are three items we are interested in:
+ 
+* the number of successes 
+* the number of independent trials
+* the probability of a success
+ 
+If we take the first item as unknown and other two as known we have a binomial distribution `B(n,p)`.
+ 
+Here `n` is the number of trials, and `p` is the probability of success. The binomial distribution is probability distribution and it will add to 1.
+ 
+Also if we take the probability `p` is known and the number of successes `k` is known we have negative binomial distribution `NB(r,p)`.
+ 
+In negative binomial distribution the number of independent trials is unknown but this is still a probability distribution.
+ 
+If we have the number of trials `n` and number of successes `k` we can calculate the ratio to get `p`.
+ 
+If the probability `p` is what is missing and `n=10`, and `k=3` we can get `p=0.3`.
+ 
+So what is the likelihood estimation then? Likelihood is a measure from hypothesis space. 
+We need to provide hypothesis and spray some likelihood on them:
+ 
+H1: `p=0.5` and 
+H2: `p=0.1`.
+ 
+Note that these hypotheses are estimations and they don't have actual meaning. 
+ 
+To decide which hypothesis is more likely (so we use the term likelihood) we will calculate the ratio of the likelihoods.
+ 
+This ratio of likelihoods is called Bayes factor. Calculating Bayes factor is a Bayesian alternative to classical hypothesis testing.
+ 
+https://www.barelysignificant.com/post/bf/
+ 
+https://www.youtube.com/watch?v=T-kMpA4z-7k
+ 
+ 
+ 
+ 
+ -->
+ 
+ 
 ## Probability of a single event (marginal probability)
  
 Probability of an event occurring $P(e)$ unconditionally. This means $P(e)$ is not conditioned on another event. We usually call marginal probability just probability.
@@ -198,6 +258,3 @@ $P(x\mid y,z)$ is similar to $P(x\mid y)$ but now $\mathrm z$ is a random variab
  
 Lastly $P(x\mid y;z)$ should mean that $z$ is a set of parameters, not a random variable.
  
- 
- 
-
