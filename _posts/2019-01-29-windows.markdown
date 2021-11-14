@@ -150,7 +150,7 @@ To execute the upper script run PowerShell as Administrator and set the policy f
 
 Possible the best way to run script is from Windows PowerShell ISE.
 
-Visit [scriptcenter](https://gallery.technet.microsoft.com/scriptcenter/) for all kind of Windows scripts you may run.
+Visit [scriptcenter](https://gallery.technet.microsoft.com/scriptcenter/){:rel="nofollow"} for all kind of Windows scripts you may run.
 
 
 ## Uninstall Internet Explorer using PowerShell
