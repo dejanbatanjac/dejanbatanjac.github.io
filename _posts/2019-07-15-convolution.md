@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Convolution details in PyTorch
 ---
- 
+
 ### 1D Convolution
  
 This would be the 1d convolution in PyTorch
@@ -274,7 +274,7 @@ According to the [paper](https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf) f
  
 ### Few more tips about convolution
  
-* Convolution is position invariant and handles location, but not actions.
+* Convolution is ~~position~~ translation invariant and handles location, but not actions.
 * In PyTorch convolution is actually implemented as correlation.
 * In PyTorch `nn.ConvNd` and `F.convNd` do have reverse order of parameters.
  

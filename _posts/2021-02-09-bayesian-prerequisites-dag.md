@@ -5,6 +5,24 @@ title: Bayesian Network
 permalink: /probmodel
 ---
 
+
+
+
+
+Prior is a prior knowledge that can help us learn new concepts from the available data.
+
+Prior or or inductive prior is also known as inductive bias.
+
+In here, the word inductive does not hold the strict mathematical meaning of induction, but rather the fact that we will make some inference based on the previous knowledge.
+
+In this sense inductive bias is a prior (prior distribution) which is the knowledge about the data (without observing any data).
+
+The posterior distribution is a knowledge after the new evidence (the data) has been observed, taking in account the prior knowledge.
+
+In this sense you may guess the distribution is the knowledge about the data.
+
+
+
 In here probabilistic model called **Bayesian Network** will be examined.
 
 ## What is Bayesian network?
