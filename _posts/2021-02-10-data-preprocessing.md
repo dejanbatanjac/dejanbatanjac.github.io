@@ -28,7 +28,7 @@ Simplified, daily job of a machine learning engineer is to:
  
 We will examine in here ideas for the first and second step.
  
-To recall models we work with can be:
+To recall, models we work with can be:
 * **linear** and 
 * **nonlinear**
  
