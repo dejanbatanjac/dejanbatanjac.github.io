@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+description: The about page, shows my interests and links to other important pages
 permalink: /about/
 published: true
 ---
