@@ -22,6 +22,7 @@ permalink: /expectation
   - [Properties of covariance:](#properties-of-covariance)
 - [Correlation](#correlation)
 - [Moments greater than 2](#moments-greater-than-2)
+- [Examples](#examples)
  
  
 ![expectation](/images/2021/expect.jpg)
@@ -214,3 +215,66 @@ Fourth moment **kurtosis**:
  
 $kur(X) = \mathbb E\left[\left(\frac{X - \mu}{\sigma}\right)^4\right]$
 
+## Examples
+
+If $a \in \mathbb{R}$, $X$ and $Y$ are continuous random variables and $p(x)$ is the probability density function. 
+
+Using the above definitions:
+
+$\begin{aligned} \mathbb{E}[X] &=\int_{-\infty}^{\infty} x p(x) d x = \mu_X  \\ \operatorname{var}(X) &=\mathbb{E}\left[(X-\mathbb{E}[X])^{2}\right] = \sigma_X^2\end{aligned}$
+
+Derive the expectation and variance of the following random variables in terms of $\mathbb{E}[X], \mathbb{E}[Y], \operatorname{var}(X)$ and $\operatorname{var}(Y)$ :
+
+a) $X+a$ 
+
+b) $a X$
+
+c) $X+Y$
+
+
+a)
+$$
+\begin{aligned}
+\mathbb{E}[X+a] &=\int_{-\infty}^{\infty}(x+a) p(x) d x \\
+&=\int_{-\infty}^{\infty} x p(x) d x+a \int_{-\infty}^{\infty} p(x) d x \\
+&=\mathbb{E}[X]+a = \mu_X + a\\
+
+\operatorname{var}(X+a) &=\int_{-\infty}^{\infty}\left(x+a-\left(\mu_{X}+a\right)\right)^{2} p(x) d x \\
+&=\int_{-\infty}^{\infty}\left(x-\mu_{X}\right)^{2} p(x) d x \\
+&=\operatorname{var}(X) = \sigma_X^2
+\end{aligned}
+$$
+
+b)
+
+$$
+\begin{aligned}
+\mathbb{E}[a X] &=\int_{-\infty}^{\infty} a x p(x) d x \\
+&=a \int_{-\infty}^{\infty} x p(x) d x \\
+&=a \mathbb{E}[X] = a \mu_X\\
+\operatorname{var}(a X) &=\int_{-\infty}^{\infty}\left(a x-a \mu_{X}\right)^{2} p(x) d x \\
+&=a^{2} \int_{-\infty}^{\infty}\left(x-\mu_{X}\right)^{2} p(x) d x \\
+&=a^{2} \operatorname{var}(X) = a^2 \sigma_X^2
+\end{aligned}
+$$
+
+
+c)
+
+We use that $X$ and $Y$ are independent so $p(x,y)=p(x)p(y)$.
+
+$$
+\begin{aligned}
+\mathbb{E}[X+Y] &=\int_{-\infty}^{\infty}\left(\int_{-\infty}^{\infty}(x+y) p(x) d x\right) p(y) d y \\
+&=\int_{-\infty}^{\infty}\left(\int_{-\infty}^{\infty} x p(x) d x\right)+\left(\int_{-\infty}^{\infty} y p(x) d x\right) p(y) d y \\
+&=\int_{-\infty}^{\infty}(\mathbb{E}[X]+y) p(y) d y \\
+&=\int_{-\infty}^{\infty} \mathbb{E}[X] p(y) d y+\int_{-\infty}^{\infty} y p(y) d y \\
+&=\mathbb{E}[X]+\mathbb{E}[Y] = \mu_X + \mu_Y \\
+\operatorname{var}(X+Y) &=\int_{-\infty}^{\infty}\left(\int_{-\infty}^{\infty}\left(x+y-\mu_{X}-\mu_{Y}\right)^{2} p(x) d x\right) p(y) d y \\
+&=\int_{-\infty}^{\infty}\left(\int_{-\infty}^{\infty}\left(x-\mu_{X}\right)^{2}+2\left(x-\mu_{X}\right)\left(y-\mu_{Y}\right)+\left(y-\mu_{Y}\right)^{2} p(x) d x\right) p(y) d y \\
+&=\int_{-\infty}^{\infty}\left(\int_{-\infty}^{\infty}\left(x-\mu_{X}\right)^{2} p(x) d x+2\left(y-\mu_{Y}\right) \int_{-\infty}^{\infty}\left(x-\mu_{X}\right) p(x) d x+\int_{-\infty}^{\infty}\left(y-\mu_{Y}\right)^{2} p(x) d x\right) p(y) d y \\
+&=\int_{-\infty}^{\infty}\left(\operatorname{var}(X)+2\left(y-\mu_{Y}\right) \cdot 0+\left(y-\mu_{Y}\right)^{2}\right) p(y) d y \\
+&=\int_{-\infty}^{\infty} \operatorname{var}(X) p(y) d y+\int_{-\infty}^{\infty}\left(y-\mu_{Y}\right)^{2} p(y) d y \\
+&=\operatorname{var}(X)+\operatorname{var}(Y) = \sigma_X^2+\sigma_Y^2
+\end{aligned}
+$$
