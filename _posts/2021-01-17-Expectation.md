@@ -221,7 +221,7 @@ If $a \in \mathbb{R}$, $X$ and $Y$ are continuous random variables and $p(x)$ is
 
 Using the above definitions:
 
-$\begin{aligned} \mathbb{E}[X] &=\int_{-\infty}^{\infty} x p(x) d x = \mu_X  \\ \operatorname{var}(X) &=\mathbb{E}\left[(X-\mathbb{E}[X])^{2}\right] = \sigma_X^2\end{aligned}$
+$$\begin{aligned} \mathbb{E}[X] &=\int_{-\infty}^{\infty} x p(x) d x = \mu_X  \\ \operatorname{var}(X) &=\mathbb{E}\left[(X-\mathbb{E}[X])^{2}\right] = \sigma_X^2\end{aligned}$$
 
 Derive the expectation and variance of the following random variables in terms of $\mathbb{E}[X], \mathbb{E}[Y], \operatorname{var}(X)$ and $\operatorname{var}(Y)$ :
 
@@ -233,6 +233,7 @@ c) $X+Y$
 
 
 a)
+
 $$
 \begin{aligned}
 \mathbb{E}[X+a] &=\int_{-\infty}^{\infty}(x+a) p(x) d x \\
