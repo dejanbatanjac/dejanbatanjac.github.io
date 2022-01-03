@@ -40,7 +40,7 @@ In here we introduce the concept of probabilistic model together with the concep
  
 **Prior** is similar to the concept of regularization in classical approach
  
-**Posterior** is more specific knowledge of parameters after we selected prior knowledge that we get using the Bayes rule. The process to get the posterior from prior we call inference which is a cute name for _deriving conclusions_.
+**Posterior** is more specific knowledge of parameters after we selected prior knowledge that we get using the Bayes rule. The process to get the posterior from prior we call inference which is a cute name for _deriving conclusions_ after we learned something.
  
 **Evidence** also called marginal likelihood is what you get when you integrate
  
