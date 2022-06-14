@@ -57,7 +57,7 @@ permalink: /ml-brainstorming
 Machine learning is usually divided into three main types:
  
 * predictive or supervised learning
-* descriptive or unsupervised learning
+* descriptive (unsupervised) or self-supervised learning
 * reinforcement learning 
 
 Predictive learning has the mapping from input $\mathbf x$ to output $y$.
