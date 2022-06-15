@@ -5,6 +5,8 @@ title: Transformers general questions
 permalink: /transformers-general
 ---
 
+
+
 **Q: What are two main blocks transformer models are composed of?**
 
 A: Typically transformers models do have two blocks:
@@ -41,9 +43,30 @@ Encoder: Bert, Electra
 Decoder: GPT-2, CTRL
 Encoder-Decoder: Bart, T5, Marian
 
+## Positional encoding
 
 
+## Embedding and un-embedding
 
+If the vocabulary size is big like N=50.000 words, we need to use embeddings.
+
+ vocabulary size N of say 50,000,
+
+
+## Why we need masking
+
+Masking is needed to prevent the attention mechanism of a transformer from “cheating” in the decoder when training
+
+## Attention heads
+
+## More than one attention head
+
+
+## Skip connections
+
+Skip connections are invented to keep the gradients smooth, which is very desirable for the [backpropagation](/backpropagation).
+
+They are invented with for ResNets at first. The [ResNets with skip connections](https://arxiv.org/abs/1712.09913) dramatically improved the model performance.
 
 
 ## Is BERT auto-encoder
