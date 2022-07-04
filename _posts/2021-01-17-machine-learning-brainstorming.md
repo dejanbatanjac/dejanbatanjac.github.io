@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: ML brainstorming 
+title: ML brainstorming
 permalink: /ml-brainstorming
 ---
 - [Types of machine learning](#types-of-machine-learning)
@@ -20,6 +20,7 @@ permalink: /ml-brainstorming
   - [Example: Picking the candies form a box](#example-picking-the-candies-form-a-box)
 - [From Likelihood to cross entropy](#from-likelihood-to-cross-entropy)
 - [Binary cross entropy](#binary-cross-entropy)
+- [Multi-class classification](#multi-class-classification)
 - [What is a random variable](#what-is-a-random-variable)
   - [How you estimate the distribution from the data](#how-you-estimate-the-distribution-from-the-data)
   - [What is the difference: MLE and MAP](#what-is-the-difference-mle-and-map)
@@ -61,36 +62,36 @@ Machine learning is usually divided into three main types:
  
 * predictive or supervised learning
 * descriptive (unsupervised) or self-supervised learning
-* reinforcement learning 
-
+* reinforcement learning
+ 
 Predictive learning has the mapping from input $\mathbf x$ to output $y$.
-
+ 
 <div>
-
+ 
 $\mathcal{D}=\left\{\left(\mathbf{x}_{i}, y_{i}\right)\right\}_{i=1}^{N}$
 </div>
-
-
+ 
+ 
 Where $N$ is the number of training examples, $y_i$ is the single output feature, $\mathbf{x}_{i}$ is all the input features and $\mathcal{D}$ is the training set.
  
 Descriptive learning doesn't have a target.
 <div>
-
+ 
 $\mathcal{D}=\left\{\mathbf{x}_{i}\right\}_{i=1}^{N}$
 </div>
-
-
+ 
+ 
 It is sometimes called _knowledge discovery_ and our goal is to find _data patterns_.
  
 The problem with descriptive learning is there is no obvious error metric to use.
  
 > There is a mixture from the first two types called semi-supervised learning
-
+ 
 ## Why do we have train, validation and test set
  
-We need all three sets, train set to train, validation set to check if we are good. 
+We need all three sets, train set to train, validation set to check if we are good.
  
-We need some unseen data (test set) for our final check. If we would use the test set before, our machine learning parameters would be **biased** with the test data. 
+We need some unseen data (test set) for our final check. If we would use the test set before, our machine learning parameters would be **biased** with the test data.
  
 The purpose of the test set is to reflect some real data that we haven't seen before.
  
@@ -122,7 +123,7 @@ This is a simple fact, there is an optimal balance of bias and variance. It is w
  
 ![overfitting and underfitting](/images/2021/07/bias.variance.png)
  
-If we track the algorithm complexity there are two trends. The variance will increase with the increase of algorithm complexity. 
+If we track the algorithm complexity there are two trends. The variance will increase with the increase of algorithm complexity.
  
 The bias will decrease with the increase of the algorithm complexity.
  
@@ -139,15 +140,15 @@ CV in the most basic form k-fold CV means the training set is split into k small
 In case of k-fold CV:
  
 * the model is trained on `k-1` folds as training data
-* the resulting model is validated on the remaining part of the data 
+* the resulting model is validated on the remaining part of the data
  
 ## CV when number of samples is small and lot of features
  
 Say we have 5000 features and 50 samples to predict one of the two possible classes.
  
-1. We could find top top 100 features (correlation) 
+1. We could find top top 100 features (correlation)
  
-2. We could then use CV on those 100 features and 50 samples. 
+2. We could then use CV on those 100 features and 50 samples.
  
 But this would be a methodological mistake again. We should do a CV with all 5000 features instead.
  
@@ -162,14 +163,14 @@ In a nonparametric model the number of parameters can grow.
  
  
 Some parametric models:
-* The Perceptron 
+* The Perceptron
 * Linear Regression
 * Logistic Regression
 * NB Naive Bayes
 * Neural net with fixed architecture
  
 The example of non parametric machine learning models:
-* KNN 
+* KNN
 * Decision trees
 * Gaussian process
  
@@ -184,7 +185,7 @@ _Generative algorithms_ given a gender will generate a human.
  
 Discriminative model focuses on what distinguishes the two or more classes.
  
-A generative model models the distribution (detailed characteristics of each class). 
+A generative model models the distribution (detailed characteristics of each class).
  
 SVM is an example of a discriminative model.
 NB is an example of a generative model.
@@ -215,7 +216,7 @@ The other approach is known as the _Bayesian probability approach_. For the same
  
 Else, if we don't have any prior beliefs at all, this is called the _uninformed prior_.
  
-Bayesian approach is especially important when we cannot do many measurements, or when the measurements are costly. For example, to answer the questions about how likely a person will catch a cold. 
+Bayesian approach is especially important when we cannot do many measurements, or when the measurements are costly. For example, to answer the questions about how likely a person will catch a cold.
  
  
 ## Bayesian approach
@@ -228,67 +229,87 @@ We often deal with uncertainty when we search for:
  
 The systematic application of probabilistic reasoning is called probabilistic approach or sometimes _Bayesian approach_.
  
-### Probability vs. likelihood 
+### Probability vs. likelihood
  
 Probability density function tells you how likely certain data appear. It always takes values in between 0 and 1.
  
 Likelihood function or likelihood represents the likeliness of different parameters for your distribution. Is used to maximize the chances of a particular situation to occur.
  
 Likelihood must be at least 0, and can be greater than 1.
-
-The likelihood of parameters $\theta$ is the probability of observing data $D$, given a model $M$: $P(D \mid M,\theta)$. 
-
+ 
+The likelihood of parameters $\theta$ is the probability of observing data $D$, given a model $M$: $P(D \mid M,\theta)$.
+ 
 A likelihood distribution will not sum to one, because there is no reason for the sum or integral of likelihoods over all parameter values to sum to one.
-
+ 
 ### Example: Picking the candies form a box
-
+ 
 Say we took the candies in this order:
 `Blue, Blue, Red, Red, Blue`. This is our training set.
-
+ 
 Empirical probability or red in the training set would be $p_{red}={2\over5}$
 $p_{blue}={3\over5}$.
-
+ 
 If we *guess* probabilities in two ways; with a bad and with a good model:
-
+ 
 $q_{red}^{bad}={4\over5}$
 $q_{blue}^{bad}={1\over5}$
-
+ 
 $q_{red}^{good}={2.5\over5}$
 $q_{blue}^{good}={2.5\over5}$
-
+ 
 How would the *bad model* describe the training set?
-
+ 
 $L(q^{bad}) = ({4 \over 5})^2({1 \over 5})^3={16\over25}{1\over125} = 0.00512$
-
+ 
 How would the *good model* describe the training set using the likelihood function?
-
+ 
 $L(q^{good}) = {1 \over 32} = 0.03125$
-
+ 
 How would the *perfect model* describe the training set?
-
+ 
 $L(q^{perfect}) = ({2 \over 5})^2({3 \over 5})^3=0.03456$
-
+ 
 ## From Likelihood to cross entropy
-
+ 
 In previous example the likelihood of the training set would be proportional to:
-
+ 
 $$\prod_i {q_i}^{Np_i}$$
-
+ 
 We convert likelihood to log likelihood:
-
+ 
 $${1\over {N}} \text {log} \prod_i {q_i}^{Np_i} = \sum_i p_i \text {log}(q_i) =-H(p,q)$$
-
+ 
 This log likelihood is cross entropy.
 ## Binary cross entropy
-
+ 
 For the binary case we may have the **binary cross entropy**:
-
+ 
 $$H(p,q) = - \sum_i p_i \text {log}(q_i) =-y \text{log}(\hat y)-(1-y)\text{log}(1-\hat y)$$
-
+ 
 $p_i$ and $q_i$ are probabilities of outcome in the training set, and estimated probability of outcome.
-
+ 
 Where the entropy is minimized the likelihood is maximized and the model is expressive.
-
+ 
+## Multi-class classification
+ 
+If the number of classes >2 we use the multi-class classification with softmax.
+ 
+Softmax function will normalize probabilities of the outputs to 1. The target or the ground truth class will have the $\hat y=1$.
+ 
+The cross entropy loss formula will be a big sum:
+ 
+$$L_{ce}=-\sum_i y_i \text{log}(\hat y_i)$$
+ 
+The smaller the loss the better the model predicts.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 ## What is a random variable
  
 As it turns out, the idea of a random variable (also called stochastic) is very important when dealing with probabilities. Random variables can be discrete and continuous.
@@ -318,7 +339,7 @@ There are few ways to estimate distributions from data:
 * MAP (Maximum A Posteriori Estimation)
 * Bayesian inference
  
-For MLE if we have to maximize $P(\mathcal D \mid \theta)$, where $\theta$ is a set of parameters, 
+For MLE if we have to maximize $P(\mathcal D \mid \theta)$, where $\theta$ is a set of parameters,
  
 For MAP we have $P(\theta \mid \mathcal D)$, where $\theta$ is a random variable now.
  
@@ -330,7 +351,7 @@ In both cases we end with the pattern $P(\mathcal D \mid \theta )$ to maximize w
  
 Bayesian inference returns probability density function and is complex to calculate.
  
-$P(y_{t} \mid \mathbf x_{t}) = \int_{\theta} P(y_{t} \mid \mathbf x_{t} , \theta) P(\theta \mid \mathcal D) d\theta$ 
+$P(y_{t} \mid \mathbf x_{t}) = \int_{\theta} P(y_{t} \mid \mathbf x_{t} , \theta) P(\theta \mid \mathcal D) d\theta$
  
 To calculate this integral is hard and this is why in practice we use pragmatic MLE and MAP approaches.
  
@@ -360,7 +381,7 @@ Second order Taylor expansion would be the Newton method.
 Newton's method is used for
 maximization/minimization of a function using knowledge of its second derivative.
  
-It has stronger constraints in terms of the differentiability of the function than gradient descent. 
+It has stronger constraints in terms of the differentiability of the function than gradient descent.
  
 If the second derivative of the function is undefined in the function's root, Newton's method won't work.
  
@@ -369,7 +390,7 @@ Newton's method has fast convergence (in just a few steps) to the local minima.
 Constraints of the Newton method:
  
 * the Newton method may not converge (no luck)
-* If the dimensionality of the data is huge it is hard to compute the Hessian ($D^2$), and inverse of Hessian ($D^3$), Where $D$ is the dimensionality of the data. 
+* If the dimensionality of the data is huge it is hard to compute the Hessian ($D^2$), and inverse of Hessian ($D^3$), Where $D$ is the dimensionality of the data.
  
 > Note the dataset may have large number of features $f$ and large number of data samples $n$, but the dimensionality of the data may just be $D=10$
  
@@ -426,7 +447,7 @@ Some activation functions:
  
 ### Why ReLU is better than Sigmoid activation function
  
-This reflects the fact that the brain (dendrons) use ReLU. Dendrons fire the axon if a certain condition is achieved. Usually things work better when we imitate nature. 
+This reflects the fact that the brain (dendrons) use ReLU. Dendrons fire the axon if a certain condition is achieved. Usually things work better when we imitate nature.
  
 The formally accepted reason why ReLU is better than sigmoid is related to the vanishing gradient problem. There are no such problems for ReLU or modifications while Sigmoids suffers from this problem for input greater than 6 in absolute value.
  
@@ -439,7 +460,7 @@ The problem with ReLU, it is not a smooth function near $x=0$.
  
 Objective function or criterion is the function we want to minimize or maximize.
  
-A loss function is for a single training example. 
+A loss function is for a single training example.
  
 A cost function is the average loss over the entire training dataset.
  
@@ -465,7 +486,7 @@ It is very important to use multiple evaluation metrics to evaluate your model.
  
 ### Regression metrics
  
-* MSE Mean Squared Error 
+* MSE Mean Squared Error
 * RMSE Root Mean Squared Error
 * MAE Mean Absolute Error
 * MAPE Mean Absolute Percentage Error
@@ -476,7 +497,7 @@ It is very important to use multiple evaluation metrics to evaluate your model.
  
 The mathematical reasoning behind the MSE is as follows: For any real applications, noise in the readings or the labels is inevitable.
  
-We generally assume this noise follows Gaussian distribution and this holds perfectly well for most of the real applications. Considering $e$ follows a Gaussian distribution in $y=f(x) + e$ and calculating the MLE, we get MSE which is also L2 distance. 
+We generally assume this noise follows Gaussian distribution and this holds perfectly well for most of the real applications. Considering $e$ follows a Gaussian distribution in $y=f(x) + e$ and calculating the MLE, we get MSE which is also L2 distance.
  
 > Assuming some other noise distribution may lead to other MLE estimates which will not be MSE.
  
@@ -492,7 +513,7 @@ We generally assume this noise follows Gaussian distribution and this holds perf
  
 Classification accuracy is the ratio of the number of correct predictions to the total number of input samples
  
-Logarithmic loss, also called log loss, works by penalizing the false classifications. 
+Logarithmic loss, also called log loss, works by penalizing the false classifications.
  
 A confusion matrix gives us a matrix as output and describes the complete performance of the model.
  
@@ -528,13 +549,13 @@ Linear regression has a closed form solution meaning that the algorithm can get 
  
 ### Logistic Regression
  
-Logistic regression uses sigmoid function which transforms output and returns reguular probability value from 0 to 1. 
-
+Logistic regression uses a sigmoid function which transforms output and returns regular probability value from 0 to 1.
+ 
 This output value will be mapped to two or more classes.
-
+ 
 If two classes of output we represent this with: $y=\{0,1\}$ and call it **binary** logistic regression.
  
-The cost function of logistic regression is log loss or Cross-Entropy loss. 
+The cost function of logistic regression is log loss or Cross-Entropy loss.
  
 If we have more than 2 output classes this is called **multiclass** logistic regression.
  
@@ -564,7 +585,7 @@ $$
  
 ### Jacobian vs. Hessian
  
-The Jacobian is then the generalization of the gradient for vector-valued functions of several variables. 
+The Jacobian is then the generalization of the gradient for vector-valued functions of several variables.
  
 Hessian Matrix is a square matrix of second-order partial derivatives of a scalar-valued function, or scalar field. It describes the local curvature of a function of many variables.
  
@@ -620,8 +641,8 @@ Use L1 or Lasso regularization if you have a great number of weights to shrink t
 This way we can use L1 for feature selection, as we can drop any variables associated with coefficients that go to zero.
  
 Use L2 or Ridge regularization will penalize weights evenly. L2 is useful when you have collinear features.
-
-> L1, L2 are also know as Weight Decay
+ 
+> L1, L2 are also known as Weight Decay
  
 ### Batch Norm
  
@@ -634,27 +655,27 @@ BN ensures bigger learning rates can be used.
 BN adds two additional trainable parameters:
  
 * the normalized output that's multiplied by standard deviation (gamma parameter)
-* and the additional mean (beta parameter) 
+* and the additional mean (beta parameter)
  
 This way we say batch normalization works together with gradient descents.
  
 ### Whitening version of Batch Norm
  
-Batch norm does a good job at controlling distributions of individual channels, but doesn't tackle covariance between channels. 
+Batch norm does a good job at controlling distributions of individual channels, but doesn't tackle covariance between channels.
  
 Whitening version of the batch norm will do ZCA to remove input correlations.
-
+ 
 ### Other norms
-
+ 
 There is no universal normalization method that can solve all application problems.
-
+ 
 Other norms are Layer norm especially used in the transformer architecture.
-
+ 
 Instance norm normalizes each element of the batch independently across spatial locations only and for all the channels.
-
-![nomrs](/images/2021/07/norms.png)
-
-
+ 
+![norms](/images/2021/07/norms.png)
+ 
+ 
  
 ### Other regularization options
  
@@ -672,12 +693,12 @@ Other regularization options include:
 * SGD (only computes a mini-batch of data examples)
 * Adam (the best among the adaptive optimizers in most of the cases and good with sparse data, has the adaptive learning rate)
 *  AdaGrad (has no momentum, uses different learning rates for each dimension)
-
+ 
 ## General task of Machine Learning
  
 The general task in ML is to reduce Entropy.
  
-Entropy is a measure of chaos or uncertainty. The goal of machine learning models is to reduce this uncertainty. 
+Entropy is a measure of chaos or uncertainty. The goal of machine learning models is to reduce this uncertainty.
  
 The lower the entropy the more information is gained about the target from the features.
  
@@ -689,6 +710,3 @@ Great resources to learn ML in 2021 are:
 * [Google Glossary](https://developers.google.com/machine-learning/glossary){:rel=nofollow}
 * [Cheat Sheet Glossary](https://ml-cheatsheet.readthedocs.io/en/latest/glossary.html){:rel=nofollow}
 * [Yann LeCun course](https://atcold.github.io/pytorch-Deep-Learning/){:rel=nofollow}
- 
- 
-
