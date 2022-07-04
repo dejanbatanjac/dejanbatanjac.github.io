@@ -17,7 +17,10 @@ permalink: /ml-brainstorming
 - [The two approaches to probability](#the-two-approaches-to-probability)
 - [Bayesian approach](#bayesian-approach)
   - [Probability vs. likelihood](#probability-vs-likelihood)
-  - [What is a random variable](#what-is-a-random-variable)
+  - [Example: Picking the candies form a box](#example-picking-the-candies-form-a-box)
+- [From Likelihood to cross entropy](#from-likelihood-to-cross-entropy)
+- [Binary cross entropy](#binary-cross-entropy)
+- [What is a random variable](#what-is-a-random-variable)
   - [How you estimate the distribution from the data](#how-you-estimate-the-distribution-from-the-data)
   - [What is the difference: MLE and MAP](#what-is-the-difference-mle-and-map)
 - [Backpropagation (BP)](#backpropagation-bp)
@@ -229,12 +232,64 @@ The systematic application of probabilistic reasoning is called probabilistic ap
  
 Probability density function tells you how likely certain data appear. It always takes values in between 0 and 1.
  
-Likelihood represents the likeliness of different parameters for your distribution. Is used to maximize the chances of a particular situation to occur.
+Likelihood function or likelihood represents the likeliness of different parameters for your distribution. Is used to maximize the chances of a particular situation to occur.
  
 Likelihood must be at least 0, and can be greater than 1.
- 
- 
-### What is a random variable
+
+The likelihood of parameters $\theta$ is the probability of observing data $D$, given a model $M$: $P(D \mid M,\theta)$. 
+
+A likelihood distribution will not sum to one, because there is no reason for the sum or integral of likelihoods over all parameter values to sum to one.
+
+### Example: Picking the candies form a box
+
+Say we took the candies in this order:
+`Blue, Blue, Red, Red, Blue`. This is our training set.
+
+Empirical probability or red in the training set would be $p_{red}={2\over5}$
+$p_{blue}={3\over5}$.
+
+If we *guess* probabilities in two ways; with a bad and with a good model:
+
+$q_{red}^{bad}={4\over5}$
+$q_{blue}^{bad}={1\over5}$
+
+$q_{red}^{good}={2.5\over5}$
+$q_{blue}^{good}={2.5\over5}$
+
+How would the *bad model* describe the training set?
+
+$L(q^{bad}) = ({4 \over 5})^2({1 \over 5})^3={16\over25}{1\over125} = 0.00512$
+
+How would the *good model* describe the training set using the likelihood function?
+
+$L(q^{good}) = {1 \over 32} = 0.03125$
+
+How would the *perfect model* describe the training set?
+
+$L(q^{perfect}) = ({2 \over 5})^2({3 \over 5})^3=0.03456$
+
+## From Likelihood to cross entropy
+
+In previous example the likelihood of the training set would be proportional to:
+
+$$\prod_i {q_i}^{Np_i}$$
+
+We convert likelihood to log likelihood:
+
+$${1\over {N}} \text {log} \prod_i {q_i}^{Np_i} = \sum_i p_i \text {log}(q_i) =-H(p,q)$$
+
+This log likelihood is cross entropy.
+## Binary cross entropy
+
+For the binary case we may have the **binary cross entropy**:
+
+$$H(p,q) = - \sum_i p_i \text {log}(q_i) =-y \text{log}(\hat y)-(1-y)\text{log}(1-\hat y)$$
+
+$p_i$ and $q_i$ are probabilities of outcome in the training set, and estimated probability of outcome.
+
+Where the entropy is minimized the likelihood is maximized and the model is expressive.
+
+## What is a random variable
  
 As it turns out, the idea of a random variable (also called stochastic) is very important when dealing with probabilities. Random variables can be discrete and continuous.
  
@@ -294,7 +349,7 @@ BP is the process of calculating the derivatives.
  
 ### Gradient Descent (GD)
  
-Once we have the derivatives and gradient descent is the process of descending through the gradient and adjusting the parameters of the model through the error function function.
+Once we have the derivatives and gradient descent is the process of descending through the gradient and adjusting the parameters of the model through the error function.
  
 GD is a first-order Taylor expansion iterative optimization algorithm for finding a local minimum of a differentiable function using the learning rate.
  
