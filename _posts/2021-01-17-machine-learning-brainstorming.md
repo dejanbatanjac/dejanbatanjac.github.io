@@ -294,7 +294,7 @@ Where the entropy is minimized the likelihood is maximized and the model is expr
  
 If the number of classes >2 we use the multi-class classification with softmax.
  
-Softmax function will normalize probabilities of the outputs to 1. The target or the ground truth class will have the $\hat y=1$.
+Softmax function will normalize the sum of output probabilities to 1. The target or the ground truth class will have the $\hat y=1$.
  
 The cross entropy loss formula will be a big sum:
  
