@@ -246,7 +246,7 @@ A likelihood distribution will not sum to one, because there is no reason for th
 Say we took the candies in this order:
 `Blue, Blue, Red, Red, Blue`. This is our training set.
  
-Empirical probability or red in the training set would be $p_{red}={2\over5}$
+Empirical probability of red in the training set would be $p_{red}={2\over5}$
 $p_{blue}={3\over5}$.
  
 If we *guess* probabilities in two ways; with a bad and with a good model:
