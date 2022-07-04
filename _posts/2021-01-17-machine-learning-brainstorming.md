@@ -9,7 +9,7 @@ permalink: /ml-brainstorming
 - [What is overfitting?](#what-is-overfitting)
 - [No Free Lunch Theorem](#no-free-lunch-theorem)
 - [Bias Variance tradeoff](#bias-variance-tradeoff)
-- [What is cross-validation (CV)](#what-is-cross-validation-cv)
+- [What is Cross-Validation (CV)](#what-is-cross-validation-cv)
 - [CV when number of samples is small and lot of features](#cv-when-number-of-samples-is-small-and-lot-of-features)
 - [Parametric vs. non parametric models](#parametric-vs-non-parametric-models)
 - [Generative vs. discriminative learning](#generative-vs-discriminative-learning)
@@ -133,7 +133,7 @@ The formula to calculate the total error is complex in general case, but if we u
  
 > Irreducible error is also called the noise, it is based on wrong labeling.
  
-## What is cross-validation (CV)
+## What is Cross-Validation (CV)
  
 CV in the most basic form k-fold CV means the training set is split into k smaller sets.
  
