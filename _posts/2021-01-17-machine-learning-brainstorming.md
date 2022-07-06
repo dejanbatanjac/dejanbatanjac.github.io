@@ -16,6 +16,7 @@ permalink: /ml-brainstorming
 - [Convex and non-convex goal functions](#convex-and-non-convex-goal-functions)
 - [The two approaches to probability](#the-two-approaches-to-probability)
 - [Bayesian approach](#bayesian-approach)
+- [Bayesian inference formula](#bayesian-inference-formula)
   - [Probability vs. likelihood](#probability-vs-likelihood)
   - [Example: Picking the candies form a box](#example-picking-the-candies-form-a-box)
 - [From Likelihood to cross entropy](#from-likelihood-to-cross-entropy)
@@ -228,19 +229,45 @@ We often deal with uncertainty when we search for:
 * what measurement should we perform next
  
 The systematic application of probabilistic reasoning is called probabilistic approach or sometimes _Bayesian approach_.
+
+## Bayesian inference formula
+
+In Bayesian inference we write the formula:
+
+$$p(\theta|x)=p(\theta)L(\theta,x)c(x)$$
+
+where:
+
+* $p(\theta)$ is the posterior
+* $L(\theta,x)$ is the Likelihood
+* $c(x)$ is a normalization constant 
  
 ### Probability vs. likelihood
+
+
+**Probability** are the areas under the fixed distribution. In the image normal (continuous) distribution.
+
+
+$$pr(data \mid \text{given parameters of normal distrubution $\mu$, $\sigma$})$$
+
+![Probability vs. Likelihood](/images/2022/07/probability_vs_likelihood.png)
+
  
-Probability density function tells you how likely certain data appear. It always takes values in between 0 and 1.
- 
-Likelihood function or likelihood represents the likeliness of different parameters for your distribution. Is used to maximize the chances of a particular situation to occur.
- 
+**Likelihood** are the fixed y-values for fixed x-point with distribution that can alter $\mu$, $\sigma$ distribution parameters.
+
+$$L(\mu, \sigma \mid x=const)$$
+
 Likelihood must be at least 0, and can be greater than 1.
- 
-The likelihood of parameters $\theta$ is the probability of observing data $D$, given a model $M$: $P(D \mid M,\theta)$.
- 
-A likelihood distribution will not sum to one, because there is no reason for the sum or integral of likelihoods over all parameter values to sum to one.
- 
+
+If we fix $x$, $\mu$ and $\theta$ we get the distribution function.
+
+We can fix just $x$ and then we can check likelihood as a function of parameters $\theta$: $\mu$ and $\sigma$.
+
+
+
+
+
+
 ### Example: Picking the candies form a box
  
 Say we took the candies in this order:
