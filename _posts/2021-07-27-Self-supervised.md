@@ -28,7 +28,7 @@ Both self-supervised and semi-supervised learning are currently hot trends in ma
  
 For instance the rise of non-supervised learning in Word2Vec and GloVE somehow brought BERT as a self-supervised learning model which addresses the problems Word2Vec and GloVE have.
  
-Word2Vec will generate the same vector for each word from the dictionary. The problem is then when we use homonyms or multiple-meaning words.
+Word2Vec will generate the specific vector for each word from the dictionary. The problem is then when we use homonyms or multiple-meaning words.
  
 BERT will generate different vectors for the same word being used in two different contexts, so it fixes the problems with homonyms.
  
