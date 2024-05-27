@@ -4,11 +4,22 @@ layout: post
 title: Creating Github Pull Requests
 ---
 
+- [Create a Pull Request](#create-a-pull-request)
+- [You just need to click a button *Fork*.](#you-just-need-to-click-a-button-fork)
+- [Clone the repo where you were redirected](#clone-the-repo-where-you-were-redirected)
+- [Setup the fork to track upstream](#setup-the-fork-to-track-upstream)
+- [Make it even](#make-it-even)
+- [Create a branch and add your updates](#create-a-branch-and-add-your-updates)
+- [Push your updates to origin](#push-your-updates-to-origin)
+- [Creating a *Pull request*](#creating-a-pull-request)
+
+
+
 ## Create a Pull Request 
 
 Let's create a fork of the [PyTorch project](https://github.com/pytorch/pytorch) first, but this procedure is the same for any other project. 
 
-## 1. You just need to click a button **[Fork]**.
+## You just need to click a button *Fork*.
 
 and you will be redirected to github.com/USERNAME/pytorch.
 
@@ -16,12 +27,12 @@ and you will be redirected to github.com/USERNAME/pytorch.
 
 Once redirected:
 
-## 2. Clone the repo where you were redirected
+## Clone the repo where you were redirected
     git clone https://github.com/dejanbatanjac/pytorch.git pytorch-fork
     cd pytorch-fork
 
 
-## 3. Setup the fork to track upstream
+## Setup the fork to track upstream
 Click the [Clone or download] button 
 
 ![IMG](/images/github3.png)
@@ -49,7 +60,7 @@ After day or two you will notice, your fork will be behind the master.
 
 So what to do?
 
-## 4. Make it even 
+## Make it even 
 
     cd pytorch-fork
     git checkout master
@@ -62,17 +73,17 @@ Then you will get this message:
 
 >This branch is even with pytorch:master. 
 
-## 5. Create a branch and add your updates
+## Create a branch and add your updates
 
     git checkout -b new-branch
     git push --set-upstream origin new-branch
 
-## 6. Push your updates to origin
+## Push your updates to origin
 
     git commit
     git push
 
-## 7. Creating a *Pull request*
+## Creating a *Pull request*
 
 ![IMG](/images/github4.png)
 
