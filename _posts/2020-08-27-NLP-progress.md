@@ -217,15 +217,15 @@ In general Transformers models can do all kind of [NLP tasks](https://dejanbatan
 The key parts of the transformers are the so called **tokenizers**. Very popular tokenizers today are:
 
 * Spacy
-* WordPeace
-* SentencePeace
-* BPT
+* WordPiece
+* SentencePiece
+* BPE
 
 Here are models that use famous [tokenizers](https://github.com/huggingface/tokenizers){:rel="nofollow"}:
 
-* WordPeace: BERT, DistilBERT, Electra
-* BPT: GPT-2, Roberta
-* SentencePeace: T5, ALBERT, CamemBERT, XLMRoBERTa, XLNet, Marian
+* WordPiece: BERT, DistilBERT, Electra
+* BPE: GPT-2, Roberta
+* SentencePiece: T5, ALBERT, CamemBERT, XLMRoBERTa, XLNet, Marian
 * Spacy: GPT
 
 
