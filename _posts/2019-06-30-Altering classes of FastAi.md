@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Altering classes of FastAi
 ---
-Wanted to show one interesting feature of FastAI library that I though at first is inconsistency. 
+Wanted to show one interesting feature of FastAI library that I thought at first was an inconsistency. 
 
 It addresses creating, splitting, and labeling data.
 
@@ -50,7 +50,7 @@ LabelLists
 <class 'fastai.data_block.ItemLists'>
 ItemLists
 ```
-As you can see, we first create `ImageList` (base in ItemList), and then after the splitting we get `ItemLists`, and after the labeling we get `LabelLists` (based in `ItemLists`).
+As you can see, we first create `ImageList` (base in ItemList), and then after the splitting we get `ItemLists`, and after the labeling we get `LabelLists` (based on `ItemLists`).
 
 All classes do implement `__call__` so we can write like this as well:
 ```
