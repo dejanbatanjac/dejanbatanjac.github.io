@@ -145,6 +145,34 @@
         "\"Frequentist simple don't\" → \"Frequentists simply don't\" (adverb + plural)"
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2021-02-05-kl-divergence.md",
+      "date": "2021-02-05",
+      "title": "KL Divergence | Relative Entropy",
+      "typos_fixed": [
+        "\"know in statistics\" → \"known in statistics\" (spelling)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-02-03-bias-variance-trade-off.md",
+      "date": "2021-02-03",
+      "title": "Bias Variance Noise trade off",
+      "typos_fixed": [
+        "\"important formula\" → \"important formulas\" (plural)",
+        "\"generalize to\" → \"generalizes to\" (verb form)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-01-29-joint-probability.md",
+      "date": "2021-01-29",
+      "title": "The Power of Joint Probability",
+      "typos_fixed": [
+        "\"joint probability $Y$ of random variables $X$\" → \"the joint probability of Y and the random variables $X$\" (phrasing/spelling fix)"
+      ],
+      "serious_issues": []
     }
   ]
 }
