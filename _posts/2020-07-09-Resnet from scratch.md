@@ -26,7 +26,7 @@ import torch
 import torch.nn as nn
 
 class ResIdentity(nn.Module):
-  # so called identity block with empty skip connection
+  # so-called identity block with empty skip connection
   def __init__(self, ni): # in out channels
     super().__init__() 
     self.conv1 = nn.Conv2d(ni, ni, kernel_size=3, stride=1, padding=1, bias=False) 
@@ -73,7 +73,7 @@ class ResSkip(nn.Module):
 
 ```
 
-What we call basic blocks has two variants, first made by N identity blocks.
+What we call basic blocks have two variants, the first made of N identity blocks.
 
 ```python
 class NIdentityBlocks(nn.Module):  
@@ -135,9 +135,9 @@ class ResNetTail(nn.Module):
         return x
 ```
 
-Lastly the full ResNet is a composition. The few things we define is the number of inputs (usually 3) and the number of outputs (usually 1000).
+Lastly the full ResNet is a composition. The few things we define are the number of inputs (usually 3) and the number of outputs (usually 1000).
 
-The channels 64 is the initial number of planes (channels) and in the end we have the 512 channels. All ResNet architectures will have these l0, l1, l2, l3 layers where l1, l2, and l3 will double the channels by factor 2.
+The initial number of channels is 64 and in the end we have 512 channels. All ResNet architectures will have these l0, l1, l2, l3 layers where l1, l2, and l3 will double the channels by a factor of 2.
 
 ```python
 class ResNet(nn.Module):

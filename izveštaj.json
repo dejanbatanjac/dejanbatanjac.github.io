@@ -271,6 +271,20 @@
         "\"our tossing set\" → \"our set of tosses\""
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2020-07-29-LR.md",
+      "date": "2020-07-29",
+      "title": "Logistic Regression",
+      "typos_fixed": [
+        "\"is classification algorithm\" → \"is a classification algorithm\"",
+        "\"LR is supervised method\" → \"LR is a supervised method\"",
+        "\"which class do we have\" → \"which class we have\"",
+        "\"is discriminative models\" → \"is a discriminative model\"",
+        "\"an **hyperplane**\" → \"a **hyperplane**\"",
+        "\"or features are independent\" → \"or the features are independent\""
+      ],
+      "serious_issues": []
     }
   ]
 }
