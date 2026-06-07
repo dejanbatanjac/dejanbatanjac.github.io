@@ -74,6 +74,17 @@
         "\"fewer nodes activation\" → \"activation of fewer nodes\" (word order / phrasing typo)"
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2021-02-10-data-preprocessing.md",
+      "date": "2021-02-10",
+      "title": "Data Preprocessing",
+      "typos_fixed": [
+        "\"IRQ\" → \"IQR\" (critical typo for Interquartile Range)",
+        "\"One another technique\" → \"Another technique\" (incorrect phrasing, appeared in context of outliers)",
+        "\"Another way to deal with outliers are special math transforms\" → \"is to use special math transforms\" (subject-verb agreement)"
+      ],
+      "serious_issues": []
     }
   ]
 }
