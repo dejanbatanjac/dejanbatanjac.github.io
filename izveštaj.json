@@ -575,6 +575,16 @@
         "\"(based in `ItemLists`)\" → \"(based on `ItemLists`)\""
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2019-06-27-Planet dataset from Kaggle.md",
+      "date": "2019-06-27",
+      "title": "Planet dataset from Kaggle, detect the criterion FastAi uses",
+      "typos_fixed": [
+        "\"specially I wanted\" → \"especially I wanted\"",
+        "\"probable set with\" → \"probably set with\""
+      ],
+      "serious_issues": []
     }
   ]
 }
