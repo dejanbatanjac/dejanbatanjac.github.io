@@ -1,5 +1,7 @@
 ---
 published: true
+layout: post
+title: PyTorch healthier life
 ---
 ## Create things on GPU
 

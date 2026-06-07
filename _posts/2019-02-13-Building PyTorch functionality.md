@@ -1,5 +1,7 @@
 ---
 published: true
+layout: post
+title: Building PyTorch functionality
 ---
 PyTorch is an extensible framework. We see that because many new things grow on PyTorch.
 

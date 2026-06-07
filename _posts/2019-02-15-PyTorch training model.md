@@ -1,5 +1,7 @@
 ---
 published: true
+layout: post
+title: PyTorch training model
 ---
 In here, we have a PyTorch short training model:
 

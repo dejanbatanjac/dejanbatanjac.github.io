@@ -1,5 +1,7 @@
 ---
 published: true
+layout: post
+title: Batch norm
 ---
 Batch normalization is the regularization technique for neural networks presented for the first time in 2015 in this [paper](https://arxiv.org/abs/1502.03167).  
 

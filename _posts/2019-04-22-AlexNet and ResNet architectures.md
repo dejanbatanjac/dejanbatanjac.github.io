@@ -1,5 +1,7 @@
 ---
 published: false
+layout: post
+title: AlexNet and ResNet architectures
 ---
 # AlexNet
 

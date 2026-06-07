@@ -1,5 +1,7 @@
 ---
 published: true
+layout: post
+title: GitHub Zen
 ---
 This little program will output random GitHub zen rules (in fact these are the zen rules of Python) `import this`:
 
