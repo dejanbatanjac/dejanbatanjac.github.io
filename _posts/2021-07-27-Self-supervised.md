@@ -22,17 +22,17 @@ On the other hand, completely autonomous driving confuses our greatest ML system
  
 That's because people rely on prior knowledge of how the world works. This prior knowledge is what is known as **common sense**.
  
-In this context self-supervised learning is simple a way to learn the  **common sense**.
+In this context self-supervised learning is simply a way to learn the  **common sense**.
  
 Both self-supervised and semi-supervised learning are currently hot trends in machine learning.
  
-For instance the rise of non-supervised learning in Word2Vec and GloVE somehow brought BERT as a self-supervised learning model which addresses the problems Word2Vec and GloVE have.
+For instance the rise of non-supervised learning in Word2Vec and GloVe somehow brought BERT as a self-supervised learning model which addresses the problems Word2Vec and GloVe have.
  
 Word2Vec will generate the specific vector for each word from the dictionary. The problem is then when we use homonyms or multiple-meaning words.
  
 BERT will generate different vectors for the same word being used in two different contexts, so it fixes the problems with homonyms.
  
-GloVe is very similar to Word2Vec and one may perform better than other just based on a dataset of choice.
+GloVe is very similar to Word2Vec and one may perform better than the other just based on a dataset of choice.
  
 Today, the NLP trend is either self-supervised or semi-supervised if we consider the dominant models such as: RoBERTa, XLM-R, GPT-2, GPT-3, T5, etc.
  
@@ -71,7 +71,7 @@ In case of the vision problems we don't have a **discrete** problem to solve. If
  
 ![augmentations](/images/2021/07/augmentations.jpg)
  
-From this reason it is hard to reason about the problem dimensionality in case of vision tasks.
+For this reason it is hard to reason about the problem dimensionality in case of vision tasks.
  
  
 ## Introducing the Energy function
@@ -98,7 +98,7 @@ Here we are comparing the image features $h$. This is different from comparing t
  
 There is a catch with these siamese images. If we had just two similar images we would run to a problem called collapse. 
  
-We avoid collapsing  by introducing contrastive images to the original chess pieces. Contrastive image means _somehow_ different from the original.
+We avoid collapse by introducing contrastive images to the original chess pieces. Contrastive image means _somehow_ different from the original.
  
 ![collapse problem](/images/2021/07/ssl.energy.gif)
  
@@ -140,7 +140,7 @@ For visual tasks it is not possible to use classification like BERT does.
  
 For visual tasks predictive models predicting a single output are limited.
  
-Siamese networks deal with image features rather than comparing images itself. Siamese networks introduce contrastive learning techniques to eliminate the collapse problem.
+Siamese networks deal with image features rather than comparing images themselves. Siamese networks introduce contrastive learning techniques to eliminate the collapse problem.
  
 Another approach is to use latent-variable predictive models. This is probably the way to go for the visual self-supervised tasks. 
  

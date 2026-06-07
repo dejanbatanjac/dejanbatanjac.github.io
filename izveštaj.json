@@ -27,6 +27,20 @@
         "\"Convoluiton\" → \"Convolution\" (spelling error in section heading)"
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2021-07-27-Self-supervised.md",
+      "date": "2021-07-27",
+      "title": "Self-supervised learning (SSL)",
+      "typos_fixed": [
+        "\"simple a way\" → \"simply a way\" (adverb form typo)",
+        "\"GloVE\" → \"GloVe\" (incorrect capitalization, appears multiple times)",
+        "\"than other\" → \"than the other\" (missing article)",
+        "\"From this reason\" → \"For this reason\" (standard phrase)",
+        "\"avoid collapsing by\" → \"avoid collapse by\" (word form in context of \"collapse problem\")",
+        "\"images itself\" → \"images themselves\" (pronoun agreement)"
+      ],
+      "serious_issues": []
     }
   ]
 }
