@@ -346,6 +346,44 @@
         "\"[Transformers repo] idea is to have openai and similar models public.\" → \"The [Transformers repo] idea is to make OpenAI and similar models public.\""
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2019-11-13-Learning to sum.md",
+      "date": "2019-11-13",
+      "title": "Learning the sum operation (regression)",
+      "typos_fixed": [
+        "\"Although this is fairly easy problem\" → \"Although this is a fairly easy problem\"",
+        "\"you would solve the limited amount of experiments, those you have trained\" → \"you would only solve the limited amount of experiments you have trained\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-11-13-From Thin Air.md",
+      "date": "2019-11-13",
+      "title": "From Thin Air",
+      "typos_fixed": [
+        "\"In here the two linear layers are used instead and single ReLU in between\" → \"Here the two linear layers are used instead of a single ReLU in between\"",
+        "\"would be probable around 1e3\" → \"would be probably around 1e3\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-11-13-Freezing layers.md",
+      "date": "2019-11-13",
+      "title": "Freezing layers (parameters) of a neural net",
+      "typos_fixed": [
+        "\"the resnet18 model\" → \"the ResNet18 model\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-09-17-Resnet inside.md",
+      "date": "2019-09-17",
+      "title": "Resnet inside",
+      "typos_fixed": [
+        "\"You wonder how the actual Python Resnet code looks\" → \"You may wonder how the actual Python ResNet code looks\""
+      ],
+      "serious_issues": []
     }
   ]
 }

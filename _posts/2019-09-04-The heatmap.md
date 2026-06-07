@@ -8,11 +8,11 @@ title: Heatmaps
 
 ![IMG](/images/heatmap1.png)
 
-I used resenet18 model to create one. Also I needed to provide the input image to detect the heatmap for:
+I used ResNet18 model to create one. Also I needed to provide the input image to detect the heatmap for:
 
     url = "https://raw.githubusercontent.com/dejanbatanjac/pytorch-learning-101/master/h.jpg"
 
-To analyse our resent18 model we would need to get layer input and output size information for the whole model. I did some of that in [this demo](https://gist.github.com/dejanbatanjac/61329992b21fa0e8e02a1d8a5c38079d).
+To analyze our ResNet18 model we would need to get layer input and output size information for the whole model. I did some of that in [this demo](https://gist.github.com/dejanbatanjac/61329992b21fa0e8e02a1d8a5c38079d).
 
 Before the last fc layer we have the average pooling layer with the input size of:
 
@@ -22,7 +22,7 @@ As we can understand we have batch size we will remove, 512 features and 7x7 map
 
 This image will show us *average activation intensities* or the **heatmap**. 
 
-> Note: the 7x7 size depends on the input image size. After passing convolution layers, if the image is bigger we may end to 10x10 or some other size.
+> Note: the 7x7 size depends on the input image size. After passing convolution layers, if the image is bigger we may end up with 10x10 or some other size.
 
 #### What we may use heatmaps for?
 
