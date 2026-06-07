@@ -16,7 +16,7 @@ permalink: /bert-word-predicting/
   - [BertForQuestionAnswering](#bertforquestionanswering)
 - [Demo](#demo)
  
-In 🤗 (HuggingFace - on a mission to solve NLP, one commit at a time) there are interesting BERT model.
+In 🤗 (HuggingFace - on a mission to solve NLP, one commit at a time) there is an interesting BERT model.
  
 ## BERT = MLM and NSP
  
