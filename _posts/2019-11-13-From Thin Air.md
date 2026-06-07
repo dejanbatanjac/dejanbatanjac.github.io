@@ -6,7 +6,7 @@ title: From Thin Air
 
 Karpathy wrote [Convnetjs](https://cs.stanford.edu/people/karpathy/convnetjs/) and in one [demo](https://cs.stanford.edu/people/karpathy/convnetjs/demo/image_regression.html) showed how to learn an image via regression.
 
-In here the two linear layers are used instead and single ReLU in between so the model looks like this:
+Here the two linear layers are used instead of a single ReLU in between, so the model looks like this:
 
 ```
 model = torch.nn.Sequential(
@@ -27,7 +27,7 @@ As you may see experimenting with the learning rate showed me interesting things
 ![IMG](/images/fromthinair2.PNG)
 ![IMG](/images/fromthinair3.PNG)
 
-The best learning rate (x-axis) would be probable around 1e3, although you may not even try this at first since usually people experiment with the learning rates smaller than 1.
+The best learning rate (x-axis) would be probably around 1e3, although you may not even try this at first since usually people experiment with the learning rates smaller than 1.
 
 However, trying the range up to 1e5 showed me the bigger learning rates will just work.
 

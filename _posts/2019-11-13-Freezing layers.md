@@ -9,7 +9,7 @@ Freezing neural net parameters means not allowing parameters to learn. This is o
 * setting `requires_grad` to `False`
 * setting the learning rate `lr` to zero
 
-Let's use the resnet18 model to examine freezing layers.
+Let's use the ResNet18 model to examine freezing layers.
 
 ## Using requires_grad
 

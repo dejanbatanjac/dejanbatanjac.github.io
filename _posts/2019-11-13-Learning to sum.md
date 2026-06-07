@@ -9,9 +9,9 @@ Typical regression problem would be to learn the sum (+) operation with this neu
 
 ![IMG](/images/sum2.PNG)
 
-Although this is fairly easy problem, it is very important to provide some tips on regression, and the advantages over the classification for this particular case.
+Although this is a fairly easy problem, it is very important to provide some tips on regression, and the advantages over the classification for this particular case.
 
-If you would set neural net for the `sum` operation as a classification problem, you would solve the limited amount of experiments, those you have trained. 
+If you would set a neural net for the `sum` operation as a classification problem, you would only solve the limited amount of experiments you have trained. 
 
 With regression, this is not the case. Regression can solve with some error margin any problem close to the original training data distribution.
 

@@ -14,7 +14,7 @@ Currently PyTorch supports these resnet models:
     'resnext101_32x8d': 'https://download.pytorch.org/models/resnext101_32x8d-8ba56ff5.pth',
     'resnext50_32x4d': 'https://download.pytorch.org/models/resnext50_32x4d-7cdf4587.pth'
 
-You wonder how the actual Python Resnet code looks:
+You may wonder how the actual Python ResNet code looks:
 
 ```python
 model = resnet18(pretrained=False)

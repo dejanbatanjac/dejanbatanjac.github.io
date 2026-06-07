@@ -336,6 +336,16 @@
         "\"there are interesting BERT model\" → \"there is an interesting BERT model\""
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2019-12-04-Transformer goodies.md",
+      "date": "2019-12-04",
+      "title": "Transformers",
+      "typos_fixed": [
+        "\"At February 14th 2019 [openai]\" → \"On February 14th 2019 [OpenAI]\"",
+        "\"[Transformers repo] idea is to have openai and similar models public.\" → \"The [Transformers repo] idea is to make OpenAI and similar models public.\""
+      ],
+      "serious_issues": []
     }
   ]
 }
