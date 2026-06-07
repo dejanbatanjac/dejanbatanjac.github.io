@@ -1,0 +1,323 @@
+{
+  "articles": [
+    {
+      "filename": "2022-01-02-Yolo5.md",
+      "date": "2022-01-02",
+      "title": "YOLO5",
+      "typos_fixed": [
+        "'real time object detectors' → 'real-time object detectors' (standardna ortografija)",
+        "'YOLO4 use the *focal Loss*' → 'YOLO4 uses the *Focal Loss*' (glagolska forma + veliko slovo za ime loss funkcije)",
+        "Dodat zarez posle 'Glenn Jocher' + pojašnjenje atribucije (nije 'founder of Mosaic Augmentation')",
+        "'human readable strings' → 'human-readable strings' (spojena reč sa crticom)",
+        "'YOLO v4' → 'YOLOv4' (konzistentnost sa YOLOvX stilom u članku) + uklonjeno 'our' (copy-paste iz Roboflow dokumentacije)",
+        "'state of the art' → 'state-of-the-art' (standardna ortografija)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-09-24-CNNs.md",
+      "date": "2021-09-24",
+      "title": "CNNs",
+      "typos_fixed": [
+        "\"inluding\" → \"including\" (typo, missing letter)",
+        "\"pixes\" → \"pixels\" (common typo)",
+        "\"filer\" → \"filter\" (typo in technical term)",
+        "\"poling layers\" → \"pooling layers\" (very common typo in the author's old notes)",
+        "\"these these two images\" → \"these two images\" (duplicate word typo)",
+        "\"Convoluiton\" → \"Convolution\" (spelling error in section heading)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-07-27-Self-supervised.md",
+      "date": "2021-07-27",
+      "title": "Self-supervised learning (SSL)",
+      "typos_fixed": [
+        "\"simple a way\" → \"simply a way\" (adverb form typo)",
+        "\"GloVE\" → \"GloVe\" (incorrect capitalization, appears multiple times)",
+        "\"than other\" → \"than the other\" (missing article)",
+        "\"From this reason\" → \"For this reason\" (standard phrase)",
+        "\"avoid collapsing by\" → \"avoid collapse by\" (word form in context of \"collapse problem\")",
+        "\"images itself\" → \"images themselves\" (pronoun agreement)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-05-14-egeria.md",
+      "date": "2021-05-14",
+      "title": "Egeria",
+      "typos_fixed": [
+        "\"and few other\" → \"and a few other\" (missing article)",
+        "\"graph organized\" → \"graph-organized\" (hyphen for compound adjective)",
+        "\"previewed from the Inheritance view\" → \"viewed from the Inheritance view\" (wrong word choice / typo for \"viewed\")"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-04-14-vae.md",
+      "date": "2021-04-14",
+      "title": "Variational Auto-Encoder",
+      "typos_fixed": [
+        "\"approximation inference\" → \"approximate inference\" (correct adjective form)",
+        "\"latent variable condition the data\" → \"latent variable conditioned on the data\" (missing verb form and preposition)",
+        "\"capable to create samples\" → \"capable of creating samples\" (correct preposition after capable)",
+        "Fixed badly broken LaTeX in the reparameterization trick equation (was split across lines with missing closing)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-04-01-ae.md",
+      "date": "2021-04-01",
+      "title": "Auto-Encoder",
+      "typos_fixed": [
+        "\"only few nodes are activated\" → \"only a few nodes are activated\" (missing article)",
+        "\"fewer nodes activation\" → \"activation of fewer nodes\" (word order / phrasing typo)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-02-10-data-preprocessing.md",
+      "date": "2021-02-10",
+      "title": "Data Preprocessing",
+      "typos_fixed": [
+        "\"IRQ\" → \"IQR\" (critical typo for Interquartile Range)",
+        "\"One another technique\" → \"Another technique\" (incorrect phrasing, appeared in context of outliers)",
+        "\"Another way to deal with outliers are special math transforms\" → \"is to use special math transforms\" (subject-verb agreement)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-02-08-bayesian-prerequisites-sampling.md",
+      "date": "2021-02-08",
+      "title": "Bayesian prerequisites | Sampling",
+      "typos_fixed": [
+        "\"Frequent we search\" → \"We frequently search\" (adverb form)",
+        "\"we cover few\" → \"we cover a few\"",
+        "\"Metropolis Hasting\" → \"Metropolis-Hastings\" (standard name)",
+        "\"In the next Markov chain will not converge\" → \"The next Markov chain will not converge\" (sentence structure typo)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-02-08-bayesian-prerequisites-rules.md",
+      "date": "2021-02-08",
+      "title": "Bayesian prerequisites | Bayes Rule",
+      "typos_fixed": [
+        "\"observer the data\" → \"observe the data\" (spelling/typo)",
+        "\"Sometimes is easier\" → \"Sometimes it is easier\" (grammar/spelling fix)"
+      ],
+      "serious_issues": [
+        "MLE and MAP are called \"Bayesian optimization\" - this is incorrect. Bayesian optimization is a different technique for hyperparameter tuning. MLE/MAP are methods for parameter estimation/inference. This is a conceptual error that could confuse readers."
+      ]
+    },
+    {
+      "filename": "2021-02-08-bayesian-prerequisites-beta-gamma.md",
+      "date": "2021-02-08",
+      "title": "Bayesian prerequisites | Beta and Gamma distributions",
+      "typos_fixed": [
+        "\"form\" → \"from\" (spelling)",
+        "\"positive review.\" → \"positive reviews.\" (plural)",
+        "latex \"\\mathrm{~B}\" → \"\\mathrm{B}\" (extra ~ in math mode)",
+        "\"exponential families includes\" → \"exponential families include\" (subject-verb)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-02-07-bayesian-prerequisites-gauss.md",
+      "date": "2021-02-07",
+      "title": "Bayesian prerequisites | Gaussian",
+      "typos_fixed": [
+        "\"threated\" → \"treated\" (spelling)",
+        "\"systemic matrix\" → \"symmetric matrix\" (wrong word, typo for symmetric)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-02-06-freq-vs.bayes.md",
+      "date": "2021-02-06",
+      "title": "There is only one way and these are two ways | Frequentist vs. Bayes approach",
+      "typos_fixed": [
+        "\"If i would\" → \"If I would\" (capitalization)",
+        "\"for Bayesian person\" → \"for a Bayesian person\" (missing article)",
+        "\"methods works\" → \"methods work\" (subject-verb)",
+        "\"Frequentist work **only**\" → \"Frequentists work **only**\" (plural)",
+        "\"just thousand data points\" → \"just a thousand data points\" (missing article)",
+        "\"Frequentist simple don't\" → \"Frequentists simply don't\" (adverb + plural)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-02-05-kl-divergence.md",
+      "date": "2021-02-05",
+      "title": "KL Divergence | Relative Entropy",
+      "typos_fixed": [
+        "\"know in statistics\" → \"known in statistics\" (spelling)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-02-03-bias-variance-trade-off.md",
+      "date": "2021-02-03",
+      "title": "Bias Variance Noise trade off",
+      "typos_fixed": [
+        "\"important formula\" → \"important formulas\" (plural)",
+        "\"generalize to\" → \"generalizes to\" (verb form)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-01-29-joint-probability.md",
+      "date": "2021-01-29",
+      "title": "The Power of Joint Probability",
+      "typos_fixed": [
+        "\"joint probability $Y$ of random variables $X$\" → \"the joint probability of Y and the random variables $X$\" (phrasing/spelling fix)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-01-29-activation-functions.md",
+      "date": "2021-01-29",
+      "title": "Activation functions",
+      "typos_fixed": [
+        "\"Activation are\" → \"Activation functions are\" (missing word)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-01-17-machine-learning-brainstorming.md",
+      "date": "2021-01-17",
+      "title": "ML brainstorming",
+      "typos_fixed": [
+        "\"non parametric\" → \"non-parametric\" (hyphen)",
+        "\"form a box\" → \"from a box\" (spelling in link and text)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-01-17-Expectation.md",
+      "date": "2021-01-17",
+      "title": "Expectation of Random Variable",
+      "typos_fixed": [
+        "\"In here I will set\" → \"Here I will set\" (phrasing/spelling)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-01-16-probability-notation.md",
+      "date": "2021-01-16",
+      "title": "Probability notation",
+      "typos_fixed": [
+        "\"algebra unknown variable\" → \"algebraic unknown variable\" (spelling)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-01-29-activation-functions.md",
+      "date": "2021-01-29",
+      "title": "Activation functions",
+      "typos_fixed": [
+        "\"Activation are\" → \"Activation functions are\" (missing word)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-01-17-machine-learning-brainstorming.md",
+      "date": "2021-01-17",
+      "title": "ML brainstorming",
+      "typos_fixed": [
+        "\"non parametric\" → \"non-parametric\" (hyphen)",
+        "\"form a box\" → \"from a box\" (spelling in link and text)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-01-17-Expectation.md",
+      "date": "2021-01-17",
+      "title": "Expectation of Random Variable",
+      "typos_fixed": [
+        "\"In here I will set\" → \"Here I will set\" (phrasing/spelling)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-01-16-probability-notation.md",
+      "date": "2021-01-16",
+      "title": "Probability notation",
+      "typos_fixed": [
+        "\"algebra unknown variable\" → \"algebraic unknown variable\" (spelling)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2020-08-27-NLP-progress.md",
+      "date": "2020-08-27",
+      "title": "NLP progress (brainstorming)",
+      "typos_fixed": [],
+      "serious_issues": [
+        "LSA described as 'Latent Statistical Analysis' - incorrect, it is Latent Semantic Analysis.",
+        "LDA described as 'Latent Dirichlet Analysis' - incorrect, it is Latent Dirichlet Allocation."
+      ]
+    },
+    {
+      "filename": "2020-08-24-MLE for the coin toss.md",
+      "date": "2020-08-24",
+      "title": "MLE for the coin toss example",
+      "typos_fixed": [
+        "\"tossing coin example\" → \"coin tossing example\"",
+        "\"typical case of\" → \"a typical case of\"",
+        "\"given with this formula\" → \"given by this formula\"",
+        "\"number of tossing\" → \"number of tosses\"",
+        "\"first derivative of the is equal to zero\" → \"first derivative is equal to zero\"",
+        "\"our tossing set\" → \"our set of tosses\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2020-07-29-LR.md",
+      "date": "2020-07-29",
+      "title": "Logistic Regression",
+      "typos_fixed": [
+        "\"is classification algorithm\" → \"is a classification algorithm\"",
+        "\"LR is supervised method\" → \"LR is a supervised method\"",
+        "\"which class do we have\" → \"which class we have\"",
+        "\"is discriminative models\" → \"is a discriminative model\"",
+        "\"an **hyperplane**\" → \"a **hyperplane**\"",
+        "\"or features are independent\" → \"or the features are independent\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2020-07-09-Resnet from scratch.md",
+      "date": "2020-07-09",
+      "title": "Creating ResNet18 from scratch",
+      "typos_fixed": [
+        "\"so called\" → \"so-called\"",
+        "\"basic blocks has two variants, first made by N\" → \"basic blocks have two variants, the first made of N\"",
+        "\"The few things we define is the number\" → \"The few things we define are the number\"",
+        "\"The channels 64 is the initial number of planes (channels) and in the end we have the 512 channels. ... by factor 2\" → \"The initial number of channels is 64 and in the end we have 512 channels. ... by a factor of 2\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2020-05-25-huggingface-library.md",
+      "date": "2020-05-25",
+      "title": "HuggingFace Config Params Explained",
+      "typos_fixed": [
+        "\"The main discuss in here are\" → \"The main discussion here is about\"",
+        "\"200.000+ models\" → \"200,000+ models\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2020-05-14-GPT2.md",
+      "date": "2020-05-14",
+      "title": "GPT2 recipe example",
+      "typos_fixed": [
+        "\"GPT2 receipt example\" → \"GPT2 recipe example\" (typo, receipt vs recipe)",
+        "\"three kind of major classes\" → \"three kinds of major classes\"",
+        "\"pre-trained bins for GPT2\" → \"pre-trained .bin files for GPT2\""
+      ],
+      "serious_issues": []
+    }
+  ]
+}
