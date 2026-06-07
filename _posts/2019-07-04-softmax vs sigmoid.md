@@ -20,7 +20,7 @@ The character of this function is "there can be only one".
  
 Note the out values are in the `B` column. Then for each `B` value $x$ we create $e^x$ in column `C`.
  
-What the `exp` function do it will do:
+What the `exp` function does: it will
 * it will make the predictions positive
 * what ever was max, it will stand out as max
  
@@ -30,7 +30,7 @@ $$ softmax( x_i ) =  {     e^{x_i} \over \sum_{j=1}^k { e^{x_j} } } $$
  
 Can be literally expressed as taking the exponent value and dividing it by the sum of all other exponents. This will make one important feature of `softmax`, that the sum of all softmax values will add to 1.
  
-Just by peaking the `max` value after the softmax we get our prediction.
+Just by picking the `max` value after the softmax we get our prediction.
  
 ### Sigmoid
  
