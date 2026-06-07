@@ -64,6 +64,16 @@
         "Fixed badly broken LaTeX in the reparameterization trick equation (was split across lines with missing closing)"
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2021-04-01-ae.md",
+      "date": "2021-04-01",
+      "title": "Auto-Encoder",
+      "typos_fixed": [
+        "\"only few nodes are activated\" → \"only a few nodes are activated\" (missing article)",
+        "\"fewer nodes activation\" → \"activation of fewer nodes\" (word order / phrasing typo)"
+      ],
+      "serious_issues": []
     }
   ]
 }
