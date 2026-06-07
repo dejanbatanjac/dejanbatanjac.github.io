@@ -6,7 +6,7 @@ title: Convolution details in PyTorch
 
 ### 1D Convolution
  
-This would be the 1d convolution in PyTorch
+This would be the 1D convolution in PyTorch
  
 ```python
 import torch
@@ -96,7 +96,7 @@ Note that in the later example I used the convolution kernel that will sum to 0.
  
 ### Convolution to linear
  
-It is not easy to understand the how we ended from 
+It is not easy to understand how we ended up from 
 `self.conv2 = nn.Conv2d(20, 50, 5)` to `self.fc1 = nn.Linear(4*4*50, 500)` in the next example. 
  
 ```python
@@ -124,7 +124,7 @@ Common sense is telling us that in and out should follow the same pattern all ov
  
 `self.conv2` takes the out from the previous layer as `in=20` and outputs `out=50`.
  
-`self.fc2` takes the `in=500` which is the out from `slef.fc1`
+`self.fc2` takes the `in=500` which is the out from `self.fc1`
  
 <sub><strong>fc*</strong> means fully connected</sub>
  
@@ -262,15 +262,14 @@ The `out_channels` is the number of convolution filters we have: `10`. The filte
  
 ### What is dilation?
  
-To explain what dilation is you can simple understand from these two images:
+To explain what dilation is you can simply understand from these two images:
  
 ![IMG](/images/conv2.png)
 ![IMG](/images/conv3.png)
  
 ### Why a 3x3 filter is the best.
  
-According to the [paper](https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf) from Max Zeiler. 
-17.3.3346
+According to the [paper](https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf) from Max Zeiler.
  
 ### Few more tips about convolution
  
