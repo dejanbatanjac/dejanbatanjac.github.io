@@ -297,6 +297,16 @@
         "\"The channels 64 is the initial number of planes (channels) and in the end we have the 512 channels. ... by factor 2\" → \"The initial number of channels is 64 and in the end we have 512 channels. ... by a factor of 2\""
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2020-05-25-huggingface-library.md",
+      "date": "2020-05-25",
+      "title": "HuggingFace Config Params Explained",
+      "typos_fixed": [
+        "\"The main discuss in here are\" → \"The main discussion here is about\"",
+        "\"200.000+ models\" → \"200,000+ models\""
+      ],
+      "serious_issues": []
     }
   ]
 }
