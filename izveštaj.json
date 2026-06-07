@@ -533,6 +533,17 @@
         "\"is_symetric\" (def and call) → \"is_symmetric\" (spelling)"
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2019-07-15-Impact of matrix multiplication.md",
+      "date": "2019-07-15",
+      "title": "The Impact of Matrix Multiplication",
+      "typos_fixed": [
+        "\"fist step\" → \"first step\"",
+        "\"with teh mean\" → \"with the mean\"",
+        "\"this was:.\" → \"this was:\""
+      ],
+      "serious_issues": []
     }
   ]
 }
