@@ -41,9 +41,9 @@ There are four major classes inside HuggingFace library:
 * Tokenizer class
 * Preprocessor class
  
-The main discuss in here are different **Config** class parameters for different HuggingFace models. Configuration can help us understand the inner structure of the HuggingFace models.
+The main discussion here is about different **Config** class parameters for different HuggingFace models. Configuration can help us understand the inner structure of the HuggingFace models.
  
-We will not consider all the models from the library as there are 200.000+ models.
+We will not consider all the models from the library as there are 200,000+ models.
  
 Some interesting models worth mentioning based on a variety of config parameters are discussed here and in particular config params of those models.
  
