@@ -41,6 +41,17 @@
         "\"images itself\" → \"images themselves\" (pronoun agreement)"
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2021-05-14-egeria.md",
+      "date": "2021-05-14",
+      "title": "Egeria",
+      "typos_fixed": [
+        "\"and few other\" → \"and a few other\" (missing article)",
+        "\"graph organized\" → \"graph-organized\" (hyphen for compound adjective)",
+        "\"previewed from the Inheritance view\" → \"viewed from the Inheritance view\" (wrong word choice / typo for \"viewed\")"
+      ],
+      "serious_issues": []
     }
   ]
 }
