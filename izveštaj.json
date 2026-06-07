@@ -585,6 +585,54 @@
         "\"probable set with\" → \"probably set with\""
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2019-05-27-torchvision.md",
+      "date": "2019-05-27",
+      "title": "Torchvision package",
+      "typos_fixed": [
+        "\"contains most important datasets\" → \"contains the most important datasets\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-05-27-normalization.md",
+      "date": "2019-05-27",
+      "title": "Color Normalization",
+      "typos_fixed": [
+        "\"well know (RGB) image sets\" → \"well known (RGB) image sets\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-04-22-Batch norm.md",
+      "date": "2019-04-22",
+      "title": "Batch norm",
+      "typos_fixed": [
+        "\"stepped the era\" → \"stepped into the era\"",
+        "\"There are few things important\" → \"There are a few things important\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-04-11-gpt-2.md",
+      "date": "2019-04-11",
+      "title": "What is GPT-2?",
+      "typos_fixed": [
+        "\"technicaly OK, but often logicaly defect\" → \"technically OK, but often logically defective\""
+      ],
+      "serious_issues": [
+        "NLP expanded as \"Neuro-Linguistic Programming\" in an ML/NLP post - this is a critical acronym error (should be Natural Language Processing in this context). The author confuses the ML field acronym with the completely unrelated field of Neuro-Linguistic Programming."
+      ]
+    },
+    {
+      "filename": "2019-03-21-PyTorch healthier life.md",
+      "date": "2019-03-21",
+      "title": "PyTorch healthier life",
+      "typos_fixed": [
+        "\"They should effect the same\" → \"They should have the same effect\""
+      ],
+      "serious_issues": []
     }
   ]
 }

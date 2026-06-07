@@ -6,7 +6,7 @@ title: Backpropagation honorable notes
 > Backpropagation is a very popular neural network learning algorithm because it is conceptually simple, computationally efficient, and because it often works.
 
 Here we will calculate derivative using backprop in a point p=(5,3,2).
-We will simple implement backprop in a point without using the chain rule.
+We will simply implement backprop in a point without using the chain rule.
 
 Notice how we defined a function `y=3*(a + b*c)` and how we use `e=0.01` to calculate the derivative.
 

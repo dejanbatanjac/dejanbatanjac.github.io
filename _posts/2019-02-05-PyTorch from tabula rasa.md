@@ -10,7 +10,7 @@ Unlike Numpy, Torch has strong GPU support.
     
 You can use Torch either using the Lua programming language or if you like Python you can use PyTorch.
 
-You can use PyTorch together with all major Python packages likes scipy, numpy, matplotlib and Cython and benefit from with PyTorch's autograd system.
+You can use PyTorch together with all major Python packages like scipy, numpy, matplotlib and Cython and benefit from PyTorch's autograd system.
 
 We will check some major PyTorch features in here and provide some feedback on PyTorch tensors, algebra and graphs.
 
@@ -19,7 +19,7 @@ We will check some major PyTorch features in here and provide some feedback on P
 
 * Eager execution
 * C++ support
-* Native ONNX Support (open nn exchange)
+* Native ONNX Support (Open Neural Network Exchange)
 * Supported on major cloud platforms
 * Supports all major network model architectures
 

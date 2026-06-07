@@ -8,7 +8,7 @@ In here, we have a PyTorch short training model:
 ![train](https://raw.githubusercontent.com/dejanbatanjac/dejanbatanjac.github.io/master/images/train.png)
 
 Most notable is the `forward` pass where we step into the model and predict the `y_hat`.
-We can write this more formal:
+We can write this more formally:
 
 `y_hat = model(X)`
 

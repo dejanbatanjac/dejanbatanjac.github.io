@@ -5,7 +5,7 @@ title: LSTM in PyTorch
 ---
 Here is the model of LSTM cell with the following notation:
 
-* LM ( long memory, same as c = captivated state )
+* LM ( long memory, same as c = cell state )
 * SM ( short memory, same as h = hidden state )
 * Remember gate ( same as forget gate )
 * Save gate ( or input gate)

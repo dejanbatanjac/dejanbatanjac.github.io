@@ -14,7 +14,7 @@ $$h_{t+1} = c(c(h_t)) + h_t $$
 Note the $+$ sign literally means the `sum` operation, not the concatenation.
 
 We can express it other way also:
-$$h_{t+1} - h_t = c(c(h_t))) $$
+$$h_{t+1} - h_t = c(c(h_t)) $$
 or 
 $$h_{t+1} - h_t = R(h_t)$$
 

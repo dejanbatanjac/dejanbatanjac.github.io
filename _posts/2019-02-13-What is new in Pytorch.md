@@ -7,7 +7,7 @@ title: What is new in PyTorch 1.0?
 
 Certainly the biggest update of Pytorch 0.4 version was when:
 
-`torch.Tensor` become `torch.autograd.Variable`
+`torch.Tensor` became `torch.autograd.Variable`
 
 This is a class capable of tracking history and behaves like the old Variable class.
 This means we don't need Variable wrapping anymore in our code.
