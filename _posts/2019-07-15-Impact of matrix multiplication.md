@@ -43,13 +43,13 @@ plt.legend(["mean","std"])
 plt.show()
 ```        
 
-At the very fist step we had:
+At the very first step we had:
 
 `MEAN: -0.03876325488090515, STD: 0.879034161567688`
 
-This means that `x = torch.randn(c)` line provided random normal initialization of our data with teh mean of ~0 and STD of ~1
+This means that `x = torch.randn(c)` line provided random normal initialization of our data with the mean of ~0 and STD of ~1
 
-And at the end this was:.
+And at the end this was:
 
 `MEAN: nan, STD: nan`
 
