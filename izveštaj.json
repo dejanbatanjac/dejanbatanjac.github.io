@@ -121,6 +121,16 @@
         "\"exponential families includes\" → \"exponential families include\" (subject-verb)"
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2021-02-07-bayesian-prerequisites-gauss.md",
+      "date": "2021-02-07",
+      "title": "Bayesian prerequisites | Gaussian",
+      "typos_fixed": [
+        "\"threated\" → \"treated\" (spelling)",
+        "\"systemic matrix\" → \"symmetric matrix\" (wrong word, typo for symmetric)"
+      ],
+      "serious_issues": []
     }
   ]
 }
