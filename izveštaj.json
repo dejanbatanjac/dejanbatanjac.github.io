@@ -1,0 +1,32 @@
+{
+  "articles": [
+    {
+      "filename": "2022-01-02-Yolo5.md",
+      "date": "2022-01-02",
+      "title": "YOLO5",
+      "typos_fixed": [
+        "'real time object detectors' → 'real-time object detectors' (standardna ortografija)",
+        "'YOLO4 use the *focal Loss*' → 'YOLO4 uses the *Focal Loss*' (glagolska forma + veliko slovo za ime loss funkcije)",
+        "Dodat zarez posle 'Glenn Jocher' + pojašnjenje atribucije (nije 'founder of Mosaic Augmentation')",
+        "'human readable strings' → 'human-readable strings' (spojena reč sa crticom)",
+        "'YOLO v4' → 'YOLOv4' (konzistentnost sa YOLOvX stilom u članku) + uklonjeno 'our' (copy-paste iz Roboflow dokumentacije)",
+        "'state of the art' → 'state-of-the-art' (standardna ortografija)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-09-24-CNNs.md",
+      "date": "2021-09-24",
+      "title": "CNNs",
+      "typos_fixed": [
+        "\"inluding\" → \"including\" (typo, missing letter)",
+        "\"pixes\" → \"pixels\" (common typo)",
+        "\"filer\" → \"filter\" (typo in technical term)",
+        "\"poling layers\" → \"pooling layers\" (very common typo in the author's old notes)",
+        "\"these these two images\" → \"these two images\" (duplicate word typo)",
+        "\"Convoluiton\" → \"Convolution\" (spelling error in section heading)"
+      ],
+      "serious_issues": []
+    }
+  ]
+}
