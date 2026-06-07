@@ -65,15 +65,29 @@ To obtain the marginal likelihood w.r.t. the parameters (integrating out latents
 $$p(X \mid \theta) = \int_z p(X \mid z,\theta)p(z)d(z)$$ 
  
  
-MLE and MAP are two important **point estimation** methods (they return a single best guess for the parameters θ).
+**MLE (Maximum Likelihood Estimation)** and **MAP (Maximum A Posteriori)** are two common methods for **point estimation** of model parameters.
 
-**MLE (Maximum Likelihood Estimation)** finds the parameter values that maximize the probability of the observed data. In practice we minimize the negative log-likelihood (which behaves like a loss).
+- **MLE** finds the parameter values that make the observed data most probable (it maximizes the likelihood, or equivalently minimizes the negative log-likelihood).
+- **MAP** does the same but also incorporates the prior; it maximizes the posterior probability. The prior term effectively acts as a regularizer.
 
-**MAP (Maximum A Posteriori)** finds the parameters that maximize the posterior. It is MLE with an extra term coming from the prior (the negative log-prior acts as a regularizer).
+**Important distinction**:
+MLE and MAP are **parameter estimation** techniques. They give you a single "best" value for each parameter.
 
-(Note: the term "Bayesian optimization" refers to a different black-box optimization technique that uses a surrogate model, usually a Gaussian process, to tune hyperparameters. It is **not** the same as MLE or MAP.)
+**Bayesian Optimization**, on the other hand, is a *black-box optimization* method. It is typically used to find good values for *hyperparameters* (learning rate, number of layers, regularization strength, etc.) when the objective function is expensive to evaluate. It usually relies on a surrogate model (e.g. Gaussian Process) + an acquisition function.
 
-Together with point estimation, probabilistic models are used for **inference** (computing or approximating posteriors) and **prediction**. These tasks often involve difficult integrals. They become tractable in closed form when we have a **conjugate prior** for the likelihood (the posterior then belongs to the same family as the prior).
+These are related ideas in the broader Bayesian world, but they are not the same thing.
+
+**Quick comparison**:
+
+| Method                  | Goal                                      | Finds model parameters? | Typically used for                  | Key tool                          |
+|-------------------------|-------------------------------------------|---------------------------|-------------------------------------|-----------------------------------|
+| **MLE**                 | Point estimate of parameters              | Yes                       | Classical parameter fitting         | Likelihood / negative log-likelihood |
+| **MAP**                 | Point estimate of parameters (with prior) | Yes                       | Bayesian parameter estimation       | Posterior (prior acts as regularizer) |
+| **Bayesian Optimization** | Optimize an expensive black-box function | No (optimizes *hyper*parameters) | Hyperparameter tuning (e.g. learning rate, architecture) | Gaussian Process + acquisition function |
+
+MLE/MAP give you "best guess" values for the actual model parameters θ. Bayesian Optimization is an *optimization algorithm* you run on top of your training/validation procedure to choose good hyperparameter settings.
+
+Together with point estimation (MLE / MAP), probabilistic models are used for **inference** (computing or approximating full posteriors over parameters or latent variables) and **prediction**. These tasks often involve intractable integrals. They become tractable when we have a **conjugate prior** to the likelihood.
  
 A probabilistic model is fully specified by the joint distribution over all its random variables. However, the joint distribution alone does not explicitly reveal the conditional independence relationships between the variables. Graphical models (Bayesian networks or Markov networks) are used to visualize and exploit the dependency structure among the random variables (RVs).
  
