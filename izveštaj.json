@@ -544,6 +544,16 @@
         "\"this was:.\" → \"this was:\""
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2019-07-04-softmax vs sigmoid.md",
+      "date": "2019-07-04",
+      "title": "Softmax vs. Sigmoid functions",
+      "typos_fixed": [
+        "\"What the `exp` function do it will do\" → \"What the `exp` function does: it will\"",
+        "\"Just by peaking the `max` value\" → \"Just by picking the `max` value\""
+      ],
+      "serious_issues": []
     }
   ]
 }
