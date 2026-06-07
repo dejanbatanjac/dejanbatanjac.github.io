@@ -123,13 +123,13 @@ In the previous case we had a numbers series 1,2,3,99:
 import pandas as pd
 df = pd.DataFrame({'numbers': [ 1,2,3, 99]})
 ```
-Our assumption here was that 99 is an outlier. We can define outliers as those values outside of `[Q1-1.5⋅IQR,Q3+1.5⋅IQR]`. Here IRQ is the `Q3-Q1`.
+Our assumption here was that 99 is an outlier. We can define outliers as those values outside of `[Q1-1.5⋅IQR,Q3+1.5⋅IQR]`. Here IQR is the `Q3-Q1`.
  
 > Clipping outliers is also called **winsorization** or **anomaly removal**.
  
 To protect models from outliers, we can clip outlier values between two chosen values, usually the max and min values for a feature.
  
-One another technique is to set them to NaN. In some cases we may ignore the records holding outliers.
+Another technique is to set them to NaN. In some cases we may ignore the records holding outliers.
  
  
 ### Preprocessing: rank transform
@@ -148,7 +148,7 @@ rankdata([0, 2, 3, 2], method='ordinal') # [1 2 4 3]
  
 ### Preprocessing: math transforms
  
-Another way to deal with outliers are special math transforms. We can use different math functions to transform the data:
+Another way to deal with outliers is to use special math transforms. We can use different math functions to transform the data:
  
 * sigmoid function
 * logit function 
