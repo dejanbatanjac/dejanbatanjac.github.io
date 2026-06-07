@@ -97,6 +97,18 @@
         "\"In the next Markov chain will not converge\" → \"The next Markov chain will not converge\" (sentence structure typo)"
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2021-02-08-bayesian-prerequisites-rules.md",
+      "date": "2021-02-08",
+      "title": "Bayesian prerequisites | Bayes Rule",
+      "typos_fixed": [
+        "\"observer the data\" → \"observe the data\" (spelling/typo)",
+        "\"Sometimes is easier\" → \"Sometimes it is easier\" (grammar/spelling fix)"
+      ],
+      "serious_issues": [
+        "MLE and MAP are called \"Bayesian optimization\" - this is incorrect. Bayesian optimization is a different technique for hyperparameter tuning. MLE/MAP are methods for parameter estimation/inference. This is a conceptual error that could confuse readers."
+      ]
     }
   ]
 }

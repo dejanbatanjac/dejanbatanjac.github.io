@@ -17,7 +17,7 @@ Where:
 * $p(X)$ the evidence
 * $p(X \mid \theta)$ likelihood (how well parameters explain our data)
 * $p(\theta)$ Prior
-* $p(\theta \mid X)$ posterior (probability of parameters after we observer the data)
+* $p(\theta \mid X)$ posterior (probability of parameters after we observe the data)
  
 In here we use small $p$ for probability of continuous distributions and $P$ for discrete distributions.
  
@@ -55,7 +55,7 @@ The problem in inference with latent variables is that we need likelihood on lat
  
 $$p(X \mid z) = \int_\theta p(X \mid z,\theta)p(\theta)d(\theta)$$ 
  
-Sometimes is easier to compute **posterior distribution on latent variables** conditioned on model parameters:
+Sometimes it is easier to compute **posterior distribution on latent variables** conditioned on model parameters:
  
 $$p(z \mid X, \theta) =\frac{p(X \mid z, \theta) p(z)}{p(X \mid \theta)}$$
  
