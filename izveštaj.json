@@ -565,6 +565,16 @@
         "\"seams to decrease\" → \"seems to decrease\" (twice)"
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2019-06-30-Altering classes of FastAi.md",
+      "date": "2019-06-30",
+      "title": "Altering classes of FastAi",
+      "typos_fixed": [
+        "\"I though at first is inconsistency\" → \"I thought at first was an inconsistency\"",
+        "\"(based in `ItemLists`)\" → \"(based on `ItemLists`)\""
+      ],
+      "serious_issues": []
     }
   ]
 }
