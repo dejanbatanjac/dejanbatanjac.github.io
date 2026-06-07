@@ -77,24 +77,13 @@ MLE and MAP are **parameter estimation** techniques. They give you a single "bes
 
 These are related ideas in the broader Bayesian world, but they are not the same thing.
 
-**Quick comparison**:
+## Quick comparison
 
-$$
-\begin{table}[h]
-\centering
-\caption{Comparison of MLE, MAP and Bayesian Optimization}
-\label{tab:mle_map_bo}
-\begin{tabular}{@{}lllp{5.5cm}l@{}}
-\toprule
-\textbf{Method} & \textbf{Goal} & \textbf{Finds model parameters?} & \textbf{Typically used for} & \textbf{Key tool} \\
-\midrule
-MLE & Point estimate of parameters & Yes & Classical parameter fitting & Likelihood / negative log-likelihood \\
-MAP & Point estimate of parameters (with prior) & Yes & Bayesian parameter estimation & Posterior (prior acts as regularizer) \\
-Bayesian Optimization & Optimize an expensive black-box function & No (optimizes \textit{hyperparameters}) & Hyperparameter tuning (e.g. learning rate, architecture) & Gaussian Process + acquisition function \\
-\bottomrule
-\end{tabular}
-\end{table}
-$$
+| Method                  | Goal                                      | Finds model parameters? | Typically used for                          | Key tool                              |
+|-------------------------|-------------------------------------------|--------------------------|---------------------------------------------|---------------------------------------|
+| **MLE**                 | Point estimate of parameters              | Yes                      | Classical parameter fitting                 | Likelihood / negative log-likelihood  |
+| **MAP**                 | Point estimate of parameters (with prior) | Yes                      | Bayesian parameter estimation               | Posterior (prior acts as regularizer) |
+| **Bayesian Optimization** | Optimize an expensive black-box function | No (optimizes *hyperparameters*) | Hyperparameter tuning (e.g. learning rate, architecture) | Gaussian Process + acquisition function |
 
 MLE/MAP give you "best guess" values for the actual model parameters $\theta$. Bayesian Optimization is an *optimization algorithm* you run on top of your training/validation procedure to choose good hyperparameter settings.
 
