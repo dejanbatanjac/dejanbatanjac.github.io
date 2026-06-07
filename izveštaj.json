@@ -633,6 +633,80 @@
         "\"They should effect the same\" → \"They should have the same effect\""
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2019-07-15-Resnet explained.md",
+      "date": "2019-07-15",
+      "title": "Resnet simple explained",
+      "typos_fixed": [
+        "\"c(c(h_t)))\" extra paren in latex → fixed"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-02-15-PyTorch training model.md",
+      "date": "2019-02-15",
+      "title": "PyTorch training model",
+      "typos_fixed": [
+        "\"more formal\" → \"more formally\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-02-13-What is new in Pytorch.md",
+      "date": "2019-02-13",
+      "title": "What is new in PyTorch 1.0?",
+      "typos_fixed": [
+        "\"become\" → \"became\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-02-13-Building PyTorch functionality.md",
+      "date": "2019-02-13",
+      "title": "Building PyTorch functionality",
+      "typos_fixed": [
+        "\"probable the most obvious one\" → \"probably the most obvious one\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-02-08-LSTM in PyTorch.md",
+      "date": "2019-02-08",
+      "title": "LSTM in PyTorch",
+      "typos_fixed": [
+        "\"c = captivated state\" → \"c = cell state\" (critical for LSTM terminology)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-02-05-ПЦА.md",
+      "date": "2019-02-05",
+      "title": "ПЦА",
+      "typos_fixed": [
+        "\"очекивог\" → \"очекиваног\" (Serbian spelling)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-02-05-PyTorch from tabula rasa.md",
+      "date": "2019-02-05",
+      "title": "PyTorch from tabula rasa",
+      "typos_fixed": [
+        "\"packages likes scipy\" → \"packages like scipy\"",
+        "\"benefit from with PyTorch\" → \"benefit from PyTorch's\"",
+        "\"open nn exchange\" → \"Open Neural Network Exchange\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-01-30-Backpropagation honorable notes.md",
+      "date": "2019-01-30",
+      "title": "Backpropagation honorable notes",
+      "typos_fixed": [
+        "\"We will simple implement\" → \"We will simply implement\""
+      ],
+      "serious_issues": []
     }
   ]
 }
