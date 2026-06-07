@@ -109,6 +109,18 @@
       "serious_issues": [
         "MLE and MAP are called \"Bayesian optimization\" - this is incorrect. Bayesian optimization is a different technique for hyperparameter tuning. MLE/MAP are methods for parameter estimation/inference. This is a conceptual error that could confuse readers."
       ]
+    },
+    {
+      "filename": "2021-02-08-bayesian-prerequisites-beta-gamma.md",
+      "date": "2021-02-08",
+      "title": "Bayesian prerequisites | Beta and Gamma distributions",
+      "typos_fixed": [
+        "\"form\" → \"from\" (spelling)",
+        "\"positive review.\" → \"positive reviews.\" (plural)",
+        "latex \"\\mathrm{~B}\" → \"\\mathrm{B}\" (extra ~ in math mode)",
+        "\"exponential families includes\" → \"exponential families include\" (subject-verb)"
+      ],
+      "serious_issues": []
     }
   ]
 }

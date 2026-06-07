@@ -10,7 +10,7 @@ In Bayesian statistics Gaussian or normal distribution is frequent. Gaussian dis
 
 ## Parameters
 
-In **classical probability** all the distributions are implicitly conditioned on $\theta$, where $\theta$ are some parameters. These parameters are threated as **unknown constants**.
+In **classical probability** all the distributions are implicitly conditioned on $\theta$, where $\theta$ are some parameters. These parameters are treated as **unknown constants**.
 
 **Classical notation** that $X$ depends on $\theta$ where $\theta$ is a parameter would be: $P(X ; \theta) = P_{\theta}(X)$.
 
@@ -47,7 +47,7 @@ We write $p(\boldsymbol{x})=\mathcal{N}(\boldsymbol{x} \mid \boldsymbol{\mu}, \b
 
 Special case called standard normal distribution is when $\boldsymbol{\mu}=0$ and $\boldsymbol{\Sigma}=I$.
 
-Every real systemic matrix such as covariance matrix $\boldsymbol{\Sigma} \in \mathbb{R}^{d \times d}$ has an eigendecomposition:
+Every real symmetric matrix such as covariance matrix $\boldsymbol{\Sigma} \in \mathbb{R}^{d \times d}$ has an eigendecomposition:
 
 $\boldsymbol{\Sigma}=R\Lambda R^{\top}$, where $R$ and $R^{\top}$ are orthonormal matrices and $R^{\top}=R^{-1}$ or $R^{\top}R = I$.
 
