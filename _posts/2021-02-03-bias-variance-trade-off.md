@@ -22,7 +22,7 @@ permalink: /bias-variance-noise-trade-off
   - [How to reduce high variance?](#how-to-reduce-high-variance)
   - [How to reduce the high bias?](#how-to-reduce-the-high-bias)
 
-One of the most important formula in statistics and machine learning is **bias variance trade off**. It actually **generalize** to **Bias, Variance Noise trade off** here I will show how.
+One of the most important formulas in statistics and machine learning is **bias variance trade off**. It actually **generalizes** to **Bias, Variance Noise trade off** here I will show how.
 
 Engineering job is to find the equilibrium of these three, since intuitively if you make one of them smaller, the other two usually get bigger.
 

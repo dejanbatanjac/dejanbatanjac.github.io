@@ -17,7 +17,7 @@ permalink: /kl-divergence
  
 ## Terminology
  
-Kullback-Leibler Divergence (**KL Divergence**) know in statistics and mathematics is the same as **relative entropy** in machine learning and Python Scipy.
+Kullback-Leibler Divergence (**KL Divergence**) known in statistics and mathematics is the same as **relative entropy** in machine learning and Python Scipy.
  
 Let's start with the Python implementation to calculate the relative entropy of two lists:
  

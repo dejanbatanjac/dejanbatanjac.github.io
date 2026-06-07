@@ -17,7 +17,7 @@ Probabilistic approach to machine learning is this:
  
 If we learn the function $f:X→Y$ we actually learn $P(Y \mid X)$, where $Y$ is a target random variable and $X$ is a set of random variables: $X_1, ..., X_n$.
  
-You may imagine $Y$ is a stock price, and $X$ are different factors we take. This way joint probability $Y$ of random variables $X$ is a function.
+You may imagine $Y$ is a stock price, and $X$ are different factors we take. This way the joint probability of Y and the random variables $X$ is a function.
  
 ## If we know the joint probability...
  

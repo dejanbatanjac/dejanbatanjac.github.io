@@ -131,6 +131,20 @@
         "\"systemic matrix\" → \"symmetric matrix\" (wrong word, typo for symmetric)"
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2021-02-06-freq-vs.bayes.md",
+      "date": "2021-02-06",
+      "title": "There is only one way and these are two ways | Frequentist vs. Bayes approach",
+      "typos_fixed": [
+        "\"If i would\" → \"If I would\" (capitalization)",
+        "\"for Bayesian person\" → \"for a Bayesian person\" (missing article)",
+        "\"methods works\" → \"methods work\" (subject-verb)",
+        "\"Frequentist work **only**\" → \"Frequentists work **only**\" (plural)",
+        "\"just thousand data points\" → \"just a thousand data points\" (missing article)",
+        "\"Frequentist simple don't\" → \"Frequentists simply don't\" (adverb + plural)"
+      ],
+      "serious_issues": []
     }
   ]
 }
