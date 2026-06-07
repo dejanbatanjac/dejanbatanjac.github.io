@@ -12,10 +12,10 @@ title: Random Forest
 
 ## Intro
 
-Random Forest (RF) is universal machine learning technique.
+Random Forest (RF) is a universal machine learning technique.
 It's a way of predicting category or continuous variables with columns of any kind that we first convert to numbers (floats).
 
-Random forests take all kind of data from from categories and continuos values even including: 
+Random forests take all kinds of data from categories and continuous values even including: 
 
 * pixel data (images)
 * zip codes 

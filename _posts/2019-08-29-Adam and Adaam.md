@@ -26,7 +26,7 @@ The paper suggests Adam should be implemented like this:
 >
 >and $\epsilon$ is some small number `1e-3` for instance.
  
-However, if we convert the [Adam optimizer from PyTorch](https://pytorch.org/docs/stable/_modules/torch/optim/adam.html) you will note that the implementation is not by the paper.
+However, if we convert the [Adam optimizer from PyTorch](https://pytorch.org/docs/stable/_modules/torch/optim/adam.html) you will note that the implementation is not as in the paper.
  
 I present in here the simplified version of Adam based on the PyTorch implementation with weight decay removed:
  

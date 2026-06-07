@@ -10,7 +10,7 @@ Pseudo labeling is based on the [paper](http://deeplearning.net/wp-content/uploa
 
 But how this can be? Wouldn't the unlabeled data provide some kind of a problem?
 
-For unlabeled data we call them pseudo-labels we pick up the class which has the maximum predicted probability.
+For unlabeled data, we call pseudo-labels the class we pick up which has the maximum predicted probability.
 
 This is in effect equivalent to entropy regularization. 
 
