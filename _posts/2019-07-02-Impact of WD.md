@@ -38,7 +38,7 @@ As you noted we provide:
 * the model (our LR model)
 * the criterion function which is always `nn.CrossEntropyLoss()` for our MNIST example, 
 * the optimizer, in fact I tested with both SGD, and Adam, but any optimizer can be used.
-* the bach size, in here this is set to 64, 
+* the batch size, in here this is set to 64, 
 * the number of epochs, in here I examined a single epoch only,
 * the learning rate (it depends if we will use the momentum or no),
 * our custom weight decay factor `wd_factor` or 0 if we don't plan to use custom WD
@@ -124,7 +124,7 @@ for p in model.parameters():
     wd += (p**2).sum()
 loss = criterion(output, target)+wd*wd_factor 
 ```
-In blue are different WD values. We are on a single epoch with with SGD, and WD `1e-1`:
+In blue are different WD values. We are on a single epoch with SGD, and WD `1e-1`:
  
 ![IMG](/images/lreg6.png)
 ![IMG](/images/lreg7.png)
@@ -136,7 +136,7 @@ As we can see the oscillations are best suppressed for `wd=4e-2`.
  
 For the next three images we used the Nesterov momentum. However, we needed to decrease the learning rate to `1e-3` this time.
  
-WD `4e-1` seams to decrease the batch loss oscillations.
+WD `4e-1` seems to decrease the batch loss oscillations.
  
 ![IMG](/images/lreg10.png)
 ![IMG](/images/lreg11.png)
@@ -145,7 +145,7 @@ WD `4e-1` seams to decrease the batch loss oscillations.
  
 Finally we examine the Adam optimizer. Again we needed to lower the learning rate to `1e-3`.
  
-WD `4e-1` seams to decrease the batch loss oscillations.
+WD `4e-1` seems to decrease the batch loss oscillations.
  
 ![IMG](/images/lreg13.png)
 ![IMG](/images/lreg14.png)
