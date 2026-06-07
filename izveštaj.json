@@ -85,6 +85,18 @@
         "\"Another way to deal with outliers are special math transforms\" → \"is to use special math transforms\" (subject-verb agreement)"
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2021-02-08-bayesian-prerequisites-sampling.md",
+      "date": "2021-02-08",
+      "title": "Bayesian prerequisites | Sampling",
+      "typos_fixed": [
+        "\"Frequent we search\" → \"We frequently search\" (adverb form)",
+        "\"we cover few\" → \"we cover a few\"",
+        "\"Metropolis Hasting\" → \"Metropolis-Hastings\" (standard name)",
+        "\"In the next Markov chain will not converge\" → \"The next Markov chain will not converge\" (sentence structure typo)"
+      ],
+      "serious_issues": []
     }
   ]
 }
