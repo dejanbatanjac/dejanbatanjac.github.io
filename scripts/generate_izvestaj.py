@@ -176,6 +176,26 @@ def generate_pdf():
         styles['Footer']
     ))
     
+    # Green listing of changes for critical (red) errors: what was critical and what is new/fixed
+    critical_articles = [a for a in articles if a.get("serious_issues")]
+    if critical_articles:
+        story.append(Spacer(1, 15))
+        green_style = ParagraphStyle(
+            name='GreenListing',
+            parent=styles['Normal'],
+            fontSize=9,
+            leading=11,
+            textColor=HexColor('#006400'),  # dark green
+            spaceAfter=4,
+        )
+        story.append(Paragraph("<b>Listing promena za kritične (crvene) greške - šta je bilo kritično i šta je novo/fiksirano (zeleno):</b>", styles['SeriousHeader']))
+        for a in critical_articles:
+            story.append(Paragraph(f"<b>{a['date']} — {a['title']} ({a['filename']})</b>", green_style))
+            for fix in a.get("typos_fixed", []):
+                story.append(Paragraph(f"  • Fiksirano/novo: {fix}", green_style))
+            for issue in a.get("serious_issues", []):
+                story.append(Paragraph(f"  • Bilo kritično: {issue}", green_style))
+    
     doc.build(story)
     print(f"PDF generisan: {OUTPUT_PDF} ({len(articles)} članaka)")
 

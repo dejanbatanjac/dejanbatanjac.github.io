@@ -707,6 +707,52 @@
         "\"We will simple implement\" → \"We will simply implement\""
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2019-01-25-Working with Github.md",
+      "date": "2019-01-25",
+      "title": "Creating Github Pull Requests",
+      "typos_fixed": [],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-08-16-Momentum.md",
+      "date": "2019-08-16",
+      "title": "SGD optimizer with momentum",
+      "typos_fixed": [
+        "\"comparing the worse one\" → \"compared to the worse one\"",
+        "\"[backpropagation article] article that shows\" → \"[backpropagation article] that shows\"",
+        "\"hundred millions\" → \"hundreds of millions\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-02-12-Number of parameters in Keras LSTM.md",
+      "date": "2019-02-12",
+      "title": "Number of Parameters in Keras LSTM",
+      "typos_fixed": [],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-03-15-ImageDataBunch.md",
+      "date": "2019-03-15",
+      "title": "ImageDataBunch",
+      "typos_fixed": [],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-03-06-GitHub Zen.md",
+      "date": "2019-03-06",
+      "title": "GitHub Zen",
+      "typos_fixed": [],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-02-11-Time series terms.md",
+      "date": "2019-02-11",
+      "title": "Time Series terms",
+      "typos_fixed": [],
+      "serious_issues": []
     }
   ]
 }
