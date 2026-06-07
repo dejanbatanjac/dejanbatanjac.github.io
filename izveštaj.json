@@ -509,6 +509,20 @@
         "\"polling operations\" → \"pooling operations\" (common typo: polling vs pooling in ML context)"
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2019-07-15-convolution.md",
+      "date": "2019-07-15",
+      "title": "Convolution details in PyTorch",
+      "typos_fixed": [
+        "`slef.fc1` → `self.fc1` (typo in code)",
+        "\"understand the how we ended\" → \"understand how we ended up\" (grammar/typo)",
+        "\"you can simple understand\" → \"you can simply understand\" (adverb typo)",
+        "\"the 1d convolution\" → \"the 1D convolution\" (capitalization)"
+      ],
+      "serious_issues": [
+        "Garbage text \"17.3.3346\" after the Zeiler paper reference - this was a critical copy-paste error from PDF (page number or artifact) that polluted the post with nonsense. Removed it."
+      ]
     }
   ]
 }

@@ -15,7 +15,7 @@ title: PyTorch Cheat Sheet
     t = torch.empty(2,2)
     t = torch.rand(2,2)
     t = torch.randn(2,2)
-    t = torch.arrange(1,10,0.2)
+    t = torch.arange(1,10,0.2)
 
 >### Concat and stack
 
@@ -110,7 +110,7 @@ print(i, i.size())
 >### Check if matrix is symmetric
 
 ```
-def is_symetric(m, rtol=1e-05, atol=1e-08):
+def is_symmetric(m, rtol=1e-05, atol=1e-08):
     return torch.allclose(m, m.t(), rtol=rtol, atol=atol)
 
 a = torch.randn(5, 5)
@@ -119,7 +119,7 @@ print(a)
 a = a + a.t()
 print(a)
 
-print(is_symetric(a))
+print(is_symmetric(a))
 
 ei = torch.eig(a)
 print(ei)
