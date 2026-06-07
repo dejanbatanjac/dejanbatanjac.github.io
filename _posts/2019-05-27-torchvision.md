@@ -14,7 +14,7 @@ The `torchvision` package in turn has additional subpackages.
     transforms 
     utils
     
-The `torchvision.datasets` subpackage contains most important datasets. At the current moment these are:
+The `torchvision.datasets` subpackage contains the most important datasets. At the current moment these are:
 
     cifar
     cityscapes

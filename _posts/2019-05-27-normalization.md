@@ -22,7 +22,7 @@ Here we calculated the train set mean and train set standard deviation (for all 
  
 But, there's also multiple channels. That would be to normalize the images you have in your train, validation and test set for each channel. 
  
-These are for instance `mean` and `std` values for well know (RGB) image sets : 
+These are for instance `mean` and `std` values for well known (RGB) image sets : 
  
     cifar_stats = ([0.491, 0.482, 0.447], [0.247, 0.243, 0.261])
     imagenet_stats = ([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])

@@ -12,7 +12,7 @@ Consider these two lines:
     torch.zeros(100, device="gpu")
     torch.zeros(100).to("cuda")
 
-They should effect the same, but first one is faster as it assumes creating GPU tensor directly without copy from CPU, while the second one uses the copy from CPU trick.
+They should have the same effect, but the first one is faster as it assumes creating a GPU tensor directly without copy from CPU, while the second one uses the copy from CPU trick.
 
 ## Two different loss functions
 

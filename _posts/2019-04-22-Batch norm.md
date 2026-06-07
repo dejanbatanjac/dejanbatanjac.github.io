@@ -9,13 +9,13 @@ The paper explains the regularization effect, explains the improvements and trie
 
 # Achievement
 
-Thanks to the batch norm for the first time the ImageNet exceeded the accuracy of human raters, and stepped the era where machine learning started to classify images better than humans (for the particular classification task).
+Thanks to the batch norm for the first time the ImageNet exceeded the accuracy of human raters, and stepped into the era where machine learning started to classify images better than humans (for the particular classification task).
 
 This is why we may call Batch Normalization (BN) a milestone technique in the development of deep learning.
 
 # How it works in PyTorch?
 
-There are few things important for the batch norm (BN):
+There are a few things important for the batch norm (BN):
 
 * BN is to be applied to every mini-batch (mb).
 * For each feature $c_i$ (from C features) in the mini-batch (mb), BN computes the mean and variance of that feature. This means batch normalization normalizes the input for each channel independently.
