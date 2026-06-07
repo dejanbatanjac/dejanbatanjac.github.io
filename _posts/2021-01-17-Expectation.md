@@ -30,7 +30,7 @@ permalink: /expectation
  
 ## Intro
  
-In here I will set a notation of the mathematical expectation of discrete and continuous Random Variable (RV).
+Here I will set a notation of the mathematical expectation of discrete and continuous Random Variable (RV).
  
 The idea is to outline some of the most important notations, properties and rules.
  

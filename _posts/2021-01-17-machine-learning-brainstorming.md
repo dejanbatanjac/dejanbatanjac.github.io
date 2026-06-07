@@ -11,14 +11,14 @@ permalink: /ml-brainstorming
 - [Bias Variance tradeoff](#bias-variance-tradeoff)
 - [What is Cross-Validation (CV)](#what-is-cross-validation-cv)
 - [CV when number of samples is small and lot of features](#cv-when-number-of-samples-is-small-and-lot-of-features)
-- [Parametric vs. non parametric models](#parametric-vs-non-parametric-models)
+- [Parametric vs. non-parametric models](#parametric-vs-non-parametric-models)
 - [Generative vs. discriminative learning](#generative-vs-discriminative-learning)
 - [Convex and non-convex goal functions](#convex-and-non-convex-goal-functions)
 - [The two approaches to probability](#the-two-approaches-to-probability)
 - [Bayesian approach](#bayesian-approach)
 - [Bayesian inference formula](#bayesian-inference-formula)
   - [Probability vs. likelihood](#probability-vs-likelihood)
-  - [Example: Picking the candies form a box](#example-picking-the-candies-form-a-box)
+  - [Example: Picking the candies from a box](#example-picking-the-candies-form-a-box)
 - [From Likelihood to cross entropy](#from-likelihood-to-cross-entropy)
 - [Binary cross entropy](#binary-cross-entropy)
 - [Multi-class classification](#multi-class-classification)
@@ -153,11 +153,11 @@ Say we have 5000 features and 50 samples to predict one of the two possible clas
  
 But this would be a methodological mistake again. We should do a CV with all 5000 features instead.
  
-## Parametric vs. non parametric models
+## Parametric vs. non-parametric models
  
 There are two types of models:
 * parametric
-* non parametric
+* non-parametric
  
 In a parametric model, the number of parameters is fixed.
 In a nonparametric model the number of parameters can grow.
@@ -170,12 +170,12 @@ Some parametric models:
 * NB Naive Bayes
 * Neural net with fixed architecture
  
-The example of non parametric machine learning models:
+The example of non-parametric machine learning models:
 * KNN
 * Decision trees
 * Gaussian process
  
-> SVM (Support Vector Machines) can be both parametric and non parametric.
+> SVM (Support Vector Machines) can be both parametric and non-parametric.
  
  
 ## Generative vs. discriminative learning
@@ -268,7 +268,7 @@ We can fix just $x$ and then we can check likelihood as a function of parameters
 
 
 
-### Example: Picking the candies form a box
+### Example: Picking the candies from a box
  
 Say we took the candies in this order:
 `Blue, Blue, Red, Red, Blue`. This is our training set.

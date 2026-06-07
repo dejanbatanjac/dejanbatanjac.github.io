@@ -31,7 +31,7 @@ In the literature to denote a Random Variable all these notations are acceptable
 * $X$
 * $\mathrm x$
  
-> We need to distinguish between algebra unknown variable $x$, and probability random variable $\mathrm x$.
+> We need to distinguish between algebraic unknown variable $x$, and probability random variable $\mathrm x$.
  
 The probability that $\mathrm x = x$ is denoted as $P( x )$. 
  

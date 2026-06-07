@@ -23,7 +23,7 @@ permalink: /activation-functions
 - [Mish](#mish)
  
  
-Activation are by default **nonlinear functions**.
+Activation functions are by default **nonlinear functions**.
  
 Why do we need nonlinear activation functions?
  
