@@ -257,6 +257,20 @@
         "LSA described as 'Latent Statistical Analysis' - incorrect, it is Latent Semantic Analysis.",
         "LDA described as 'Latent Dirichlet Analysis' - incorrect, it is Latent Dirichlet Allocation."
       ]
+    },
+    {
+      "filename": "2020-08-24-MLE for the coin toss.md",
+      "date": "2020-08-24",
+      "title": "MLE for the coin toss example",
+      "typos_fixed": [
+        "\"tossing coin example\" → \"coin tossing example\"",
+        "\"typical case of\" → \"a typical case of\"",
+        "\"given with this formula\" → \"given by this formula\"",
+        "\"number of tossing\" → \"number of tosses\"",
+        "\"first derivative of the is equal to zero\" → \"first derivative is equal to zero\"",
+        "\"our tossing set\" → \"our set of tosses\""
+      ],
+      "serious_issues": []
     }
   ]
 }
