@@ -52,6 +52,18 @@
         "\"previewed from the Inheritance view\" → \"viewed from the Inheritance view\" (wrong word choice / typo for \"viewed\")"
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2021-04-14-vae.md",
+      "date": "2021-04-14",
+      "title": "Variational Auto-Encoder",
+      "typos_fixed": [
+        "\"approximation inference\" → \"approximate inference\" (correct adjective form)",
+        "\"latent variable condition the data\" → \"latent variable conditioned on the data\" (missing verb form and preposition)",
+        "\"capable to create samples\" → \"capable of creating samples\" (correct preposition after capable)",
+        "Fixed badly broken LaTeX in the reparameterization trick equation (was split across lines with missing closing)"
+      ],
+      "serious_issues": []
     }
   ]
 }
