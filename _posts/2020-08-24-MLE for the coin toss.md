@@ -6,9 +6,9 @@ permalink: /mle-binomial
 ---
 
  
-In the typical tossing coin example, with probability for the head equal to $p$ and tossing the coin $n$ times let's calculate the Maximum Likelihood Estimate (MLE) for the heads.
+In the typical coin tossing example, with probability for heads equal to $p$ and tossing the coin $n$ times, let's calculate the Maximum Likelihood Estimate (MLE) for the heads probability.
 
-We know this is typical case of [Binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution){:ref="nofollow"} that is given with this formula:
+We know this is a typical case of [Binomial distribution](https://en.wikipedia.org/wiki/Binomial_distribution){:ref="nofollow"} that is given by this formula:
 
 
 $\operatorname{Bin}(k;n,p) = \binom{n}{k}p^k(1-p)^{n-k}$
@@ -17,7 +17,7 @@ $\operatorname{Bin}(k;n,p) = \binom{n}{k}p^k(1-p)^{n-k}$
 
 We have:
 
-$n=H+T$ is the total number of tossing, and $H=k$ is how many heads.
+$n = H + T$ is the total number of tosses, and $H = k$ is the number of heads.
 
 Leading to:
 
@@ -33,7 +33,7 @@ $=\underset{p}{\operatorname{arg\,max}} \big[ H \operatorname{log} p + T \operat
 
 We used `log` trick to gain numerical stability, and we removed the constant in this transformation process since it will not affect the `argmax`.
 
-To get the MLE, and since this is the estimation we will find where first derivative of the is equal to zero:
+To get the MLE, we will find where the first derivative is equal to zero:
 
 $\large \frac{\partial [ H  \operatorname{log} p + T \operatorname{log}(1-p)]}{\partial p}=\small 0$
 
@@ -48,7 +48,7 @@ $\large p_{\small \text{MLE}} = \frac{H}{T+H}$
 We could intuitively get the same conclusion, let's say we have some tossing events:
 
 
-$\mathcal{T}=\\{h, h, h, t, t, h, t, t, t, h, t \\}$, where $\mathcal{T}$ is our tossing set with $n = T+H = 11$ elements, and number of heads is $H=5$. Just based on this example:
+$\mathcal{T}=\\{h, h, h, t, t, h, t, t, t, h, t \\}$, where $\mathcal{T}$ is our set of tosses with $n = T + H = 11$ elements, and the number of heads is $H = 5$. Just based on this example:
 
 $\large p_{\small \text{MLE}}$ is ${H \over {T+H}} = {5 \over 11}$.
 
