@@ -327,6 +327,15 @@
         "\"of he NLP acronyms\" → \"of the NLP acronyms\""
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2019-12-25-BERT for predicting words.md",
+      "date": "2019-12-25",
+      "title": "BERT predicts the words",
+      "typos_fixed": [
+        "\"there are interesting BERT model\" → \"there is an interesting BERT model\""
+      ],
+      "serious_issues": []
     }
   ]
 }

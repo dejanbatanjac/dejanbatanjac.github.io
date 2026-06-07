@@ -28,12 +28,12 @@ NLP tasks are (just to recall):
 
 It supports both TensorFlow 2.0 and PyTorch.
 
-At February 14th 2019 [openai](openai.com) released the article [Better Language Models
+On February 14th 2019 [OpenAI](openai.com) released the article [Better Language Models
 and Their Implications](https://openai.com/blog/better-language-models/) where they said:
 
 >Our model, called GPT-2 (a successor to GPT), was trained simply to predict the next word in 40GB of Internet text. Due to our concerns about malicious applications of the technology, we are not releasing the trained model. As an experiment in responsible disclosure, we are instead releasing a much smaller model for researchers to experiment with, as well as a technical paper.
 
-[Transformers repo](https://github.com/huggingface/transformers) idea is to have openai and similar models public. 
+The [Transformers repo](https://github.com/huggingface/transformers) idea is to make OpenAI and similar models public. 
 
 ## Models you will find inside transformers:
 Here is the list of the models in question: 
