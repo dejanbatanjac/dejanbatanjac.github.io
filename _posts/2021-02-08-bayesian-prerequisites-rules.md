@@ -33,25 +33,25 @@ In here we introduce the concept of probabilistic model together with the concep
 * MLE (Maximum Likelihood Estimation) and 
 * MAP (Maximum A Priori Estimation)
  
-**Probabilistic model** is joint distribution of all its random variables.
+A **probabilistic model** is fully specified by the joint distribution of all its random variables.
  
  
-**Likelihood** tells us, given some parameters, what is the best distribution of data. Likelihood is similar to the concept of loss function in classical approach.
+**Likelihood** is a function of the parameters (for fixed observed data). It quantifies how probable the observed data is for different values of the parameters. MLE consists of choosing the parameters that maximize this likelihood (or, equivalently, minimize the negative log-likelihood, which acts like a loss function).
  
-**Prior** is similar to the concept of regularization in classical approach
+**Prior** encodes our beliefs about the parameters before seeing the data. In MAP estimation the prior term acts as a regularizer (the negative log-prior penalizes certain parameter values).
  
-**Posterior** is more specific knowledge of parameters after we selected prior knowledge that we get using the Bayes rule. The process to get the posterior from prior we call inference which is a cute name for _deriving conclusions_ after we learned something.
+**Posterior** represents our updated beliefs about the parameters after seeing the data. It is obtained by combining the prior with the likelihood via Bayes' rule. The process of obtaining the posterior (or computing quantities from it) is called **inference**.
  
-**Evidence** also called marginal likelihood is what you get when you integrate
+**Evidence** (also called the marginal likelihood) is the probability of the observed data after integrating out the parameters (or latent variables). It is what you get when you compute
  
 $$p(X)=\int_\theta p(X \mid \theta) \,p(\theta)\, d\theta$$
  
-Similar to posterior on **model parameters** we can compute posterior on **latent variables**, but then we need prior on latent variables $p(z)$.
+We can also write Bayes' rule for the posterior over latent variables $z$ (instead of parameters $\theta$):
  
  
 $$p(z \mid X) =\frac{p(X \mid z) p(z)}{p(X)}$$
  
-The problem in inference with latent variables is that we need likelihood on latent variables.
+When latent variables are present, the marginal likelihood $p(X \mid z)$ itself usually requires an integral over the parameters (or other latents).
  
 $$p(X \mid z) = \int_\theta p(X \mid z,\theta)p(\theta)d(\theta)$$ 
  
@@ -60,29 +60,31 @@ Sometimes it is easier to compute **posterior distribution on latent variables**
 $$p(z \mid X, \theta) =\frac{p(X \mid z, \theta) p(z)}{p(X \mid \theta)}$$
  
  
-To marginalize out latent variables:
+To obtain the marginal likelihood w.r.t. the parameters (integrating out latents):
  
 $$p(X \mid \theta) = \int_z p(X \mid z,\theta)p(z)d(z)$$ 
  
  
-MLE and MAP are parameter estimators and the process to find parameters is called **Bayesian optimization**.
+MLE and MAP are two important **point estimation** methods (they return a single best guess for the parameters θ).
+
+**MLE (Maximum Likelihood Estimation)** finds the parameter values that maximize the probability of the observed data. In practice we minimize the negative log-likelihood (which behaves like a loss).
+
+**MAP (Maximum A Posteriori)** finds the parameters that maximize the posterior. It is MLE with an extra term coming from the prior (the negative log-prior acts as a regularizer).
+
+(Note: the term "Bayesian optimization" refers to a different black-box optimization technique that uses a surrogate model, usually a Gaussian process, to tune hyperparameters. It is **not** the same as MLE or MAP.)
+
+Together with point estimation, probabilistic models are used for **inference** (computing or approximating posteriors) and **prediction**. These tasks often involve difficult integrals. They become tractable in closed form when we have a **conjugate prior** for the likelihood (the posterior then belongs to the same family as the prior).
  
-**MLE** is a function seeking for a model as a set of parameters that best fits the data. MLE uses likelihood function (minimum of the negative log likelihood function) to estimate the fit.
- 
-**MAP** is using minimum of the negative log posterior function to estimate Maximum a Posteriori fit. We also say MAP is a summarization of the posterior.
- 
-Together with estimating parameters probabilistic models are used for **inference** and **prediction**. Later problems are connected with the difficult integrations unless we have **conjugate prior and posterior**.
- 
-Probabilistic model is specified by the joint distribution of all its random variables. This joint distribution will not show how random variables are connected together. For RV inner connection we use graphs.
+A probabilistic model is fully specified by the joint distribution over all its random variables. However, the joint distribution alone does not explicitly reveal the conditional independence relationships between the variables. Graphical models (Bayesian networks or Markov networks) are used to visualize and exploit the dependency structure among the random variables (RVs).
  
  
 ## Conjugate prior for a likelihood function
  
-Prior is said to be **conjugate for a likelihood** function if the posterior would stay in the same family of distributions as prior.
+A prior is said to be **conjugate** to a likelihood function if the resulting posterior belongs to the same distributional family as the prior. This makes many Bayesian calculations tractable in closed form.
  
  
  
-Matches:
+
  
 ## Beta prior, binomial likelihood
  

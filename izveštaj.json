@@ -104,9 +104,16 @@
       "title": "Bayesian prerequisites | Bayes Rule",
       "typos_fixed": [
         "\"observer the data\" → \"observe the data\" (spelling/typo)",
-        "\"Sometimes is easier\" → \"Sometimes it is easier\" (grammar/spelling fix)"
+        "\"Sometimes is easier\" → \"Sometimes it is easier\" (grammar/spelling fix)",
+        "CRITICAL FIX: Replaced the incorrect claim that \"the process to find parameters is called Bayesian optimization\" with a clear explanation that MLE and MAP are point estimation methods (and that Bayesian optimization is a completely different technique).",
+        "CRITICAL FIX: Rewrote the Likelihood description to be accurate: it is a function of parameters (for fixed data) that measures how well parameters explain the observed data (not \"what is the best distribution of data\").",
+        "CRITICAL FIX: Improved the Prior sentence to correctly state that in MAP the prior acts as a regularizer.",
+        "CRITICAL FIX: Clarified the Posterior and Evidence explanations and the latent-variable inference section.",
+        "CRITICAL FIX: Removed stray \"Matches:\" heading and improved the graphical models sentence for clarity.",
+        "CRITICAL FIX: Made the conjugate prior explanation more precise."
       ],
       "serious_issues": [
+        "RESOLVED (see green section below for the corrections that were applied)",
         "MLE and MAP are called \"Bayesian optimization\" - this is incorrect. Bayesian optimization is a different technique for hyperparameter tuning. MLE/MAP are methods for parameter estimation/inference. This is a conceptual error that could confuse readers."
       ]
     },
