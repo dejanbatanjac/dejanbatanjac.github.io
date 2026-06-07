@@ -210,6 +210,53 @@
         "\"algebra unknown variable\" → \"algebraic unknown variable\" (spelling)"
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2021-01-29-activation-functions.md",
+      "date": "2021-01-29",
+      "title": "Activation functions",
+      "typos_fixed": [
+        "\"Activation are\" → \"Activation functions are\" (missing word)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-01-17-machine-learning-brainstorming.md",
+      "date": "2021-01-17",
+      "title": "ML brainstorming",
+      "typos_fixed": [
+        "\"non parametric\" → \"non-parametric\" (hyphen)",
+        "\"form a box\" → \"from a box\" (spelling in link and text)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-01-17-Expectation.md",
+      "date": "2021-01-17",
+      "title": "Expectation of Random Variable",
+      "typos_fixed": [
+        "\"In here I will set\" → \"Here I will set\" (phrasing/spelling)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2021-01-16-probability-notation.md",
+      "date": "2021-01-16",
+      "title": "Probability notation",
+      "typos_fixed": [
+        "\"algebra unknown variable\" → \"algebraic unknown variable\" (spelling)"
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2020-08-27-NLP-progress.md",
+      "date": "2020-08-27",
+      "title": "NLP progress (brainstorming)",
+      "typos_fixed": [],
+      "serious_issues": [
+        "LSA described as 'Latent Statistical Analysis' - incorrect, it is Latent Semantic Analysis.",
+        "LDA described as 'Latent Dirichlet Analysis' - incorrect, it is Latent Dirichlet Allocation."
+      ]
     }
   ]
 }
