@@ -9,7 +9,7 @@ permalink: /bayesian-prerequisites-beta-gamma
 - [Appendix](#appendix)
 
 
-In here I will create short intro for beta and gamma distributions two very important distributions form [different univariate distributions](http://www.math.wm.edu/~leemis/chart/UDR/UDR.html).
+In here I will create short intro for beta and gamma distributions two very important distributions from [different univariate distributions](http://www.math.wm.edu/~leemis/chart/UDR/UDR.html).
 
 ## Beta distribution
 
@@ -113,9 +113,9 @@ $\theta_2 \text{PDF}:3y^{2}$
 
 To find the $Pr[\theta_1 > \theta_2]$ we integrate over region $x>y$:
 
-$\int_{0}^{1} \int_{0}^{x} \frac{3 x^{80}(1-x)^{20} y^{2}}{\mathrm{~B}(81,21)} d y d x=\frac{91881}{182104} \approx 0.504552$
+$\int_{0}^{1} \int_{0}^{x} \frac{3 x^{80}(1-x)^{20} y^{2}}{\mathrm{B}(81,21)} d y d x=\frac{91881}{182104} \approx 0.504552$
 
-It is still better to purchase from the reseller with 80 positive review.
+It is still better to purchase from the reseller with 80 positive reviews.
 
 
 
@@ -161,7 +161,7 @@ $\mathcal{N}\left(x \mid \mu, \gamma^{-1}\right)=\frac{\sqrt{\gamma}}{\sqrt{2 \p
 
 ## Appendix
 
-Exponential family of distribution is huge, among many others, exponential families includes:
+Exponential family of distribution is huge, among many others, exponential families include:
 
 * normal
 * exponential
