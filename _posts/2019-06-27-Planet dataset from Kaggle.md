@@ -5,7 +5,7 @@ title: Planet dataset from Kaggle, detect the criterion FastAi uses
 ---
 I decided to fast-forward the Planet dataset from Kaggle from [planet competition](https://www.kaggle.com/c/planet-understanding-the-amazon-from-space), or the alternative name of this challenge was "understanding the amazon from space". It touches on the problem of wood cutting.
  
-I used [FastAi](https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson3-planet.ipynb) to examine things, specially I wanted to examine what kind of loss function will be used in this case of multi-label classification problem.
+I used [FastAi](https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson3-planet.ipynb) to examine things, especially I wanted to examine what kind of loss function will be used in this case of multi-label classification problem.
  
 There was a general note `ImageList` class should be used for this set:
  
@@ -17,7 +17,7 @@ src = (ImageList.from_csv(path, 'train_v2.csv', folder='train-jpg', suffix='.jpg
 ```
  
  
-My guess was that loss should not be inside `ImageList` class but inside some other class, probable set with: 
+My guess was that loss should not be inside `ImageList` class but inside some other class, probably set with: 
  
 `self.crit` or `self.loss` or `self.loss_fn`
  
