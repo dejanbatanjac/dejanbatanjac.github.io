@@ -1,8 +1,26 @@
+# Jekyll build artifacts (ne commituj generisani sajt)
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata/
+
+# Ruby / Bundler (po želji možeš da commituješ Gemfile.lock za reproducible build)
+Gemfile.lock
+
+# Projektni junk iz istorije ovog repoa
 .gitconfig
 Gemfile
-Gemfile.lock
-/_Sites
-_posts/test2.drawio
-_posts/test3.drawio
-_posts/test4.drawio
-.vscode/extensions.json
+
+# Draw.io dijagrami koji su slučajno završili u _posts/
+_posts/*.drawio
+_posts/test*.drawio
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS generisani fajlovi
+.DS_Store
+Thumbs.db
