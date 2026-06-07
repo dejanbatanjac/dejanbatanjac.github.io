@@ -523,6 +523,16 @@
       "serious_issues": [
         "Garbage text \"17.3.3346\" after the Zeiler paper reference - this was a critical copy-paste error from PDF (page number or artifact) that polluted the post with nonsense. Removed it."
       ]
+    },
+    {
+      "filename": "2019-07-15-PyTorch Cheat Sheet.md",
+      "date": "2019-07-15",
+      "title": "PyTorch Cheat Sheet",
+      "typos_fixed": [
+        "\"torch.arrange\" → \"torch.arange\" (common misspelling of arange)",
+        "\"is_symetric\" (def and call) → \"is_symmetric\" (spelling)"
+      ],
+      "serious_issues": []
     }
   ]
 }
