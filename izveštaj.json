@@ -113,7 +113,8 @@
         "CRITICAL FIX: Made the conjugate prior explanation more precise.",
         "CRITICAL FIX (major clarification): Completely replaced the misleading sentence that incorrectly associated MLE/MAP with \"Bayesian optimization\". Now clearly states that MLE and MAP are parameter *estimation* (point estimate) methods.",
         "CRITICAL FIX: Added a clear comparison table distinguishing MLE, MAP (parameter estimation) from Bayesian Optimization (black-box hyperparameter optimization technique using Gaussian Processes).",
-        "CRITICAL FIX: Strengthened the surrounding text on inference vs. point estimation and the role of conjugate priors for tractability."
+        "CRITICAL FIX: Strengthened the surrounding text on inference vs. point estimation and the role of conjugate priors for tractability.",
+        "TABLE UPDATE: Replaced the Markdown comparison table with the exact LaTeX booktabs table provided (with \\toprule, \\midrule, \\bottomrule, caption, and label) for better formatting and professional look in the article."
       ],
       "serious_issues": [
         "RESOLVED with detailed corrections (see green section). Original problem: MLE and MAP were incorrectly described as part of \"the process ... called Bayesian optimization\"."
