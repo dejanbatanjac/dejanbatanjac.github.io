@@ -318,6 +318,15 @@
         "\"pre-trained bins for GPT2\" → \"pre-trained .bin files for GPT2\""
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2019-12-25-NLP acronyms.md",
+      "date": "2019-12-25",
+      "title": "Acronyms, metrics and tasks in NLP",
+      "typos_fixed": [
+        "\"of he NLP acronyms\" → \"of the NLP acronyms\""
+      ],
+      "serious_issues": []
     }
   ]
 }
