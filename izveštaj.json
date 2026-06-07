@@ -419,6 +419,96 @@
       "title": "PAMAdam",
       "typos_fixed": [],
       "serious_issues": []
+    },
+    {
+      "filename": "2019-08-30-LSUV.md",
+      "date": "2019-08-30",
+      "title": "LSUV",
+      "typos_fixed": [
+        "\"Let we start\" → \"Let's start\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-08-29-Adam and Adaam.md",
+      "date": "2019-08-29",
+      "title": "Adam and Adaam",
+      "typos_fixed": [
+        "\"not by the paper\" → \"not as in the paper\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-08-27-LAMB.md",
+      "date": "2019-08-27",
+      "title": "LAMB",
+      "typos_fixed": [],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-08-02-Layer init.md",
+      "date": "2019-08-02",
+      "title": "Layer initialization in PyTorch",
+      "typos_fixed": [],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-07-28-random forest.md",
+      "date": "2019-07-28",
+      "title": "Random Forest",
+      "typos_fixed": [
+        "\"universal machine learning technique.\" → \"a universal machine learning technique.\"",
+        "\"all kind of data from from categories and continuos values\" → \"all kinds of data from categories and continuous values\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-07-28-Caffe.md",
+      "date": "2019-07-28",
+      "title": "Caffe2",
+      "typos_fixed": [
+        "\"Caffe sit on these four concepts:\" → \"Caffe sits on these four concepts:\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-07-20-Matplotlib.md",
+      "date": "2019-07-20",
+      "title": "Matplotlib",
+      "typos_fixed": [],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-07-20-Callbacks in PyTorch.md",
+      "date": "2019-07-20",
+      "title": "Python Callbacks vs. PyTorch hooks",
+      "typos_fixed": [],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-07-16-Pseudo labeling.md",
+      "date": "2019-07-16",
+      "title": "Pseudo labeling",
+      "typos_fixed": [
+        "\"For unlabeled data we call them pseudo-labels we pick up the class\" → \"For unlabeled data, we call pseudo-labels the class we pick up\""
+      ],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-08-30-PyTorch working with images.md",
+      "date": "2019-08-30",
+      "title": "Working with images in Python, PyTorch",
+      "typos_fixed": [],
+      "serious_issues": []
+    },
+    {
+      "filename": "2019-07-15-pooling.md",
+      "date": "2019-07-15",
+      "title": "Pooling operations in PyTorch",
+      "typos_fixed": [
+        "\"polling operations\" → \"pooling operations\" (common typo: polling vs pooling in ML context)"
+      ],
+      "serious_issues": []
     }
   ]
 }
