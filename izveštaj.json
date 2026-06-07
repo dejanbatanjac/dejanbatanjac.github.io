@@ -554,6 +554,17 @@
         "\"Just by peaking the `max` value\" → \"Just by picking the `max` value\""
       ],
       "serious_issues": []
+    },
+    {
+      "filename": "2019-07-02-Impact of WD.md",
+      "date": "2019-07-02",
+      "title": "Impact of Weight Decay",
+      "typos_fixed": [
+        "\"the bach size\" → \"the batch size\"",
+        "\"with with SGD\" → \"with SGD\"",
+        "\"seams to decrease\" → \"seems to decrease\" (twice)"
+      ],
+      "serious_issues": []
     }
   ]
 }
