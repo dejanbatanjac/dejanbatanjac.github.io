@@ -29,7 +29,7 @@ $$
 \{x_i\}_{i=1}^n \sim p({x}) \tag{1}
 $$
  
-Frequent we search for the expectation $\large \mu$ of any function $f: \mathbb R \rightarrow \mathbb{R}$ under that distribution:
+We frequently search for the expectation $\large \mu$ of any function $f: \mathbb R \rightarrow \mathbb{R}$ under that distribution:
  
  
 $$
@@ -46,7 +46,7 @@ $$
  
 Monte Carlo sampling depends on the sample size $\large n$ and should not depend on the dimensionality of the random variable $X$ or cardinality.
  
-Two very popular Monte Carlo methods are **Importance** and **Rejection** sampling. After that we cover few Markov Chain Monte Carlo methods including **Gibbs** and **Metropolis Hasting** sampling.
+Two very popular Monte Carlo methods are **Importance** and **Rejection** sampling. After that we cover a few Markov Chain Monte Carlo methods including **Gibbs** and **Metropolis-Hastings** sampling.
  
 My idea is to provide a basic classification and intuition for the methods. You may check the reference materials for the strict mathematical definitions and more details.
  
@@ -124,7 +124,7 @@ $$
 At each time interval there is a fixed probability to switch to any state. After many time steps states we **may** or **may not** converge to stationary distribution.
  
  
-In the next Markov chain will not converge to stationary probability distribution (states are altered each timestep):
+The next Markov chain will not converge to a stationary probability distribution (states are altered each timestep):
  
 ![non converging](/images/2021/04/smc-nc.png)
  
