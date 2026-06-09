@@ -10,9 +10,19 @@
         "Dodat zarez posle 'Glenn Jocher' + pojašnjenje atribucije (nije 'founder of Mosaic Augmentation')",
         "'human readable strings' → 'human-readable strings' (spojena reč sa crticom)",
         "'YOLO v4' → 'YOLOv4' (konzistentnost sa YOLOvX stilom u članku) + uklonjeno 'our' (copy-paste iz Roboflow dokumentacije)",
-        "'state of the art' → 'state-of-the-art' (standardna ortografija)"
+        "'state of the art' → 'state-of-the-art' (standardna ortografija)",
+        "Uklonjen promocioni copy-paste Roboflow tekst ('Roboflow can read and write... training YOLOv4 tutorial') koji je bio off-topic u YOLO5 članku (critical hygiene)",
+        "Ispravljena kritična faktografska greška u YOLOv4 sekciji: 'YOLO4 uses the *Focal Loss*' kao ključna stvar → tačno: YOLOv4 ključi su bili CSPDarknet53, PANet, Mosaic i CIoU loss (Focal Loss je iz RetinaNet rada)",
+        "Uklonjen duplikat '## YOLO5' heading i kratak stub 'nearly 90 percent smaller' paragraf (sadržaj konsolidovan)",
+        "Popravljen uvod: 'is CNN-based Object Detector' → 'is a CNN-based object detector' (član + mala slova)",
+        "Popravljena nelogična rečenica i redosled u YOLO3 sekciji (YOLOv2 poboljšanja sada pre YOLOv3; uklonjen netačan 'switched to using SSD' claim; dodate multi-scale + Darknet-53 napomene)",
+        "Poboljšana atribucija za YOLOv5: Glenn Jocher / Ultralytics + napomena da je Mosaic popularizovan u YOLOv5 pipelineu (prvi put u YOLOv4 paperu)",
+        "Konzistentni headingi: YOLOv4 i YOLOv5 (umesto mešovitog YOLO4 / YOLO5)"
       ],
-      "serious_issues": []
+      "serious_issues": [
+        "Promocioni copy-paste Roboflow teksta u YOLO5 postu (preporučivao YOLOv4 tutorial i alat) — critical content pollution / off-topic za članak.",
+        "Pogrešna tvrdnja da je 'key part of the YOLO4 model' bio Focal Loss (sa objašnjenjem imbalance 1:1000). Ovo je netačno — Focal Loss je iz RetinaNet; YOLOv4 je imao drugačije ključne doprinose."
+      ]
     },
     {
       "filename": "2021-09-24-CNNs.md",
